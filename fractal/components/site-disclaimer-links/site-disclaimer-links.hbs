@@ -1,0 +1,33 @@
+{{!-- fractal/components/site-disclaimer-links.hbs --}}
+<div class="c-site-disclaimer-links
+
+    {{~#if siteDisclaimerLinksModifier}} c-site-disclaimer-links--{{siteDisclaimerLinksModifier}}{{/if}}{{#each siteDisclaimerLinksContext.modifiers}} c-site-disclaimer-links--{{this}}{{/each~}}
+
+    {{~#if siteDisclaimerLinksClasses}} {{siteDisclaimerLinksClasses}}{{/if}}{{#each siteDisclaimerLinksContext.classes}} {{this}}{{/each}}">
+
+    {{~> @link
+            linkClasses="c-site-disclaimer-links__link"
+            linkLabelClasses="c-site-disclaimer-links__text"
+            linkLabel="adchoices"
+            linkTo="https://www.sharecare.com/static/adchoices"}}
+    {{> @link
+            linkClasses="c-site-disclaimer-links__link"
+            linkLabelClasses="c-site-disclaimer-links__text"
+            linkLabel="cookies"
+            linkTo="https://www.sharecare.com/static/cookies"}}
+    {{> @link
+            linkClasses="c-site-disclaimer-links__link"
+            linkLabelClasses="c-site-disclaimer-links__text"
+            linkLabel="privacy"
+            linkTo="https://www.sharecare.com/static/privacy"}}
+    {{> @link
+            linkClasses="c-site-disclaimer-links__link"
+            linkLabelClasses="c-site-disclaimer-links__text"
+            linkLabel="terms"
+            linkTo="https://www.sharecare.com/static/terms"}}
+    {{> @link
+            linkClasses="c-site-disclaimer-links__link"
+            linkLabelClasses="c-site-disclaimer-links__text"
+            linkLabel="sitemap"
+            linkTo="https://www.sharecare.com/static/sitemap"~}}
+</div>

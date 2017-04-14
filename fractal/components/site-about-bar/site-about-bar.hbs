@@ -1,0 +1,12 @@
+{{!-- fractal/components/site-about-bar.hbs --}}
+<div class="c-site-about-bar
+
+    {{~#if siteAboutBarModifier}} c-site-about-bar--{{siteAboutBarModifier}}{{/if}}{{#each siteAboutBarContext.modifiers}} c-site-about-bar--{{this}}{{/each~}}
+
+    {{~#if siteAboutBarClasses}} {{siteAboutBarClasses}}{{/if}}{{#each siteAboutBarContext.classes}} {{this}}{{/each}}">
+    {{~> @site-about-links
+            siteAboutLinksClasses="c-site-about-bar__about-links"~}}
+
+    {{~> @social-icons
+            socialIconsClasses="c-site-about-bar__social-links hidden-md-down"~}}
+</div>

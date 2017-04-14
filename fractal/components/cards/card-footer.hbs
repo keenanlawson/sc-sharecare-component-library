@@ -1,0 +1,31 @@
+{{!-- fractal/components/card-footer.hbs --}}
+<div class="c-card__footer
+
+    {{~#if cardFooterModifier}} c-card__footer--{{cardFooterModifier}}{{/if}}{{#each cardFooterContext.modifiers}} c-card__footer--{{this}}{{/each~}}
+
+    {{~#if cardFooterClasses}} {{cardFooterClasses}}{{/if}}{{#each cardFooterContext.classes}} {{this}}{{/each}}">
+    {{!-- Add footer link --}}
+    {{#if cardFooterLinkLabel}}
+        <div class="c-card__footer-left">
+            {{> @link
+                    linkContext=cardFooterContext.link
+                    linkTo=cardFooterLinkTo
+                    linkLabel=cardFooterLinkLabel
+                    linkModifier=cardFooterLinkModifier
+                    linkClasses="c-card__footer-link"}}
+
+        </div>
+    {{else if cardFooterContext.link}}
+        <div class="c-card__footer-left">
+            {{> @link
+                    linkContext=cardFooterContext.link
+                    linkTo=cardFooterLinkTo
+                    linkLabel=cardFooterLinkLabel
+                    linkModifier=cardFooterLinkModifier
+                    linkClasses="c-card__footer-link"}}
+
+        </div>
+    {{/if}}
+    {{!-- TODO: add more footer stuff --}}
+    {{!--<div class="c-card__footer-right"></div>--}}
+</div>

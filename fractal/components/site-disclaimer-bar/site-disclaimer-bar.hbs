@@ -1,0 +1,13 @@
+{{!-- fractal/components/site-disclaimer-bar.hbs --}}
+<div class="c-site-disclaimer-bar
+
+    {{~#if siteDisclaimerBarModifier}} c-site-disclaimer-bar--{{siteDisclaimerBarModifier}}{{/if}}{{#each siteDisclaimerBarContext.modifiers}} c-site-disclaimer-bar--{{this}}{{/each~}}
+
+    {{~#if siteDisclaimerBarClasses}} {{siteDisclaimerBarClasses}}{{/if}}{{#each siteDisclaimerBarContext.classes}} {{this}}{{/each}}">
+
+    {{~> @site-disclaimer
+            siteDisclaimerClasses="c-site-disclaimer-bar__site-disclaimer"~}}
+        
+    {{~> @site-disclaimer-links
+            siteDisclaimerLinksClasses="c-site-disclaimer-bar__disclaimer-links"~}}
+</div>

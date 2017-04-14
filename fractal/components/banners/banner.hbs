@@ -1,0 +1,52 @@
+{{!-- fractal/components/banner.hbs --}}
+{{!-- Add close target --}}
+<input class="c-banner__toggle" type="checkbox" id="{{#if bannerName}}{{bannerName}}{{else}}{{bannerContext.name}}{{/if}}"/>
+<span class="c-banner
+
+    {{~#if bannerModifier}} c-banner--{{bannerModifier}}{{/if}}{{#each bannerContext.modifiers}} c-banner--{{this}}{{/each~}}
+
+    {{~#if bannerClasses}} {{bannerClasses}}{{/if}}{{#each bannerContext.classes}} {{this}}{{/each}}">
+    {{!-- BANNER FONT ICON --}}
+    {{!-- Add font icon explicitly --}}
+    {{#if bannerFontIcon}}
+        <span class="c-banner__icon">
+            {{> @font-icon
+                    fontIconContext=bannerContext.fontIcon
+                    fontIcon=bannerFontIcon
+                    fontIconClasses="font-icon--sm"
+                    fontIconModifier=bannerFontIconModifier
+                    fontIconBadgeLabel=bannerFontIconBadgeLabel
+                    fontIconBadgeModifier=bannerFontIconBadgeModifier}}
+
+        </span>
+    {{!-- OR --}}
+    {{!-- Add font icon via context --}}
+    {{else if bannerContext.fontIcon}}
+        <span class="c-banner__icon">
+            {{> @font-icon
+                    fontIconContext=bannerContext.fontIcon
+                    fontIcon=bannerFontIcon
+                    fontIconClasses="font-icon--sm"
+                    fontIconModifier=bannerFontIconModifier
+                    fontIconBadgeLabel=bannerFontIconBadgeLabel
+                    fontIconBadgeModifier=bannerFontIconBadgeModifier}}
+
+        </span>
+    {{/if}}
+    {{!-- BANNER LABEL TEXT --}}
+    {{!-- Add label explicitly --}}
+    {{#if bannerLabel}}
+        <span class="c-banner__label">{{bannerLabel}}</span>
+    {{!-- Add label via context --}}
+    {{else if bannerContext.label}}
+        <span class="c-banner__label">{{bannerContext.label}}</span>
+    {{/if}}
+    {{!-- BANNER CLOSE FONT ICON --}}
+    {{!-- Add close trigger --}}
+    <label class="c-banner__close" for="{{#if bannerName}}{{bannerName}}{{else}}{{bannerContext.name}}{{/if}}">
+        {{> @font-icon
+                fontIcon="close"
+                fontIconClasses="font-icon--xs"}}
+
+    </label>
+</span>

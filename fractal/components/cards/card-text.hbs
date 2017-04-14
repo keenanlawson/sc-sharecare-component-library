@@ -1,0 +1,29 @@
+{{!-- fractal/components/card-text.hbs --}}
+<div class="c-card__text
+
+    {{~#if cardTextModifier}} c-card__text--{{cardTextModifier}}{{/if}}{{#each cardTextContext.modifiers}} c-card__text--{{this}}{{/each~}}
+
+    {{~#if cardTextClasses}} {{cardTextClasses}}{{/if}}{{#each cardTextContext.classes}} {{this}}{{/each}}">
+    {{!-- Add Font Icon --}}
+    {{#if cardTextFontIcon}}
+        <div class="c-card__text-image">
+            {{> @font-icon
+                    fontIconContext=cardTextContext.fontIcon
+                    fontIcon=cardTextFontIcon
+                    fontIconModifier="md"
+                    fontIconClasses="font-icon--highlight c-card__text-icon"}}
+
+        </div>
+    {{else if cardTextContext.fontIcon}}
+        <div class="c-card__text-image">
+            {{> @font-icon
+                    fontIconContext=cardTextContext.fontIcon
+                    fontIcon=cardTextFontIcon
+                    fontIconModifier="md"
+                    fontIconClasses="font-icon--highlight c-card__text-icon"}}
+
+        </div>
+    {{/if}}
+    {{!-- Add Text Body --}}
+    <div class="c-card__text-body">{{#if cardTextBody}}{{cardTextBody}}{{else}}{{cardTextContext.textBody}}{{/if}}</div>
+</div>

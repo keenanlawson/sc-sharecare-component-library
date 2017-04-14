@@ -1,0 +1,40 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-social-icons__link {
+  margin-left: 0.8rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.c-social-icons__icon {
+  display: block;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

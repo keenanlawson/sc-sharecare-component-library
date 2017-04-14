@@ -1,0 +1,96 @@
+{{!-- fractal/components/checkbox-usages.hbs --}}
+<h3>Block Checkbox Group</h3>
+{{#> @checkbox-group
+        groupLabelFor="block-testA"
+        groupLabel="Checkbox Group Label"}}
+    {{> @checkbox
+            checkboxName="block-testA"
+            checkboxLabel="Checkbox Label A"
+            checkboxId="block-testA"}}
+    {{> @checkbox
+            isChecked=true
+            checkboxName="block-testA"
+            checkboxLabel="Checkbox Label B"
+            checkboxId="block-testB"}}
+    {{> @checkbox
+            checkboxName="block-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label C"
+            checkboxId="block-testC"}}
+    {{> @checkbox
+            isChecked=true
+            checkboxName="inline-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label D"
+            checkboxId="inline-testD"}}
+{{/@checkbox-group}}
+
+<h3>Inline Checkbox Group</h3>
+{{#> @checkbox-group
+        groupModifier="inline"
+        groupLabelFor="inline-testA"
+        groupLabel="Checkbox Group Label"}}
+    {{> @checkbox
+            checkboxName="inline-testA"
+            checkboxLabel="Checkbox Label A"
+            checkboxId="inline-testA"}}
+    {{> @checkbox
+            isChecked=true
+            checkboxName="inline-testA"
+            checkboxLabel="Checkbox Label B"
+            checkboxId="inline-testB"}}
+    {{> @checkbox
+            checkboxName="inline-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label C"
+            checkboxId="inline-testC"}}
+    {{> @checkbox
+            isChecked=true
+            checkboxName="inline-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label D"
+            checkboxId="inline-testD"}}
+{{/@checkbox-group}}
+
+<h3>Disabled Checkbox Group</h3>
+{{#> @checkbox-group
+        groupLabelFor="disabled-testA"
+        groupLabel="Checkbox Group Label"}}
+    {{> @checkbox
+            isDisabled=true
+            checkboxName="disabled-testA"
+            checkboxLabel="Checkbox Label A"
+            checkboxId="disabled-testA"}}
+    {{> @checkbox
+            isDisabled=true
+            isChecked=true
+            checkboxName="disabled-testA"
+            checkboxLabel="Checkbox Label B"
+            checkboxId="disabled-testB"}}
+    {{> @checkbox
+            checkboxName="disabled-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label C"
+            checkboxId="disabled-testC"}}
+{{/@checkbox-group}}
+
+<h3>Error Checkbox Group</h3>
+{{#> @checkbox-group
+        groupLabelFor="error-testA"
+        inputModifier="error"
+        groupLabel="Checkbox Group Label"}}
+    {{> @checkbox
+            checkboxName="error-testA"
+            checkboxLabel="Checkbox Label A"
+            checkboxId="error-testA"}}
+    {{> @checkbox
+            isChecked=true
+            checkboxName="error-testA"
+            checkboxLabel="Checkbox Label B"
+            checkboxId="error-testB"}}
+    {{> @checkbox
+            checkboxName="error-testA"
+            isDisabled=true
+            checkboxLabel="Checkbox Label C"
+            checkboxId="error-testC"}}
+{{/@checkbox-group}}

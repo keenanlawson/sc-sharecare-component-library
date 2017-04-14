@@ -1,0 +1,80 @@
+{{!-- fractal/components/modal.hbs --}}
+{{!-- Add modal visibility target --}}
+<input class="c-modal__toggle" type="checkbox"
+
+    {{~#if modalName}} id="{{modalName}}"{{else}} id="{{modalContext.name}}"{{/if~}}
+    
+    {{~#if modalIsVisible}} checked{{else if modalContext.isVisible}} checked{{/if}}/>
+{{!-- Add modal --}}
+<div class="c-modal c-modal__overlay
+
+    {{~#if modalModifier}} c-modal--{{modalModifier}}{{/if}}{{#each modalContext.modifiers}} c-modal--{{this}}{{/each~}}
+
+    {{~#if modalClasses}} {{modalClasses}}{{/if}}{{#each modalContext.classes}} {{this}}{{/each}}">
+    {{!-- Add modal window --}}
+    <div class="c-modal__window
+    
+        {{~#if modalWindowModifier}} c-modal__window--{{modalWindowModifier}}{{/if}}{{#each modalContext.windowModifiers}} c-modal__window--{{this}}{{/each~}}
+
+        {{~#if modalWindowClasses}} {{modalWindowClasses}}{{/if}}{{#each modalContext.windowClasses}} {{this}}{{/each}}">
+        {{!-- Add modal title bar --}}
+        <div class="c-modal__title-bar">
+            <label class="c-modal__close"{{#if modalName}} for="{{modalName}}"{{else}} for="{{modalContext.name}}"{{/if}}>
+                {{> @font-icon
+                        fontIcon="close"
+                        fontIconModifier="xs"
+                        fontIconClasses="font-icon--highlight"}}
+
+            </label>
+        </div>
+        {{!-- Add modal content --}}
+        <div class="c-modal__content">
+            {{!-- ADD CUSTOM CONTENT --}}
+            {{#if @partial-block}}
+                {{> @partial-block }}
+
+            {{else}}
+                Example Modal Content
+            {{/if}}
+        </div>
+        {{!-- Add modal actions --}}
+        <div class="c-modal__actions">
+            {{#if modalIsCancelable}}
+                {{> @button-label
+                        buttonLabelContext=modalContext.button
+                        buttonLabelFor=modalButtonLabelFor
+                        buttonLabelModifier="large"
+                        buttonLabelClasses="c-button--secure c-button--split"
+                        buttonLabelLabel="Cancel"}}
+
+                {{> @button
+                        buttonContext=modalContext.button
+                        buttonModifier="large"
+                        buttonClasses="c-button--split"
+                        buttonLabel=modalButtonLabel}}
+
+            {{else if modalContext.isCancelable}}
+                {{> @button-label
+                        buttonLabelContext=modalContext.button
+                        buttonLabelFor=modalButtonLabelFor
+                        buttonLabelModifier="large"
+                        buttonLabelClasses="c-button--secure c-button--split"
+                        buttonLabelLabel="Cancel"}}
+
+                {{> @button
+                        buttonContext=modalContext.button
+                        buttonModifier="large"
+                        buttonClasses="c-button--split"
+                        buttonLabel=modalButtonLabel}}
+
+            {{else}}
+                {{> @button
+                        buttonContext=modalContext.button
+                        buttonModifier="large"
+                        buttonClasses="c-button--full"
+                        buttonLabel=modalButtonLabel}}
+
+            {{/if}}
+        </div>
+    </div>
+</div>

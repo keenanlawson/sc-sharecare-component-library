@@ -1,0 +1,22 @@
+{{!-- fractal/components/checkbox.hbs --}}
+<div class="c-input__group-input c-input__checkbox
+
+    {{~#if checkboxIsDisabled}} c-input--inactive{{else if checkboxContext.isDisabled}} c-input--inactive{{/if~}}
+
+    {{~#if checkboxModifier}} c-input__checkbox--{{checkboxModifier}}{{/if}}{{#each checkboxContext.modifiers}} c-input__checkbox--{{this}}{{/each~}}
+
+    {{~#if checkboxClasses}} {{checkboxClasses}}{{/if}}{{#each checkboxContext.classes}} {{this}}{{/each}}">
+    {{!-- Add checkbox --}}
+    <input type="checkbox"
+        class="c-input__element c-input__element--checkbox"
+        {{~#if checkboxId}} id="{{checkboxId}}"{{else if checkboxContext.id}} id="{{checkboxContext.id}}"{{/if~}}
+        {{~#if checkboxName}} name="{{checkboxName}}"{{else if checkboxContext.name}} name="{{checkboxContext.name}}"{{/if~}}
+        {{~#if checkboxValue}} value="{{checkboxValue}}"{{else if checkboxContext.value}} value="{{checkboxContext.value}}"{{/if~}}
+        {{~#if checkboxTitle}} title="{{checkboxTitle}}"{{else if checkboxContext.title}} title="{{checkboxContext.title}}"{{/if~}}
+        {{~#if checkboxIsDisabled}} disabled{{else if checkboxContext.isDisabled}} disabled{{/if~}}
+        {{#if checkboxIsChecked}} checked{{else if checkboxContext.isChecked}} checked{{/if}}/>
+    {{!-- Add label --}}
+    <label class="c-input__label c-input__label--checkbox" for="{{#if checkboxId}}{{checkboxId}}{{else}}{{checkboxContext.id}}{{/if}}">
+        {{~#if checkboxLabel}}{{checkboxLabel}}{{else}}{{checkboxContext.label}}{{/if~}}
+    </label>
+</div>

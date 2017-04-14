@@ -1,0 +1,119 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$accordion-item-selected-border-color: $color-mountain-meadow !default;
+$accordion-item-background-color: $color-gallery !default;
+$accordion-label-border-color: $color-alto !default;
+$accordion-label-expanded-icon-color: $color-san-juan !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+// Give the label some spacing and border
+.c-accordion__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid;
+  padding: 1rem 0 0.4rem 1.5rem;
+}
+
+.c-accordion__content {
+  // Start accordion in collapsed state for animation
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.c-accordion__text {
+  display: inline-block;
+}
+
+// Set up icon rotation collapsed state
+.c-accordion__icon {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+// Use input checkbox/radio checked states for toggle effect
+.c-accordion__toggle {
+  // Hide input control
+  display: none;
+
+  // Expanded state
+  &:checked {
+
+    // Access sibling
+    ~ .c-accordion__label {
+
+      // Set up icon rotation expanded state
+      .c-accordion__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    // Display content in expanded state
+    ~ .c-accordion__content {
+      display: block;
+      max-height: 30rem;
+    }
+  }
+}
+
+.c-accordion__item {
+  padding: 0.5rem 2.5rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-accordion__item--selected {
+  border-left: 2px solid;
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-accordion__label {
+  border-color: $accordion-label-border-color;
+}
+
+.c-accordion__toggle {
+
+  // Expanded state
+  &:checked {
+
+    // Access sibling
+    ~ .c-accordion__label {
+
+      // Set up icon rotation expanded state
+      .c-accordion__icon {
+        color: $accordion-label-expanded-icon-color;
+      }
+    }
+  }
+}
+
+.c-accordion__item--selected {
+  background-color: $accordion-item-background-color;
+  border-color: $accordion-item-selected-border-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-accordion__text {
+  line-height: 1.9rem;
+}
+
+.c-accordion__item {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}

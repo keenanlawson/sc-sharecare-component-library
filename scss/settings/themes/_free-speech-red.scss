@@ -1,0 +1,40 @@
+// 1. Import descriptive colors
+@import '../s-color-palette';
+
+// 2. Overwrite paths
+$theme: 'free-speech-red';
+
+
+// 3A. Overwrite palette
+// TODO: these should be refactored out in favor of functionally named component variables (#3A below)
+// TODO: DO NOT PROPAGATE THESE VARIABLES
+$theme-primary-color: $color-guardsman-red;
+$theme-primary-supporting-color: $color-red;
+$theme-secondary-supporting-color: $color-maroon;
+//$color-secondary-color1: $color-silver;
+//$color-secondary-color2: $color-valencia;
+$theme-primary-accent-color: $color-mine-shaft;
+//$color-negative-response-color1: $color-puce;
+$theme-error-color: $color-chestnut-rose;
+$color-negative-response-color3: $color-roman;
+//$color-positive-response-color1: $color-feijoa;
+//$color-positive-response-color2: $color-olivine;
+$theme-cta-color: $color-guardsman-red;
+$theme-cta-supporting-color: $color-international-orange;
+//$color-accent-color3: $color-chathams-blue;
+//$color-alternate-1: $color-ripe-lemon;
+//$color-alternate-2: $color-amethyst-smoke;
+//$color-alternate-3: $color-affair;
+//$color-alternate-4: $color-curious-blue;
+
+
+// 3B. Overwrite components
+// Examples:
+// $color-card-background: $color-white;
+// $color-link-text: $color-curious-blue;
+
+
+// 4. Overwrite typography color
+// NOTE: No other typography settings allowed in here
+// Examples:
+//$base-font-color: $color-mine-shaft;

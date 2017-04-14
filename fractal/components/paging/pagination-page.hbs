@@ -1,0 +1,29 @@
+{{!-- fractal/components/pagination-item.hbs --}}
+<li class="c-pagination__item c-pagination__page
+
+    {{~#if paginationPageIsSelected}} c-pagination__page--selected{{else if paginationPageContext.isSelected}} c-pagination__page--selected{{/if~}}
+
+    {{~#if paginationPageModifier}} c-pagination__page--{{paginationPageModifier}}{{/if}}{{#each paginationPageContext.modifiers}} c-pagination__page--{{this}}{{/each~}}
+
+    {{~#if paginationPageClasses}} {{paginationPageClasses}}{{/if}}{{#each paginationPageContext.classes}} {{this}}{{/each}}">
+
+    {{~#if paginationPageLinkLabel}}
+        {{> @link
+                linkContext=paginationPageContext.link
+                linkTo=linkTo
+                linkLabel=paginationPageLinkLabel
+                linkModifier=paginationPageLinkModifier
+                linkClasses='c-pagination__page-link'}}
+
+    {{else if paginationPageContext.label}}
+        {{~paginationPageContext.label~}}
+    {{else}}
+        {{> @link
+                linkContext=paginationPageContext.link
+                linkTo=linkTo
+                linkLabel=paginationPageLinkLabel
+                linkModifier=paginationPageLinkModifier
+                linkClasses='c-pagination__page-link'}}
+
+    {{/if~}}
+</li>

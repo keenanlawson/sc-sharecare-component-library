@@ -1,0 +1,22 @@
+{{!-- fractal/components/chip-usages.hbs --}}
+<h3>Basic Chip</h3>
+{{> @chip
+        chipLabel="Lorem Ipsum"}}
+
+<h3>Avatar Chip</h3>
+{{> @chip
+        chipModifier="avatar"
+        chipImage="https://placeimg.com/80/80/animals"
+        chipLabel="Lorem Ipsum"}}
+
+<h3>Font Icon Avatar Chip</h3>
+{{> @chip
+        chipModifier="avatar"
+        chipFontIcon="website"
+        chipLabel="Lorem Ipsum"}}
+
+<h3>Deletable Chip</h3>
+{{> @chip
+        isDeletable=true
+        chipName="deletable-chip"
+        chipLabel="Lorem Ipsum"}}

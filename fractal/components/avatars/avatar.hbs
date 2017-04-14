@@ -1,0 +1,52 @@
+{{!-- fractal/components/avatar.hbs --}}
+<span class="c-avatar
+
+    {{~#if avatarModifier}} c-avatar--{{avatarModifier}}{{/if}}{{#each avatarContext.modifiers}} c-avatar--{{this}}{{/each~}}
+
+    {{~#if avatarClasses}} {{avatarClasses}}{{/if}}{{#each avatarContext.classes}} {{this}}{{/each}}">
+    {{!-- Add image --}}
+    {{#if avatarImage}}
+        {{> @image
+                imageContext=avatarContext.image
+                imageModifier=avatarImageModifier
+                imageSrc=avatarImage
+                imageAlt=avatarImageAlt
+                imageTitle=avatarTitle
+                imageClasses="c-avatar__image"}}
+    {{!-- OR --}}
+    {{!-- Add font icon explicitly --}}
+    {{else if avatarFontIcon}}
+        {{> @font-icon
+                fontIconContext=avatarContext.fontIcon
+                fontIcon=avatarFontIcon
+                fontIconModifier=avatarFontIconModifier
+                fontIconClasses="c-avatar__icon"}}
+    {{!-- OR --}}
+    {{!-- Add title --}}
+    {{else if avatarTitle}}
+        <span class="c-avatar__title">{{avatarTitle}}</span>
+    {{!-- OR --}}
+    {{!-- Add avatar via context --}}
+    {{else if avatarContext.image}}
+        {{> @image
+                imageContext=avatarContext.image
+                imageModifier=avatarImageModifier
+                imageSrc=avatarImage
+                imageAlt=avatarImageAlt
+                imageTitle=avatarTitle
+                imageClasses="c-avatar__image"}}
+    {{!-- OR --}}
+    {{!-- Add font icon via context --}}
+    {{else if avatarContext.fontIcon}}
+        {{> @font-icon
+                fontIconContext=avatarContext.fontIcon
+                fontIcon=avatarFontIcon
+                fontIconModifier=avatarFontIconModifier
+                fontIconClasses="c-avatar__icon"}}
+    {{!-- OR --}}
+    {{!-- Add title --}}
+    {{else if avatarContext.title}}
+        <span class="c-avatar__title">{{avatarContext.title}}</span>
+    {{/if}}
+
+</span>

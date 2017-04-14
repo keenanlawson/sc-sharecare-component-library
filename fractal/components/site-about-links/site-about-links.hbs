@@ -1,0 +1,43 @@
+{{!-- fractal/components/site-about-links.hbs --}}
+<div class="c-site-about-links
+
+    {{~#if siteAboutLinksModifier}} c-site-about-links--{{siteAboutLinksModifier}}{{/if}}{{#each siteAboutLinksContext.modifiers}} c-site-about-links--{{this}}{{/each~}}
+
+    {{~#if siteAboutLinksClasses}} {{siteAboutLinksClasses}}{{/if}}{{#each siteAboutLinksContext.classes}} {{this}}{{/each}}">
+
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="what is sharecare?"
+            linkTo="https://www.sharecare.com/static/what-is-sharecare"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="advisory board"
+            linkTo="https://www.sharecare.com/static/advisory-board"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="press"
+            linkTo="https://www.sharecare.com/static/press"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="contact"
+            linkTo="https://www.sharecare.com/static/contact"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="sharecare app"
+            linkTo="https://www.sharecare.com/static/sharecare-app"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="askmd"
+            linkTo="https://www.sharecare.com/static/askmd"}}
+    {{> @link
+            linkClasses="c-site-about-links__link"
+            linkLabelClasses="c-site-about-links__text"
+            linkLabel="realage test"
+            linkTo="https://www.sharecare.com/static/realage-test"}}
+</div>

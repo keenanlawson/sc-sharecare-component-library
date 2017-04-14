@@ -1,0 +1,89 @@
+//////////////////////////
+/// CONFIGURATION - variables
+//////////////////////////
+$list-item-border-color: $color-gallery !default;
+$list-item-subtitle-text-color: $color-dusty-gray !default;
+
+
+//////////////////////////
+/// LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-list {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+}
+
+.c-list__item {
+  display: flex;
+  border-top: 1px solid;
+  padding: 18px;
+
+  &:first-child {
+    border: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 11px;
+  }
+}
+
+.c-list__item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-list__item-avatar {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.c-list__item-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.c-list__item-subtitle {
+  margin-top: 2px;
+}
+
+
+//////////////////////////
+/// STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-list__item {
+  border-color: $list-item-border-color;
+}
+
+.c-list__item-subtitle {
+  color: $list-item-subtitle-text-color;
+}
+
+
+//////////////////////////
+/// TYPOGRAPHY RULES
+//////////////////////////
+.c-list__item-body {
+  white-space: normal;
+}
+
+.c-list__item-title {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.c-list__item-subtitle {
+  font-size: 14px;
+  line-height: 1.22;
+}

@@ -1,0 +1,53 @@
+{{!-- fractal/components/accordion-usages.hbs --}}
+<h3>Accordion with Accordion Items</h3>
+{{#> @accordion
+        accordionName="basic-accordion-with-items"
+        isExpanded=true
+        accordionLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum" accordionItemModifier="selected"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum" linkTo="http://www.sharecare.com"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+{{/@accordion}}
+
+<h3>Accordion with Custom Content</h3>
+{{#> @accordion
+        accordionName="basic-accordion"
+        accordionLabel="Lorem Ipsum"}}
+    <div>Lorem Ipsum Lorem Ipsum</div>
+    <div>Lorem Ipsum Lorem Ipsum</div>
+    <div>Lorem Ipsum Lorem Ipsum</div>
+{{/@accordion}}
+
+<h3>Expanded Accordion</h3>
+{{#> @accordion
+        accordionName="expanded-accordion"
+        isExpanded=true
+        accordionLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+{{/@accordion}}
+
+<h3>Stacked Accordions</h3>
+{{#> @accordion
+        accordionName="stacked-accordion1"
+        accordionLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+{{/@accordion}}
+{{#> @accordion
+        accordionName="stacked-accordion2"
+        accordionLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+{{/@accordion}}
+{{#> @accordion
+        accordionName="stacked-accordion3"
+        accordionLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+    {{> @accordion-item accordionItemLabel="Lorem Ipsum"}}
+{{/@accordion}}

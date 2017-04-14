@@ -1,0 +1,94 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-logos-text-color: $color-dusty-gray !default;
+$site-logos-text-hover-color: $color-mine-shaft !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-site-logos {
+
+  @include respond-to(lg) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+.c-site-logos__link {
+
+  &::after {
+    content: '';
+    margin-right: 0.8rem;
+    padding-right: 0.8rem;
+    width: 0.1rem;
+    height: 1.2rem;
+    border-right: 0.1rem solid;
+    display: inline-block;
+    position: relative;
+    top: 0.2rem;
+
+    @include respond-to(sm) {
+      margin-right: 1.6rem;
+      padding-right: 1.6rem;
+    }
+
+    @include respond-to(md) {
+      margin-right: 2.4rem;
+      padding-right: 2.4rem;
+    }
+
+    @include respond-to(lg) {
+      content: none;
+    }
+  }
+
+  &:last-child {
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-site-logos__link {
+
+  &::after {
+    border-right-color: $site-logos-text-color;
+  }
+}
+
+.c-site-logos__text {
+  color: $site-logos-text-color;
+
+  &:hover {
+    color: $site-logos-text-hover-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-site-logos {
+  text-align: center;
+}
+
+.c-site-logos__link {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  white-space: nowrap;
+  font-weight: $font-weight-semi;
+}

@@ -1,0 +1,41 @@
+{{!-- fractal/components/page-template-example.hbs --}}
+{{> @page-header pageHeaderContext=pageHeaderContext}}
+{{#> @page-content pageContentContext=pageContentContext}}
+    {{#*inline "main-content"}}
+        {{#> @card}}
+            {{> @card-header
+                    cardHeaderTitle="Lorem ipsum dolor sit amet"
+                    cardHeaderSubtitle="Lorem ipsum dolor sit amet"
+                    cardHeaderAvatarImage="https://placeimg.com/80/80/animals"}}
+            {{> @card-text
+                    cardTextBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+        {{/@card}}
+        {{#> @card}}
+            {{> @card-header
+                    cardHeaderTitle="Lorem ipsum dolor sit amet"
+                    cardHeaderSubtitle="Lorem ipsum dolor sit amet"
+                    cardHeaderAvatarImage="https://placeimg.com/80/80/animals"}}
+            {{> @card-text
+                    cardTextBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+        {{/@card}}
+        {{#> @card}}
+            {{> @card-header
+                    cardHeaderTitle="Lorem ipsum dolor sit amet"
+                    cardHeaderSubtitle="Lorem ipsum dolor sit amet"
+                    cardHeaderAvatarImage="https://placeimg.com/80/80/animals"}}
+            {{> @card-text
+                    cardTextBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+        {{/@card}}
+    {{/inline}}
+    {{#*inline "sidebar-content"}}
+        {{#> @card}}
+            {{> @card-header
+                    cardHeaderTitle="Lorem ipsum dolor sit amet"
+                    cardHeaderSubtitle="Lorem ipsum dolor sit amet"
+                    cardHeaderAvatarImage="https://placeimg.com/80/80/animals"}}
+            {{> @card-text
+                    cardTextBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+        {{/@card}}
+    {{/inline}}
+{{/@page-content}}
+{{> @page-footer pageFooterContext=pageFooterContext}}

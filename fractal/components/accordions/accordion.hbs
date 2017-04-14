@@ -1,0 +1,37 @@
+{{!-- fractal/components/accordion.hbs --}}
+<div class="c-accordion
+
+    {{~#if accordionModifier}} c-accordion--{{accordionModifier}}{{/if}}{{#each accordionContext.modifiers}} c-accordion--{{this}}{{/each~}}
+
+    {{~#if accordionClasses}} {{accordionClasses}}{{/if}}{{#each accordionContext.classes}} {{this}}{{/each}}">
+    {{!-- Add expander target --}}
+    <input class="c-accordion__toggle" type="checkbox"
+           id="{{#if accordionName}}{{accordionName}}{{else}}{{accordionContext.name}}{{/if}}"
+           {{#if accordionIsExpanded}} checked{{else if accordionContext.isExpanded}} checked{{/if}}/>
+    {{!-- Add expander trigger --}}
+    <label class="c-accordion__label" for="{{#if accordionName}}{{accordionName}}{{else}}{{accordionContext.name}}{{/if}}">
+        <span class="c-accordion__text">{{#if accordionLabel}}{{accordionLabel}}{{else}}{{accordionContext.label}}{{/if}}</span>
+        {{> @font-icon
+                fontIcon="caret-down"
+                fontIconClasses="font-icon--primary font-icon--xs c-accordion__icon"}}
+    </label>
+    {{!-- Add accordion items via context --}}
+    {{#if accordionContext.items}}
+        <div class="c-accordion__content">
+            {{!-- Add accordion items via context --}}
+            {{#each accordionContext.items}}
+                {{> @accordion-item accordionItemContext=this}}
+            {{/each}}
+            {{!-- Add any extra accordion items explicitly via partial-block include --}}
+            {{#if @partial-block}}
+                {{> @partial-block }}
+            {{/if}}
+        </div>
+    {{/if}}
+    {{!-- Add accordion items explicitly via partial-block include --}}
+    {{#if @partial-block}}
+        <div class="c-accordion__content">
+            {{> @partial-block }}
+        </div>
+    {{/if}}
+</div>

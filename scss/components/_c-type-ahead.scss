@@ -1,0 +1,247 @@
+//////////////////////////
+/// DOCUMENTATION
+//////////////////////////
+///
+
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$type-ahead-background-color: $color-pure-white !default;
+$type-ahead-border-color: $color-gallery !default;
+$type-ahead-shadow-color: $color-pure-black !default;
+$type-ahead-header-background-color: $color-alabaster !default;
+$type-ahead-hint-background-color: $color-pure-white !default;
+$type-ahead-suggestion-text-color: $color-gray !default;
+$type-ahead-text-hover-color: $color-curious-blue !default;
+$type-ahead-text-highlight-color: $color-mine-shaft !default;
+$type-ahead-text-highlight-hover-color: $color-san-juan !default;
+$type-ahead-loading-spinner-color: $color-mountain-meadow !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+#{$root-selector} {
+
+  .c-type-ahead {
+    width: 100%;
+
+    .c-list__item-content {
+      padding: 0;
+    }
+
+    .c-list__item-subtitle {
+      display: inline;
+
+      &:last-child {
+
+        &::before {
+          content: ' | ';
+        }
+      }
+    }
+  }
+
+  .c-type-ahead__menu {
+    border: 1px solid;
+    width: 100%;
+    border-radius: 2px;
+  }
+
+  .c-type-ahead__header {
+    padding: 10px;
+  }
+
+  .c-type-ahead__suggestion {
+    border-top: 1px solid;
+    padding: 8px 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .c-type-ahead__dataset {
+    border-top: 1px solid;
+  }
+
+  .c-type-ahead__dataset:empty {
+    display: none;
+  }
+
+  .c-type-ahead__dataset:first-child,
+  .c-type-ahead__dataset:empty + .c-type-ahead__dataset {
+    border: 0;
+  }
+
+  .c-type-ahead__footer {
+    border-top: 1px solid;
+  }
+}
+
+#{$breakpoint-medium} {
+
+  .c-type-ahead__menu {
+    margin-top: 7px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-style: solid;
+      border-width: 0 7px 7px;
+      z-index: 100;
+      top: -7px;
+      left: 20px;
+    }
+  }
+
+  .c-type-ahead__dataset {
+    position: relative;
+    min-height: 35px;
+  }
+
+  .c-type-ahead__header {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 10px 10px 0;
+    min-height: 34px;
+  }
+
+  .c-type-ahead__suggestion {
+    border: 0;
+    padding: 5px 10px;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+#{$root-selector} {
+
+  .c-type-ahead__hint {
+
+    &.is-loading {
+
+      // !important to override plugin created inline styles
+      background: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a"><stop stop-color="#{$type-ahead-loading-spinner-color}" stop-opacity="0" offset="0%"/><stop stop-color="#{$type-ahead-loading-spinner-color}" stop-opacity=".631" offset="63.146%"/><stop stop-color="#{$type-ahead-loading-spinner-color}" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)"><path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></path><circle fill="#{$type-ahead-loading-spinner-color}" cx="36" cy="18" r="1"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></circle></g></g></svg>') right 15px center / 30px no-repeat  !important;
+    }
+  }
+}
+
+#{$breakpoint-medium} {
+
+  .c-type-ahead__hint {
+
+    &.is-loading {
+
+      // !important to override plugin created inline styles
+      background-size: 20px !important;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+#{$root-selector} {
+
+  .c-type-ahead__menu {
+    background-color: $type-ahead-background-color;
+    box-shadow: 0 1px 3px 0 rgba($type-ahead-shadow-color, 0.2);
+
+    &::before {
+      border-color: $type-ahead-header-background-color transparent;
+    }
+  }
+
+  .c-type-ahead__header {
+    background-color: $type-ahead-header-background-color;
+  }
+
+  .c-type-ahead__suggestion {
+    color: $type-ahead-suggestion-text-color;
+
+    &:hover,
+    &.c-type-ahead__cursor {
+      color: $type-ahead-text-hover-color;
+    }
+
+    &:hover {
+
+      .c-type-ahead__highlight {
+        color: $type-ahead-text-highlight-hover-color;
+      }
+
+      .c-avatar {
+        border-color: $type-ahead-text-hover-color;
+      }
+    }
+
+    .c-list__item-subtitle {
+
+      .c-type-ahead__highlight {
+        color: $type-ahead-suggestion-text-color;
+      }
+    }
+  }
+
+  .c-type-ahead__highlight {
+    color: $type-ahead-text-highlight-color;
+  }
+
+  .c-type-ahead__hint.is-loading {
+
+    // !important to override plugin created inline styles
+    background-color: $type-ahead-hint-background-color !important;
+  }
+
+  .c-type-ahead__menu,
+  .c-type-ahead__suggestion,
+  .c-type-ahead__dataset,
+  .c-type-ahead__footer {
+    border-color: $type-ahead-border-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+#{$root-selector} {
+
+  .c-type-ahead__header {
+    font-weight: $font-weight-semi;
+  }
+
+  .c-type-ahead__suggestion {
+
+    .c-list__item-subtitle {
+      font-size: 14px;
+
+      .c-type-ahead__highlight {
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+
+  .c-type-ahead__footer {
+
+    span {
+      font-weight: $font-weight-semi;
+    }
+  }
+}
+
+#{$breakpoint-medium} {
+
+  .c-type-ahead__header {
+    font-size: 12px;
+  }
+
+  .c-type-ahead__suggestion {
+    font-size: 14px;
+  }
+}

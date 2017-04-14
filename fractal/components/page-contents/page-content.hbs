@@ -1,0 +1,39 @@
+{{!-- fractal/components/page-content.hbs --}}
+<main class="m-page-content l-page-content
+
+    {{~#if pageContentModifier}} m-page-content--{{pageContentModifier}}{{/if}}{{#each pageContentContext.modifiers}}  m-page-content--{{this}}{{/each~}}
+
+    {{~#if pageContentClasses}} {{pageContentClasses}}{{/if}}{{#each pageContentContext.classes}} {{this}}{{/each}}">
+    {{!-- Add responsive container --}}
+    {{#> @page-section
+            pageSectionContext=pageContentContext.section
+            pageContainerClasses="m-page-content__container"}}
+        {{!-- Include page content, defaulting to two column layout --}}
+        <div class="row l-page-content__section">
+            {{!-- Include main content --}}
+            <div class="
+
+                {{~#if pageContentIsOneColumn}} col-xs-12{{else if pageContentContext.isOneColumn}} col-xs-12{{else~}}
+
+                {{~#if pageContentIsTwoColumn}} col-xs-12 col-lg-8{{else if pageContentContext.isTwoColumn}} col-xs-12 col-lg-8
+
+                {{~else}} col-xs-12 col-lg-8{{/if~}}{{/if}}">
+                {{!-- Include main content inline partial --}}
+                {{> main-content}}
+            </div>
+            {{!-- Include sidebar content --}}
+            {{#unless pageContentHasSidebar}}
+                <div class="
+
+                    {{~#if pageContentIsOneColumn}} col-xs-12{{else if pageContentContext.isOneColumn}} col-xs-12{{else~}}
+
+                    {{~#if pageContentIsTwoColumn}} col-xs-12 col-lg-4{{else if pageContentContext.isTwoColumn}} col-xs-12 col-lg-4
+
+                    {{~else}} col-xs-12 col-lg-4{{/if~}}{{/if}}">
+                    {{!-- Include sidebar content inline partial --}}
+                    {{> sidebar-content}}
+                </div>
+            {{/unless}}
+        </div>
+    {{/@page-section}}
+</main>

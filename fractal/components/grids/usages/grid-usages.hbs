@@ -1,0 +1,58 @@
+{{!-- fractal/components/grid-usages.hbs --}}
+<h3>Max Width 1200px Fluid Container</h3>
+<section class="l-grid-wrapper l-grid-container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            {{#> @card}}
+                {{> @card-header
+                        title="Lorem ipsum dolor sit amet"
+                        subtitle="Lorem ipsum dolor sit amet"
+                        avatarImage="https://placeimg.com/80/80/animals"}}
+                {{> @card-text
+                        textBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+            {{/@card}}
+        </div>
+    </div>
+</section>
+
+<h3>Full Width Fluid Container</h3>
+<section class="l-grid-container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            {{#> @card}}
+                {{> @card-header
+                        title="Lorem ipsum dolor sit amet"
+                        subtitle="Lorem ipsum dolor sit amet"
+                        avatarImage="https://placeimg.com/80/80/animals"}}
+                {{> @card-text
+                        textBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+            {{/@card}}
+        </div>
+    </div>
+</section>
+
+<h3>One Column to Two Column Responsive Container</h3>
+<section class="l-grid-wrapper l-grid-container-fluid">
+    <div class="row l-content-section">
+        <div class="col-xs-12 col-lg-9">
+            {{#> @card}}
+                {{> @card-header
+                        title="Lorem ipsum dolor sit amet"
+                        subtitle="Lorem ipsum dolor sit amet"
+                        avatarImage="https://placeimg.com/80/80/animals"}}
+                {{> @card-text
+                        textBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+            {{/@card}}
+        </div>
+        <div class="col-xs-12 col-lg-3">
+            {{#> @card}}
+                {{> @card-header
+                        title="Lorem ipsum dolor sit amet"
+                        subtitle="Lorem ipsum dolor sit amet"
+                        avatarImage="https://placeimg.com/80/80/animals"}}
+                {{> @card-text
+                        textBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."}}
+            {{/@card}}
+        </div>
+    </div>
+</section>

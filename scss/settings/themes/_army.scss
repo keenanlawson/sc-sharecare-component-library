@@ -1,0 +1,49 @@
+// 1. Import descriptive colors
+@import '../s-color-palette';
+
+// 2. Overwrite paths
+$theme: 'army';
+
+
+// 3A. Overwrite palette
+// TODO: these should be refactored out in favor of functionally named component variables (#3A below)
+// TODO: DO NOT PROPAGATE THESE VARIABLES
+$theme-primary-color: $color-gurkha;
+$theme-primary-supporting-color: $color-olivetone;
+$theme-secondary-supporting-color: $color-hemlock;
+//$color-secondary-color1: $color-cararra;
+//$color-secondary-color2: $color-silver;
+$theme-primary-accent-color: $color-celery;
+//$color-negative-response-color1: $color-can-can;
+$theme-error-color: $color-crown-of-thorns;
+$color-negative-response-color3: '';
+//$color-positive-response-color1: $color-feijoa;
+//$color-positive-response-color2: $color-olivine;
+$theme-cta-color: $color-tree-poppy;
+$theme-cta-supporting-color: $color-zest;
+//$color-accent-color3: $color-chathams-blue;
+//$color-alternate-1: $color-ripe-lemon;
+//$color-alternate-2: $color-amethyst-smoke;
+//$color-alternate-3: $color-affair;
+//$color-alternate-4: '';
+
+
+//$header-search-border: $color-olive-green-approx1;
+//$header-nav-links: $color-olive-green-approx2;
+//$header-search-button: $color-olive-green-approx2;
+//$top-bar: $color-rangoon-green;
+//$admin-bar-links: $color-olive-green-approx3;
+//$admin-bar: $color-fuscous-gray;
+//$graphing-goal-met: $color-olive-green-approx2;
+
+
+// 3B. Overwrite components
+// Examples:
+// $color-card-background: $color-white;
+// $color-link-text: $color-curious-blue;
+
+
+// 4. Overwrite typography color
+// NOTE: No other typography settings allowed in here
+// Examples:
+//$base-font-color: $color-mine-shaft;

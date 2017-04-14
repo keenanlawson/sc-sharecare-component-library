@@ -1,0 +1,41 @@
+{{!-- fractal/components/accordion-item.hbs --}}
+<div class="c-accordion__item
+
+    {{~#if accordionItemIsSelected}} c-accordion__item--selected{{/if}}{{#if accordionItemContext.isSelected}} c-accordion__item--selected{{/if~}}
+
+    {{~#if accordionItemModifier}} c-accordion__item--{{accordionItemModifier}}{{/if}}{{#each accordionItemContext.modifiers}} c-accordion__item--{{this}}{{/each~}}
+
+    {{~#if accordionItemClasses}} {{accordionItemClasses}}{{/if}}{{#each accordionItemContext.classes}} {{this}}{{/each}}">
+    {{!-- Add link explicitly --}}
+    {{#if linkTo}}
+        {{> @link
+                linkContext=accordionItemContext.link
+                linkTo=linkTo
+                linkLabel=accordionItemLabel
+                linkModifier=accordionLinkModifier
+                linkClasses=accordionLinkClasses}}
+    {{!-- OR --}}
+    {{!-- Add label explicitly --}}
+    {{else if accordionItemLabel}}
+        {{accordionItemLabel}}
+    {{!-- OR --}}
+    {{!-- Add via context --}}
+    {{else if accordionItemContext}}
+        {{!-- Add link via context --}}
+        {{#if accordionItemContext.link}}
+            {{> @link
+                    linkContext=accordionItemContext.link
+                    linkTo=linkTo
+                    linkLabel=accordionItemLabel
+                    linkModifier=accordionLinkModifier
+                    linkClasses=accordionLinkClasses}}
+        {{!-- Add label via context --}}
+        {{else if accordionItemContext.label}}
+            {{accordionItemContext.label}}
+        {{/if}}
+    {{/if}}
+    {{!-- CUSTOM CONTENT --}}
+    {{#if @partial-block}}
+        {{> @partial-block }}
+    {{/if}}
+</div>

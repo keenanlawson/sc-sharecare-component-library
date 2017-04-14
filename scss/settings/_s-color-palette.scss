@@ -1,0 +1,168 @@
+/*doc
+---
+title: Colors
+name: colors
+category: Base
+---
+<ul>
+  <li>Use http://chir.ag/projects/name-that-color/ to get descriptive color names</li>
+  <li>Use Lowercase values: <code>#fff</code> vs <code>#FFF</code></li>
+  <li>Use short values when possible: <code>#fff</code> vs <code>#ffffff</code></li>
+  <li>DO NOT RENAME, CHANGE OR OVERWRITE</li>
+</ul>
+*/
+
+$color-pure-white: #fff;
+$color-supernova: #fc0;
+$color-mona-lisa: #ffa699;
+$color-neon-carrot: #f93;
+$color-international-orange: #f50;
+$color-alabaster: #fafafa;
+$color-citrine-white: #faf4de;
+$color-tree-poppy: #f7941d;
+$color-froly: #f28379;
+$color-ripe-lemon: #f1d90b;
+
+$color-dew: #eff;
+$color-gallery: #eee;
+$color-cararra: #edeee9;
+$color-kobi: #eb93c8;
+$color-aqua-haze: #e9eef3;
+$color-mercury: #e5e5e5;
+$color-anzac: #e3bc49;
+$color-red: #e30000;
+$color-link-water: #e1eef7;
+$color-zest: #e18719;
+
+$color-mystic: #dfeced;
+$color-chenin: #dfd67f;
+$color-alto: #ddd;
+$color-cameo: #dba;
+$color-roman: #dc5968;
+$color-charm: #da6797;
+$color-sisal: #d9d5c2;
+$color-blossom: #d8adbc;
+$color-iron: #d7dddd;
+$color-can-can: #d79898;
+$color-valencia: #d33f41;
+$color-puce: #d18e8e;
+$color-chestnut-rose: #d15050;
+
+$color-cardinal: #cd2027;
+$color-onahau: #ccebff;
+$color-periwinkle: #cdf;
+$color-silver: #ccc;
+$color-guardsman-red: #c00;
+$color-old-rose: #c77b82;
+$color-jungle-mist: #c3dadc;
+$color-maroon-flush: #c1224d;
+$color-buddha-gold: #c0ad00;
+$color-viola: #c085a4;
+
+$color-piper: #bd6122;
+$color-ziggurat: #bdd;
+$color-olive-green: #bab85f;
+$color-pine-glade: #b6c691;
+$color-chatelle: #b6b1ba;
+$color-feijoa: #b4d781;
+
+$color-pigeon-post: #adc5d8;
+$color-lipstick: #ad0048;
+$color-celery: #abc351;
+$color-aqua-island: #acd;
+$color-silver-chalice: #aaa;
+$color-bouquet: #a89;
+$color-pharlap: #a88;
+$color-regent-st-blue: #a8cfe8;
+$color-bright-red: #a81600;
+$color-sinbad: #a3d3d7;
+
+$color-portage: #9f79f2;
+$color-gurkha: #9c9c66;
+$color-olivine: #9bbe68;
+$color-disco: #9b2053;
+$color-stiletto: #9a2e4c;
+$color-scarlett: #9a000e;
+$color-anakiwa: #9bf;
+$color-dusty-gray: #999;
+$color-amethyst-smoke: #9983aa;
+$color-mexican-red: #924;
+$color-old-brick: #922;
+$color-copper-rust: #98574d;
+$color-mantle: #969897;
+$color-fresh-eggplant: #930059;
+
+$color-bay-leaf: #8a9;
+$color-gray: #888;
+$color-tamarillo: #821;
+$color-siren: #860038;
+$color-claret: #811b45;
+$color-maroon: #800002;
+
+$color-cosmic: #7f3f55;
+$color-malibu: #7dc7fa;
+$color-boulder: #7a7a7a;
+$color-spray: #79e2f2;
+$color-jordy-blue: #79a7f2;
+$color-cornflower-blue: #798ff2;
+$color-gunsmoke: #787b7a;
+$color-crown-of-thorns: #762525;
+
+$color-olive-drab: #6d8d23;
+$color-olivetone: #6d860e;
+$color-affair: #6c5081;
+$color-dove-gray: #666;
+$color-royal-purple: #639;
+$color-cedar-wood-finish: #610;
+$color-tyrian-purple: #603;
+$color-hemlock: #626b42;
+$color-bordeaux: #610028;
+
+$color-viking: #55d1da;
+$color-vida-loca: #592;
+$color-cutty-sark: #577;
+$color-victoria: #533f7f;
+$color-fuscous-gray: #515147;
+
+$color-steel-blue: #4e8abe;
+$color-dodger-blue: #4099ff;
+$color-barossa: #400228;
+
+$color-viridian: #3f7f64;
+$color-faded-jade: #3f777f;
+$color-bismark: #3f637f;
+$color-east-bay: #3f4b7f;
+$color-san-marino: #3c72b1;
+$color-chambray: #3b5998;
+$color-toledo: #360016;
+$color-san-juan: #345779;
+$color-mine-shaft: #333;
+$color-turquoise: #33ceca;
+
+$color-boston-blue: #2c9bad;
+$color-curious-blue: #2c9acc;
+$color-eucalyptus: #277667;
+$color-bilbao: #281;
+$color-elm: #227474;
+$color-jacksons-purple: #239;
+
+$color-mountain-meadow: #1aba9c;
+$color-eastern-blue: #18919a;
+$color-chathams-blue: #145a7b;
+$color-surfie-green: #187;
+$color-salem: #185;
+$color-torea-bay: #148;
+$color-deep-koamaru: #128;
+
+$color-rangoon-green: #0f0f0a;
+$color-deep-sea-green: #075b61;
+$color-venice-blue: #045988;
+$color-persian-green: #00a889;
+$color-lochmara: #007dc3;
+$color-blue-stone: #065;
+$color-aqua-deep: #005747;
+$color-regal-blue: #00417d;
+$color-international-klein-blue: #0039ab;
+$color-prussian-blue: #002554;
+$color-midnight: #012;
+$color-pure-black: #000;

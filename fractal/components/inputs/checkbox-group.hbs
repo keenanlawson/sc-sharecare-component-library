@@ -1,0 +1,35 @@
+{{!-- fractal/components/checkbox-group.hbs --}}
+<div class="c-input
+
+    {{~#if inputModifier}} c-input--{{inputModifier}}{{/if}}{{#each checkboxGroupContext.modifiers}} c-input--{{this}}{{/each~}}
+
+    {{~#if inputClasses}} {{inputClasses}}{{/if}}{{#each checkboxGroupContext.classes}} {{this}}{{/each}}">
+    {{!-- Add group label --}}
+    <label class="c-input__label c-input__label--group
+
+        {{~#if inputLabelModifier}} c-input__label--{{inputLabelModifier}}{{/if}}{{#each checkboxGroupContext.labelModifiers}} c-input__label--{{this}}{{/each~}}
+
+        {{~#if inputLabelClasses}} {{inputLabelClasses}}{{/if}}{{#each checkboxGroupContext.labelClasses}} {{this}}{{/each}}"
+
+        {{~#if checkboxGroupLabelFor}} for="{{checkboxGroupLabelFor}}"{{else if checkboxGroupContext.groupLabelFor}} for="{{checkboxGroupContext.groupLabelFor}}"{{/if}}>
+
+        {{~#if checkboxGroupLabel}}{{checkboxGroupLabel}}{{else}}{{checkboxGroupContext.groupLabel}}{{/if~}}
+    </label>
+    {{!--  --}}
+    <div class="c-input__group c-input__group--checkbox
+
+        {{~#if inputGroupModifier}} c-input__group--{{inputModifier}}{{/if}}{{#each checkboxGroupContext.groupModifiers}} c-input__group--{{this}}{{/each~}}
+
+        {{~#if inputGroupClasses}} {{inputGroupClasses}}{{/if}}{{#each checkboxGroupContext.groupClasses}} {{this}}{{/each}}">
+        {{!-- Add checkboxes via context --}}
+        {{#each checkboxGroupContext.checkboxes}}
+            {{> @checkbox checkboxContext=this}}
+
+        {{/each}}
+        {{!-- Add checkboxes via partial block include --}}
+        {{#if @partial-block}}
+            {{> @partial-block }}
+
+        {{/if}}
+    </div>
+</div>

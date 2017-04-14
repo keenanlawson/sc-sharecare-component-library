@@ -1,0 +1,21 @@
+{{!-- fractal/components/navigation.hbs --}}
+<div class="c-navigation
+
+    {{~#if navigationIsPrimary}} c-navigation--primary{{else if navigationContext.isPrimary}} c-navigation--primary{{/if~}}
+
+    {{~#if navigationIsSecondary}} c-navigation--secondary{{else if navigationContext.isSecondary}} c-navigation--secondary{{/if~}}
+
+    {{~#if navigationModifier}} c-navigation--{{navigationModifier}}{{/if}}{{#each navigationContext.modifiers}}  c-navigation--{{this}}{{/each~}}
+
+    {{~#if navigationClasses}} {{navigationClasses}}{{/if}}{{#each navigationContext.classes}} {{this}}{{/each}}">
+    {{!-- Add navigation tabs via context --}}
+    {{#each navigationContext.tabs}}
+        {{> @navigation-tab navigationTabContext=this}}
+
+    {{/each}}
+    {{!-- Add navigation tabs via partial block include --}}
+    {{#if @partial-block}}
+        {{> @partial-block }}
+
+    {{/if}}
+</div>

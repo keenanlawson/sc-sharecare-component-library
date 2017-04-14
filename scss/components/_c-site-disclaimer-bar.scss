@@ -1,0 +1,57 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-site-disclaimer-bar {
+  padding: 0.8rem 0;
+
+  @include respond-to(sm) {
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0 1.6rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0.8rem 0 2.4rem;
+  }
+}
+
+.c-site-disclaimer-bar__site-disclaimer {
+  margin-bottom: 0.8rem;
+
+  @include respond-to(sm) {
+    margin: 0 1.6rem 0 0;
+    padding-right: 1.6rem;
+    border-right: 0.1rem solid;
+    flex-basis: 70%;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-site-disclaimer-bar {
+  background-color: $color-mine-shaft;
+}
+
+.c-site-disclaimer-bar__site-disclaimer {
+
+  &::after {
+    border-right-color: $color-pure-white;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

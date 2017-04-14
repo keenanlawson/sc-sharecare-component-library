@@ -1,0 +1,33 @@
+{{!-- fractal/components/pagination.hbs --}}
+<ul class="c-pagination
+
+    {{~#if paginationModifier}} c-pagination--{{paginationModifier}}{{/if}}{{#each paginationContext.modifiers}} c-pagination--{{this}}{{/each~}}
+
+    {{~#if paginationClasses}} {{paginationClasses}}{{/if}}{{#each paginationContext.classes}} {{this}}{{/each}}">
+    {{!-- Add left arrow --}}
+    <li class="c-pagination__item c-pagination__control">
+        {{> @font-icon
+                fontIcon="caret-circled-open-left"
+                fontIconModifier="primary"
+                fontIconClasses="font-icon--xs"}}
+
+    </li>
+    {{!-- Add pages via context --}}
+    {{#each paginationContext.pages}}
+        {{> @pagination-page paginationPageContext=this}}
+
+    {{/each}}
+    {{!-- Add pages via partial block include --}}
+    {{#if @partial-block}}
+        {{> @partial-block }}
+
+    {{/if}}
+    {{!-- Add right arrow --}}
+    <li class="c-pagination__item c-pagination__control">
+        {{> @font-icon
+                fontIcon="caret-circled-open-right"
+                fontIconModifier="primary"
+                fontIconClasses="font-icon--xs"}}
+
+    </li>
+</ul>

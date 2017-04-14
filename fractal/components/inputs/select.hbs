@@ -1,0 +1,39 @@
+{{!-- fractal/components/select.hbs --}}
+<div class="c-input
+
+    {{~#if selectIsDisabled}} c-input--inactive{{else if selectContext.isDisabled}} c-input--inactive{{/if~}}
+
+    {{~#if selectModifier}} c-input--{{inputModifier}}{{/if}}{{#each selectContext.modifiers}} c-input--{{this}}{{/each~}}
+
+    {{~#if selectClasses}} {{inputClasses}}{{/if}}{{#each selectContext.classes}} {{this}}{{/each}}">
+    {{!-- Add label --}}
+    <label class="c-input__label c-input__label--select
+
+        {{~#if selectLabelModifier}} c-input__label--{{selectLabelModifier}}{{/if}}{{#each selectContext.labelModifiers}} c-input__label--{{this}}{{/each~}}
+
+        {{~#if selectLabelClasses}} {{selectLabelClasses}}{{/if}}{{#each selectContext.labelClasses}} {{this}}{{/each}}"
+
+        {{~#if selectId}} for="{{selectId}}"{{else if selectContext.id}} for="{{selectContext.id}}"{{/if}}>
+
+        {{~#if selectLabel}}{{selectLabel}}{{else if selectContext.label}}{{selectContext.label}}{{/if~}}
+    </label>
+    {{!-- Add select --}}
+    <select
+        class="c-input__element c-input__element--select"
+        {{~#if selectId}} id="{{selectId}}"{{else if selectContext.id}} id="{{selectContext.id}}"{{/if~}}
+        {{~#if selectName}} name="{{selectName}}"{{else if selectContext.name}} name="{{selectContext.name}}"{{/if~}}
+        {{~#if selectTitle}} title="{{selectTitle}}"{{else if selectContext.title}} title="{{selectContext.title}}"{{/if~}}
+        {{~#if selectIsDisabled}} disabled{{else if selectContext.isDisabled}} disabled{{/if}}>
+        {{!-- Add options via context --}}
+        {{#each selectContext.options}}
+            {{> @select-option
+                    selectOptionContext=this}}
+
+        {{/each}}
+        {{!-- Add options via partial block include --}}
+        {{#if @partial-block}}
+            {{> @partial-block }}
+
+        {{/if}}
+    </select>
+</div>

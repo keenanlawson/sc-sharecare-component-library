@@ -1,0 +1,31 @@
+{{!-- fractal/components/breadcrumb.hbs --}}
+<span class="c-breadcrumb
+
+    {{~#if breadcrumbModifier}} c-breadcrumb--{{breadcrumbModifier}}{{/if}}{{#each breadcrumbContext.modifiers}} c-breadcrumb--{{this}}{{/each~}}
+
+    {{~#if breadcrumbClasses}} {{breadcrumbClasses}}{{/if}}{{#each breadcrumbContext.classes}} {{this}}{{/each}}">
+    {{!-- Add breadcrumb as a link --}}
+    {{#if linkTo}}
+        {{> @link
+                linkContext=breadcrumbContext.link
+                linkTo=linkTo
+                linkLabel=breadcrumbLabel
+                linkModifier=breadcrumbLinkModifier
+                linkClasses="c-breadcrumb__label"}}
+
+    {{else if breadcrumbContext.link}}
+        {{> @link
+                linkContext=breadcrumbContext.link
+                linkTo=linkTo
+                linkLabel=breadcrumbLabel
+                linkModifier=breadcrumbLinkModifier
+                linkClasses="c-breadcrumb__label"}}
+
+    {{!-- OR --}}
+    {{!-- Add breadcrumb as text --}}
+    {{else if breadcrumbLabel}}
+        <span class="c-breadcrumb__label">{{breadcrumbLabel}}</span>
+    {{else if breadcrumbContext.label}}
+        <span class="c-breadcrumb__label">{{breadcrumbContext.label}}</span>
+    {{~/if}}
+</span>

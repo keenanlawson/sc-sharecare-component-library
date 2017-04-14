@@ -1,0 +1,46 @@
+{{!-- fractal/components/fixed-page-footer.hbs --}}
+<footer class="m-page-footer">
+    {{#> @fixed-page-container fixedPageContainerClasses="m-footer-logos-bar"}}
+        <span class="svg-icon svg-icon--sharecare-logo"></span>
+        <span class="svg-icon svg-icon--dr-oz-logo"></span>
+        <span class="svg-icon svg-icon--daily-strength-logo"></span>
+    {{/@fixed-page-container}}
+    {{#> @fixed-page-container fixedPageContainerClasses="m-footer-links-bar"}}
+        <div class="m-footer-links-bar__left">
+            {{> @link linkLabel="what is sharecare" linkTo="https://www.sharecare.com/static/what-is-sharecare"}}
+            {{> @link linkLabel="advisory board" linkTo="https://www.sharecare.com/static/advisory-board"}}
+            {{> @link linkLabel="press" linkTo="https://www.sharecare.com/static/press"}}
+            {{> @link linkLabel="contact" linkTo="https://www.sharecare.com/static/contact"}}
+            {{> @link linkLabel="sharecare app" linkTo="https://www.sharecare.com/static/sharecare-app"}}
+            {{> @link linkLabel="askmd" linkTo="https://www.sharecare.com/static/askmd"}}
+            {{> @link linkLabel="realage test" linkTo="https://www.sharecare.com/static/realage-test"}}
+        </div>
+        <div class="m-footer-links-bar__right">
+            {{> @font-icon fontIcon="facebook"}}
+            {{> @font-icon fontIcon="twitter"}}
+            {{> @font-icon fontIcon="linkedin"}}
+            {{> @font-icon fontIcon="google"}}
+            {{> @font-icon fontIcon="instagram"}}
+            {{> @font-icon fontIcon="pinterest"}}
+        </div>
+    {{/@fixed-page-container}}
+    {{#> @fixed-page-container fixedPageContainerClasses="m-footer-search-bar"}}
+        <span class="m-footer-search-bar__text">Find a Doctor in Your Area</span>
+        {{> @input
+                inputLabel="Hidden Label"
+                inputLabelModifier="collapsed"
+                inputId="test-id-d"
+                inputModifier="inline"
+                inputPlaceholder="Specialty"
+                inputValue=""}}
+        {{> @input
+                inputLabel="Hidden Label"
+                inputLabelModifier="collapsed"
+                inputId="test-id-d"
+                inputModifier="inline"
+                inputPlaceholder="Zip Code or City, State"
+                inputValue=""}}
+        {{> @button
+                buttonLabel="Search"}}
+    {{/@fixed-page-container}}
+</footer>

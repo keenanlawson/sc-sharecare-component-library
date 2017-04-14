@@ -1,0 +1,85 @@
+{{!-- fractal/components/radio-usages.hbs --}}
+<h3>Block Radio Group</h3>
+{{#> @radio-group
+        groupLabelFor="block-testA"
+        groupLabel="Radio Group Label"}}
+    {{> @radio
+            radioName="block-testA"
+            radioLabel="Radio Label A"
+            radioId="block-testA"}}
+    {{> @radio
+            isChecked=true
+            radioName="block-testA"
+            radioLabel="Radio Label B"
+            radioId="block-testB"}}
+    {{> @radio
+            radioName="block-testA"
+            isDisabled=true
+            radioLabel="Radio Label C"
+            radioId="block-testC"}}
+{{/@radio-group}}
+
+<h3>Inline Radio Group</h3>
+{{#> @radio-group
+        groupModifier="inline"
+        groupLabelFor="inline-testA"
+        groupLabel="Radio Group Label"}}
+    {{> @radio
+            radioName="inline-testA"
+            radioLabel="Radio Label A"
+            radioId="inline-testA"}}
+    {{> @radio
+            isChecked=true
+            radioName="inline-testA"
+            radioLabel="Radio Label B"
+            radioId="inline-testB"}}
+    {{> @radio
+            radioName="inline-testA"
+            isDisabled=true
+            radioLabel="Radio Label C"
+            radioId="inline-testC"}}
+{{/@radio-group}}
+
+<h3>Disabled Radio Group</h3>
+{{#> @radio-group
+        groupLabelFor="disabled-testA"
+        groupLabel="Radio Group Label"}}
+    {{> @radio
+            isDisabled=true
+            radioName="disabled-testA"
+            radioLabel="Radio Label A"
+            radioId="disabled-testA"}}
+    {{> @radio
+            isDisabled=true
+            isChecked=true
+            radioName="disabled-testA"
+            radioLabel="Radio Label B"
+            radioId="disabled-testB"}}
+    {{> @radio
+            isDisabled=true
+            radioName="disabled-testA"
+            isDisabled=true
+            radioLabel="Radio Label C"
+            radioId="disabled-testC"}}
+{{/@radio-group}}
+
+<h3>Error Radio Group</h3>
+{{#> @radio-group
+        groupLabelFor="error-testA"
+        inputModifier="error"
+        groupLabel="Radio Group Label"}}
+    {{> @radio
+            radioName="error-testA"
+            radioLabel="Radio Label A"
+            radioId="error-testA"}}
+    {{> @radio
+            isChecked=true
+            radioName="error-testA"
+            radioLabel="Radio Label B"
+            radioId="error-testB"}}
+    {{> @radio
+            radioName="error-testA"
+            isDisabled=true
+            radioLabel="Radio Label C"
+            radioId="error-testC"}}
+{{/@radio-group}}

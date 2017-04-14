@@ -1,0 +1,49 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-about-links-text-color: $color-dove-gray !default;
+$site-about-links-text-hover-color: $color-mine-shaft !default;
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-site-about-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.c-site-about-links__link {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-site-about-links__text {
+  color: $site-about-links-text-color;
+
+  &:hover {
+    color: $site-about-links-text-hover-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-site-about-links__text {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: $font-weight-semi;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

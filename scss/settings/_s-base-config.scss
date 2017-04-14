@@ -1,0 +1,29 @@
+// Import descriptive colors
+@import 's-color-palette';
+
+// Social brand colors
+@import 's-social-palette';
+
+// Default abstracted theme palette
+@import 's-default-palette';
+
+// Define breakpoints
+@import 's-break-points';
+
+// Define z-index layers
+@import 's-z-indexes';
+
+// Import Font Icon Variables
+@import 's-font-icons';
+
+// Default theme name
+// Must be lowercase and hyphenated
+// Must match any respective directory paths
+$theme: 'light-sea-green' !default;
+
+// Default Typography
+$base-font-size: 1.6rem !default;
+$base-line-height: 1.8rem !default;
+$base-font-color: $color-mine-shaft !default;
+
+

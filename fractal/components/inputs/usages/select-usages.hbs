@@ -1,0 +1,29 @@
+{{!-- fractal/components/select-usages.hbs --}}
+<h3>Basic Usage</h3>
+{{#> @select
+        selectLabel="Select Label"}}
+    <option value="" selected>Please select...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+{{/@select}}
+
+<h3>Disabled Usage</h3>
+{{#> @select
+        isDisabled=true
+        selectLabel="Select Label"}}
+    <option value="" selected>Please select...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+{{/@select}}
+
+<h3>Error State Usage</h3>
+{{#> @select
+        selectModifier="error"
+        selectLabel="Select Label"}}
+    <option value="" selected>Please select...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+{{/@select}}

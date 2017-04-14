@@ -1,0 +1,55 @@
+//////////////////////////
+/// DOCUMENTATION
+//////////////////////////
+/// <div class="c-google-map-marker">{Content}</div>
+
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$google-map-marker-text-color: $color-pure-white !default;
+$google-map-marker-text-background-color: transparent !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+#{$root-selector} {
+
+  .c-google-map-marker {
+    width: 24px;
+    height: 15px;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+#{$root-selector} {
+
+  .c-google-map-marker {
+    color: $google-map-marker-text-color;
+    background-color: $google-map-marker-text-background-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+#{$root-selector} {
+
+  .c-google-map-marker {
+    font-size: 15px;
+    font-weight: $font-weight-semi;
+    text-align: center;
+    font-family: $base-font-family;
+    line-height: 1;
+  }
+}

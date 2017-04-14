@@ -1,0 +1,61 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$chip-background-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-chip {
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 2rem;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+}
+
+.c-chip__image {
+  margin-right: 0.5rem;
+}
+
+.c-chip__delete {
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+.c-chip__toggle {
+  display: none;
+
+  &:checked {
+
+    + .c-chip {
+      display: none;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-chip--avatar {
+  padding: 0 1.2rem 0 0;
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-chip {
+  background-color: $chip-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-chip__label {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}

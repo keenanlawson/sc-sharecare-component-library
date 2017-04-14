@@ -1,0 +1,61 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$badge-text-color: $color-pure-white !default;
+$badge-background-color: $color-dusty-gray !default;
+$badge-primary-background-color: $color-mountain-meadow !default;
+$badge-secondary-background-color: $color-san-juan !default;
+$badge-alert-background-color: $color-neon-carrot !default;
+$badge-warning-background-color: $color-chestnut-rose !default;
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-badge {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 1rem;
+  border-radius: 1rem;
+  align-content: center;
+  padding: 0.3rem 0.7rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-badge {
+  background-color: $badge-background-color;
+  color: $badge-text-color;
+}
+
+.c-badge--primary {
+  background-color: $badge-primary-background-color;
+}
+
+.c-badge--accent {
+  background-color: $badge-secondary-background-color;
+}
+
+.c-badge--warning {
+  background-color: $badge-warning-background-color;
+}
+
+.c-badge--alert {
+  background-color: $badge-alert-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-badge {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  white-space: nowrap;
+}

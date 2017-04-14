@@ -1,0 +1,68 @@
+{{!-- fractal/components/chip.hbs --}}
+{{!-- Add delete target --}}
+{{#if chipIsDeletable}}
+    <input class="c-chip__toggle" type="checkbox" id="{{#if chipName}}{{chipName}}{{else}}{{chipContext.name}}{{/if}}"/>
+{{else if chipContext.isDeletable}}
+    <input class="c-chip__toggle" type="checkbox" id="{{#if chipName}}{{chipName}}{{else}}{{chipContext.name}}{{/if}}"/>
+{{/if}}
+<div class="c-chip
+
+    {{~#if chipAvatarImage}} c-chip--avatar{{else if chipAvatarFontIcon}} c-chip--avatar{{else if chipContext.avatar}} c-chip--avatar{{/if~}}
+
+    {{~#if chipModifier}} c-chip--{{chipModifier}}{{/if}}{{#each chipContext.modifiers}} c-chip--{{this}}{{/each~}}
+
+    {{~#if chipClasses}} {{chipClasses}}{{/if}}{{#each chipContext.classes}} {{this}}{{/each}}">
+    {{!-- CHIP IMAGE --}}
+    {{!-- Add avatar explicitly --}}
+    {{#if chipAvatarImage}}
+        {{> @avatar
+                avatarContext=chipContext.avatar
+                avatarImage=chipAvatarImage
+                avatarModifier="medium"
+                avatarClasses="c-chip__image"
+                avatarTitle=chipAvatarTitle}}
+
+    {{!-- OR --}}
+    {{!-- Add avatar font icon explicitly --}}
+    {{else if chipAvatarFontIcon}}
+        {{> @avatar
+                avatarContext=chipContext.avatar
+                avatarFontIcon=chipAvatarFontIcon
+                avatarModifier="medium"
+                avatarClasses="c-chip__image"
+                avatarTitle=chipAvatarTitle}}
+
+    {{!-- OR --}}
+    {{!-- Add avatar via context --}}
+    {{else if chipContext.avatar}}
+        {{> @avatar
+                avatarContext=chipContext.avatar
+                avatarModifier="medium"
+                avatarClasses="c-chip__image"
+                avatarTitle=chipAvatarTitle}}
+
+    {{~/if}}
+
+    {{!-- Add label --}}
+    <span class="c-chip__label">{{#if chipLabel}}{{chipLabel}}{{else}}{{chipContext.label}}{{/if}}</span>
+    {{!-- DELETE FONT ICON --}}
+    {{!-- Add delete trigger font icon explicitly --}}
+    {{#if chipIsDeletable}}
+        <label class="c-chip__delete" for="{{#if chipName}}{{chipName}}{{else}}{{chipContext.name}}{{/if}}">
+            {{> @font-icon
+                    fontIcon="close"
+                    fontIconClasses="font-icon--xs"}}
+
+        </label>
+    {{!-- OR --}}
+    {{!-- Add delete trigger font icon via context --}}
+    {{else if chipContext.isDeletable}}
+        <label class="c-chip__delete" for="{{#if chipName}}{{chipName}}{{else}}{{chipContext.name}}{{/if}}">
+            {{> @font-icon
+                    fontIcon="close"
+                    fontIconClasses="font-icon--xs"}}
+
+        </label>
+    {{~/if}}
+
+</div>

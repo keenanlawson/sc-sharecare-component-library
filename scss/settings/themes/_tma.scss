@@ -1,0 +1,40 @@
+// 1. Import descriptive colors
+@import '../s-color-palette';
+
+// 2. Overwrite paths
+$theme: 'tma';
+
+
+// 3A. Overwrite palette
+// TODO: these should be refactored out in favor of functionally named component variables (#3A below)
+// TODO: DO NOT PROPAGATE THESE VARIABLES
+$theme-primary-color: $color-san-marino;
+$theme-primary-supporting-color: $color-regal-blue;
+$theme-secondary-supporting-color: $color-prussian-blue;
+//$color-secondary-color1: $color-aqua-haze;
+//$color-secondary-color2: $color-silver;
+$theme-primary-accent-color: $color-malibu;
+//$color-negative-response-color1: $color-old-rose;
+$theme-error-color: $color-old-brick;
+$color-negative-response-color3: '';
+//$color-positive-response-color1: '';
+//$color-positive-response-color2: '';
+$theme-cta-color: $color-tree-poppy;
+$theme-cta-supporting-color: $color-zest;
+//$color-accent-color3: $color-crown-of-thorns;
+//$color-alternate-1: $color-ripe-lemon;
+//$color-alternate-2: $color-amethyst-smoke;
+//$color-alternate-3: $color-affair;
+//$color-alternate-4: '';
+
+
+// 3B. Overwrite components
+// Examples:
+// $color-card-background: $color-white;
+// $color-link-text: $color-curious-blue;
+
+
+// 4. Overwrite typography color
+// NOTE: No other typography settings allowed in here
+// Examples:
+//$base-font-color: $color-mine-shaft;

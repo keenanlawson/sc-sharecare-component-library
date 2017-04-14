@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url("https://fonts.sharecare.com/fonts/ProximaNovaSoft-Semibold-webfont.eot");
+  src: url("https://fonts.sharecare.com/fonts/ProximaNovaSoft-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("https://fonts.sharecare.com/fonts/ProximaNovaSoft-Semibold-webfont.woff") format("woff"), url("https://fonts.sharecare.com/fonts/ProximaNovaSoft-Semibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url("https://fonts.sharecare.com/fonts/proxima-nova-soft-bold.eot");
+  src: url("https://fonts.sharecare.com/fonts/proxima-nova-soft-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.sharecare.com/fonts/proxima-nova-soft-bold.woff") format("woff"), url("https://fonts.sharecare.com/fonts/proxima-nova-soft-bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }

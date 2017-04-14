@@ -1,0 +1,35 @@
+{{!-- fractal/components/badge.hbs --}}
+<span class="c-badge
+
+    {{~#if badgeModifier}} c-badge--{{badgeModifier}}{{/if}}{{#each badgeContext.modifiers}} c-badge--{{this}}{{/each~}}
+
+    {{~#if badgeClasses}} {{badgeClasses}}{{/if}}{{#each badgeContext.classes}} {{this}}{{/each}}">
+    {{!-- Add label --}}
+    {{#if badgeLabel}}
+        <span class="c-badge__label">{{badgeLabel}}</span>
+    {{else if badgeContext.label}}
+        <span class="c-badge__label">{{badgeContext.label}}</span>
+    {{/if}}
+    {{!-- BADGE FONT ICON --}}
+    {{!-- Add icon explicitly --}}
+    {{#if badgeFontIcon}}
+        {{> @font-icon
+                fontIconContext=badgeContext.fontIcon
+                fontIcon=badgeFontIcon
+                fontIconModifier=badgeFontIconModifier
+                fontIconBadgeLabel=badgeFontIconBadgeLabel
+                fontIconBadgeModifier=badgeFontIconBadgeModifier
+                fontIconClasses="c-badge__icon"}}
+
+    {{!-- Add icon via context --}}
+    {{else if badgeContext.fontIcon}}
+        {{> @font-icon
+                fontIconContext=badgeContext.fontIcon
+                fontIcon=badgeFontIcon
+                fontIconModifier=badgeFontIconModifier
+                fontIconBadgeLabel=badgeFontIconBadgeLabel
+                fontIconBadgeModifier=badgeFontIconBadgeModifier
+                fontIconClasses="c-badge__icon"}}
+
+    {{/if}}
+</span>

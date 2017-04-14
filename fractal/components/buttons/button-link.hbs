@@ -1,0 +1,25 @@
+{{!-- fractal/components/button-link.hbs --}}
+<a class="c-button c-button--link
+
+    {{~#if buttonLinkModifier}} c-button--{{buttonLinkModifier}}{{/if}}{{#each buttonLinkContext.modifiers}} c-button--{{this}}{{/each~}}
+
+    {{~#if buttonLinkClasses}} {{buttonLinkClasses}}{{/if}}{{#each buttonLinkContext.classes}} {{this}}{{/each}}"
+
+    {{!-- Add title --}}
+    {{~#if buttonLinkTitle}} title="{{buttonLinkTitle}}"{{else if buttonLinkContext.title}} title="{{buttonLinkContext.title}}"{{/if~}}
+
+    {{!-- Add target --}}
+    {{~#if buttonLinkTarget}} target="{{buttonLinkTarget}}"{{else if buttonLinkContext.target}} target="{{buttonLinkContext.target}}"{{/if~}}
+
+    {{!-- Add where to go --}}
+    {{~#if linkTo}} href="{{linkTo}}"{{else if buttonLinkContext.linkTo}} href="{{buttonLinkContext.linkTo}}"{{/if}}>
+    {{!-- Add content --}}
+    {{> @button-content
+            buttonContext=buttonLinkContext
+            buttonLeftIcon=buttonLinkLeftFontIcon
+            buttonLabel=buttonLinkLabel
+            buttonBadgeModifier=buttonLinkBadgeModifier
+            buttonBadgeLabel=buttonLinkBadgeLabel
+            buttonRightIcon=buttonLinkRightFontIcon}}
+
+</a>

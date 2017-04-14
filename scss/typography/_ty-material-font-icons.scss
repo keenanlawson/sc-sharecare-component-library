@@ -1,0 +1,17 @@
+//////////////////////////
+/// Material Design Font Icons
+//////////////////////////
+
+$font-domain: 'https://fonts.sharecare.com/fonts';
+$regular-path: "#{$font-domain}/MaterialIcons-Regular";
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$regular-path}.eot"); // For IE6-8 //
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url("#{$regular-path}.woff2") format('woff2'),
+  url("#{$regular-path}.woff") format('woff'),
+  url("#{$regular-path}.ttf") format('truetype');
+}

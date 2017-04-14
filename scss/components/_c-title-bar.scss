@@ -1,0 +1,48 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$title-bar-text-color: $color-pure-white !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-title-bar {
+  display: flex;
+  align-items: center;
+  height: 0.5rem;
+
+  @include respond-to('sm') {
+    height: 5.8rem;
+  }
+}
+
+.c-title-bar__text {
+  display: none;
+
+  @include respond-to('sm') {
+    display: block;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-title-bar__text {
+  color: $title-bar-text-color;
+}
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-title-bar__text {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: $font-weight-normal;
+}

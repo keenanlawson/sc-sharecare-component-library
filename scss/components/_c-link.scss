@@ -1,0 +1,38 @@
+//////////////////////////
+/// CONFIG
+//////////////////////////
+$link-text-color: $color-curious-blue !default;
+$link-text-hover-color: $color-san-juan !default;
+
+
+//////////////////////////
+/// BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-link {
+  cursor: pointer;
+}
+
+
+//////////////////////////
+/// STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-link__label {
+  color: $link-text-color;
+
+  &:hover {
+    color: $link-text-hover-color;
+  }
+}
+
+
+//////////////////////////
+/// TYPOGRAPHY RULES
+//////////////////////////
+.c-link {
+  line-height: 1.9rem;
+}

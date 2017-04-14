@@ -1,0 +1,36 @@
+// Declare breakpoints
+// name / size / size - gutter
+$breakpoint-names: xs sm md lg xl;
+$breakpoint-sizes: 0 576px 768px 992px 1200px;
+$breakpoint-containers: 546px, 738px, 962px 1170px;
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+
+//@each $bp-name in $breakpoint-names {
+//  @debug $bp-name;
+//}
+
+$breakpoints:
+        sm 576px 546px,
+        md 768px 738px,
+        lg 992px 962px,
+        xl 1200px 1170px !default;
+
+/// Breakpoints map
+/// @access private
+/// @type Map
+/// @prop {String} key - Breakpoint name
+/// @prop {String} value - breakpoint value mapped to the key
+$breakpoints-map: (
+        xs: (min-width: 0px)
+) !default;
+
+// Populate breakpoints map
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $breakpoints-map: map-merge(($breakpoints-map), (#{$name}: (min-width: #{$size})));
+}
+
+//@warn $breakpoints-map;
+//@warn map-keys($breakpoints-map);

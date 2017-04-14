@@ -1,0 +1,139 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$avatar-text-color: $color-pure-white !default;
+$avatar-background-color: $color-dusty-gray !default;
+$avatar-border-color: $color-alto !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-avatar {
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.c-avatar__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c-avatar__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c-avatar__title {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-avatar--medium {
+  width: 36px;
+  height: 36px;
+}
+
+.c-avatar--large {
+  width: 62px;
+  height: 62px;
+
+  @include respond-to(sm) {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-avatar {
+  background-color: $avatar-background-color;
+  border-color: $avatar-border-color;
+  color: $avatar-text-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-avatar__title {
+  font-size: 0;
+}
+
+.c-avatar {
+
+  .c-avatar__icon {
+    font-size: 1rem;
+
+    @include respond-to(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .c-avatar__title {
+
+    &::first-letter {
+      font-size: 1.5rem;
+
+      @include respond-to(sm) {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
+
+.c-avatar--medium {
+
+  .c-avatar__icon {
+    font-size: 2rem;
+
+    @include respond-to(sm) {
+      font-size: 3rem;
+    }
+  }
+
+  .c-avatar__title {
+
+    &::first-letter {
+      font-size: 3rem;
+      line-height: 3.2rem;
+
+      @include respond-to(sm) {
+        font-size: 5rem;
+        line-height: 5.8rem;
+      }
+    }
+  }
+}
+
+.c-avatar--large {
+
+  .c-avatar__icon {
+    font-size: 3rem;
+  }
+
+  .c-avatar__title {
+
+    &::first-letter {
+      font-size: 5rem;
+      line-height: 5.8rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Fonts
+//------------------------------------
+
+$font-domain: 'http://localhost:3050/static/fonts';
+$regular-path: "#{$font-domain}/sharecare-font-icon";
+@font-face {
+  font-family: 'sharecare-font-icon';
+  src:
+    url('#{$regular-path}.ttf') format('truetype'),
+    url('#{$regular-path}.woff') format('woff'),
+    url('#{$regular-path}.svg?#sharecare-font-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

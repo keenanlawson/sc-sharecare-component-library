@@ -1,0 +1,18 @@
+{{!-- fractal/components/global-search.hbs --}}
+<div class="c-global-search
+
+    {{~#if globalSearchModifier}} c-global-search--{{globalSearchModifier}}{{/if}}{{#each globalSearchContext.modifiers}} c-global-search--{{this}}{{/each~}}
+
+    {{~#if globalSearchClasses}} {{globalSearchClasses}}{{/if}}{{#each globalSearchContext.classes}} {{this}}{{/each}}">
+    {{> @input
+            inputContext=globalSearchContext.inputContext
+            inputLabel="Search"
+            inputLabelModifier="collapsed"
+            inputId="global-search"
+            inputModifier="inline"
+            inputClasses="c-global-search__input"
+            inputLabelClasses="c-global-search__input-label"
+            inputElementClasses="c-global-search__input-element"
+            inputPlaceholder="Search"}}
+
+</div>

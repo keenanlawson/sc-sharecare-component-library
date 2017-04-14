@@ -1,0 +1,38 @@
+// Fonts
+//------------------------------------
+
+$font-domain: 'https://fonts.sharecare.com/fonts';
+//$font-domain: '/static/fonts';
+
+$regular-path: "#{$font-domain}/ProximaNova-Light-webfont";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$regular-path}.eot");
+  src: url('#{$regular-path}.eot?#iefix') format('embedded-opentype'),
+    url("#{$regular-path}.woff") format('woff'),
+    url("#{$regular-path}.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$semibold-path: "#{$font-domain}/ProximaNovaSoft-Semibold-webfont";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$semibold-path}.eot");
+  src: url('#{$semibold-path}.eot?#iefix') format('embedded-opentype'),
+  url("#{$semibold-path}.woff") format('woff'),
+  url("#{$semibold-path}.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+$bold-path: "#{$font-domain}/proxima-nova-soft-bold";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$bold-path}.eot");
+  src: url('#{$bold-path}.eot?#iefix') format('embedded-opentype'),
+  url("#{$bold-path}.woff") format('woff'),
+  url("#{$bold-path}.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}

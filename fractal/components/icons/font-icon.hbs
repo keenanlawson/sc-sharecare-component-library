@@ -1,0 +1,29 @@
+{{!-- fractal/components/font-icon.hbs --}}
+<span class="font-icon
+
+    {{~#if fontIcon}} font-icon--{{fontIcon}}{{else if fontIconContext.fontIcon}} font-icon--{{fontIconContext.fontIcon}}{{/if~}}
+
+    {{~#if fontIconModifier}} font-icon--{{fontIconModifier}}{{/if}}{{#each fontIconContext.modifiers}} font-icon--{{this}}{{/each~}}
+
+    {{~#if fontIconClasses}} {{fontIconClasses}}{{/if}}{{#each fontIconContext.classes}} {{this}}{{/each}}"
+
+    {{~#if fontIcon}} title="{{fontIcon}}"{{else if fontIconContext.fontIcon}} title="{{fontIconContext.fontIcon}}"{{/if}}>
+    {{!-- FONT ICON BADGE --}}
+    {{!-- Add badge explicitly --}}
+    {{#if fontIconBadgeLabel}}
+        {{> @badge
+                badgeContext=fontIconContext.badge
+                badgeLabel=fontIconBadgeLabel
+                badgeModifier=fontIconBadgeModifier
+                badgeClasses="font-icon__badge"}}
+
+    {{!-- Add badge via context --}}
+    {{else if fontIconContext.badge}}
+        {{> @badge
+                badgeContext=fontIconContext.badge
+                badgeLabel=fontIconBadgeLabel
+                badgeModifier=fontIconBadgeModifier
+                badgeClasses="font-icon__badge"}}
+
+    {{/if}}
+</span>

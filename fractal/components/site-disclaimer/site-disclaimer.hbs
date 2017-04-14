@@ -1,0 +1,8 @@
+{{!-- fractal/components/site-disclaimer.hbs --}}
+<div class="c-site-disclaimer
+
+    {{~#if siteDisclaimerModifier}} c-site-disclaimer--{{siteDisclaimerModifier}}{{/if}}{{#each siteDisclaimerContext.modifiers}} c-site-disclaimer--{{this}}{{/each~}}
+
+    {{~#if siteDisclaimerClasses}} {{siteDisclaimerClasses}}{{/if}}{{#each siteDisclaimerContext.classes}} {{this}}{{/each}}">
+    <span>© <span class="c-site-disclaimer__copyright">2010-2017 Sharecare, Inc.</span> All content posted on this site is the responsibility of the party posting such content. Participation on this site by a party does not imply endorsement of any other party's content, products, or services. Content should not be used for medical advice, diagnosis, or treatment.</span>
+</div>

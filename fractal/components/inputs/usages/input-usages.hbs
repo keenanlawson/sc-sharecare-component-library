@@ -1,0 +1,42 @@
+{{!-- fractal/components/input-usages.hbs --}}
+<h3>Basic Input</h3>
+{{> @input
+        inputLabel="Input Label"
+        inputId="test-id-a"
+        inputPlaceholder="Placeholder Text"}}
+
+<h3>Disabled Input</h3>
+{{> @input
+        inputLabel="Disabled Input"
+        isDisabled=true
+        inputId="test-id-b"
+        inputValue="Value Text"}}
+
+<h3>Search Input</h3>
+{{> @input
+        inputType="search"
+        inputId="test-id-c"
+        inputLabel="Search Input Label"
+        inputValue="Search Value Text"}}
+
+<h3>Hidden Label Input</h3>
+{{> @input
+        inputLabel="Hidden Label"
+        inputLabelModifier="hidden"
+        inputId="test-id-d"
+        inputValue="Hidden Label Text"}}
+
+<h3>Collapsed Label Input</h3>
+{{> @input
+        inputLabel="Collapsed Label"
+        inputLabelModifier="collapsed"
+        inputId="test-id-e"
+        inputValue="Collapsed Label Text"}}
+
+
+<h3>Error State Input</h3>
+{{> @input
+        inputLabel="Error State Label"
+        inputModifier="error"
+        inputId="test-id-f"
+        inputValue="Error Label Text"}}

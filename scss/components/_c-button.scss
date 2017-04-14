@@ -1,0 +1,158 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+// Background colors
+$button-default-background-color: $color-mountain-meadow !default;
+$button-default-background-hover-color: $color-elm !default;
+
+$button-accent-background-color: $color-san-juan !default;
+$button-accent-background-hover-color: $color-dusty-gray !default;
+
+$button-secure-background-color: $color-alto !default;
+$button-secure-background-hover-color: $color-dusty-gray !default;
+
+$button-cta-background-color: $color-neon-carrot !default;
+$button-cta-background-hover-color: $color-piper !default;
+
+$button-inactive-background-color: $color-alto !default;
+$button-inactive-background-hover-color: $color-alto !default;
+
+// Text colors
+$button-default-text-color: $color-pure-white !default;
+$button-secure-text-color: $color-dusty-gray !default;
+$button-secure-text-hover-color: $color-pure-white !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-button {
+  display: inline-block;
+  min-width: 10.8rem;
+  border: 0;
+  cursor: pointer;
+  padding: 0.9rem 1.4rem 0.5rem;
+}
+
+.c-button__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-button__icon {
+
+  &:first-child {
+    margin-right: 0.5rem;
+  }
+
+  &:last-child {
+    margin-left: 0.5rem;
+  }
+
+  &:only-child {
+    margin: 0;
+  }
+}
+
+.c-button__badge {
+  margin-left: 0.5rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-button--medium {
+  min-width: 13rem;
+  padding: 0.9rem 1.5rem 0.7rem;
+}
+
+.c-button--large {
+  min-width: 15rem;
+  padding: 1.6rem 1.5rem 1.5rem;
+}
+
+.c-button--xlarge {
+  min-width: 32rem;
+  padding: 1.9rem 4.8rem 2.3rem;
+}
+
+.c-button--split {
+  width: 50%;
+}
+
+.c-button--full {
+  width: 100%;
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-button {
+  color: $button-default-text-color;
+  background-color: $button-default-background-color;
+
+  &:hover {
+    background-color: $button-default-background-hover-color;
+  }
+}
+
+.c-button--accent {
+  background-color: $button-accent-background-color;
+
+  &:hover {
+    background-color: $button-accent-background-hover-color;
+  }
+}
+
+.c-button--secure {
+  background-color: $button-secure-background-color;
+  color: $button-secure-text-color;
+
+  &:hover {
+    background-color: $button-secure-background-hover-color;
+    color: $button-secure-text-hover-color;
+  }
+}
+
+.c-button--cta {
+  background-color: $button-cta-background-color;
+
+  &:hover {
+    background-color: $button-cta-background-hover-color;
+  }
+}
+
+.c-button--inactive {
+  background-color: $button-inactive-background-color;
+
+  &:hover {
+    background-color: $button-inactive-background-hover-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-button {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.c-button--medium {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.c-button--large {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.c-button--xlarge {
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+}

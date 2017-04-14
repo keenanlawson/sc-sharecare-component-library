@@ -1,0 +1,19 @@
+{{!-- fractal/components/link-usages.hbs --}}
+<h3>Link</h3>
+{{> @link
+        linkTo="http://www.sharecare.com"
+        linkLabel="Lorem Ipsum"}}
+
+<h3>Link with Badge</h3>
+{{> @link
+        linkTo="http://www.sharecare.com"
+        linkLabel="Lorem Ipsum"
+        linkBadgeLabel="99"
+        linkBadgeModifier="warning"}}
+
+
+<h3>Custom Content Link</h3>
+{{#> @link
+        linkTo="http://www.sharecare.com"}}
+    {{> @avatar avatarImage="https://placeimg.com/80/80/animals" avatarModifier="large"}}
+{{/@link}}

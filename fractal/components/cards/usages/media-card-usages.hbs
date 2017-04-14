@@ -1,0 +1,21 @@
+{{!-- fractal/components/media-card-usages.hbs --}}
+<h3>Media Card with Image Only</h3>
+{{#> @card}}
+    {{> @card-media
+            mediaImage="https://placeimg.com/80/80/animals"}}
+{{/@card}}
+
+<h3>Media Card with Image and Title Only Media Header</h3>
+{{#> @card}}
+    {{> @card-media
+            mediaImage="https://placeimg.com/80/80/animals"
+            mediaTitle="Lorem ipsum dolor sit amet"}}
+{{/@card}}
+
+<h3>Media Card with Image and Full Media Header</h3>
+{{#> @card}}
+    {{> @card-media
+            mediaImage="https://placeimg.com/80/80/animals"
+            mediaTitle="Lorem ipsum dolor sit amet"
+            mediaSubtitle="Lorem ipsum dolor sit amet"}}
+{{/@card}}

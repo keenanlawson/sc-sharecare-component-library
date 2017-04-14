@@ -1,0 +1,11 @@
+{{!-- fractal/components/select-option.hbs --}}
+<option
+
+    {{~#if optionIsDisabled}} disabled{{else if selectOptionContext.isDisabled}} disabled{{/if~}}
+
+    {{~#if optionIsSelected}} selected{{else if selectOptionContext.isSelected}} selected{{/if~}}
+
+    {{~#if optionValue}} value="{{optionValue}}"{{else if selectOptionContext.value}} value="{{selectOptionContext.value}}"{{/if}}>
+
+    {{~#if optionLabel}}{{optionLabel}}{{else if selectOptionContext.label}}{{selectOptionContext.label}}{{/if~}}
+</option>

@@ -1,0 +1,8 @@
+{
+  "title": "Grid",
+  "status": "prototype",
+  "collated": false,
+  "preview": "@preview",
+  "default": "fixed",
+  "context": {}
+}

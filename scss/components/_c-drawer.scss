@@ -1,0 +1,57 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$drawer-item-selected-border-color: $color-mountain-meadow !default;
+$drawer-item-background-color: $color-gallery !default;
+$drawer-label-border-color: $color-alto !default;
+$drawer-label-expanded-icon-color: $color-san-juan !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-drawer {
+  // Start drawer in collapsed state for animation
+  overflow: hidden;
+  transition: right 0.5s;
+  position: fixed;
+  width: 200px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid;
+  z-index: 500;
+  top: 38px;
+  right: -200px;
+}
+
+
+// Use input checkbox/radio checked states for toggle effect
+.c-drawer__toggle {
+  // Hide input control
+  display: none;
+
+  // Expanded state
+  &:checked {
+
+    // Display content in expanded state
+    + .c-drawer {
+      display: block;
+      right: 0;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

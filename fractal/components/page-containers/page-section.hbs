@@ -1,0 +1,27 @@
+{{!-- fractal/components/page-section.hbs --}}
+<section class="l-page-section
+
+    {{~#if pageSectionModifier}} l-page-section--{{pageSectionModifier}}{{/if}}{{#each pageSectionContext.modifiers}}  l-page-section--{{this}}{{/each~}}
+
+    {{~#if pageSectionClasses}} {{pageSectionClasses}}{{/if}}{{#each pageSectionContext.classes}} {{this}}{{/each}}">
+    {{!-- Add page container --}}
+    <div class="l-page-container l-grid-wrapper l-grid-container
+
+        {{~#unless pageContainerIsFixed}}-fluid{{else unless pageSectionContext.isFixed}}-fluid{{/unless~}}
+
+        {{~#if pageContainerModifier}} l-page-container--{{pageContainerModifier}}{{/if}}{{#each pageSectionContext.containerModifiers}}  l-page-container--{{this}}{{/each~}}
+
+        {{~#if pageContainerClasses}} {{pageContainerClasses}}{{/if}}{{#each pageSectionContext.containerClasses}} {{this}}{{/each~}}
+
+        {{~#if gridWrapperModifier}} l-grid-wrapper--{{gridWrapperModifier}}{{/if}}{{#each pageSectionContext.gridModifiers}} l-grid-wrapper--{{this}}{{/each~}}
+
+        {{~#if gridWrapperClasses}} {{gridWrapperClasses}}{{/if}}{{#each pageSectionContext.gridClasses}} {{this}}{{/each}}">
+        {{!-- CUSTOM CONTENT --}}
+        {{#if @partial-block}}
+            {{> @partial-block}}
+
+        {{else}}
+            Example Content
+        {{/if}}
+    </div>
+</section>

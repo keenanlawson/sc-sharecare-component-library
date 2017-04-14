@@ -1,0 +1,76 @@
+{
+  "title": "Text Card Usages",
+  "status": "prototype",
+  "collated": true,
+  "preview": "@card-preview",
+  "context": {
+    "textCardContext": {
+      "sections": [
+        {
+          "text": {
+            "fontIcon": "qa-question",
+            "textBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."
+          }
+        }
+      ]
+    },
+    "headerCardContext": {
+      "sections": [
+        {
+          "header": {
+            "avatarTitle": "Lorem",
+            "title": "Lorem ipsum dolor sit amet",
+            "titleLinkTo": "http://www.sharecare.com",
+            "subtitle": "Lorem ipsum dolor sit amet"
+          }
+        }
+      ]
+    },
+    "mediaCardContext": {
+      "sections": [
+        {
+          "media": {
+            "image": "https://placeimg.com/80/80/animals",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Lorem ipsum dolor sit amet"
+          }
+        }
+      ]
+    },
+    "fullCardContext": {
+      "sections": [
+        {
+          "header": {
+            "avatarImage": "https://placeimg.com/80/80/animals",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Lorem ipsum dolor sit amet"
+          }
+        },
+        {
+          "media": {
+            "image": "https://placeimg.com/80/80/animals",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Lorem ipsum dolor sit amet"
+          }
+        },
+        {
+          "header": {
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Lorem ipsum dolor sit amet"
+          }
+        },
+        {
+          "text": {
+            "textBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis libero sed eros lobortis fringilla. Ut sed elit nisl. Fusce enim enim, sollicitudin ac dolor vel, fermentum pharetra justo. Integer vestibulum mauris in nibh maximus venenatis. Praesent pulvinar magna at dictum viverra. Nunc diam enim, auctor ac vestibulum at, tristique eu nisl. Donec eu justo id odio imperdiet porttitor vel in diam. Suspendisse non bibendum orci, nec venenatis ligula."
+          }
+        },
+        {
+          "footer": {
+            "linkLabel": "READ MORE",
+            "linkTo": "http://www.sharecare.com"
+          }
+        }
+      ]
+    }
+  }
+}

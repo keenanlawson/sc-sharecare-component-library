@@ -1,0 +1,94 @@
+{{!-- fractal/components/link.hbs --}}
+<a class="c-link
+
+    {{~#if linkModifier}} c-link--{{linkModifier}}{{/if}}{{#each linkContext.modifiers}} c-link--{{this}}{{/each~}}
+
+    {{~#if linkClasses}} {{linkClasses}}{{/if}}{{#each linkContext.classes}} {{this}}{{/each}}"
+
+    {{~#if linkTo}} href="{{linkTo}}"{{/if}}{{#if linkContext.linkTo}} href="{{linkContext.linkTo}}"{{/if}}>
+    {{!-- Add content --}}
+    <span class="c-link__content
+
+        {{~#if linkContentModifier}} c-link__content--{{linkContentModifier}}{{/if}}{{#each linkContext.contentModifiers}} c-link__content--{{this}}{{/each~}}
+
+        {{~#if linkContentClasses}} {{linkContentClasses}}{{/if}}{{#each linkContext.contentClasses}} {{this}}{{/each}}">
+        {{!-- Add label explicitly --}}
+        {{#if linkLabel}}
+            <span class="c-link__label
+
+            {{~#if linkLabelModifier}} c-link__label--{{linkLabelModifier}}{{/if}}{{#each linkContext.labelModifiers}} c-link__label--{{this}}{{/each~}}
+
+                {{~#if linkLabelClasses}} {{linkLabelClasses}}{{/if}}{{#each linkContext.labelClasses}} {{this}}{{/each}}">
+
+                {{~linkLabel~}}
+
+            </span>
+        {{!-- Add label via context --}}
+        {{else if linkContext.label}}
+            <span class="c-link__label
+
+            {{~#if linkLabelModifier}} c-link__label--{{linkLabelModifier}}{{/if}}{{#each linkContext.labelModifiers}} c-link__label--{{this}}{{/each~}}
+
+            {{~#if linkLabelClasses}} {{linkLabelClasses}}{{/if}}{{#each linkContext.labelClasses}} {{this}}{{/each}}">
+
+                {{~linkContext.label~}}
+
+            </span>
+        {{/if}}
+        {{!-- LINK BADGES --}}
+        {{!-- Add badge explicitly --}}
+        {{#if linkBadgeLabel}}
+            {{> @badge
+                    badgeContext=linkContext.badge
+                    badgeModifier=linkBadgeModifier
+                    badgeLabel=linkBadgeLabel
+                    badgeFontIcon=linkBadgeFontIcon
+                    badgeClasses="c-link__badge"}}
+
+        {{else if linkBadgeFontIcon}}
+            {{> @badge
+                    badgeContext=linkContext.badge
+                    badgeModifier=linkBadgeModifier
+                    badgeLabel=linkBadgeLabel
+                    badgeFontIcon=linkBadgeFontIcon
+                    badgeClasses="c-link__badge"}}
+
+        {{!-- Add badge via context --}}
+        {{else if linkContext.badge}}
+            {{> @badge
+                    badgeContext=linkContext.badge
+                    badgeModifier=linkBadgeModifier
+                    badgeLabel=linkBadgeLabel
+                    badgeFontIcon=linkBadgeFontIcon
+                    badgeClasses="c-link__badge"}}
+
+        {{/if}}
+        {{!-- LINK FONT ICONS --}}
+        {{!-- Add font icon explicitly --}}
+        {{#if linkFontIcon}}
+            {{> @font-icon
+                    fontIconContext=linkContext.fontIcon
+                    fontIcon=linkFontIcon
+                    fontIconModifier=linkFontIconModifier
+                    fontIconBadgeLabel=linkFontIconBadgeLabel
+                    fontIconBadgeModifier=linkFontIconBadgeModifier
+                    fontIconClasses="c-link__icon"}}
+
+        {{!-- Add font icon via context --}}
+        {{else if linkContext.fontIcon}}
+            {{> @font-icon
+                    fontIconContext=linkContext.fontIcon
+                    fontIcon=linkFontIcon
+                    fontIconModifier=linkFontIconModifier
+                    fontIconBadgeLabel=linkFontIconBadgeLabel
+                    fontIconBadgeModifier=linkFontIconBadgeModifier
+                    fontIconClasses="c-link__icon"}}
+
+        {{/if}}
+        {{!-- CUSTOM CONTENT --}}
+        {{#if @partial-block}}
+            {{> @partial-block }}
+
+        {{/if}}
+    </span>
+</a>

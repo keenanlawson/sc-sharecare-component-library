@@ -1,0 +1,9 @@
+{
+  "title": "Fluid Responsive Page",
+  "status": "ready",
+  "collated": true,
+  "preview": "@grid-layout-preview",
+  "context": {
+    "pageHeaderContext": "@page-header.pageHeaderContext"
+  }
+}

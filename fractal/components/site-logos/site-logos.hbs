@@ -1,0 +1,34 @@
+{{!-- fractal/components/site-logos.hbs --}}
+<div class="c-site-logos
+
+    {{~#if siteLogosModifier}} c-site-logos--{{siteLogosModifier}}{{/if}}{{#each siteLogosContext.modifiers}} c-site-logos--{{this}}{{/each~}}
+
+    {{~#if siteLogosClasses}} {{siteLogosClasses}}{{/if}}{{#each siteLogosContext.classes}} {{this}}{{/each}}">
+
+    {{~#> @link
+            linkClasses="c-site-logos__link"
+            linkLabelClasses="c-site-logos__text hidden-lg-up"
+            linkLabel="sharecare"
+            linkTo="http://www.sharecare.com"}}
+        {{> @svg-icon svgIcon="sharecare-logo-monotone"
+                svgIconClasses="hidden-md-down"}}
+    {{/@link~}}
+
+    {{~#> @link
+            linkClasses="c-site-logos__link"
+            linkLabelClasses="c-site-logos__text hidden-lg-up"
+            linkLabel="doctoroz.com"
+            linkTo="http://www.doctoroz.com"}}
+        {{> @svg-icon svgIcon="dr-oz-logo"
+                svgIconClasses="hidden-md-down"}}
+    {{/@link~}}
+
+    {{~#> @link
+            linkClasses="c-site-logos__link"
+            linkLabelClasses="c-site-logos__text hidden-lg-up"
+            linkLabel="daily strength"
+            linkTo="http://www.dailystrength.com"}}
+        {{> @svg-icon svgIcon="daily-strength-logo"
+                svgIconClasses="hidden-md-down"}}
+    {{/@link}}
+</div>

@@ -1,0 +1,49 @@
+// Import descriptive colors
+@import 's-color-palette';
+
+// Default theme palette and theme colors map
+// This is to abstract colors to a general usage type
+$theme-primary-color: $color-mountain-meadow !default;
+$theme-primary-accent-color: $color-elm !default;
+$theme-primary-supporting-color: $color-curious-blue !default;
+
+$theme-primary-gray: $color-dusty-gray !default;
+$theme-primary-accent-gray: $color-alto !default;
+$theme-primary-supporting-gray: $color-gallery !default;
+
+$theme-secondary-color: $color-eucalyptus !default;
+$theme-secondary-supporting-color: $color-san-juan !default;
+
+$theme-error-color: $color-chestnut-rose !default;
+$theme-error-text-color: $color-pure-white !default;
+
+$theme-warning-color: $color-supernova !default;
+$theme-warning-text-color: $color-mine-shaft !default;
+
+$theme-success-color: $theme-secondary-color !default;
+$theme-success-text-color: $color-pure-white !default;
+
+$theme-cta-color: $color-neon-carrot !default;
+$theme-cta-supporting-color: $color-piper !default;
+
+/// Theme colors map
+/// @access private
+/// @type Map
+/// @prop {String} key - brand color category
+/// @prop {String} value - color value
+// TODO: use this somewhere???
+$theme-colors-map: (
+        'primary': $theme-primary-color,
+        'primary-accent': $theme-primary-accent-color,
+        'primary-supporting': $theme-primary-supporting-color,
+        'primary-gray': $theme-primary-gray,
+        'primary-accent-gray': $theme-primary-accent-gray,
+        'primary-supporting-gray': $theme-primary-supporting-gray,
+        'secondary': $theme-secondary-color,
+        'secondary-supporting': $theme-secondary-supporting-color,
+        'error': $theme-error-color,
+        'warning': $theme-warning-color,
+        'success': $theme-success-color,
+        'cta': $theme-cta-color,
+        'cta-supporting': $theme-cta-supporting-color
+) !default;

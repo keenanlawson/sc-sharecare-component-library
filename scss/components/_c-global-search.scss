@@ -1,0 +1,35 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$global-search-input-background-color: $color-pure-white !default;
+$global-search-input-icon-base-color: $color-dusty-gray !default;
+$global-search-input-icon-accent-color: $color-mountain-meadow !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-global-search__input-element {
+  width: 25.8rem;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.75 7.5a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm0-1a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5z" fill="#{$global-search-input-icon-base-color}"/><path d="M6.025 6.731l3.122 3.123a.5.5 0 0 0 .706-.706L6.731 6.025c-.203.266-.44.503-.706.706z" fill="#{$global-search-input-icon-accent-color}"/></g></svg>') $global-search-input-background-color no-repeat 24rem / 10px;
+
+  @include respond-to(md) {
+    width: 30rem;
+    background-position-x: 28rem;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

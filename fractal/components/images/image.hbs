@@ -1,0 +1,12 @@
+{{!-- fractal/components/link.hbs --}}
+<img class="c-image
+
+    {{~#if imageModifier}} c-image--{{imageModifier}}{{/if}}{{#each imageContext.modifiers}} c-image--{{this}}{{/each~}}
+
+    {{~#if imageClasses}} {{imageClasses}}{{/if}}{{#each imageContext.classes}} {{this}}{{/each}}"
+
+    {{~#if imageSrc}} src="{{imageSrc}}"{{else if imageContext.src}} src="{{imageContext.src}}"{{/if~}}
+
+    {{~#if imageAlt}} alt="{{imageAlt}}"{{else if imageContext.alt}} alt="{{imageContext.alt}}"{{/if~}}
+
+    {{~#if imageTitle}} title="{{imageTitle}}"{{else if imageContext.title}} title="{{imageContext.title}}"{{/if}}/>

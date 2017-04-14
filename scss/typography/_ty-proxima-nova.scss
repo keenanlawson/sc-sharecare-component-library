@@ -1,0 +1,41 @@
+// Fonts
+//------------------------------------
+
+$base-font-family: Proxima Nova, Arial, Helvetica, sans-serif !default;
+$font-weight-normal: normal !default;
+$font-weight-semi: 600 !default;
+$font-weight-bold: 800 !default;
+
+$font-domain: 'http://localhost:3050/static/fonts';
+$regular-path: "#{$font-domain}/proximanova-light-webfont";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$regular-path}.eot");
+  src: url('#{$regular-path}.eot?#iefix') format('embedded-opentype'),
+  url("#{$regular-path}.woff") format('woff'),
+  url("#{$regular-path}.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$semibold-path: "#{$font-domain}/proximanova-regular-webfont";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$semibold-path}.eot");
+  src: url('#{$semibold-path}.eot?#iefix') format('embedded-opentype'),
+  url("#{$semibold-path}.woff") format('woff'),
+  url("#{$semibold-path}.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+$bold-path: "#{$font-domain}/ProximaNovaSoft-Semibold-webfont";
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("#{$bold-path}.eot");
+  src: url('#{$bold-path}.eot?#iefix') format('embedded-opentype'),
+  url("#{$bold-path}.woff") format('woff'),
+  url("#{$bold-path}.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}

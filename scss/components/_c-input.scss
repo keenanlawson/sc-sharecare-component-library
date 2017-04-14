@@ -1,0 +1,316 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$input-text-color: $color-dove-gray !default;
+$input-placeholder-text-color: $color-chatelle !default;
+$input-border-color: $color-alto !default;
+$input-error-border-color: $color-chestnut-rose !default;
+$input-border-focus-color: $color-mountain-meadow !default;
+$input-background-color: $color-pure-white !default;
+$input-label-text-color: $base-font-color !default;
+$input-icon-color: $color-mountain-meadow !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-input__label {
+  // Block style labels
+  display: block;
+  // Set label cursor
+  cursor: pointer;
+}
+
+// Default radio/checkbox groups to stacked
+.c-input__group {
+  display: flex;
+  flex-direction: column;
+}
+
+// Give stacked radio/checkboxes some spacing
+.c-input__radio,
+.c-input__checkbox {
+  margin-top: 1.5rem;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.c-input__element {
+  // Default to full width input text/selects
+  width: 100%;
+  // Default input heights
+  height: 4rem;
+  border: 0.1rem solid;
+  cursor: pointer;
+  padding: 0.1rem 0 0 0.9rem;
+  border-radius: 0.2rem;
+
+  &:focus {
+    outline: 0;
+  }
+
+  // Smaller input heights and widths on non-xs screens
+  @include respond-to(sm) {
+    width: 22rem;
+    height: 3rem;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+// Allow for inlined inputs
+.c-input--inline {
+  display: inline-block;
+
+  // Give inlined inputs some spacing
+  margin-left: 1.5rem;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+// Allow for inlined group inputs
+.c-input__group--inline {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+
+  // Give inlined group inputs some spacing
+  .c-input__group-input {
+    margin: 0 0 0 1.5rem;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+// Give some spacing below input labels
+.c-input__label--text,
+.c-input__label--select,
+.c-input__label--group {
+  margin-bottom: 0.4rem;
+}
+
+// Custom style radio/checkboxes using before pseudo element
+.c-input__label--radio,
+.c-input__label--checkbox {
+
+  &::before {
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.1rem solid;
+    border-radius: 0.2rem;
+    position: relative;
+    margin-right: 0.8rem;
+    vertical-align: middle;
+    top: -0.3rem;
+    display: inline-block;
+  }
+}
+
+// Make radios round
+.c-input__label--radio {
+
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.c-input__element--select {
+  // Hide default browser styled select arrow
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.c-input__element--radio,
+.c-input__element--checkbox {
+  // Hide default browser styled radio/checkboxes
+  display: none;
+}
+
+// Inactive/Disabled inputs
+.c-input--inactive {
+
+  .c-input__label,
+  .c-input__element {
+    // Reset cursor for input element
+    cursor: default;
+  }
+}
+
+// Allow for hidden input labels, keeping the block dimensions
+.c-input__label--hidden {
+  visibility: hidden;
+}
+
+// Allow for collapsing input labels, removing the block dimensions
+.c-input__label--collapsed {
+  display: none;
+}
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+// Add custom SVG select arrow
+.c-input__element--select {
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><g fill="none"><g style="fill:#{$input-icon-color};stroke-width:0.5;stroke:#{$input-icon-color}"><path d="M12.85 1.8C13.31 1.38 12.6 0.72 12.14 1.14L7 5.88 7 5.87 7 5.87 1.86 1.14C1.4 0.71 0.69 1.37 1.15 1.79L6.65 6.86C6.74 6.95 6.88 7 7 7 7.13 7 7.27 6.95 7.36 6.86L12.85 1.8Z"/></g></g></svg>') no-repeat right 7px center;
+  background-size: 1.5rem 1.5rem;
+}
+
+// Add custom SVG check mark
+.c-input__element--checkbox {
+
+  &:checked {
+
+    + .c-input__label::before {
+      background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><g fill="none"><g fill="#{$input-icon-color}"><path d="M9.89 0.71C9.85 0.48 9.73 0.28 9.54 0.15L9.54 0.15C9.18-0.12 8.63-0.02 8.38 0.37L3.75 7.33 1.51 4.13C1.44 4.03 1.35 3.95 1.24 3.88 0.94 3.71 0.6 3.74 0.34 3.94 0.16 4.08 0.04 4.28 0.01 4.51 -0.02 4.74 0.03 4.97 0.16 5.16L3.09 9.36C3.26 9.58 3.5 9.71 3.76 9.71 4.03 9.71 4.29 9.57 4.47 9.31L9.75 1.37C9.88 1.18 9.93 0.94 9.89 0.71"/></g></g></svg>') no-repeat center center;
+      background-size: 1rem;
+    }
+  }
+}
+
+// Add custom SVG radio circle
+.c-input__element--radio {
+
+  &:checked {
+
+    + .c-input__label::before {
+      background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2" fill="#{$input-icon-color}"/></svg>') no-repeat center center;
+    }
+  }
+}
+
+// Custom style radio/checkboxes using before pseudo element
+.c-input__label--radio,
+.c-input__label--checkbox {
+
+  &::before {
+    background-color: #fff;
+    border-color: #ddd;
+  }
+}
+
+// Label colors
+.c-input__label {
+  color: $input-label-text-color;
+}
+
+// Input colors
+.c-input__element {
+  border-color: $input-border-color;
+  color: $input-text-color;
+  background-color: $input-background-color;
+
+  &:focus {
+    border-color: $input-border-focus-color;
+  }
+
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    color: $input-placeholder-text-color;
+  }
+
+  // Error state colors
+  &.is-error {
+    border-color: $input-error-border-color;
+    color: $input-error-border-color;
+  }
+}
+
+// Inactive/Disabled inputs
+.c-input--inactive {
+
+  // Gray out input label text
+  .c-input__label {
+    color: $color-dusty-gray;
+  }
+
+  // Gray out input element background
+  .c-input__element,
+  .c-input__label--radio::before,
+  .c-input__label--checkbox::before {
+    background-color: $color-gallery;
+  }
+
+  // Gray out checked radio/checkbox element background
+  .c-input__element {
+
+    &:checked {
+
+      + .c-input__label::before {
+        background-color: $color-gallery;
+      }
+    }
+  }
+}
+
+.c-input--error {
+
+  .c-input__label {
+    color: $color-chestnut-rose;
+  }
+
+  .c-input__element,
+  .c-input__label--radio::before,
+  .c-input__label--checkbox::before {
+    border-color: $color-chestnut-rose;
+    color: $color-chestnut-rose;
+  }
+
+  .c-input__element {
+
+    &:checked {
+
+      + .c-input__label::before {
+        border-color: $color-chestnut-rose;
+      }
+    }
+  }
+}
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-input__label {
+  font-size: 1.5rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+  }
+}
+
+.c-input__label--radio,
+.c-input__label--checkbox {
+  font-size: 1.8rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.c-input__element {
+  font-size: 1.8rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+  }
+
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    font-weight: $font-weight-normal;
+  }
+}

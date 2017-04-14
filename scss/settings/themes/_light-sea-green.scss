@@ -1,0 +1,55 @@
+// 1. Import descriptive colors
+@import '../s-color-palette';
+
+// 2. Overwrite theme name
+// Must be lowercase and hyphenated
+// Must match any respective directory paths
+$theme: 'light-sea-green';
+
+// 3A. Create theme palette and theme colors map
+$theme-primary-color: $color-mountain-meadow;
+$theme-primary-accent-color: $color-elm;
+$theme-primary-supporting-color: $color-curious-blue;
+
+$theme-primary-gray: $color-dusty-gray;
+$theme-primary-accent-gray: $color-alto;
+$theme-primary-supporting-gray: $color-gallery;
+
+$theme-secondary-color: $color-eucalyptus;
+$theme-secondary-supporting-color: $color-san-juan;
+
+$theme-error-color: $color-chestnut-rose;
+$theme-error-text-color: $color-pure-white;
+
+$theme-warning-color: $color-supernova;
+$theme-warning-text-color: $color-mine-shaft;
+
+$theme-success-color: $theme-secondary-color;
+$theme-success-text-color: $color-pure-white;
+
+$theme-cta-color: $color-neon-carrot;
+$theme-cta-supporting-color: $color-piper;
+
+$theme-colors-map: (
+        'primary': $theme-primary-color,
+        'primary-accent': $theme-primary-accent-color,
+        'primary-supporting': $theme-primary-supporting-color,
+        'primary-gray': $theme-primary-gray,
+        'primary-accent-gray': $theme-primary-accent-gray,
+        'primary-supporting-gray': $theme-primary-supporting-gray,
+        'secondary': $theme-secondary-color,
+        'secondary-supporting': $theme-secondary-supporting-color,
+        'error': $theme-error-color,
+        'warning': $theme-warning-color,
+        'success': $theme-success-color,
+        'cta': $theme-cta-color,
+        'cta-supporting': $theme-cta-supporting-color
+);
+
+// 3B. Overwrite components color variables
+@import '../s-themed-variables';
+
+// 4. Overwrite base typography color, size or line height
+// NOTE: No other typography settings allowed in here
+// Example:
+//$base-font-color: $color-mine-shaft;

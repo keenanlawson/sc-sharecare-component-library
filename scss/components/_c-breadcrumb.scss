@@ -1,0 +1,62 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$breadcrumb-bar-background-color: $color-gallery !default;
+$breadcrumb-border-color: $color-silver !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-breadcrumb-bar {
+  display: flex;
+  padding: 1.3rem 0 1.2rem;
+}
+
+.c-breadcrumb {
+  display: inline-flex;
+
+  &::after {
+    content: '';
+    height: 10px;
+    margin: 2px 10px;
+    border-left: 1px solid;
+  }
+
+  &:last-child {
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-breadcrumb-bar {
+  background-color: $breadcrumb-bar-background-color;
+}
+
+.c-breadcrumb {
+
+  &::after {
+    border-color: $breadcrumb-border-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-breadcrumb__label {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}

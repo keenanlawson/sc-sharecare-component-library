@@ -1,0 +1,123 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$navigation-background-color: $color-alabaster !default;
+$navigation-shadow-color: $color-pure-black !default;
+$navigation-tab-border-color: $color-alto !default;
+$navigation-primary-tab-selected-border-color: $color-mountain-meadow !default;
+$navigation-secondary-tab-text-color: $color-dusty-gray !default;
+$navigation-secondary-tab-selected-border-color: $color-curious-blue !default;
+$navigation-secondary-tab-selected-text-color: $color-san-juan !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-navigation {
+  display: flex;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-navigation--primary {
+
+  .c-navigation__tab {
+    padding: 0.8rem 1.2rem 0.7rem;
+
+    @include respond-to('sm') {
+      padding: 1.5rem 3rem 1.9rem;
+      border-right: 0.1rem solid;
+    }
+
+    &:first-child {
+      padding-left: 0;
+
+      @include respond-to('sm') {
+        padding-left: 3rem;
+        border-left: 0.1rem solid;
+      }
+    }
+  }
+
+  .c-navigation__tab--selected {
+    border-bottom: 0.2rem solid;
+    padding-bottom: 0.5rem;
+
+    @include respond-to('sm') {
+      border-bottom: 0.6rem solid;
+      padding-bottom: 1.3rem;
+    }
+  }
+}
+
+.c-navigation--secondary {
+  border-bottom: 0.1rem solid;
+
+  .c-navigation__tab {
+    padding: 1.5rem 2rem 1.2rem;
+    border: 0;
+  }
+
+  .c-navigation__tab--selected {
+    border-bottom: 0.3rem solid;
+    padding-bottom: 0.9rem;
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-navigation--primary {
+  background-color: $navigation-background-color;
+
+  .c-navigation__tab {
+    border-right-color: $navigation-tab-border-color;
+
+    &:first-child {
+      border-left-color: $navigation-tab-border-color;
+    }
+  }
+
+  .c-navigation__tab--selected {
+    border-bottom-color: $navigation-primary-tab-selected-border-color;
+  }
+}
+
+.c-navigation--secondary {
+  border-bottom-color: $navigation-tab-border-color;
+
+  .c-navigation__tab-text {
+    color: $navigation-secondary-tab-text-color;
+  }
+
+  .c-navigation__tab--selected {
+    border-bottom-color: $navigation-secondary-tab-selected-border-color;
+
+    .c-navigation__tab-text {
+      color: $navigation-secondary-tab-selected-text-color;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-navigation__tab-text {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  white-space: nowrap;
+}
+
+.c-navigation--secondary {
+
+  .c-navigation__tab-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: $font-weight-semi;
+    text-transform: uppercase;
+  }
+}

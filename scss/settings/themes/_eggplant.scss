@@ -1,0 +1,40 @@
+// 1. Import descriptive colors
+@import '../s-color-palette';
+
+// 2. Overwrite paths
+$theme: 'eggplant';
+
+
+// 3A. Overwrite palette
+// TODO: these should be refactored out in favor of functionally named component variables (#3A below)
+// TODO: DO NOT PROPAGATE THESE VARIABLES
+$theme-primary-color: $color-fresh-eggplant;
+$theme-primary-supporting-color: $color-siren;
+$theme-secondary-supporting-color: $color-siren;
+//$color-secondary-color1: $color-kobi;
+//$color-secondary-color2: $color-barossa;
+$theme-primary-accent-color: $color-lipstick;
+//$color-negative-response-color1: $color-maroon-flush;
+$theme-error-color: $color-maroon-flush;
+$color-negative-response-color3: $color-maroon-flush;
+//$color-positive-response-color1: $color-feijoa;
+//$color-positive-response-color2: $color-olivine;
+$theme-cta-color: $color-anzac;
+$theme-cta-supporting-color: $color-alto;
+//$color-accent-color3: $color-chathams-blue;
+//$color-alternate-1: $color-ripe-lemon;
+//$color-alternate-2: $color-amethyst-smoke;
+//$color-alternate-3: $color-affair;
+//$color-alternate-4: $color-curious-blue;
+
+
+// 3B. Overwrite components
+// Examples:
+// $color-card-background: $color-white;
+// $color-link-text: $color-curious-blue;
+
+
+// 4. Overwrite typography color
+// NOTE: No other typography settings allowed in here
+// Examples:
+//$base-font-color: $color-mine-shaft;

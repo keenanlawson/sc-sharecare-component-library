@@ -1,0 +1,82 @@
+{{!-- fractal/components/header-card-usages.hbs --}}
+<h3>Title Only Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"}}
+{{/@card}}
+
+<h3>Full Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            subtitle="Lorem ipsum dolor sit amet"}}
+{{/@card}}
+
+<h3>Font Icon Title Only Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            fontIcon="qa-question"}}
+{{/@card}}
+
+<h3>Font Icon Full Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            subtitle="Lorem ipsum dolor sit amet"
+            fontIcon="qa-question"}}
+{{/@card}}
+
+<h3>Avatar Title Only Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarImage="https://placeimg.com/80/80/animals"}}
+{{/@card}}
+
+
+<h3>Avatar Full Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            subtitle="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarImage="https://placeimg.com/80/80/animals"}}
+{{/@card}}
+
+<h3>Font Icon Avatar Title Only Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarFontIcon="qa-question"}}
+{{/@card}}
+
+
+<h3>Font Icon Avatar Full Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            subtitle="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarFontIcon="qa-question"}}
+{{/@card}}
+
+<h3>Title Avatar Title Only Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarTitle="Lorem"}}
+{{/@card}}
+
+<h3>Title Avatar Full Header</h3>
+{{#> @card}}
+    {{> @card-header
+            title="Lorem ipsum dolor sit amet"
+            subtitle="Lorem ipsum dolor sit amet"
+            titleLinkTo="http://www.sharecare.com"
+            avatarTitle="Lorem"}}
+{{/@card}}

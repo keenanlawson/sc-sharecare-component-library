@@ -1,0 +1,55 @@
+{{!-- fractal/components/page-footer.hbs --}}
+<footer class="m-page-footer l-page-footer
+
+    {{~#if pageFooterModifier}} m-page-footer--{{pageFooterModifier}}{{/if}}{{#each pageFooterContext.modifiers}} m-page-footer--{{this}}{{/each~}}
+
+    {{~#if pageFooterClasses}} {{pageFooterClasses}}{{/if}}{{#each pageFooterContext.classes}} {{this}}{{/each}}">
+
+    {{!-- Site Logos and Social Icons Bar --}}
+    {{#> @page-section
+            pageSectionClasses="m-page-footer__site-logos-bar"
+            pageContainerClasses="m-page-footer__site-logos-container"}}
+        {{> @site-logos-bar
+                siteLogosBarClasses="m-page-footer__site-logos"}}
+    {{/@page-section}}
+
+    {{!-- Site Links and Social Icons Bar --}}
+    {{#> @page-section
+            pageSectionClasses="m-page-footer__site-about-bar"
+            pageContainerClasses="m-page-footer__site-about-container"}}
+        {{> @site-about-bar
+                siteAboutBarClasses="m-page-footer__site-about"}}
+    {{/@page-section}}
+
+    {{!-- Footer Search --}}
+    {{#> @page-section
+            pageSectionClasses="m-page-footer__search-bar"
+            pageContainerClasses="m-page-footer__search-bar-container"}}
+        <span class="m-page-footer__search-bar-text">Find a Doctor in Your Area</span>
+        {{> @input
+                inputLabel="Hidden Label"
+                inputLabelModifier="collapsed"
+                inputId="test-id-d"
+                inputModifier="inline"
+                inputPlaceholder="Specialty"
+                inputValue=""}}
+        {{> @input
+                inputLabel="Hidden Label"
+                inputLabelModifier="collapsed"
+                inputId="test-id-d"
+                inputModifier="inline"
+                inputPlaceholder="Zip Code or City, State"
+                inputValue=""}}
+        {{> @button
+                buttonLabel="Search"}}
+    {{/@page-section}}
+
+    {{!-- Footer Search --}}
+    {{#> @page-section
+            pageSectionClasses="m-page-footer__disclaimer-bar"
+            pageContainerClasses="m-page-footer__disclaimer-container"}}
+        {{> @site-disclaimer-bar
+                siteDisclaimerBarClasses="m-page-footer__site-disclaimer"}}
+    {{/@page-section}}
+
+</footer>

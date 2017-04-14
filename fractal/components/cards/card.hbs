@@ -1,0 +1,27 @@
+{{!-- fractal/components/card.hbs --}}
+<div class="c-card
+
+    {{~#if cardModifier}} c-card--{{cardModifier}}{{/if}}{{#each cardContext.modifiers}} c-card--{{this}}{{/each~}}
+
+    {{~#if cardClasses}} {{cardClasses}}{{/if}}{{#each cardContext.classes}} {{this}}{{/each}}">
+    {{!-- Add card sections --}}
+    {{#each cardContext.sections}}
+        {{#if header}}
+            {{> @card-header cardHeaderContext=header}}
+
+        {{else if media}}
+            {{> @card-media cardMediaContext=media}}
+
+        {{else if text}}
+            {{> @card-text cardTextContext=text}}
+
+        {{else if footer}}
+            {{> @card-footer cardFooterContext=footer}}
+
+        {{/if}}
+    {{/each}}
+    {{#if @partial-block}}
+        {{> @partial-block }}
+
+    {{/if}}
+</div>

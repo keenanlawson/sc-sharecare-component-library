@@ -1,0 +1,30 @@
+/// http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+/// mixin for multiline text block with ellipsis
+/// @example
+/// .block-with-text {
+///   @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);
+/// }
+@mixin multiLineEllipsis($lineHeight: $base-line-height, $lineCount: 1, $bgColor: $color-pure-white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}

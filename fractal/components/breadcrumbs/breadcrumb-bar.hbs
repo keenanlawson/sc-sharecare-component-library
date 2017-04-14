@@ -1,0 +1,17 @@
+{{!-- fractal/components/breadcrumb-bar.hbs --}}
+<div class="c-breadcrumb-bar
+
+    {{~#if breadcrumbBarModifier}} c-breadcrumb-bar--{{breadcrumbBarModifier}}{{/if}}{{#each breadcrumbBarContext.modifiers}} c-breadcrumb-bar--{{this}}{{/each~}}
+
+    {{~#if breadcrumbBarClasses}} {{breadcrumbBarClasses}}{{/if}}{{#each breadcrumbBarContext.classes}} {{this}}{{/each}}">
+    {{!-- Add breadcrumbs --}}
+    {{#each breadcrumbBarContext.breadcrumbs}}
+        {{> @breadcrumb breadcrumbContext=this}}
+
+    {{/each}}
+    {{!-- Add breadcrumbs via partial block include --}}
+    {{#if @partial-block}}
+        {{> @partial-block }}
+
+    {{/if}}
+</div>
