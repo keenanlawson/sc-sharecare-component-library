@@ -1,27 +1,22 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$title-bar-text-color: $color-pure-white !default;
+$site-navigation-link-label-color: $color-mine-shaft !default;
+$site-navigation-link-label-selected-color: $color-mountain-meadow !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.c-title-bar {
-  display: flex;
-  align-items: center;
-  height: 0.5rem;
+.c-site-navigation__navigation-tab {
+  margin-left: 1.5rem;
 
-  @include respond-to('sm') {
-    height: 5.8rem;
+  @include respond-to('md') {
+    margin-left: 3rem;
   }
-}
 
-.c-title-bar__text {
-  display: none;
-
-  @include respond-to('sm') {
-    display: block;
+  &:first-child {
+    margin: 0;
   }
 }
 
@@ -34,15 +29,14 @@ $title-bar-text-color: $color-pure-white !default;
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.c-title-bar__text {
-  color: $title-bar-text-color;
-}
+
 
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.c-title-bar__text {
-  font-size: 3rem;
-  line-height: 3.6rem;
-  font-weight: $font-weight-normal;
+.c-site-navigation__navigation-label {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: $font-weight-semi;
 }

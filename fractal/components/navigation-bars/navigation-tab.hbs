@@ -6,12 +6,40 @@
     {{~#if navigationTabModifier}} c-navigation__tab--{{navigationTabModifier}}{{/if}}{{#each navigationTabContext.modifiers}} c-navigation__tab--{{this}}{{/each~}}
 
     {{~#if navigationTabClasses}} {{navigationTabClasses}}{{/if}}{{#each navigationTabContext.classes}} {{this}}{{/each}}">
-    {{!-- Add label --}}
-    {{> @link
-            linkContext=navigationTabContext.link
-            linkTo=navigationTabLinkTo
-            linkLabel=navigationTabLabel
-            linkModifier=navigationTabLinkModifier
-            linkClasses="c-navigation__tab-text"}}
+
+    {{~#if navigationTabIsSelected}}
+        {{> @link
+                linkContext=navigationTabContext.link
+                linkModifier=navigationTabLinkModifier
+                linkClasses=navigationTabLinkClasses
+                linkTo=navigationTabLinkTo
+                linkContentModifier=navigationTabLinkContentModifier
+                linkContentClasses=navigationTabLinkContentClasses
+                linkLabel=navigationTabLinkLabel
+                linkLabelModifier=navigationTabLinkLabelModifier
+                linkLabelClasses="c-navigation__tab-label--selected"}}
+    {{else if navigationTabContext.isSelected}}
+        {{> @link
+                linkContext=navigationTabContext.link
+                linkModifier=navigationTabLinkModifier
+                linkClasses=navigationTabLinkClasses
+                linkTo=navigationTabLinkTo
+                linkContentModifier=navigationTabLinkContentModifier
+                linkContentClasses=navigationTabLinkContentClasses
+                linkLabel=navigationTabLinkLabel
+                linkLabelModifier=navigationTabLinkLabelModifier
+                linkLabelClasses="c-navigation__tab-label--selected"}}
+    {{else}}
+        {{> @link
+                linkContext=navigationTabContext.link
+                linkModifier=navigationTabLinkModifier
+                linkClasses=navigationTabLinkClasses
+                linkTo=navigationTabLinkTo
+                linkContentModifier=navigationTabLinkContentModifier
+                linkContentClasses=navigationTabLinkContentClasses
+                linkLabel=navigationTabLinkLabel
+                linkLabelModifier=navigationTabLinkLabelModifier
+                linkLabelClasses="c-navigation__tab-label"}}
+    {{/if~}}
 
 </div>

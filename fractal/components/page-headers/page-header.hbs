@@ -1,99 +1,55 @@
 {{!-- fractal/components/page-header.hbs --}}
-<header class="m-page-header l-page-header
+<header class="m-page-header
 
     {{~#if pageHeaderModifier}} m-page-header--{{pageHeaderModifier}}{{/if}}{{#each pageHeaderContext.modifiers}} m-page-header--{{this}}{{/each~}}
 
     {{~#if pageHeaderClasses}} {{pageHeaderClasses}}{{/if}}{{#each pageHeaderContext.classes}} {{this}}{{/each}}">
-    {{!-- Global Search and Join/Login --}}
-    {{!-- Nothing in this section has a 'state' so components are explicity added --}}
-    {{#unless pageHeaderSearchBar}}
+
+    {{~#unless pageHeaderSearchBar}}
         {{#> @page-section
-                pageSectionContext=pageHeaderContext.sections.searchBar.pageSection
-                pageSectionClasses="m-page-header__search-bar hidden-xs"
-                pageContainerClasses="m-page-header__search-bar-container"}}
-            {{!-- Global Search --}}
-            {{> @global-search globalSearchContext=pageHeaderContext.globalSearchContext}}
-            {{!-- Join/Login --}}
-            <div class="m-page-header__join-login">
-                {{> @button
-                        buttonLabel="Join Sharecare"
-                        buttonModifier="cta"
-                        buttonClasses="m-page-header__join-login-button m-page-header__join"}}
-                {{> @button
-                        buttonLabel="Log In"
-                        buttonModifier="secure"
-                        buttonClasses="m-page-header__join-login-button m-page-header__login"}}
-            </div>
+                pageSectionContext=pageHeaderContext.sections.siteSearchBar.pageSection
+                pageSectionClasses="m-page-header__site-search-bar l-hidden-xs"}}
+            {{> @site-search-bar
+                    siteSearchBarContext=pageHeaderContext.sections.siteSearchBar.siteSearchBar
+                    siteSearchBarClasses="m-page-header__site-search"}}
         {{~/@page-section}}
-    {{/unless}}
-    {{!-- Site Navigation --}}
-    {{#if pageHeaderContext.sections.siteNavigation}}
+    {{/unless~}}
+
+    {{~#if pageHeaderContext.sections.siteNavigationBar}}
         {{#> @page-section
-                pageSectionContext=pageHeaderContext.sections.siteNavigation.pageSection
-                pageSectionClasses="m-page-header__site-navigation-bar"
-                pageContainerClasses="m-page-header__site-navigation-bar-container"}}
-            {{#> @link
-                    linkTo="https://www.sharecare.com"
-                    linkClasses="m-page-header__site-logo"}}
-                <div class="hidden-lg-up">
-                    {{> @svg-icon svgIcon="sharecare-icon-color"}}
-                </div>
-                <div class="hidden-md-down">
-                    {{> @svg-icon svgIcon="sharecare-logo-color"}}
-                </div>
-            {{/@link}}
-            <div class="m-page-header__join-login hidden-sm-up">
-                {{> @link
-                        linkLabel="Log In"
-                        linkTo="https://www.sharecare.com"
-                        linkClasses="m-page-header__join-login-link"}}
-                {{> @link
-                        linkLabel="Sign Up"
-                        linkTo="https://www.sharecare.com"
-                        linkClasses="m-page-header__join-login-link"}}
-            </div>
-            <div class="m-page-header__site-navigation hidden-xs">
-                {{> @navigation navigationContext=pageHeaderContext.sections.siteNavigation.navigation}}
-            </div>
-            {{!-- Add drawer trigger --}}
-            <label class="m-page-header__app-drawer-trigger c-drawer__trigger hidden-sm-up" for="c-drawer__trigger">
-                {{> @font-icon fontIcon="hamburger" fontIconModifier="sm" fontIconClasses="font-icon--primary"}}
-            </label>
-            {{!-- Add drawer target --}}
-            {{!-- TODO: add drawer component --}}
-            {{!-- TODO: side note: add carousel component --}}
-            <input class="c-drawer__toggle" type="checkbox" id="c-drawer__trigger"/>
-            <div class="c-drawer hidden-sm-up">
-                Drawer Content
-            </div>
+                pageSectionContext=pageHeaderContext.sections.siteNavigationBar.pageSection
+                pageSectionClasses="m-page-header__site-navigation-bar"}}
+            {{> @site-navigation-bar
+                    siteNavigationBarContext=pageHeaderContext.sections.siteNavigationBar.siteNavigationBar
+                    siteNavigationBarClasses="m-page-header__site-navigation"}}
         {{~/@page-section}}
-    {{/if}}
-    {{!-- Title Bar --}}
-    {{#if pageHeaderContext.sections.titleBar}}
+    {{~/if~}}
+
+    {{~#if pageHeaderContext.sections.titleBar}}
         {{#> @page-section
                 pageSectionContext=pageHeaderContext.sections.titleBar.pageSection
-                pageSectionClasses="m-page-header__title-bar"
-                pageContainerClasses="m-page-header__title-bar-container"}}
-            {{> @title-bar titleBarContext=pageHeaderContext.sections.titleBar.titleBar}}
+                pageSectionClasses="m-page-header__title-bar"}}
+            {{> @title-bar
+                    titleBarContext=pageHeaderContext.sections.titleBar.titleBar}}
         {{~/@page-section}}
-    {{/if}}
-    {{!-- Primary Navigation --}}
-    {{#if pageHeaderContext.sections.primaryNavigation}}
+    {{~/if~}}
+
+    {{~#if pageHeaderContext.sections.primaryNavigation}}
         {{#> @page-section
                 pageSectionContext=pageHeaderContext.sections.primaryNavigation.pageSection
-                pageSectionClasses="m-page-header__primary-navigation-bar l-header-primary-navigation"
-                pageContainerClasses="m-page-header__primary-navigation-bar-container"}}
-            {{> @navigation navigationContext=pageHeaderContext.sections.primaryNavigation.navigation}}
+                pageSectionClasses="m-page-header__primary-navigation-bar"}}
+            {{> @navigation
+                    navigationContext=pageHeaderContext.sections.primaryNavigation.navigation}}
         {{~/@page-section}}
-    {{/if}}
-    {{!-- Breadcrumb Bar --}}
-    {{#if pageHeaderContext.sections.breadcrumbBar}}
+    {{~/if~}}
+
+    {{~#if pageHeaderContext.sections.breadcrumbBar}}
         {{#> @page-section
                 pageSectionContext=pageHeaderContext.sections.breadcrumbBar.pageSection
-                pageSectionClasses="m-page-header__breadcrumbs-bar l-header-breadcrumbs l-xs-collapsed hidden-xs"
-                pageContainerClasses="m-page-header__breadcrumbs-bar-container"}}
-            {{> @breadcrumb-bar breadcrumbBarContext=pageHeaderContext.sections.breadcrumbBar.breadcrumbBar}}
+                pageSectionClasses="m-page-header__breadcrumbs-bar"}}
+            {{> @breadcrumb-bar
+                    breadcrumbBarContext=pageHeaderContext.sections.breadcrumbBar.breadcrumbBar}}
         {{~/@page-section}}
 
-    {{/if}}
+    {{~/if~}}
 </header>

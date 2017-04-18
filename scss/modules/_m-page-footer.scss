@@ -2,7 +2,7 @@
 /// 1. CONFIG
 //////////////////////////
 $footer-about-bar-background-color: $color-alabaster !default;
-$footer-search-bar-background-color: $color-mine-shaft !default;
+$footer-fad-bar-background-color: $color-mine-shaft !default;
 $footer-disclaimer-bar-background-color: $color-mine-shaft !default;
 
 
@@ -30,11 +30,11 @@ $footer-disclaimer-bar-background-color: $color-mine-shaft !default;
   background-color: $footer-about-bar-background-color;
 }
 
-.m-page-footer__search-bar {
-  background-color: $footer-search-bar-background-color;
+.m-page-footer__site-fad-bar {
+  background-color: $footer-fad-bar-background-color;
 }
 
-.m-page-footer__disclaimer-bar {
+.m-page-footer__site-disclaimer-bar {
   background-color: $footer-disclaimer-bar-background-color;
 }
 

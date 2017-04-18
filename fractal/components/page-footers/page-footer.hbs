@@ -1,5 +1,5 @@
 {{!-- fractal/components/page-footer.hbs --}}
-<footer class="m-page-footer l-page-footer
+<footer class="m-page-footer
 
     {{~#if pageFooterModifier}} m-page-footer--{{pageFooterModifier}}{{/if}}{{#each pageFooterContext.modifiers}} m-page-footer--{{this}}{{/each~}}
 
@@ -7,49 +7,37 @@
 
     {{!-- Site Logos and Social Icons Bar --}}
     {{#> @page-section
-            pageSectionClasses="m-page-footer__site-logos-bar"
-            pageContainerClasses="m-page-footer__site-logos-container"}}
+            pageSectionContext=pageFooterContext.sections.siteLogosBar.pageSection
+            pageSectionClasses="m-page-footer__site-logos-bar"}}
         {{> @site-logos-bar
+                siteLogosBarContext=pageFooterContext.sections.siteLogosBar.siteLogosBar
                 siteLogosBarClasses="m-page-footer__site-logos"}}
     {{/@page-section}}
 
     {{!-- Site Links and Social Icons Bar --}}
     {{#> @page-section
-            pageSectionClasses="m-page-footer__site-about-bar"
-            pageContainerClasses="m-page-footer__site-about-container"}}
+            pageSectionContext=pageFooterContext.sections.siteAboutBar.pageSection
+            pageSectionClasses="m-page-footer__site-about-bar"}}
         {{> @site-about-bar
+                siteAboutBarContext=pageFooterContext.sections.siteAboutBar.siteAboutBar
                 siteAboutBarClasses="m-page-footer__site-about"}}
     {{/@page-section}}
 
-    {{!-- Footer Search --}}
+    {{!-- Site Find a Doctor Search Bar --}}
     {{#> @page-section
-            pageSectionClasses="m-page-footer__search-bar"
-            pageContainerClasses="m-page-footer__search-bar-container"}}
-        <span class="m-page-footer__search-bar-text">Find a Doctor in Your Area</span>
-        {{> @input
-                inputLabel="Hidden Label"
-                inputLabelModifier="collapsed"
-                inputId="test-id-d"
-                inputModifier="inline"
-                inputPlaceholder="Specialty"
-                inputValue=""}}
-        {{> @input
-                inputLabel="Hidden Label"
-                inputLabelModifier="collapsed"
-                inputId="test-id-d"
-                inputModifier="inline"
-                inputPlaceholder="Zip Code or City, State"
-                inputValue=""}}
-        {{> @button
-                buttonLabel="Search"}}
+            pageSectionContext=pageFooterContext.sections.siteFadBar.pageSection
+            pageSectionClasses="m-page-footer__site-fad-bar l-hidden-xs"}}
+        {{> @site-fad-bar
+                siteFadBarContext=pageFooterContext.sections.siteFadBar.siteFadBar
+                siteFadBarClasses="m-page-footer__site-fad"}}
     {{/@page-section}}
 
-    {{!-- Footer Search --}}
+    {{!-- Site Disclaimer Bar --}}
     {{#> @page-section
-            pageSectionClasses="m-page-footer__disclaimer-bar"
-            pageContainerClasses="m-page-footer__disclaimer-container"}}
+            pageSectionContext=pageFooterContext.sections.siteDisclaimerBar.pageSection
+            pageSectionClasses="m-page-footer__site-disclaimer-bar"}}
         {{> @site-disclaimer-bar
+                siteDisclaimerBarContext=pageFooterContext.sections.siteDisclaimerBar.siteDisclaimerBar
                 siteDisclaimerBarClasses="m-page-footer__site-disclaimer"}}
     {{/@page-section}}
-
 </footer>

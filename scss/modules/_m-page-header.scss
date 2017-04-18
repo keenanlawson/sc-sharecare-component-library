@@ -1,90 +1,24 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
+$search-bar-background-color: $color-gallery !default;
 $primary-navigation-bar-background-color: $color-alabaster !default;
-$header-search-bar-background-color: $color-gallery !default;
-$breadcrumb-bar-background-color: $color-gallery !default;
 $title-bar-gradient-start-color: $color-mountain-meadow !default;
 $title-bar-gradient-middle-color: $color-turquoise !default;
 $title-bar-gradient-end-color: $color-boston-blue !default;
+$breadcrumb-bar-background-color: $color-gallery !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-// GLOBAL SEARCH/JOIN/LOGIN BAR
-.m-page-header__search-bar-container {
-  height: 4rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.m-page-header__join-login {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-left: 0.8rem;
-
-  @include respond-to('sm') {
-    margin-left: 0;
-  }
-}
-
-.m-page-header__join-login-button {
-  float: left;
-}
-
-.m-page-header__join-login-link {
-
-  &:first-child::after {
-    content: '';
-    margin: 0 1.5rem;
-    display: inline-block;
-    width: 0.1rem;
-    height: 1rem;
-    border-left: 0.1rem solid;
-  }
-}
-
-.m-page-header__join {
-  padding: 1.3rem 3rem 1.1rem
-}
-
-.m-page-header__login {
-  padding: 1.3rem 3.2rem 1.1rem
-}
-
-// SITE NAVIGATION BAR
-.m-page-header__site-navigation-bar-container {
-  min-height: 3.8rem;
-  align-items: center;
-
-  @include respond-to('sm') {
-    height: 8.4rem;
-  }
+.m-page-header__site-search {
+  flex-grow: 1;
 }
 
 .m-page-header__site-navigation {
-  margin-left: auto;
+  flex-grow: 1;
 }
-
-.m-page-header__site-navigation-tab {
-  margin-left: 1.5rem;
-
-  @include respond-to('md') {
-    margin-left: 3rem;
-  }
-
-  &:first-child {
-    margin: 0;
-  }
-}
-
-// APP DRAWER
-.m-page-header__app-drawer-trigger {
-  margin-left: auto;
-}
-
 
 
 //////////////////////////
@@ -95,8 +29,12 @@ $title-bar-gradient-end-color: $color-boston-blue !default;
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.m-page-header__search-bar {
-  background-color: $header-search-bar-background-color;
+.m-page-header__site-search-bar {
+  background-color: $search-bar-background-color;
+}
+
+.m-page-header__title-bar {
+  background: linear-gradient(to right, $title-bar-gradient-start-color, $title-bar-gradient-middle-color, $title-bar-gradient-end-color);
 }
 
 .m-page-header__primary-navigation-bar {
@@ -107,25 +45,7 @@ $title-bar-gradient-end-color: $color-boston-blue !default;
   background-color: $breadcrumb-bar-background-color;
 }
 
-.m-page-header__title-bar {
-  background: linear-gradient(to right, $title-bar-gradient-start-color, $title-bar-gradient-middle-color, $title-bar-gradient-end-color);
-}
-
-.m-page-header__breadcrumb-link,
-.m-page-header__navigation-link {
-  color: $color-mine-shaft;
-}
-
 
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.m-page-header__navigation-link {
-  font-weight: $font-weight-semi;
-}
-
-.m-page-header__site-navigation-link {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  line-height: 2rem;
-}

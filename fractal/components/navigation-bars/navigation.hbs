@@ -9,7 +9,7 @@
 
     {{~#if navigationClasses}} {{navigationClasses}}{{/if}}{{#each navigationContext.classes}} {{this}}{{/each}}">
     {{!-- Add navigation tabs via context --}}
-    {{#each navigationContext.tabs}}
+    {{#each navigationContext.navigationTabs}}
         {{> @navigation-tab navigationTabContext=this}}
 
     {{/each}}

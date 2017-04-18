@@ -1,0 +1,25 @@
+{{!-- fractal/components/site-fad-bar.hbs --}}
+<div class="c-site-fad-bar
+
+    {{~#if siteFadBarModifier}} c-site-fad-bar--{{siteFadBarModifier}}{{/if}}{{#each siteFadBarContext.modifiers}} c-site-fad-bar--{{this}}{{/each~}}
+
+    {{~#if siteFadBarClasses}} {{siteFadBarClasses}}{{/if}}{{#each siteFadBarContext.classes}} {{this}}{{/each}}">
+
+    <span class="m-page-footer__search-bar-text">Find a Doctor in Your Area</span>
+    {{> @input
+            inputLabel="Hidden Label"
+            inputLabelModifier="collapsed"
+            inputId="test-id-d"
+            inputModifier="inline"
+            inputPlaceholder="Specialty"
+            inputValue=""}}
+    {{> @input
+            inputLabel="Hidden Label"
+            inputLabelModifier="collapsed"
+            inputId="test-id-d"
+            inputModifier="inline"
+            inputPlaceholder="Zip Code or City, State"
+            inputValue=""}}
+    {{> @button
+            buttonLabel="Search"}}
+</div>

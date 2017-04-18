@@ -16,6 +16,8 @@ const CardTextContext = require('./cards/card-text.context');
 const CheckboxContext = require('./inputs/checkbox.context');
 const CheckboxGroupContext = require('./inputs/checkbox-group.context');
 const ChipContext = require('./chips/chip.context');
+const DrawerContext = require('./drawers/drawer.context');
+const DrawerTriggerContext = require('./drawers/drawer-trigger.context');
 const FontIconContext = require('./icons/font-icon.context');
 const GlobalSearchContext = require('./global-search/global-search.context');
 const ImageContext = require('./images/image.context');
@@ -39,8 +41,12 @@ const SiteAboutLinksContext = require('./site-about-links/site-about-links.conte
 const SiteDisclaimerContext = require('./site-disclaimer/site-disclaimer.context');
 const SiteDisclaimerBarContext = require('./site-disclaimer-links/site-disclaimer-links.context');
 const SiteDisclaimerLinksContext = require('./site-disclaimer-bar/site-disclaimer-bar.context');
-const SiteLogosBarContext = require('./site-logos-bar/site-logos-bar.context');
+const SiteFadBarContext = require('./site-fad-bar/site-fad-bar.context');
 const SiteLogosContext = require('./site-logos/site-logos.context');
+const SiteLogosBarContext = require('./site-logos-bar/site-logos-bar.context');
+const SiteNavigationContext = require('./site-navigation/site-navigation.context');
+const SiteNavigationBarContext = require('./site-navigation-bar/site-navigation-bar.context');
+const SiteSearchBarContext = require('./site-search-bar/site-search-bar.context');
 const SocialIconsContext = require('./social-icons/social-icons.context.js');
 const SVGIconContext = require('./icons/svg-icon.context');
 const TitleBarContext = require('./title-bars/title-bar.context');
@@ -80,6 +86,8 @@ const ComponentFactory = {
         checkbox: CheckboxContext,
         checkboxGroup: CheckboxGroupContext,
         chip: ChipContext,
+        drawer: DrawerContext,
+        drawerTrigger: DrawerTriggerContext,
         fontIcon: FontIconContext,
         globalSearch: GlobalSearchContext,
         image: ImageContext,
@@ -103,8 +111,12 @@ const ComponentFactory = {
         siteDisclaimer: SiteDisclaimerContext,
         siteDisclaimerLinks: SiteDisclaimerLinksContext,
         siteDisclaimerBar: SiteDisclaimerBarContext,
+        siteFadBar: SiteFadBarContext,
         siteLogos: SiteLogosContext,
         siteLogosBar: SiteLogosBarContext,
+        siteNavigation: SiteNavigationContext,
+        siteNavigationBar: SiteNavigationBarContext,
+        siteSearchBar: SiteSearchBarContext,
         socialIcons: SocialIconsContext,
         svgIcon: SVGIconContext,
         titleBar: TitleBarContext

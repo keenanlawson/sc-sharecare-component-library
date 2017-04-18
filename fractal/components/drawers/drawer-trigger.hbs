@@ -1,0 +1,19 @@
+{{!-- fractal/components/drawer-trigger.hbs --}}
+<label class="c-drawer__trigger
+
+    {{~#if drawerTriggerModifier}} c-drawer__trigger--{{drawerTriggerModifier}}{{/if}}{{#each drawerContext.triggerModifiers}} c-drawer__trigger--{{this}}{{/each~}}
+
+    {{~#if drawerTriggerClasses}} {{drawerTriggerClasses}}{{/if}}{{#each drawerContext.triggerClasses}} {{this}}{{/each}}"
+
+    {{~#if drawerIdFor}} for="{{drawerIdFor}}"{{else if drawerContext.id}} for="{{drawerContext.id}}"{{/if}}>
+
+    {{~#if @partial-block}}
+        {{> @partial-block }}
+    {{else}}
+        {{~> @font-icon
+                fontIcon="hamburger"
+                fontIconModifier="sm"
+                fontIconClasses="font-icon--primary"}}
+    {{/if~}}
+
+</label>

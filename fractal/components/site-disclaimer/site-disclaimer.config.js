@@ -11,7 +11,7 @@ function SiteDisclaimer() {
         "collated": false,
         "preview": "@grid-layout-preview",
         "context": {
-            "siteLogosContext": siteDisclaimer
+            "siteDisclaimerContext": siteDisclaimer
         }
     };
 }

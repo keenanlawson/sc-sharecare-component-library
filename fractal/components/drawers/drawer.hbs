@@ -1,0 +1,21 @@
+{{!-- fractal/components/drawer.hbs --}}
+<input type="checkbox" class="c-drawer__target
+
+    {{~#if drawerTargetModifier}} c-drawer__target--{{drawerTargetModifier}}{{/if}}{{#each drawerContext.targetModifiers}} c-drawer__target--{{this}}{{/each~}}
+
+    {{~#if drawerTargetClasses}} {{drawerTargetClasses}}{{/if}}{{#each drawerContext.targetClasses}} {{this}}{{/each}}"
+
+    {{~#if drawerIdFor}} id="{{drawerIdFor}}"{{else if drawerContext.id}} id="{{drawerContext.id}}"{{/if~}}
+
+    {{#if drawerIsVisible}} checked{{else if drawerContext.isVisible}} checked{{/if}}/>
+<div class="c-drawer
+
+    {{~#if drawerModifier}} c-drawer--{{drawerModifier}}{{/if}}{{#each drawerContext.modifiers}} c-drawer--{{this}}{{/each~}}
+
+    {{~#if drawerClasses}} {{drawerClasses}}{{/if}}{{#each drawerContext.classes}} {{this}}{{/each}}">
+
+    {{~#if @partial-block}}
+        {{> @partial-block }}
+    {{else}}Drawer Content{{/if~}}
+
+</div>

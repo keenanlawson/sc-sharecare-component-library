@@ -62,3 +62,10 @@ Added site about links and site about bar components.
 Still working out responsive header, content and footer templates and styles
 
 Added site disclaimer links and site disclaimer bar components.
+
+***4/17/2017***
+
+Still working out responsive header, content and footer templates and styles
+
+Added drawer, site header/footer bars, cleaned styles
+

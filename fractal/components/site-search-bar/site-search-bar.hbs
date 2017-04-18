@@ -1,0 +1,22 @@
+{{!-- fractal/components/site-search-bar.hbs --}}
+<div class="c-site-search-bar
+
+    {{~#if siteSearchBarModifier}} c-site-search-bar--{{siteSearchBarModifier}}{{/if}}{{#each siteSearchBarContext.modifiers}} c-site-search-bar--{{this}}{{/each~}}
+
+    {{~#if siteSearchBarClasses}} {{siteSearchBarClasses}}{{/if}}{{#each siteSearchBarContext.classes}} {{this}}{{/each}}">
+
+    {{~> @global-search
+            globalSearchContext=siteSearchBarContext.globalSearch
+            globalSearchClasses="c-site-search-bar__global-search"~}}
+
+    <div class="c-site-search-bar__join-login">
+        {{> @button
+                buttonLabel="Join Sharecare"
+                buttonModifier="cta"
+                buttonClasses="c-site-search-bar__join-login-button c-site-search-bar__join"}}
+        {{> @button
+                buttonLabel="Log In"
+                buttonModifier="secure"
+                buttonClasses="c-site-search-bar__join-login-button c-site-search-bar__login"}}
+    </div>
+</div>

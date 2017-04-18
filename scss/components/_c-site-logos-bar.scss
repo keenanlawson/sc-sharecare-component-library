@@ -7,13 +7,14 @@
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-site-logos-bar {
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 0;
 
   @include respond-to(sm) {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    padding: 0.8rem 1.6rem;
   }
 }
 

@@ -2,23 +2,23 @@
   @include media-breakpoint-down($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     $infix: if($infix == '', -xs, #{$infix}-down);
-    .hidden#{$infix},
-    .visible#{$infix}-none,
-    .visible#{$infix}-inline,
-    .visible#{$infix}-inline-block,
-    .visible#{$infix}-block,
-    .visible#{$infix}-table,
-    .visible#{$infix}-table-cell,
-    .visible#{$infix}-flex,
-    .visible#{$infix}-inline-flex  { display: none !important; }
+    .l-hidden#{$infix},
+    .l-visible#{$infix}-none,
+    .l-visible#{$infix}-inline,
+    .l-visible#{$infix}-inline-block,
+    .l-visible#{$infix}-block,
+    .l-visible#{$infix}-table,
+    .l-visible#{$infix}-table-cell,
+    .l-visible#{$infix}-flex,
+    .l-visible#{$infix}-inline-flex  { display: none !important; }
 
-    .visible#{$infix}-inline       { display: inline !important; }
-    .visible#{$infix}-inline-block { display: inline-block !important; }
-    .visible#{$infix}-block        { display: block !important; }
-    .visible#{$infix}-table        { display: table !important; }
-    .visible#{$infix}-table-cell   { display: table-cell !important; }
-    .visible#{$infix}-flex         { display: flex !important; }
-    .visible#{$infix}-inline-flex  { display: inline-flex !important; }
+    .l-visible#{$infix}-inline       { display: inline !important; }
+    .l-visible#{$infix}-inline-block { display: inline-block !important; }
+    .l-visible#{$infix}-block        { display: block !important; }
+    .l-visible#{$infix}-table        { display: table !important; }
+    .l-visible#{$infix}-table-cell   { display: table-cell !important; }
+    .l-visible#{$infix}-flex         { display: flex !important; }
+    .l-visible#{$infix}-inline-flex  { display: inline-flex !important; }
   }
 }
 
@@ -26,23 +26,23 @@
   @include media-breakpoint-only($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .hidden#{$infix},
-    .visible#{$infix}-none,
-    .visible#{$infix}-inline,
-    .visible#{$infix}-inline-block,
-    .visible#{$infix}-block,
-    .visible#{$infix}-table,
-    .visible#{$infix}-table-cell,
-    .visible#{$infix}-flex,
-    .visible#{$infix}-inline-flex  { display: none !important; }
+    .l-hidden#{$infix},
+    .l-visible#{$infix}-none,
+    .l-visible#{$infix}-inline,
+    .l-visible#{$infix}-inline-block,
+    .l-visible#{$infix}-block,
+    .l-visible#{$infix}-table,
+    .l-visible#{$infix}-table-cell,
+    .l-visible#{$infix}-flex,
+    .l-visible#{$infix}-inline-flex  { display: none !important; }
 
-    .visible#{$infix}-inline       { display: inline !important; }
-    .visible#{$infix}-inline-block { display: inline-block !important; }
-    .visible#{$infix}-block        { display: block !important; }
-    .visible#{$infix}-table        { display: table !important; }
-    .visible#{$infix}-table-cell   { display: table-cell !important; }
-    .visible#{$infix}-flex         { display: flex !important; }
-    .visible#{$infix}-inline-flex  { display: inline-flex !important; }
+    .l-visible#{$infix}-inline       { display: inline !important; }
+    .l-visible#{$infix}-inline-block { display: inline-block !important; }
+    .l-visible#{$infix}-block        { display: block !important; }
+    .l-visible#{$infix}-table        { display: table !important; }
+    .l-visible#{$infix}-table-cell   { display: table-cell !important; }
+    .l-visible#{$infix}-flex         { display: flex !important; }
+    .l-visible#{$infix}-inline-flex  { display: inline-flex !important; }
   }
 }
 
@@ -51,23 +51,23 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     @if($infix != '') {
       $infix: #{$infix}-up;
-      .hidden#{$infix},
-      .visible#{$infix}-none,
-      .visible#{$infix}-inline,
-      .visible#{$infix}-inline-block,
-      .visible#{$infix}-block,
-      .visible#{$infix}-table,
-      .visible#{$infix}-table-cell,
-      .visible#{$infix}-flex,
-      .visible#{$infix}-inline-flex  { display: none !important; }
+      .l-hidden#{$infix},
+      .l-visible#{$infix}-none,
+      .l-visible#{$infix}-inline,
+      .l-visible#{$infix}-inline-block,
+      .l-visible#{$infix}-block,
+      .l-visible#{$infix}-table,
+      .l-visible#{$infix}-table-cell,
+      .l-visible#{$infix}-flex,
+      .l-visible#{$infix}-inline-flex  { display: none !important; }
 
-      .visible#{$infix}-inline       { display: inline !important; }
-      .visible#{$infix}-inline-block { display: inline-block !important; }
-      .visible#{$infix}-block        { display: block !important; }
-      .visible#{$infix}-table        { display: table !important; }
-      .visible#{$infix}-table-cell   { display: table-cell !important; }
-      .visible#{$infix}-flex         { display: flex !important; }
-      .visible#{$infix}-inline-flex  { display: inline-flex !important; }
+      .l-visible#{$infix}-inline       { display: inline !important; }
+      .l-visible#{$infix}-inline-block { display: inline-block !important; }
+      .l-visible#{$infix}-block        { display: block !important; }
+      .l-visible#{$infix}-table        { display: table !important; }
+      .l-visible#{$infix}-table-cell   { display: table-cell !important; }
+      .l-visible#{$infix}-flex         { display: flex !important; }
+      .l-visible#{$infix}-inline-flex  { display: inline-flex !important; }
     }
   }
 }

@@ -32,9 +32,7 @@
 // Layouts (layouts for main page components)
 @import 'layouts/l-grids';
 @import 'layouts/l-page-section';
-@import 'layouts/l-page-header';
 @import 'layouts/l-main-content';
-@import 'layouts/l-page-footer';
 
 // Components (most things will go here)
 //@import 'components/c-visibility-toggle';
@@ -68,6 +66,8 @@
 @import 'components/c-pagination';
 @import 'components/c-global-search';
 
+@import 'components/c-site-navigation';
+
 @import 'components/c-social-icons';
 @import 'components/c-site-logos';
 @import 'components/c-site-about-links';
@@ -75,6 +75,9 @@
 @import 'components/c-site-disclaimer-links';
 
 // ORGANISMS
+@import 'components/c-site-search-bar';
+@import 'components/c-site-navigation-bar';
+
 @import 'components/c-site-logos-bar';
 @import 'components/c-site-about-bar';
 @import 'components/c-site-disclaimer-bar';
