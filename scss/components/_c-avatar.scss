@@ -14,8 +14,8 @@ $avatar-border-color: $color-alto !default;
   overflow: hidden;
   border: 2px solid;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .c-avatar__image {
@@ -44,18 +44,13 @@ $avatar-border-color: $color-alto !default;
 /// 3. STATE RULES - is-className, media queries, etc
 //////////////////////////
 .c-avatar--medium {
-  width: 36px;
-  height: 36px;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .c-avatar--large {
-  width: 62px;
-  height: 62px;
-
-  @include respond-to(sm) {
-    width: 62px;
-    height: 62px;
-  }
+  width: 7.75rem;
+  height: 7.75rem;
 }
 
 

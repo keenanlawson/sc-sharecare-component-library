@@ -14,15 +14,15 @@ $banner-text-color: $color-pure-white !default;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 1.1rem 1rem 1.2rem 2rem;
+  padding:($base-unit-size * 1.5) ($base-unit-size * 1.5) ($base-unit-size * 1.5) ($base-unit-size * 2.5);
 }
 
 .c-banner__icon {
-  margin-right: 1rem;
+  margin-right: ($base-unit-size);
 }
 
 .c-banner__close {
-  margin-left: 1.7rem;
+  margin-left: ($base-unit-size * 2);
   cursor: pointer;
 }
 

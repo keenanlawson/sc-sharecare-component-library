@@ -69,3 +69,9 @@ Still working out responsive header, content and footer templates and styles
 
 Added drawer, site header/footer bars, cleaned styles
 
+
+***4/19/2017***
+
+Still working out responsive header, content and footer templates and styles
+
+Updated styles to use a base-size-unit variable as design has changed from 10px base spacing units to 8px.  Doing this to be flexible.

@@ -31,7 +31,7 @@ $button-secure-text-hover-color: $color-pure-white !default;
   min-width: 10.8rem;
   border: 0;
   cursor: pointer;
-  padding: 0.9rem 1.4rem 0.5rem;
+  padding: ($base-unit-size) ($base-unit-size * 2) ($base-unit-size / 2);
 }
 
 .c-button__content {
@@ -43,11 +43,11 @@ $button-secure-text-hover-color: $color-pure-white !default;
 .c-button__icon {
 
   &:first-child {
-    margin-right: 0.5rem;
+    margin-right: ($base-unit-size / 2);
   }
 
   &:last-child {
-    margin-left: 0.5rem;
+    margin-left: ($base-unit-size / 2);
   }
 
   &:only-child {
@@ -56,7 +56,7 @@ $button-secure-text-hover-color: $color-pure-white !default;
 }
 
 .c-button__badge {
-  margin-left: 0.5rem;
+  margin-left: ($base-unit-size / 2);
 }
 
 
@@ -64,18 +64,18 @@ $button-secure-text-hover-color: $color-pure-white !default;
 /// 3. STATE RULES - is-className, media queries, etc
 //////////////////////////
 .c-button--medium {
-  min-width: 13rem;
-  padding: 0.9rem 1.5rem 0.7rem;
+  min-width: 16.25rem;
+  padding: ($base-unit-size) ($base-unit-size * 2) ($base-unit-size);
 }
 
 .c-button--large {
-  min-width: 15rem;
-  padding: 1.6rem 1.5rem 1.5rem;
+  min-width: 18.75rem;
+  padding: ($base-unit-size * 2);
 }
 
 .c-button--xlarge {
-  min-width: 32rem;
-  padding: 1.9rem 4.8rem 2.3rem;
+  min-width: 40rem;
+  padding: ($base-unit-size * 2) ($base-unit-size * 6) ($base-unit-size * 3);
 }
 
 .c-button--split {
