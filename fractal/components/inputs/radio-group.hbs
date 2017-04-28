@@ -5,16 +5,29 @@
 
     {{~#if inputClasses}} {{inputClasses}}{{/if}}{{#each radioGroupContext.classes}} {{this}}{{/each}}">
     {{!-- Add group label --}}
-    <label class="c-input__label c-input__label--group
+    {{~#if radioGroupLabel}}
+        <label class="c-input__label c-input__label--group
 
-        {{~#if inputLabelModifier}} c-input__label--{{inputLabelModifier}}{{/if}}{{#each radioGroupContext.labelModifiers}} c-input__label--{{this}}{{/each~}}
+            {{~#if inputLabelModifier}} c-input__label--{{inputLabelModifier}}{{/if}}{{#each radioGroupContext.labelModifiers}} c-input__label--{{this}}{{/each~}}
 
-        {{~#if inputLabelClasses}} {{inputLabelClasses}}{{/if}}{{#each radioGroupContext.labelClasses}} {{this}}{{/each}}"
+            {{~#if inputLabelClasses}} {{inputLabelClasses}}{{/if}}{{#each radioGroupContext.labelClasses}} {{this}}{{/each}}"
 
-        {{~#if radioGroupLabelFor}} for="{{radioGroupLabelFor}}"{{else if radioGroupContext.groupLabelFor}} for="{{radioGroupContext.groupLabelFor}}"{{/if}}>
+            {{~#if radioGroupLabelFor}} for="{{radioGroupLabelFor}}"{{else if radioGroupContext.groupLabelFor}} for="{{radioGroupContext.groupLabelFor}}"{{/if}}>
 
-        {{~#if radioGroupLabel}}{{radioGroupLabel}}{{else}}{{radioGroupContext.groupLabel}}{{/if~}}
-    </label>
+            {{radioGroupLabel}}
+        </label>
+    {{else if radioGroupContext.groupLabel}}
+        <label class="c-input__label c-input__label--group
+
+            {{~#if inputLabelModifier}} c-input__label--{{inputLabelModifier}}{{/if}}{{#each radioGroupContext.labelModifiers}} c-input__label--{{this}}{{/each~}}
+
+            {{~#if inputLabelClasses}} {{inputLabelClasses}}{{/if}}{{#each radioGroupContext.labelClasses}} {{this}}{{/each}}"
+
+            {{~#if radioGroupLabelFor}} for="{{radioGroupLabelFor}}"{{else if radioGroupContext.groupLabelFor}} for="{{radioGroupContext.groupLabelFor}}"{{/if}}>
+
+            {{radioGroupContext.groupLabel}}
+        </label>
+    {{/if~}}
     {{!--  --}}
     <div class="c-input__group c-input__group--radio
 
