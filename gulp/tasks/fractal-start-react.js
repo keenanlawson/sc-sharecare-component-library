@@ -1,6 +1,11 @@
 'use strict';
 var gulp = require('gulp-help')(require('gulp'));
 var path = require('path');
+const reactAdapter = require('fractal-react-adapter')({
+    babelConfig: {
+        presets: ['react', 'env', 'es2015']
+    }
+});
 
 /*
  * Configure a Fractal instance.
@@ -11,6 +16,9 @@ var path = require('path');
  */
 
 const fractal = require('@frctl/fractal').create();
+
+fractal.components.engine(reactAdapter);
+fractal.components.set('ext', '.jsx');
 
 fractal.set('project.title', 'Sharecare Component Library'); // title for the project
 fractal.web.set('builder.dest', path.resolve(__dirname, '../../fractal/build')); // destination for the static export
@@ -33,7 +41,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
  * This task will also log any errors to the console.
  */
 
-gulp.task('fractal:start', function(){
+gulp.task('fractal:start-react', function(){
     const server = fractal.web.server({
         sync: true
     });
