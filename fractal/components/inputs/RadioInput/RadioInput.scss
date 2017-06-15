@@ -1,0 +1,39 @@
+@import '../../../../scss/settings/s-color-palette';
+@import '../../../../scss/utilities/u-respond-to-breakpoint';
+
+$radio-label-disabled-color: $color-alto;
+$radio-label-error-color: $color-chestnut-rose;
+
+.c-radio {
+  display: flex;
+  margin-top: 1rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-radio__input {
+  display: none;
+}
+
+.c-radio__label {
+  margin-left: 0.8rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  cursor: pointer;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+
+  &.is-disabled {
+    color: $radio-label-disabled-color;
+    cursor: default;
+  }
+
+  &.is-error {
+    color: $radio-label-error-color;
+  }
+}

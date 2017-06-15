@@ -8,7 +8,9 @@ gulp.task('style-guide-css', 'Building style guide CSS files...', function(done)
 
     // Get all entry files
     return gulp.src([
-        './scss/motifs/**/*.scss',
+        // './scss/motifs/**/*.scss',
+        './fractal/components/**/*.scss',
+        './scss/core-configuration.scss',
         './scss/style-guide.scss'
     ])
 

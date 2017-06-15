@@ -24,6 +24,7 @@ fractal.set('project.title', 'Sharecare Component Library'); // title for the pr
 fractal.web.set('builder.dest', path.resolve(__dirname, '../../fractal/build')); // destination for the static export
 fractal.docs.set('path', path.resolve(__dirname, '../../fractal/docs')); // location of the documentation directory.
 fractal.components.set('path', path.resolve(__dirname, '../../fractal/components')); // location of the component directory.
+fractal.components.set('yield', 'rendered_content');
 fractal.web.set('static.path', path.resolve(__dirname, '../../_site'));
 fractal.web.set('static.mount', 'static');
 fractal.web.set('server.port', 3050);

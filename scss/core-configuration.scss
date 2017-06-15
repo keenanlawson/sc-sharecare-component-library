@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+// CUSTOM THEME
+// NOTE: There should be no variable overrides here, create a new theme or typography
+
+// 1. Import preferred typography
+@import './typography/ty-proxima-nova';
+
+// 2. Import preferred color theme
+@import './settings/themes/light-sea-green';
+
+// 3. Render application styles
+//@import '../../core-application-styles';
+
+// 4. Optional - additional styles outside of the core Sharecare application
+// N/A
+
+// Motifs import typography as their first item
+// Import icon typography here keeps typography CSS together
+@import './typography/ty-sharecare-font-icons';
+
+// Vendors
+
+// Vendors extensions
+
+// Utilities
+@import 'utilities/u-get-z-index';
+@import 'utilities/u-respond-to-breakpoint';
+@import 'utilities/u-sass-flex-mixin';
+@import 'utilities/u-multi-line-ellipsis';
+@import 'utilities/u-url-encode-svg';
+@import 'utilities/u-breakpoint-next';
+@import 'utilities/u-breakpoint-min';
+@import 'utilities/u-breakpoint-max';
+@import 'utilities/u-breakpoint-infix';
+@import 'utilities/u-breakpoint-up';
+@import 'utilities/u-breakpoint-down';
+@import 'utilities/u-breakpoint-between';
+@import 'utilities/u-breakpoint-only';
+
+
+
+// Settings
+@import 'settings/s-base-config';
+
+// Base (base element settings, no classes nor ids allowed)
+@import 'base/b-resets';

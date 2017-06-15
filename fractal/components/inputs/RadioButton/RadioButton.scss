@@ -1,0 +1,39 @@
+@import '../../../../scss/settings/s-color-palette';
+@import '../../../../scss/utilities/u-url-encode-svg';
+
+$radio-button-default-background-color: $color-pure-white;
+$radio-button-default-border-color: $color-alto;
+$radio-button-default-fill-color: $color-mountain-meadow;
+
+$radio-button-disabled-background-color: $color-gallery;
+$radio-button-error-border-color: $color-chestnut-rose;
+
+.c-radio__button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.1rem solid;
+  border-radius: 50%;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.c-radio__button {
+  background-color: $radio-button-default-background-color;
+  border-color: $radio-button-default-border-color;
+
+  &.is-checked {
+    @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2" fill="#{$radio-button-default-fill-color}"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $radio-button-default-background-color;
+  }
+
+  &.is-disabled {
+    background-color: $radio-button-disabled-background-color;
+    cursor: default;
+  }
+
+  &.is-error {
+    border-color: $radio-button-error-border-color;
+  }
+}
