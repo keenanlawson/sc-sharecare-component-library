@@ -2,27 +2,25 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const RadioGroup = ({ className, label, error, required, children }) => {
+const TextGroup = ({ className, label, error, children }) => {
 
     const componentClass = 'c-radio-group';
     const labelClass = `${componentClass}__label`;
     const errorClass = `${componentClass}__error`;
-    const requiredClass = `${componentClass}__required`;
     const componentClasses = classNames(componentClass, className);
 
     return (
         <div className={componentClasses}>
-            {label ? <span className={labelClass}>{label}{required ? <span className={requiredClass}> * </span> : null}</span> : null}
+            {label ? <div className={labelClass}>{label}</div> : null}
             {!!error && !error instanceof PropTypes.bool ? <div className={errorClass}>{error}</div> : null}
             {children}
         </div>
     );
 };
 
-RadioGroup.propTypes = {
+TextGroup.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    required: PropTypes.bool,
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
@@ -31,10 +29,10 @@ RadioGroup.propTypes = {
         PropTypes.bool,
         PropTypes.string,
         PropTypes.node
-    ])
+    ]),
 };
 
-RadioGroup.defaultProps = {};
+TextGroup.defaultProps = {};
 
-// export default RadioGroup;
-module.exports = RadioGroup;
+// export default TextGroup;
+module.exports = TextGroup;

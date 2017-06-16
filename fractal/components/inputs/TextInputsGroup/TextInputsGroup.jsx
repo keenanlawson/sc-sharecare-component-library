@@ -12,20 +12,15 @@ export default class RadioButtonsGroup extends React.Component {
         this.state = { value: this.props.labelsAndValues.find((item)=>{return item.checked}).value };
     }
 
-    handleChange(value, event) {
-        this.setState({value});
-        if (this.props.onChange) this.props.onChange(value, event);
+    handleChange(event) {
+        this.setState({value: event.target.value});
+        if (this.props.onChange) this.props.onChange(event);
     }
 
     render() {
         return (
             this.props.labelsAndValues.length > 0 &&
-            <RadioGroup
-                error={this.props.error}
-                label={this.props.label}
-                className={this.props.className}
-                required={this.props.required}
-            >
+            <RadioGroup error={this.props.error} label={this.props.label} className={this.props.className}>
                 {
                     this.props.labelsAndValues.map((item) => {
                         return <RadioInput

@@ -1,0 +1,32 @@
+@import '../../../../scss/settings/s-base-config';
+@import '../../../../scss/utilities/u-respond-to-breakpoint';
+
+$radio-group-error-color: $color-chestnut-rose;
+
+.c-radio-group {
+
+}
+
+.c-radio-group__label {
+  margin-bottom: ($base-unit-size / 2);
+  font-size: 1.8rem;
+  line-height: 2rem;
+  cursor: default;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+.c-radio-group__error {
+  color: $radio-group-error-color;
+
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}

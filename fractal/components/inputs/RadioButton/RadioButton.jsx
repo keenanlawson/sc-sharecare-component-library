@@ -2,10 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const RadioButton = ({ checked = false, disabled = false, error = false }) => {
+const RadioButton = ({ className, checked = false, disabled = false, error = false }) => {
     const componentClass = 'c-radio__button';
     const componentClasses = classNames(
         componentClass,
+        className,
         {['is-checked']: checked},
         {['is-error']: error && !disabled},
         {['is-disabled']: disabled}
@@ -17,6 +18,7 @@ const RadioButton = ({ checked = false, disabled = false, error = false }) => {
 };
 
 RadioButton.propTypes = {
+    className: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     error: PropTypes.bool

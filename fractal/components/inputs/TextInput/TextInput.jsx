@@ -2,9 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import RadioButton from '../RadioButton/RadioButton';
-
-export default class RadioInput extends React.Component {
+export default class TextInput extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,10 +11,8 @@ export default class RadioInput extends React.Component {
         this.focus = this.focus.bind(this);
     }
 
-    handleClick(event) {
-        const { checked, disabled, onChange } = this.props;
-        if (event.pageX !== 0 && event.pageY !== 0) this.blur();
-        if (!disabled && !checked && onChange) onChange(event.target.value, event);
+    handleChange(event) {
+        if (this.props.onChange) this.props.onChange(event.target.value, event);
     };
 
     blur() {
@@ -28,58 +24,63 @@ export default class RadioInput extends React.Component {
     }
 
     render() {
-        const { className, checked, disabled, required, label, name, onChange, error, value } = this.props;
-        const componentClass = 'c-radio';
+        const { className, disabled, required, label, name, onChange, error, value, placeholder } = this.props;
+        const componentClass = 'c-text';
         const labelClass = `${componentClass}__label`;
         const inputClass = `${componentClass}__input`;
+        const requiredClass = `${componentClass}__required`;
+        const errorClass = `${componentClass}__error`;
         const componentClasses = classNames(componentClass, className);
-        const otherClasses = [{['is-error']: error && !disabled}, {['is-disabled']: disabled}];
+        const otherClasses = [{['is-error']: !!error && !disabled}, {['is-disabled']: disabled}];
         const labelClasses = classNames(labelClass, ...otherClasses);
         const inputClasses = classNames(inputClass, ...otherClasses);
         let componentProps = {};
-        if (checked) componentProps.checked = checked;
         if (disabled) componentProps.disabled = disabled;
         if (required) componentProps.required = required;
+        if (placeholder) componentProps.placeholder = placeholder;
 
         return (
             <label className={componentClasses}>
+                {label ? <span className={labelClasses}>{label}{required ? <span className={requiredClass}> * </span> : null}</span> : null}
                 <input
                     {...componentProps}
-                    type="radio"
+                    type="text"
                     value={value}
                     className={inputClasses}
                     name={name}
-                    onChange={()=>{}}
-                    onClick={this.handleClick}
+                    onChange={this.handleChange}
                     ref={(node) => { this.inputNode = node; }}
                 />
-                <RadioButton checked={checked} disabled={disabled} error={error}/>
-                {label ? <span className={labelClasses}>{label}</span> : null}
+                {!!error && !error instanceof PropTypes.bool ? <div className={errorClass}>{error}</div> : null}
             </label>
         );
     }
 }
 
-RadioInput.propTypes = {
+TextInput.propTypes = {
     className: PropTypes.string,
-    checked: PropTypes.bool,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
-    error: PropTypes.bool,
+    error: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.string,
+        PropTypes.node
+    ]),
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
     name: PropTypes.string,
     value: PropTypes.string,
+    placeholder: PropTypes.string,
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
     ])
 };
 
-RadioInput.defaultProps = {
+TextInput.defaultProps = {
     onChange: ()=>{}
 };
 
-// export default RadioInput;
-module.exports = RadioInput;
+// export default TextInput;
+module.exports = TextInput;
