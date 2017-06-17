@@ -1,13 +1,13 @@
 module.exports = {
-    "title": "Radio Group",
+    "title": "Text Group",
     "status": "ready",
     "collated": true,
-    "preview": "@radio-group-preview",
+    "preview": "@text-group-preview",
     "context": {
-        "label": "Radio Group Test Text"
+        "label": "Text Group Test Text"
     },
     "variants": [
-        {"name": "radio-group-error", "context": {
+        {"name": "text-group-error", "context": {
             "error": "Error Test Text"
         }}
     ]

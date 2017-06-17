@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const TextGroup = ({ className, label, error, children }) => {
 
-    const componentClass = 'c-radio-group';
+    const componentClass = 'c-text-group';
     const labelClass = `${componentClass}__label`;
     const errorClass = `${componentClass}__error`;
     const componentClasses = classNames(componentClass, className);
@@ -12,7 +12,7 @@ const TextGroup = ({ className, label, error, children }) => {
     return (
         <div className={componentClasses}>
             {label ? <div className={labelClass}>{label}</div> : null}
-            {!!error && !error instanceof PropTypes.bool ? <div className={errorClass}>{error}</div> : null}
+            {!!error && !(typeof error === 'boolean') ? <div className={errorClass}>{error}</div> : null}
             {children}
         </div>
     );

@@ -1,49 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import RadioGroup from '../RadioGroup/RadioGroup';
-import RadioInput from '../RadioInput/RadioInput';
+import TextGroup from '../TextGroup/TextGroup';
+import TextInput from '../TextInput/TextInput';
 
-export default class RadioButtonsGroup extends React.Component {
+const TextInputsGroup = ({ className, label, required, labelsAndValues, onChange, groupError = true, error }) => {
 
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = { value: this.props.labelsAndValues.find((item)=>{return item.checked}).value };
-    }
+    const handleChange = (value, event) => {
+        if (onChange) onChange(value, event);
+    };
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-        if (this.props.onChange) this.props.onChange(event);
-    }
+    return (
+        labelsAndValues.length > 0 &&
+        <TextGroup error={groupError ? error : null} label={label} className={className}>
+            {
+                labelsAndValues.map((item) => {
+                    return <TextInput
+                        label={item.label}
+                        value={item.value}
+                        error={(groupError ? !!error : item.error || null) || null}
+                        disabled={item.disabled || false}
+                        required={required || false}
+                        key={item.value}
+                        name={item.name}
+                        onChange={handleChange}
+                    />;
+                })
+            }
+        </TextGroup>
+    );
+};
 
-    render() {
-        return (
-            this.props.labelsAndValues.length > 0 &&
-            <RadioGroup error={this.props.error} label={this.props.label} className={this.props.className}>
-                {
-                    this.props.labelsAndValues.map((item) => {
-                        return <RadioInput
-                            label={item.label}
-                            value={item.value}
-                            checked={this.state.value === item.value}
-                            error={!!this.props.error || false}
-                            disabled={item.disabled || false}
-                            required={this.props.required || false}
-                            key={item.value}
-                            name={this.props.name}
-                            onChange={this.handleChange}
-                        />;
-                    })
-                }
-            </RadioGroup>
-        );
-    }
-}
-
-RadioButtonsGroup.propTypes = {
+TextInputsGroup.propTypes = {
     className: PropTypes.string,
-    name: PropTypes.string.isRequired,
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
@@ -55,10 +44,16 @@ RadioButtonsGroup.propTypes = {
             PropTypes.node
         ]).isRequired,
         value: PropTypes.string.isRequired,
-        checked: PropTypes.bool,
-        disabled: PropTypes.bool
+        name: PropTypes.string,
+        disabled: PropTypes.bool,
+        error: PropTypes.oneOfType([
+            PropTypes.bool,
+            PropTypes.string,
+            PropTypes.node
+        ])
     })).isRequired,
     onChange: PropTypes.func,
+    groupError: PropTypes.bool,
     error: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string,
@@ -66,9 +61,9 @@ RadioButtonsGroup.propTypes = {
     ]),
 };
 
-RadioButtonsGroup.defaultProps = {
-    onChange: ()=>{}
+TextInputsGroup.defaultProps = {
+    groupError: true
 };
 
-// export default RadioButtonsGroup;
-module.exports = RadioButtonsGroup;
+// export default TextInputsGroup;
+module.exports = TextInputsGroup;

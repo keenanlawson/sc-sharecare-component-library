@@ -1,39 +1,128 @@
 @import '../../../../scss/settings/s-color-palette';
+@import '../../../../scss/settings/s-base-variables';
 @import '../../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../../scss/typography/ty-proxima-nova';
 
-$radio-label-disabled-color: $color-alto;
-$radio-label-error-color: $color-chestnut-rose;
+$text-label-default-color: $base-font-color;
+$text-label-disabled-color: $color-alto;
+$text-label-error-color: $color-chestnut-rose;
 
-.c-radio {
+$text-required-color: $color-chestnut-rose;
+$text-error-color: $color-chestnut-rose;
+
+$text-input-text-color: $color-dove-gray !default;
+$text-input-placeholder-color: $color-chatelle !default;
+$text-input-border-color: $color-alto !default;
+$text-input-background-color: $color-pure-white !default;
+
+$text-input-disabled-background-color: $color-gallery !default;
+
+$text-input-error-text-color: $color-chestnut-rose !default;
+$text-input-error-placeholder-color: $color-chestnut-rose !default;
+$text-input-error-border-color: $color-chestnut-rose !default;
+
+$text-input-focus-border-color: $color-mountain-meadow !default;
+
+.c-text {
   display: flex;
-  margin-top: 1rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  flex-direction: column;
 }
 
-.c-radio__input {
-  display: none;
-}
-
-.c-radio__label {
-  margin-left: 0.8rem;
-  font-size: 1.8rem;
-  line-height: 2rem;
+.c-text__label {
   cursor: pointer;
+  color: $text-label-default-color;
 
-  @include respond-to(sm) {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-  }
+  // Give some spacing below input labels
+  margin-bottom: ($base-unit-size / 2);
 
   &.is-disabled {
-    color: $radio-label-disabled-color;
+    color: $text-label-disabled-color;
     cursor: default;
   }
 
   &.is-error {
-    color: $radio-label-error-color;
+    color: $text-label-error-color;
+  }
+
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.c-text__input {
+  // Default to full width input text/selects
+  width: 100%;
+  // Default input heights
+  height: 4rem;
+  border: 0.1rem solid;
+  cursor: pointer;
+  padding: 0.1rem 0 0 ($base-unit-size);
+  border-radius: 0.2rem;
+
+  @include respond-to(sm) {
+    height: 3rem;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  border-color: $text-input-border-color;
+  color: $text-input-text-color;
+  background-color: $text-input-background-color;
+
+  &:focus {
+    border-color: $text-input-focus-border-color;
+  }
+
+  &.is-disabled {
+    cursor: default;
+    background-color: $text-input-disabled-background-color;
+  }
+
+  // Error state colors
+  &.is-error {
+    border-color: $text-input-error-border-color;
+    color: $text-input-error-text-color;
+  }
+
+  font-size: 1.8rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+  }
+}
+
+:-moz-placeholder { color: $text-input-placeholder-color; }
+::-moz-placeholder { color: $text-input-placeholder-color; }
+:-ms-input-placeholder { color: $text-input-placeholder-color; }
+::-webkit-input-placeholder { color: $text-input-placeholder-color; }
+
+:-moz-placeholder { font-weight: $font-weight-normal; }
+::-moz-placeholder { font-weight: $font-weight-normal; }
+:-ms-input-placeholder { font-weight: $font-weight-normal; }
+::-webkit-input-placeholder { font-weight: $font-weight-normal; }
+
+.c-text__required {
+  color: $text-required-color;
+}
+
+.c-text__error {
+
+  // Give some spacing above error labels
+  margin-top: ($base-unit-size / 2);
+
+  color: $text-error-color;
+
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
   }
 }

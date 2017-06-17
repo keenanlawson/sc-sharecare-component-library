@@ -1,46 +1,38 @@
 module.exports = {
-    "title": "Radio Input",
+    "title": "Text Input",
     "status": "ready",
     "collated": true,
-    "preview": "@radio-input-preview",
+    "preview": "@text-input-preview",
     "context": {
-        "checked": true,
-        "disabled": false,
-        "name": "radioNameA",
-        "value": "radioValue",
-        "label": "Radio Label"
+        "name": "textNameA",
+        "label": "Text Label"
     },
     "variants": [
-        {"name": "radio-input-unchecked-not-disabled", "context": {
-            "checked": false,
-            "disabled": false,
-            "name": "radioNameA"
+        {"name": "text-input-disabled", "context": {
+            "disabled": true
         }},
-        {"name": "radio-input-checked-disabled", "context": {
-            "checked": true,
+        {"name": "text-input-required", "context": {
+            "required": true
+        }},
+        {"name": "text-input-error", "context": {
+            "error": true
+        }},
+        {"name": "text-input-error", "context": {
+            "error": "Text Error"
+        }},
+        {"name": "text-input-placeholder", "context": {
+            "placeholder": "Sample placeholder text"
+        }},
+        {"name": "text-input-with-value", "context": {
+            "value": "Sample value text",
+        }},
+        {"name": "text-input-no-label", "context": {
+            "label": "",
+            "value": "Sample without label"
+        }},
+        {"name": "text-input-error-disabled", "context": {
             "disabled": true,
-            "name": "radioNameB"
-        }},
-        {"name": "radio-input-unchecked-disabled", "context": {
-            "checked": false,
-            "disabled": true,
-            "name": "radioNameB"
-        }},
-        {"name": "radio-input-checked-error", "context": {
-            "checked": true,
-            "error": true,
-            "name": "radioNameC"
-        }},
-        {"name": "radio-input-unchecked-error", "context": {
-            "checked": false,
-            "error": true,
-            "name": "radioNameC"
-        }},
-        {"name": "radio-input-unchecked-error-disabled", "context": {
-            "checked": false,
-            "disabled": true,
-            "error": true,
-            "name": "radioNameC"
+            "error": true
         }}
     ]
 };

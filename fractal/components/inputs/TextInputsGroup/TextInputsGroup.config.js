@@ -1,23 +1,25 @@
 module.exports = {
-    "title": "Radio Buttons Group",
+    "title": "Text Inputs Group",
     "status": "ready",
     "collated": true,
-    "preview": "@radio-buttons-group-preview",
+    "preview": "@text-inputs-group-preview",
     "context": {
-        "name": "radioButtonsName",
-        "label": "Radio Group Test Text",
+        "label": "Text Inputs Group Test Text",
         "labelsAndValues": [
-            {label: 'Radio Button Label A', value: 'radioButtonLabelA', checked: true},
-            {label: 'Radio Button Label B', value: 'radioButtonLabelB'},
-            {label: 'Radio Button Label C', value: 'radioButtonLabelC'},
-            {label: 'Radio Button Label D', value: 'radioButtonLabelD', disabled: true}
+            {label: 'Text Input Label A', value: 'textInputValueA', name: 'textInputA'},
+            {label: 'Text Input Label B', value: 'textInputValueB', name: 'textInputB', error: 'Custom Error'},
+            {label: 'Text Input Label C', value: 'textInputValueC', name: 'textInputC'},
+            {label: 'Text Input Label D', value: 'textInputValueD', name: 'textInputD', disabled: true}
         ]
     },
     "variants": [
-        {"name": "radio-buttons-group-error", "context": {
+        {"name": "text-inputs-group-error", "context": {
             "error": "Error Test Text"
         }},
-        {"name": "radio-buttons-group-required", "context": {
+        {"name": "text-inputs-group-individual-errors", "context": {
+            "groupError": false
+        }},
+        {"name": "text-inputs-group-required", "context": {
             "required": true
         }}
     ]

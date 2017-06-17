@@ -1,17 +1,26 @@
-@import '../../../../scss/settings/s-base-config';
+@import '../../../../scss/settings/s-color-palette';
+@import '../../../../scss/settings/s-base-variables';
 @import '../../../../scss/utilities/u-respond-to-breakpoint';
 
-$radio-group-error-color: $color-chestnut-rose;
+$text-group-label-default-color: $base-font-color;
+$text-group-error-color: $color-chestnut-rose;
 
-.c-radio-group {
+.c-text-group {
 
+  .c-text {
+    margin-top: ($base-unit-size * 2);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
-.c-radio-group__label {
-  margin-bottom: ($base-unit-size / 2);
+.c-text-group__error {
+  color: $text-group-error-color;
+
   font-size: 1.8rem;
   line-height: 2rem;
-  cursor: default;
 
   @include respond-to(sm) {
     font-size: 1.6rem;
@@ -19,14 +28,19 @@ $radio-group-error-color: $color-chestnut-rose;
   }
 }
 
-.c-radio-group__error {
-  color: $radio-group-error-color;
-
+.c-text-group__label {
+  margin-bottom: ($base-unit-size / 2);
   font-size: 1.8rem;
   line-height: 2rem;
+  cursor: default;
+  color: $text-group-label-default-color;
 
   @include respond-to(sm) {
     font-size: 1.6rem;
     line-height: 1.8rem;
+  }
+
+  & + .c-text-group__error {
+    margin-top: ($base-unit-size / 2);
   }
 }

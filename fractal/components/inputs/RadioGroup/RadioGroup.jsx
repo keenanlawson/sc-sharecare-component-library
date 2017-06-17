@@ -13,7 +13,7 @@ const RadioGroup = ({ className, label, error, required, children }) => {
     return (
         <div className={componentClasses}>
             {label ? <span className={labelClass}>{label}{required ? <span className={requiredClass}> * </span> : null}</span> : null}
-            {!!error && !error instanceof PropTypes.bool ? <div className={errorClass}>{error}</div> : null}
+            {!!error && !(typeof error === 'boolean') ? <div className={errorClass}>{error}</div> : null}
             {children}
         </div>
     );

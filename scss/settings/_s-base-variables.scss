@@ -1,0 +1,11 @@
+// Default theme name
+// Must be lowercase and hyphenated
+// Must match any respective directory paths
+$theme: 'light-sea-green' !default;
+
+$base-unit-size: 0.8rem !default;
+
+// Default Typography
+$base-font-size: 1.6rem !default;
+$base-line-height: 1.8rem !default;
+$base-font-color: $color-mine-shaft !default;

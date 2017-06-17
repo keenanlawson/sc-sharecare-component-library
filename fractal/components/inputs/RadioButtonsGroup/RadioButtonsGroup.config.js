@@ -7,10 +7,10 @@ module.exports = {
         "name": "radioButtonsName",
         "label": "Radio Group Test Text",
         "labelsAndValues": [
-            {label: 'Radio Button Label A', value: 'radioButtonLabelA', checked: true},
-            {label: 'Radio Button Label B', value: 'radioButtonLabelB'},
-            {label: 'Radio Button Label C', value: 'radioButtonLabelC'},
-            {label: 'Radio Button Label D', value: 'radioButtonLabelD', disabled: true}
+            {label: 'Radio Button Label A', value: 'radioButtonValueA', checked: true},
+            {label: 'Radio Button Label B', value: 'radioButtonValueB'},
+            {label: 'Radio Button Label C', value: 'radioButtonValueC'},
+            {label: 'Radio Button Label D', value: 'radioButtonValueD', disabled: true}
         ]
     },
     "variants": [

@@ -6,22 +6,24 @@ export default class TextInput extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.blur = this.blur.bind(this);
         this.focus = this.focus.bind(this);
+        this.state = { value: props.value || '' };
     }
 
     handleChange(event) {
+        this.setState({value: event.target.value});
         if (this.props.onChange) this.props.onChange(event.target.value, event);
     };
 
     blur() {
         if (this.inputNode) { this.inputNode.blur(); }
-    }
+    };
 
     focus() {
         if (this.inputNode) { this.inputNode.focus(); }
-    }
+    };
 
     render() {
         const { className, disabled, required, label, name, onChange, error, value, placeholder } = this.props;
@@ -51,7 +53,7 @@ export default class TextInput extends React.Component {
                     onChange={this.handleChange}
                     ref={(node) => { this.inputNode = node; }}
                 />
-                {!!error && !error instanceof PropTypes.bool ? <div className={errorClass}>{error}</div> : null}
+                {!disabled && !!error && !(typeof error === 'boolean') ? <div className={errorClass}>{error}</div> : null}
             </label>
         );
     }
@@ -78,9 +80,7 @@ TextInput.propTypes = {
     ])
 };
 
-TextInput.defaultProps = {
-    onChange: ()=>{}
-};
+TextInput.defaultProps = {};
 
 // export default TextInput;
 module.exports = TextInput;

@@ -33,7 +33,7 @@ export default class RadioInput extends React.Component {
         const labelClass = `${componentClass}__label`;
         const inputClass = `${componentClass}__input`;
         const componentClasses = classNames(componentClass, className);
-        const otherClasses = [{['is-error']: error && !disabled}, {['is-disabled']: disabled}];
+        const otherClasses = [{['is-error']: !!error && !disabled}, {['is-disabled']: disabled}];
         const labelClasses = classNames(labelClass, ...otherClasses);
         const inputClasses = classNames(inputClass, ...otherClasses);
         let componentProps = {};
@@ -53,7 +53,7 @@ export default class RadioInput extends React.Component {
                     onClick={this.handleClick}
                     ref={(node) => { this.inputNode = node; }}
                 />
-                <RadioButton checked={checked} disabled={disabled} error={error}/>
+                <RadioButton checked={checked} disabled={disabled} error={!!error}/>
                 {label ? <span className={labelClasses}>{label}</span> : null}
             </label>
         );

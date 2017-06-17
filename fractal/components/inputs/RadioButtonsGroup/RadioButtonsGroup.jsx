@@ -32,7 +32,7 @@ export default class RadioButtonsGroup extends React.Component {
                             label={item.label}
                             value={item.value}
                             checked={this.state.value === item.value}
-                            error={!!this.props.error || false}
+                            error={!!this.props.error || null}
                             disabled={item.disabled || false}
                             required={this.props.required || false}
                             key={item.value}
