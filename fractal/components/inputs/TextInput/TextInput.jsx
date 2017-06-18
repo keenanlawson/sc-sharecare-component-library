@@ -26,16 +26,21 @@ export default class TextInput extends React.Component {
     };
 
     render() {
-        const { className, disabled, required, label, name, onChange, error, value, placeholder } = this.props;
+        const { className, disabled, required, inline, label, name, onChange, error, value, placeholder } = this.props;
         const componentClass = 'c-text';
         const labelClass = `${componentClass}__label`;
         const inputClass = `${componentClass}__input`;
         const requiredClass = `${componentClass}__required`;
         const errorClass = `${componentClass}__error`;
-        const componentClasses = classNames(componentClass, className);
-        const otherClasses = [{['is-error']: !!error && !disabled}, {['is-disabled']: disabled}];
+        const componentClasses = classNames(componentClass, className, {['is-inline']: inline});
+        const otherClasses = [
+            {['is-error']: !!error && !disabled},
+            {['is-disabled']: disabled},
+            {['is-inline']: inline}
+        ];
         const labelClasses = classNames(labelClass, ...otherClasses);
         const inputClasses = classNames(inputClass, ...otherClasses);
+        const errorClasses = classNames(errorClass, {['is-inline']: inline});
         let componentProps = {};
         if (disabled) componentProps.disabled = disabled;
         if (required) componentProps.required = required;
@@ -53,7 +58,7 @@ export default class TextInput extends React.Component {
                     onChange={this.handleChange}
                     ref={(node) => { this.inputNode = node; }}
                 />
-                {!disabled && !!error && !(typeof error === 'boolean') ? <div className={errorClass}>{error}</div> : null}
+                {!disabled && !!error && !(typeof error === 'boolean') ? <div className={errorClasses}>{error}</div> : null}
             </label>
         );
     }
@@ -63,6 +68,7 @@ TextInput.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
+    inline: PropTypes.bool,
     error: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string,

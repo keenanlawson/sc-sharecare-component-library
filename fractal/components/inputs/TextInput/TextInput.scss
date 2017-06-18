@@ -26,6 +26,17 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
 .c-text {
   display: flex;
   flex-direction: column;
+
+  &.is-inline {
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 50%;
+    }
+  }
 }
 
 .c-text__label {
@@ -42,6 +53,14 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
 
   &.is-error {
     color: $text-label-error-color;
+  }
+
+  &.is-inline {
+
+    @include respond-to(sm) {
+      flex-shrink: 0;
+      margin: 0 0.8rem 0 0;
+    }
   }
 
   font-size: 1.5rem;
@@ -90,10 +109,19 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
     color: $text-input-error-text-color;
   }
 
+  &.is-inline {
+
+    @include respond-to(sm) {
+      width: 20rem;
+    }
+  }
+
   font-size: 1.8rem;
+  line-height: 2rem;
 
   @include respond-to(sm) {
     font-size: 1.4rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -117,6 +145,15 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
   margin-top: ($base-unit-size / 2);
 
   color: $text-error-color;
+
+  &.is-inline {
+
+    @include respond-to(sm) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
 
   font-size: 1.5rem;
   line-height: 1.7rem;

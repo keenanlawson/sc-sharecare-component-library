@@ -14,10 +14,17 @@ module.exports = {
         {"name": "text-input-required", "context": {
             "required": true
         }},
-        {"name": "text-input-error", "context": {
+        {"name": "text-input-inline", "context": {
+            "inline": true
+        }},
+        {"name": "text-input-boolean-error", "context": {
             "error": true
         }},
-        {"name": "text-input-error", "context": {
+        {"name": "text-input-string-error", "context": {
+            "error": "Text Error"
+        }},
+        {"name": "text-input-inline-error", "context": {
+            "inline": true,
             "error": "Text Error"
         }},
         {"name": "text-input-placeholder", "context": {
