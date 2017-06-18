@@ -3,7 +3,7 @@ var gulp = require('gulp-help')(require('gulp'));
 var path = require('path');
 const reactAdapter = require('fractal-react-adapter')({
     babelConfig: {
-        presets: ['react', 'env', 'es2015']
+        presets: ['react', 'env', 'es2015', 'stage-0']
     }
 });
 
