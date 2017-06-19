@@ -1,6 +1,6 @@
-@import '../../../../scss/settings/s-color-palette';
-@import '../../../../scss/settings/s-base-variables';
-@import '../../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
 
 $radio-group-label-default-color: $base-font-color;
 $radio-group-error-color: $color-chestnut-rose;

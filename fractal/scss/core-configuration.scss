@@ -4,10 +4,10 @@
 // NOTE: There should be no variable overrides here, create a new theme or typography
 
 // 1. Import preferred typography
-@import './typography/ty-proxima-nova';
+@import 'typography/ty-proxima-nova';
 
 // 2. Import preferred color theme
-@import './settings/themes/light-sea-green';
+@import 'settings/themes/light-sea-green';
 
 // 3. Render application styles
 //@import '../../core-application-styles';
@@ -17,7 +17,7 @@
 
 // Motifs import typography as their first item
 // Import icon typography here keeps typography CSS together
-@import './typography/ty-sharecare-font-icons';
+@import 'typography/ty-sharecare-font-icons';
 
 // Vendors
 

@@ -177,7 +177,7 @@ export default class CurrencyInput extends React.Component {
             this.props.suffix
         );
         this.setState({ maskedValue, value }, () => {
-            if (this.props.onChange) this.props.onChange(maskedValue, value, event);
+            if (this.props.onChange) this.props.onChange(maskedValue, event);
         });
     };
 
@@ -211,6 +211,7 @@ export default class CurrencyInput extends React.Component {
             onChange,
             onFocus,
             ...other } = this.props;
+
         return <TextInput
             className={classNames('c-currency', className)}
             value={this.state.maskedValue}
@@ -251,6 +252,7 @@ CurrencyInput.propTypes = {
 
 CurrencyInput.defaultProps = {
     value: '0',
+    placeholder: '$0.00',
     decimalSeparator: '.',
     thousandSeparator: ',',
     precision: '2',

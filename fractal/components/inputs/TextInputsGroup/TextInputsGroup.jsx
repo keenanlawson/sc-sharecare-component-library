@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import TextGroup from '../TextGroup/TextGroup';
 import TextInput from '../TextInput/TextInput';
+import CurrencyInput from '../CurrencyInput/CurrencyInput';
 
 const TextInputsGroup = ({ className, label, required, labelsAndValues, onChange, groupError = true, error }) => {
 
@@ -15,16 +16,22 @@ const TextInputsGroup = ({ className, label, required, labelsAndValues, onChange
         <TextGroup error={groupError ? error : null} label={label} className={className}>
             {
                 labelsAndValues.map((item) => {
-                    return <TextInput
-                        label={item.label}
-                        value={item.value}
-                        error={(groupError ? !!error : item.error || null) || null}
-                        disabled={item.disabled || false}
-                        required={required || false}
-                        key={item.value}
-                        name={item.name}
-                        onChange={handleChange}
-                    />;
+
+                    const props = {
+                        label: item.label,
+                        value: item.value,
+                        error: (groupError ? !!error : item.error || null) || null,
+                        disabled: item.disabled || false,
+                        required: required || false,
+                        key: item.value,
+                        name: item.name,
+                        onChange: handleChange
+                    };
+
+                    return item.type === 'currency' ?
+                        <CurrencyInput {...props}/>
+                        :
+                        <TextInput {...props}/>;
                 })
             }
         </TextGroup>
@@ -39,6 +46,7 @@ TextInputsGroup.propTypes = {
     ]),
     required: PropTypes.bool,
     labelsAndValues: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.oneOf(['input', 'currency']),
         label: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.node

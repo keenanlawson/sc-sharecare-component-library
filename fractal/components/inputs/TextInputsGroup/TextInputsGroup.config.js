@@ -8,7 +8,7 @@ module.exports = {
         "labelsAndValues": [
             {label: 'Text Input Label A', value: 'textInputValueA', name: 'textInputA'},
             {label: 'Text Input Label B', value: 'textInputValueB', name: 'textInputB', error: 'Custom Error'},
-            {label: 'Text Input Label C', value: 'textInputValueC', name: 'textInputC'},
+            {label: 'Text Input Label C', value: 'textInputValueC', name: 'textInputC', type: 'currency'},
             {label: 'Text Input Label D', value: 'textInputValueD', name: 'textInputD', disabled: true}
         ]
     },

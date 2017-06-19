@@ -1,13 +1,13 @@
 @charset 'UTF-8';
 
 // Import preferred typography
-@import './typography/ty-proxima-nova';
+@import 'typography/_ty-proxima-nova';
 
 // Import descriptive colors
-@import './settings/s-color-palette';
+@import 'settings/_s-color-palette';
 
 // Import base config
-@import './settings/s-base-config';
+@import 'settings/_s-base-config';
 
 // Grid display styles
 .box-row {

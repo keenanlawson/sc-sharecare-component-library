@@ -1,31 +1,31 @@
 // 1. Import descriptive colors
-@import '../s-color-palette';
+@import '../_s-color-palette';
 
 // 2. Overwrite paths
-$theme: 'dark-cerulean';
+$theme: 'copper-rust';
 
 
 // 3A. Overwrite palette
 // TODO: these should be refactored out in favor of functionally named component variables (#3A below)
 // TODO: DO NOT PROPAGATE THESE VARIABLES
-$theme-primary-color: $color-chathams-blue;
-$theme-primary-supporting-color: $color-international-klein-blue;
-$theme-secondary-supporting-color: $color-anakiwa;
-//$color-secondary-color1: $color-surfie-green;
-//$color-secondary-color2: $color-anakiwa;
-$theme-primary-accent-color: $color-periwinkle;
-//$color-negative-response-color1: $color-mexican-red;
-$theme-error-color: $color-mexican-red;
+$theme-primary-color: $color-copper-rust;
+$theme-primary-supporting-color: $color-tamarillo;
+$theme-secondary-supporting-color: $color-cedar-wood-finish;
+//$color-secondary-color1: $color-malibu;
+//$color-secondary-color2: $color-malibu;
+$theme-primary-accent-color: $color-aqua-island;
+//$color-negative-response-color1: $color-bright-red;
+$theme-error-color: $color-pure-white;
 $color-negative-response-color3: '';
 //$color-positive-response-color1: $color-feijoa;
 //$color-positive-response-color2: $color-olivine;
 $theme-cta-color: $color-surfie-green;
 $theme-cta-supporting-color: $color-faded-jade;
 //$color-accent-color3: $color-surfie-green;
-//$color-alternate-1: $color-blossom;
-//$color-alternate-2: $color-aqua-island;
-//$color-alternate-3: $color-torea-bay;
-//$color-alternate-4: $color-cosmic;
+//$color-alternate-1: $color-spray;
+//$color-alternate-2: $color-mona-lisa;
+//$color-alternate-3: $color-pharlap;
+//$color-alternate-4: $color-cutty-sark;
 
 
 // 3B. Overwrite components

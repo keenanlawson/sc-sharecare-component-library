@@ -1,7 +1,7 @@
-@import '../../../../scss/settings/s-color-palette';
-@import '../../../../scss/settings/s-base-variables';
-@import '../../../../scss/utilities/u-respond-to-breakpoint';
-@import '../../../../scss/typography/ty-proxima-nova';
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/typography/ty-proxima-nova';
 
 $text-label-default-color: $base-font-color;
 $text-label-disabled-color: $color-alto;

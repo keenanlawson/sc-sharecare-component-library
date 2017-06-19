@@ -10,8 +10,8 @@ gulp.task('style-guide-css', 'Building style guide CSS files...', function(done)
     return gulp.src([
         // './scss/motifs/**/*.scss',
         './fractal/components/**/*.scss',
-        './scss/core-configuration.scss',
-        './scss/style-guide.scss'
+        './fractal/scss/core-configuration.scss',
+        './fractal/scss/style-guide.scss'
     ])
 
     // Initialize source maps

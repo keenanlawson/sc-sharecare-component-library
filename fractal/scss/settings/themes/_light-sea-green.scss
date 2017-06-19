@@ -1,5 +1,5 @@
 // 1. Import descriptive colors
-@import '../s-color-palette';
+@import '../_s-color-palette';
 
 // 2. Overwrite theme name
 // Must be lowercase and hyphenated
@@ -47,7 +47,7 @@ $theme-colors-map: (
 );
 
 // 3B. Overwrite components color variables
-@import '../s-themed-variables';
+@import '../_s-themed-variables';
 
 // 4. Overwrite base typography color, size or line height
 // NOTE: No other typography settings allowed in here
