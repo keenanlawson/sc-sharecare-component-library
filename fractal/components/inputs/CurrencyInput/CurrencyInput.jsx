@@ -176,9 +176,8 @@ export default class CurrencyInput extends React.Component {
             this.props.prefix,
             this.props.suffix
         );
-        this.setState({ maskedValue, value }, () => {
-            if (this.props.onChange) this.props.onChange(maskedValue, event);
-        });
+        this.setState({ maskedValue, value });
+        if (this.props.onChange) this.props.onChange(maskedValue, event);
     };
 
     blur() {
