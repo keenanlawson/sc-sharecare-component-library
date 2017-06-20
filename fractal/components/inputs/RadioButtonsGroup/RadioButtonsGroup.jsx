@@ -9,7 +9,8 @@ export default class RadioButtonsGroup extends React.Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
-        this.state = { value: this.props.labelsAndValues.find((item)=>{return item.checked}).value };
+        const checkedAnswer = props.labelsAndValues.find((item)=>{return item.checked});
+        this.state = { value: checkedAnswer ? checkedAnswer.value : ''};
     }
 
     handleChange(value, event) {

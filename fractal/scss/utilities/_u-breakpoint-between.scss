@@ -1,5 +1,8 @@
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints
+@import '../settings/s-break-points';
+//@import '../utilities/u-breakpoint-min';
+//@import '../utilities/u-breakpoint-max';
 @mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-max($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);

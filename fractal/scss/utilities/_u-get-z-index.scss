@@ -3,6 +3,7 @@
 /// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
+@import '../settings/s-z-indexes';
 @function z($layer) {
   @return map-get($z-indexes-map, $layer);
 }

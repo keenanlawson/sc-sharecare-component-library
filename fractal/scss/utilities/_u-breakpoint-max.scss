@@ -3,6 +3,10 @@
 //
 //    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    767px
+@import '../settings/s-break-points';
+//@import '../utilities/u-breakpoint-next';
+//@import '../utilities/u-breakpoint-min';
+//@import '../utilities/u-breakpoint-max';
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
