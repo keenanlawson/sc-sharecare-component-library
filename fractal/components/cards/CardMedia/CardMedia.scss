@@ -1,0 +1,53 @@
+@import '../../../scss/settings/s-color-palette';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$card-media-header-text-color: $color-pure-white !default;
+$card-media-header-shadow-color: $color-pure-black !default;
+$card-media-header-background-color: $color-mine-shaft !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-card__media {
+  position: relative;
+}
+
+.c-card__media-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c-card__media-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-card__media-header {
+  color: $card-media-header-text-color;
+  text-shadow: 0 0.1rem 0.3rem rgba($card-media-header-shadow-color, 0.2);
+  background-image: linear-gradient(to bottom, rgba($card-media-header-background-color, 0), rgba($card-media-header-background-color, 0.7));
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-card__media-header {
+  font-size: 2rem;
+  line-height: 2.2rem;
+}

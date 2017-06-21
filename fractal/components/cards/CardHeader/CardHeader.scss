@@ -1,0 +1,58 @@
+@import '../../../scss/settings/s-base-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$card-simple-header-background-color: $color-alabaster !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-card__header {
+  padding: ($base-unit-size * 2);
+  display: flex;
+  flex-direction: column;
+}
+
+//.c-card__header-image {
+//  margin-right: ($base-unit-size * 2.5);
+//  flex-shrink: 0;
+//}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-card__header {
+
+  &.is-simple {
+    padding: $base-unit-size ($base-unit-size * 2) $base-unit-size;
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-card__header {
+
+  &.is-simple {
+    background-color: $card-simple-header-background-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-card__header-title {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  &.is-simple {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+  }
+}

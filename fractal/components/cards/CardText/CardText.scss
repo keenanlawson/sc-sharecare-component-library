@@ -1,0 +1,43 @@
+@import '../../../scss/settings/s-base-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-card__text {
+  padding: ($base-unit-size * 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card__text-header {
+  padding: 0;
+  margin-bottom: $base-unit-size;
+}
+
+//.c-card__text-image {
+//  margin-right: ($base-unit-size);
+//}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-card__text {
+  font-size: 1.4rem;
+  line-height: 1.7rem
+}

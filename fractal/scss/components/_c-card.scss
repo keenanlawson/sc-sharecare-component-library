@@ -10,64 +10,64 @@ $card-subtitle-text-color: $color-dove-gray !default;
 /*************************
 * 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 *************************/
-.c-card {
-  display: flex;
-  position: relative;
-  width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 0.2rem;
-}
+//.c-card {
+//  display: flex;
+//  position: relative;
+//  width: 100%;
+//  flex-direction: column;
+//  overflow: hidden;
+//  border-radius: 0.2rem;
+//}
 
-.c-card__header,
-.c-card__text {
-  padding: ($base-unit-size * 2);
-  display: flex;
-  align-items: center;
-}
+//.c-card__header,
+//.c-card__text {
+//  padding: ($base-unit-size * 2);
+//  display: flex;
+//  align-items: center;
+//}
 
-.c-card__header-image {
-  margin-right: ($base-unit-size * 2.5);
-  flex-shrink: 0;
-}
+//.c-card__header-image {
+//  margin-right: ($base-unit-size * 2.5);
+//  flex-shrink: 0;
+//}
 
-.c-card__media {
-  position: relative;
-}
+//.c-card__media {
+//  position: relative;
+//}
+//
+//.c-card__media-image {
+//  width: 100%;
+//  height: auto;
+//  display: block;
+//}
+//
+//.c-card__media-header {
+//  position: absolute;
+//  bottom: 0;
+//  left: 0;
+//  width: 100%;
+//}
 
-.c-card__media-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+//.c-card__text {
+//  align-items: flex-start;
+//}
+//
+//.c-card__text-image {
+//  margin-right: ($base-unit-size);
+//}
 
-.c-card__media-header {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+//.c-card__header {
+//
+//  + .c-card__text {
+//    padding-top: 0;
+//  }
+//}
 
-.c-card__text {
-  align-items: flex-start;
-}
-
-.c-card__text-image {
-  margin-right: ($base-unit-size);
-}
-
-.c-card__header {
-
-  + .c-card__text {
-    padding-top: 0;
-  }
-}
-
-.c-card__footer {
-  padding: 0 ($base-unit-size * 2) ($base-unit-size * 2);
-  display: flex;
-  justify-content: space-between;
-}
+//.c-card__footer {
+//  padding: 0 ($base-unit-size * 2) ($base-unit-size * 2);
+//  display: flex;
+//  justify-content: space-between;
+//}
 
 
 /*************************
@@ -78,39 +78,39 @@ $card-subtitle-text-color: $color-dove-gray !default;
 /*************************
 * 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 *************************/
-.c-card {
-  box-shadow: 0 0.1rem 0.3rem 0 rgba($card-shadow-color, .2);
-  background-color: $card-background-color;
-}
+//.c-card {
+//  box-shadow: 0 0.1rem 0.3rem 0 rgba($card-shadow-color, .2);
+//  background-color: $card-background-color;
+//}
 
-.c-card__media-header {
-  color: $color-pure-white;
-  text-shadow: 0 0.1rem 0.3rem rgba($color-pure-black, 0.2);
-  background-image: linear-gradient(to bottom, rgba($color-mine-shaft, 0), rgba($color-mine-shaft, 0.7));
-}
+//.c-card__media-header {
+//  color: $color-pure-white;
+//  text-shadow: 0 0.1rem 0.3rem rgba($color-pure-black, 0.2);
+//  background-image: linear-gradient(to bottom, rgba($color-mine-shaft, 0), rgba($color-mine-shaft, 0.7));
+//}
 
 
 /*************************
 * 5. TYPOGRAPHY RULES
 *************************/
-.c-card__header-title {
-  font-size: 2.4rem;
-  line-height: 2.8rem;
-}
+//.c-card__header-title {
+//  font-size: 2.4rem;
+//  line-height: 2.8rem;
+//}
 
-.c-card__media-header {
-  font-size: 2rem;
-  line-height: 2.2rem;
-}
+//.c-card__media-header {
+//  font-size: 2rem;
+//  line-height: 2.2rem;
+//}
 
-.c-card__text {
-  font-size: 1.4rem;
-  line-height: 1.7rem
-}
+//.c-card__text {
+//  font-size: 1.4rem;
+//  line-height: 1.7rem
+//}
 
-.c-card__footer-link {
-  text-transform: uppercase;
-  font-weight: $font-weight-semi;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-}
+//.c-card__footer-link {
+//  text-transform: uppercase;
+//  font-weight: $font-weight-semi;
+//  font-size: 1.4rem;
+//  line-height: 1.7rem;
+//}
