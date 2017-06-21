@@ -5,10 +5,10 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$tooltip-default-text-color: $base-font-color;
-$tooltip-background-color: $color-pure-white;
-$tooltip-border-color: $color-alto;
-$tooltip-shadow-color: $color-pure-black;
+$tooltip-default-text-color: $base-font-color !default;
+$tooltip-background-color: $color-pure-white !default;
+$tooltip-border-color: $color-alto !default;
+$tooltip-shadow-color: $color-pure-black !default;
 
 
 //////////////////////////

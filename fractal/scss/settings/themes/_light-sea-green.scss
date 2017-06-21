@@ -1,5 +1,5 @@
 // 1. Import descriptive colors
-@import '../_s-color-palette';
+@import '../s-color-palette';
 
 // 2. Overwrite theme name
 // Must be lowercase and hyphenated
@@ -7,6 +7,7 @@
 $theme: 'light-sea-green';
 
 // 3A. Create theme palette and theme colors map
+// Use these values to create a new theme
 $theme-primary-color: $color-mountain-meadow;
 $theme-primary-accent-color: $color-elm;
 $theme-primary-supporting-color: $color-curious-blue;
@@ -47,7 +48,8 @@ $theme-colors-map: (
 );
 
 // 3B. Overwrite components color variables
-@import '../_s-themed-variables';
+// These component variables consume the above 'theme' colors
+@import '../s-themed-component-variables';
 
 // 4. Overwrite base typography color, size or line height
 // NOTE: No other typography settings allowed in here

@@ -6,12 +6,12 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$text-label-default-color: $base-font-color;
-$text-label-disabled-color: $color-alto;
-$text-label-error-color: $color-chestnut-rose;
+$text-label-default-color: $base-font-color !default;
+$text-label-disabled-color: $color-alto !default;
+$text-label-error-color: $color-chestnut-rose !default;
 
-$text-required-color: $color-chestnut-rose;
-$text-error-color: $color-chestnut-rose;
+$text-required-color: $color-chestnut-rose !default;
+$text-error-color: $color-chestnut-rose !default;
 
 $text-input-text-color: $color-dove-gray !default;
 $text-input-placeholder-color: $color-chatelle !default;

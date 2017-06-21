@@ -4,12 +4,12 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$radio-button-default-background-color: $color-pure-white;
-$radio-button-default-border-color: $color-alto;
-$radio-button-default-fill-color: $color-mountain-meadow;
+$radio-button-default-background-color: $color-pure-white !default;
+$radio-button-default-border-color: $color-alto !default;
+$radio-button-default-fill-color: $color-mountain-meadow !default;
 
-$radio-button-disabled-background-color: $color-gallery;
-$radio-button-error-border-color: $color-chestnut-rose;
+$radio-button-disabled-background-color: $color-gallery !default;
+$radio-button-error-border-color: $color-chestnut-rose !default;
 
 
 //////////////////////////
