@@ -33,6 +33,8 @@ SimpleCard.propTypes = {
     className: PropTypes.string,
     title: PropTypes.string,
     subtitle: PropTypes.string,
+    linkTo: PropTypes.string,
+    linkLabel: PropTypes.string,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
