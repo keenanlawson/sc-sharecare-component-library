@@ -1,0 +1,37 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/typography/ty-proxima-nova-variables';
+
+/*************************
+* 1. CONFIG
+*************************/
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-svg-arc-chart {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-svg-arc-chart__svg {
+  max-width: 100%;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-svg-arc-chart__percentage {
+  font-weight: $font-weight-semi;
+}

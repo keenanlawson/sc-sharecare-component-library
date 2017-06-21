@@ -2,50 +2,50 @@ module.exports = {
     "title": "SVG Bar Chart",
     "status": "ready",
     "collated": true,
-    "preview": "",
+    "preview": "@svg-bar-chart-preview",
     "context": {
         "percentFull": 95
     },
     "variants": [
-        {"name": "zero", "context": {
+        {"name": "svg-bar-chart-zero", "context": {
             "percentFull": 0
         }},
-        {"name": "neutral", "context": {
+        {"name": "svg-bar-chart-neutral", "context": {
             "percentFull": 75,
             "fillClassName": "neutral"
         }},
-        {"name": "neutral", "context": {
+        {"name": "svg-bar-chart-neutral", "context": {
             "percentFull": 75,
             "fillClassName": "very-high"
         }},
-        {"name": "ten", "context": {
+        {"name": "svg-bar-chart-ten", "context": {
             "percentFull": 10
         }},
-        {"name": "twenty", "context": {
+        {"name": "svg-bar-chart-twenty", "context": {
             "percentFull": 20
         }},
-        {"name": "twentyFive", "context": {
+        {"name": "svg-bar-chart-twentyFive", "context": {
             "percentFull": 25
         }},
-        {"name": "fourty", "context": {
+        {"name": "svg-bar-chart-fourty", "context": {
             "percentFull": 40
         }},
-        {"name": "fifty", "context": {
+        {"name": "svg-bar-chart-fifty", "context": {
             "percentFull": 50
         }},
-        {"name": "sixty", "context": {
+        {"name": "svg-bar-chart-sixty", "context": {
             "percentFull": 60
         }},
-        {"name": "seventy", "context": {
+        {"name": "svg-bar-chart-seventy", "context": {
             "percentFull": 70
         }},
-        {"name": "seventyFive", "context": {
+        {"name": "svg-bar-chart-seventyFive", "context": {
             "percentFull": 75
         }},
-        {"name": "ninety", "context": {
+        {"name": "svg-bar-chart-ninety", "context": {
             "percentFull": 90
         }},
-        {"name": "oneHundred", "context": {
+        {"name": "svg-bar-chart-oneHundred", "context": {
             "percentFull": 100
         }}
     ]

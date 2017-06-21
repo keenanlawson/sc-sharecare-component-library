@@ -1,0 +1,74 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/typography/ty-proxima-nova-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$svg-line-chart-background-color: $color-gallery !default;
+$svg-line-chart-background-defcon1-color: $color-chestnut-rose !default;
+$svg-line-chart-background-defcon2-color: $color-neon-carrot !default;
+$svg-line-chart-background-defcon3-color: $color-supernova !default;
+$svg-line-chart-background-defcon4-color: $color-mountain-meadow !default;
+$svg-line-chart-background-defcon5-color: $color-eucalyptus !default;
+$svg-line-chart-marker-color: $color-mine-shaft !default;
+$svg-line-chart-percentage-color: $color-mine-shaft !default;
+$svg-line-chart-text-color: $color-dusty-gray !default;
+$svg-line-chart-mask-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-svg-line-chart__background {
+  fill: $svg-line-chart-background-color;
+}
+
+.c-svg-line-chart__marker {
+  fill: $svg-line-chart-marker-color;
+}
+
+.c-svg-line-chart__marker,
+.c-svg-line-chart__background {
+  &.def-con-1 { fill: $svg-line-chart-background-defcon1-color;}
+  &.def-con-2 { fill: $svg-line-chart-background-defcon2-color;}
+  &.def-con-3 { fill: $svg-line-chart-background-defcon3-color;}
+  &.def-con-4 { fill: $svg-line-chart-background-defcon4-color;}
+  &.def-con-5 { fill: $svg-line-chart-background-defcon5-color;}
+}
+
+.c-svg-line-chart__result {
+  fill: $svg-line-chart-mask-color;
+}
+
+.c-svg-line-chart__percentage {
+  fill: $svg-line-chart-percentage-color;
+}
+.c-svg-line-chart__text {
+  fill: $svg-line-chart-text-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-svg-line-chart__percentage {
+  text-anchor: middle;
+  font-weight: $font-weight-bold;
+  line-height: 1rem;
+  font-size: 3.6rem;
+}
+
+.c-svg-line-chart__text {
+  text-anchor: middle;
+  font-size: 1.4rem;
+}

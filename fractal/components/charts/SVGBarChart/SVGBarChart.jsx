@@ -11,7 +11,7 @@ const SVGBarChart = ({ className, percentFull = 0, fillClassName, chartMarkers, 
     const barMaxWidth = 99.75;
 
     // Truncate precision to 2 decimal places
-    const truncatedPercentFull = parseFloat((percentFull || 0).toFixed(2));
+    const truncatedPercentFull = Math.abs(parseFloat((percentFull || 0).toFixed(2)));
 
     // Ensure fill doesn't go past max
     const barPercentFull = truncatedPercentFull > barMaxWidth ? barMaxWidth : truncatedPercentFull;
@@ -85,7 +85,7 @@ const SVGBarChart = ({ className, percentFull = 0, fillClassName, chartMarkers, 
                         if (marker.text) {
                             const isFirst = marker.percent === 0;
                             const isLast = marker.percent >= barMaxWidth;
-                            const markerTextClass = classNames("c-svg-bar-chart__marker-text", {'c-svg-bar-chart__marker-text--first': isFirst}, {'c-svg-bar-chart__marker-text--last': isLast});
+                            const markerTextClass = classNames("c-svg-bar-chart__marker-text", {'is-first': isFirst}, {'is-last': isLast});
                             html = <text className={markerTextClass} x={`${marker.percent > barMaxWidth ? barMaxWidth : marker.percent}%`} y="15">{marker.text}</text>;
                         }
                         return html;
@@ -124,8 +124,8 @@ SVGBarChart.propTypes = {
 };
 
 SVGBarChart.defaultProps = {
-    percentFull: 0
+    percentFull: 95
 };
 
-export default SVGBarChart;
+// export default SVGBarChart;
 module.exports = SVGBarChart;

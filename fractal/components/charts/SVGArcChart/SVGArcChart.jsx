@@ -14,7 +14,7 @@ export default class SVGArcChart extends React.Component {
     componentDidMount() {
 
         // Get the percentage to uncover
-        const percentFull = parseInt(this.props.percentFull);
+        const percentFull = parseInt(this.props.percentFull || 0);
 
         // Get the percentage text node
         let percentage = this.svgArcChart.querySelector('.c-svg-arc-chart__percentage');
@@ -122,6 +122,10 @@ export default class SVGArcChart extends React.Component {
         const componentClasses = classNames(componentClass, className);
         const componentProps = { className: componentClasses };
 
+        // Ensure a valid percent value
+        let cleanPercentFull = Math.abs(parseInt(percentFull || 0));
+        if (cleanPercentFull > 100) cleanPercentFull = 100;
+
         // Base radial units off of 100%
         // This will allow dash arrays to be represented as a % of a full circle
         // Since we are showing a subset of a full circle
@@ -153,10 +157,10 @@ export default class SVGArcChart extends React.Component {
             <div {...componentProps} ref={(svgArcChart) => {this.svgArcChart = svgArcChart;}}>
                 <svg {...svgProps}>
                     <g transform={`translate(${height} 0) scale(-1 1)`}>
-                        {this.createSegments(cx, cy, radius, strokeWidth, visibleArcPercent, circumference, percentFull)}
+                        {this.createSegments(cx, cy, radius, strokeWidth, visibleArcPercent, circumference, cleanPercentFull)}
                     </g>
                     <g transform={`translate(0 ${height}) scale(1 -1)`}>
-                        {this.createMask(cx, cy, radius, strokeWidth, '#eee', visibleArcPercent * ((100 - percentFull) / 100), circumference)}
+                        {this.createMask(cx, cy, radius, strokeWidth, '#eee', visibleArcPercent * ((100 - cleanPercentFull) / 100), circumference)}
                     </g>
                     <text className="c-svg-arc-chart__percentage" x={cx} y={cy} textAnchor="middle" fontSize="8" fill="#333">0</text>
                     <text className="c-svg-arc-chart__text" x={cx} y="95%" textAnchor="middle" fontSize="4" fill="#999">out of 100</text>
@@ -172,7 +176,7 @@ SVGArcChart.propTypes = {
 };
 
 SVGArcChart.defaultProps = {
-    percentFull: 0
+    percentFull: 95
 };
 
 module.exports = SVGArcChart;
