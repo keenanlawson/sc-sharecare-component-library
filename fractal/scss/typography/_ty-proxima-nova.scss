@@ -1,10 +1,7 @@
 // Fonts
 //------------------------------------
 
-$base-font-family: Proxima Nova, Arial, Helvetica, sans-serif !default;
-$font-weight-normal: normal !default;
-$font-weight-semi: 600 !default;
-$font-weight-bold: 800 !default;
+@import 'ty-proxima-nova-variables';
 
 $font-domain: 'http://localhost:3050/static/fonts';
 $regular-path: "#{$font-domain}/proximanova-light-webfont";
