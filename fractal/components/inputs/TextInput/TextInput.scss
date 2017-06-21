@@ -3,6 +3,9 @@
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 @import '../../../scss/typography/ty-proxima-nova-variables';
 
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
 $text-label-default-color: $base-font-color;
 $text-label-disabled-color: $color-alto;
 $text-label-error-color: $color-chestnut-rose;
@@ -23,58 +26,27 @@ $text-input-error-border-color: $color-chestnut-rose !default;
 
 $text-input-focus-border-color: $color-mountain-meadow !default;
 
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
 .c-text {
   display: flex;
   flex-direction: column;
-
-  &.is-inline {
-
-    @include respond-to(sm) {
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 50%;
-    }
-  }
 }
 
 .c-text__label {
   cursor: pointer;
-  color: $text-label-default-color;
 
   // Give some spacing below input labels
   margin-bottom: ($base-unit-size / 2);
-
-  &.is-disabled {
-    color: $text-label-disabled-color;
-    cursor: default;
-  }
-
-  &.is-error {
-    color: $text-label-error-color;
-  }
-
-  &.is-inline {
-
-    @include respond-to(sm) {
-      flex-shrink: 0;
-      margin: 0 0.8rem 0 0;
-    }
-  }
-
-  font-size: 1.5rem;
-  line-height: 1.7rem;
-
-  @include respond-to(sm) {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
 }
 
 .c-text__input {
+
   // Default to full width input text/selects
   width: 100%;
+
   // Default input heights
   height: 4rem;
   border: 0.1rem solid;
@@ -89,24 +61,51 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
   &:focus {
     outline: 0;
   }
+}
 
-  border-color: $text-input-border-color;
-  color: $text-input-text-color;
-  background-color: $text-input-background-color;
+.c-text__error {
 
-  &:focus {
-    border-color: $text-input-focus-border-color;
+  // Give some spacing above error labels
+  margin-top: ($base-unit-size / 2);
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-text {
+
+  &.is-inline {
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 50%;
+    }
   }
+}
+
+.c-text__label {
 
   &.is-disabled {
     cursor: default;
-    background-color: $text-input-disabled-background-color;
   }
 
-  // Error state colors
-  &.is-error {
-    border-color: $text-input-error-border-color;
-    color: $text-input-error-text-color;
+  &.is-inline {
+
+    @include respond-to(sm) {
+      flex-shrink: 0;
+      margin: 0 0.8rem 0 0;
+    }
+  }
+}
+
+.c-text__input {
+
+  &.is-disabled {
+    cursor: default;
   }
 
   &.is-inline {
@@ -115,36 +114,9 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
       width: 20rem;
     }
   }
-
-  font-size: 1.8rem;
-  line-height: 2rem;
-
-  @include respond-to(sm) {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
-}
-
-:-moz-placeholder { color: $text-input-placeholder-color; }
-::-moz-placeholder { color: $text-input-placeholder-color; }
-:-ms-input-placeholder { color: $text-input-placeholder-color; }
-::-webkit-input-placeholder { color: $text-input-placeholder-color; }
-
-:-moz-placeholder { font-weight: $font-weight-normal; }
-::-moz-placeholder { font-weight: $font-weight-normal; }
-:-ms-input-placeholder { font-weight: $font-weight-normal; }
-::-webkit-input-placeholder { font-weight: $font-weight-normal; }
-
-.c-text__required {
-  color: $text-required-color;
 }
 
 .c-text__error {
-
-  // Give some spacing above error labels
-  margin-top: ($base-unit-size / 2);
-
-  color: $text-error-color;
 
   &.is-inline {
 
@@ -154,7 +126,82 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
       width: 100%;
     }
   }
+}
 
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-text__label {
+  color: $text-label-default-color;
+
+  &.is-disabled {
+    color: $text-label-disabled-color;
+  }
+
+  &.is-error {
+    color: $text-label-error-color;
+  }
+}
+
+.c-text__input {
+  border-color: $text-input-border-color;
+  color: $text-input-text-color;
+  background-color: $text-input-background-color;
+
+  &:focus {
+    border-color: $text-input-focus-border-color;
+  }
+
+  &.is-disabled {
+    background-color: $text-input-disabled-background-color;
+  }
+
+  // Error state colors
+  &.is-error {
+    border-color: $text-input-error-border-color;
+    color: $text-input-error-text-color;
+  }
+}
+
+.c-text__required {
+  color: $text-required-color;
+}
+
+.c-text__error {
+  color: $text-error-color;
+}
+
+:-moz-placeholder { color: $text-input-placeholder-color; }
+::-moz-placeholder { color: $text-input-placeholder-color; }
+:-ms-input-placeholder { color: $text-input-placeholder-color; }
+::-webkit-input-placeholder { color: $text-input-placeholder-color; }
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-text__label {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.c-text__input {
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.c-text__error {
   font-size: 1.5rem;
   line-height: 1.7rem;
 

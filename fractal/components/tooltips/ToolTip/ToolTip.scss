@@ -2,11 +2,18 @@
 @import '../../../scss/settings/s-base-variables';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
 $tooltip-default-text-color: $base-font-color;
 $tooltip-background-color: $color-pure-white;
 $tooltip-border-color: $color-alto;
 $tooltip-shadow-color: $color-pure-black;
 
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
 .c-tooltip {
   display: inline-block;
   position: relative;
@@ -19,9 +26,7 @@ $tooltip-shadow-color: $color-pure-black;
 
 .c-tooltip__body {
   position: absolute;
-  border: 0.1rem solid $tooltip-border-color;
-  background-color: $tooltip-background-color;
-  box-shadow: 0 0.1rem 0.2rem 0 rgba($tooltip-shadow-color, 0.3);
+  border: 0.1rem solid;
   border-radius: 0.2rem;
   padding: 1rem 1.5rem;
   min-width: 16rem;
@@ -29,7 +34,6 @@ $tooltip-shadow-color: $color-pure-black;
   bottom: 2.5rem;
   left: -50%;
   cursor: default;
-  color: $tooltip-default-text-color;
 
   @include respond-to(sm) {
     width: 25rem;
@@ -40,16 +44,17 @@ $tooltip-shadow-color: $color-pure-black;
     content: '';
     display: block;
     position: absolute;
-    border-style: solid;
-    border-width: 0.5rem;
+    border: 0.5rem solid;
     bottom: -0.5rem;
     left: calc(50% - (0.5rem / 2));
-    border-color: transparent transparent $tooltip-background-color $tooltip-background-color;
-    box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba($tooltip-shadow-color, 0.3);
     transform: rotate(-45deg);
   }
 }
 
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
 .c-tooltip__body {
 
   &.push-left {
@@ -70,3 +75,32 @@ $tooltip-shadow-color: $color-pure-black;
 }
 
 
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-tooltip__body {
+  border-color: $tooltip-border-color;
+  background-color: $tooltip-background-color;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba($tooltip-shadow-color, 0.3);
+  color: $tooltip-default-text-color;
+
+  &::before {
+    border-color: transparent transparent $tooltip-background-color $tooltip-background-color;
+    box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba($tooltip-shadow-color, 0.3);
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-tooltip__body {
+
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}

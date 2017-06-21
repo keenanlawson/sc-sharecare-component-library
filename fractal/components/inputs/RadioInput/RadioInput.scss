@@ -1,9 +1,16 @@
 @import '../../../scss/settings/s-color-palette';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
 $radio-label-disabled-color: $color-alto;
 $radio-label-error-color: $color-chestnut-rose;
 
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
 .c-radio {
   display: flex;
   margin-top: 1rem;
@@ -19,21 +26,45 @@ $radio-label-error-color: $color-chestnut-rose;
 
 .c-radio__label {
   margin-left: 0.8rem;
-  font-size: 1.8rem;
-  line-height: 2rem;
   cursor: pointer;
+}
 
-  @include respond-to(sm) {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+.c-radio__label {
+
+  &.is-disabled {
+    cursor: default;
   }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-radio__label {
 
   &.is-disabled {
     color: $radio-label-disabled-color;
-    cursor: default;
   }
 
   &.is-error {
     color: $radio-label-error-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-radio__label {
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
   }
 }

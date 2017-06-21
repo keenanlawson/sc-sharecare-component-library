@@ -1,6 +1,9 @@
 @import '../../../scss/settings/s-color-palette';
 @import '../../../scss/utilities/u-url-encode-svg';
 
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
 $radio-button-default-background-color: $color-pure-white;
 $radio-button-default-border-color: $color-alto;
 $radio-button-default-fill-color: $color-mountain-meadow;
@@ -8,6 +11,10 @@ $radio-button-default-fill-color: $color-mountain-meadow;
 $radio-button-disabled-background-color: $color-gallery;
 $radio-button-error-border-color: $color-chestnut-rose;
 
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
 .c-radio__button {
   width: 1.8rem;
   height: 1.8rem;
@@ -17,6 +24,22 @@ $radio-button-error-border-color: $color-chestnut-rose;
   cursor: pointer;
 }
 
+.c-radio__button {
+
+  &.is-disabled {
+    cursor: default;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, media queries, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
 .c-radio__button {
   background-color: $radio-button-default-background-color;
   border-color: $radio-button-default-border-color;
@@ -30,10 +53,14 @@ $radio-button-error-border-color: $color-chestnut-rose;
 
   &.is-disabled {
     background-color: $radio-button-disabled-background-color;
-    cursor: default;
   }
 
   &.is-error {
     border-color: $radio-button-error-border-color;
   }
 }
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
