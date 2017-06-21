@@ -4,6 +4,7 @@
 /// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes-map: (
+        'loading': 6000,
         'modal': 5000,
         'dropdown': 4000,
         'default': 1,
