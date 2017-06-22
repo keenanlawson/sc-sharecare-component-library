@@ -12,6 +12,10 @@
   padding: ($base-unit-size * 2);
   display: flex;
   flex-direction: column;
+
+  + .c-card__text {
+    padding-top: 0;
+  }
 }
 
 .c-card__text-header {

@@ -22,6 +22,7 @@ $radio-button-error-border-color: $color-chestnut-rose !default;
   border-radius: 50%;
   display: inline-flex;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .c-radio__button {
