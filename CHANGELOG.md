@@ -82,3 +82,9 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Adding React Card components
 - Adding React Loading Spinner component
+
+-----
+
+6/23/2017
+
+- Added sticky bar component
