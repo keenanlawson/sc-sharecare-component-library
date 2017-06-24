@@ -14,9 +14,9 @@ export default class StickyBar extends React.Component {
         const bottom = document.documentElement.scrollHeight || document.body.scrollHeight;
         const screenBottom = window.screen.availHeight + window.scrollY;
         const stickyInitial = parseInt(this.sticky.getAttribute('data-sticky-initial'), 10);
+        const stickyEnter = parseInt(this.sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;
         const stickyClass = 'is-sticky';
         if (this.props.stickyPosition === 'top') {
-            const stickyEnter = parseInt(this.sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;
             const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || bottom;
             if (top >= stickyEnter && top <= stickyExit) {
                 this.sticky.classList.add(stickyClass);
@@ -27,7 +27,6 @@ export default class StickyBar extends React.Component {
 
         // stickyPosition === bottom
         else {
-            const stickyEnter = parseInt(this.sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;
             const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || top;
             if (screenBottom <= stickyEnter && screenBottom <= stickyExit) {
                 this.sticky.classList.add(stickyClass);
@@ -69,7 +68,8 @@ StickyBar.propTypes = {
     className: PropTypes.string,
     enter: PropTypes.string,
     exit: PropTypes.string,
-    stickyPosition: PropTypes.oneOf(['top', 'bottom'])
+    stickyPosition: PropTypes.oneOf(['top', 'bottom']),
+    disabled: PropTypes.bool
 };
 
 StickyBar.defaultProps = {

@@ -95,3 +95,4 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 6/24/2017
 
 - Updated some breakpoint functions and mix-ins
+- Updated sticky bar with some consolidation and style changes
