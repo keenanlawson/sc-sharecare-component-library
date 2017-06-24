@@ -4,10 +4,17 @@
 //    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    767px
 @import '../settings/s-break-points';
-//@import '../utilities/u-breakpoint-next';
-//@import '../utilities/u-breakpoint-min';
-//@import '../utilities/u-breakpoint-max';
+@import '../utilities/u-breakpoint-next';
+@import '../utilities/u-breakpoint-min';
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+
+  @debug 'MAX $name ->' $name;
+
   $next: breakpoint-next($name, $breakpoints);
+
+  @debug 'MAX $next ->' $next;
+  @debug 'MAX breakpoint-min($next, $breakpoints) - 1px ->' breakpoint-min($next, $breakpoints) - 1px;
+  @debug 'MAX if($next, breakpoint-min($next, $breakpoints) - 1px, null) ->' if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }

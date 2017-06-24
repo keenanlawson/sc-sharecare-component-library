@@ -2,14 +2,30 @@
 // No minimum for the smallest breakpoint, and no maximum for the largest one.
 // Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
 @import '../settings/s-break-points';
-//@import '../utilities/u-breakpoint-min';
-//@import '../utilities/u-breakpoint-max';
+@import '../utilities/u-breakpoint-min';
+@import '../utilities/u-breakpoint-max';
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   $max: breakpoint-max($name, $breakpoints);
 
+  @debug 'ONLY $min ->' $min;
+  @debug 'ONLY $max ->' $max;
+  @debug 'ONLY if($min) ->' if($min, true, false);
+  @debug 'ONLY if($max) ->' if($max, true, false);
+  @debug 'ONLY $min and $max ->' if($min and $max, true, false);
+  @debug 'ONLY $min and not $max ->' if($min and not $max, true, false);
+  @debug 'ONLY $max and not $min ->' if($max and not $min, true, false);
+
   @if $max and $min {
     @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max and not $min {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else if $min and not $max {
+    @media (min-width: $min) {
       @content;
     }
   }
