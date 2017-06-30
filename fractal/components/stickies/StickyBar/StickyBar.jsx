@@ -28,7 +28,7 @@ export default class StickyBar extends React.Component {
         // stickyPosition === bottom
         else {
             const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || top;
-            if (screenBottom <= stickyEnter && screenBottom <= stickyExit) {
+            if (screenBottom <= stickyEnter && screenBottom >= stickyExit) {
                 this.sticky.classList.add(stickyClass);
             } else {
                 this.sticky.classList.remove(stickyClass);
