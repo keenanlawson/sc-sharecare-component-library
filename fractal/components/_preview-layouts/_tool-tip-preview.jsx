@@ -6,6 +6,7 @@ const page = ({ rendered_content, path }) => {
         <div>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/core-configuration.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/tooltips/ToolTip/ToolTip.css`}/>
+            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/icons/SVGIcon/SVGIcon.css`}/>
             <style>{"\
                 .c-tooltip{\
                   top: 200px;\
@@ -13,6 +14,7 @@ const page = ({ rendered_content, path }) => {
                 }\
               "}</style>
             <div className="base-preview" dangerouslySetInnerHTML={{__html: rendered_content}}/>
+            <script src={`http://localhost:3050/static/js/ToolTip.js`}/>
         </div>
     );
 };

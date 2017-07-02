@@ -89,10 +89,16 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Added sticky bar component
 
-
 -----
 
 6/24/2017
 
 - Updated some breakpoint functions and mix-ins
 - Updated sticky bar with some consolidation and style changes
+
+-----
+
+7/2/2017
+
+- Updated tooltip component
+- Added use case for individually compiling and loading component JS in fractal preview for interactivity

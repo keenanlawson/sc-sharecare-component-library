@@ -25,54 +25,30 @@ $tooltip-shadow-color: $color-pure-black !default;
 }
 
 .c-tooltip__body {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+
   border: 0.1rem solid;
   border-radius: 0.2rem;
   padding: 1rem 1.5rem;
-  min-width: 16rem;
-  max-width: 30rem;
-  bottom: 2.5rem;
-  left: -50%;
   cursor: default;
+}
 
-  @include respond-to(sm) {
-    width: 25rem;
-  }
-
-  // Create the tooltip arrow pointing to the label
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    border: 0.5rem solid;
-    bottom: -0.5rem;
-    left: calc(50% - (0.5rem / 2));
-    transform: rotate(-45deg);
-  }
+// Create the tooltip arrow pointing to the label
+.c-tooltip__arrow {
+  position: absolute;
+  border: 0.5rem solid;
+  bottom: -0.5rem;
+  left: calc(50% - (0.5rem / 2));
+  transform: rotate(-45deg);
 }
 
 
 //////////////////////////
 /// 3. STATE RULES - is-className, media queries, etc
 //////////////////////////
-.c-tooltip__body {
-
-  &.push-left {
-    left: -16rem;
-
-    &::before {
-      left: 16rem;
-    }
-  }
-
-  &.push-right {
-    left: 0;
-
-    &::before {
-      left: 0.5rem;
-    }
-  }
-}
 
 
 //////////////////////////
@@ -83,18 +59,18 @@ $tooltip-shadow-color: $color-pure-black !default;
   background-color: $tooltip-background-color;
   box-shadow: 0 0.1rem 0.2rem 0 rgba($tooltip-shadow-color, 0.3);
   color: $tooltip-default-text-color;
+}
 
-  &::before {
-    border-color: transparent transparent $tooltip-background-color $tooltip-background-color;
-    box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba($tooltip-shadow-color, 0.3);
-  }
+.c-tooltip__arrow {
+  border-color: transparent transparent $tooltip-background-color $tooltip-background-color;
+  box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba($tooltip-shadow-color, 0.3);
 }
 
 
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.c-tooltip__body {
+.c-tooltip__text {
 
   font-size: 1.8rem;
   line-height: 2rem;
