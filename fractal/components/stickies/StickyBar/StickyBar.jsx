@@ -12,18 +12,11 @@ export default class StickyBar extends React.Component {
     }
 
     onScroll() {
-        console.log('scrolling');
-
         const top = document.documentElement.scrollTop || document.body.scrollTop;
-        console.log('top:', top);
         const bottom = document.documentElement.scrollHeight || document.body.scrollHeight;
-        console.log('bottom:', bottom);
         const screenBottom = window.innerHeight + window.scrollY;
-        console.log('screenBottom:', screenBottom);
         const stickyInitial = parseInt(this.sticky.getAttribute('data-sticky-initial'), 10);
-        console.log('stickyInitial:', stickyInitial);
         const stickyEnter = parseInt(this.sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;
-        console.log('stickyEnter:', stickyEnter);
         const stickyClass = 'is-sticky';
         if (this.props.stickyPosition === 'top') {
             const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || bottom;
