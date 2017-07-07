@@ -76,7 +76,7 @@ export default class StickyBar extends React.Component {
 
     componentWillUnmount() {
         document.removeEventListener('scroll', this.onScroll);
-        document.removeEventListener('resize', this.onOrientationChange);
+        window.removeEventListener('resize', this.onOrientationChange);
     }
 
     render() {
