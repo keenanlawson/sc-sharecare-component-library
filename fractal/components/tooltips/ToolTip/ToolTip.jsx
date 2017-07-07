@@ -112,7 +112,7 @@ export default class ToolTip extends React.Component {
 
         return (
             <div className={componentClasses} ref={(tooltip) => { this.tooltip = tooltip;}}>
-                <div className={labelClass} onClick={this.handleClick}>{this.props.label}<span className="c-svg-icon c-svg-icon--info-open"/></div>
+                <div className={labelClass} onClick={this.handleClick}>{this.props.label}</div>
                 {
                     this.state.expanded &&
                     <div className={bodyClasses}>

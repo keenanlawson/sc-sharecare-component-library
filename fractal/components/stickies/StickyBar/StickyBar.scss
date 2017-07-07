@@ -1,4 +1,5 @@
 @import '../../../scss/utilities/u-breakpoint-down';
+@import '../../../scss/utilities/u-get-z-index';
 
 //////////////////////////
 /// 1. CONFIG
@@ -13,12 +14,17 @@
 //////////////////////////
 /// 3. STATE RULES - is-className, media queries, etc
 //////////////////////////
+.c-sticky-bar {
+
+}
+
 .c-sticky {
 
   &.is-sticky {
     position: fixed;
     left: 0;
     right: 0;
+    z-index: z('sticky');
 
     &.is-sticky-top {
       top: 0;

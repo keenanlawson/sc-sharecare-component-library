@@ -6,7 +6,8 @@
 $z-indexes-map: (
         'loading': 6000,
         'modal': 5000,
-        'dropdown': 4000,
+        'sticky': 4000,
+        'dropdown': 3000,
         'default': 1,
         'below': -1,
 );

@@ -102,3 +102,11 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Updated tooltip component
 - Added use case for individually compiling and loading component JS in fractal preview for interactivity
+
+-----
+
+7/7/2017
+
+- Removed hard coded icon in ToolTip component
+- Added Sticky preview interactivity JS
+- Updated Sticky functionality to be more stable
