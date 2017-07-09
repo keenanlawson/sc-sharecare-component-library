@@ -9,18 +9,29 @@ export default class StickyBar extends React.Component {
         this.onScroll = this.onScroll.bind(this);
         this.onOrientationChange = this.onOrientationChange.bind(this);
         this.sizeElements = this.sizeElements.bind(this);
+        this.updateInitialPosition = this.updateInitialPosition.bind(this);
+        this.destroy = this.destroy.bind(this);
     }
 
     onScroll() {
-        const top = document.documentElement.scrollTop || document.body.scrollTop;
-        const bottom = document.documentElement.scrollHeight || document.body.scrollHeight;
-        const screenBottom = window.innerHeight + window.scrollY;
+
+        // Set stickiness class
+        const stickyClass = 'is-sticky';
+
+        // Get baseline position
+        const documentTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const documentBottom = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+        // Get viewport bottom
+        const viewportBottom = window.innerHeight + window.scrollY;
+
+        // Set sticky position coordinates
         const stickyInitial = parseInt(this.sticky.getAttribute('data-sticky-initial'), 10);
         const stickyEnter = parseInt(this.sticky.getAttribute('data-sticky-enter'), 10) || stickyInitial;
-        const stickyClass = 'is-sticky';
+        const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || (this.props.stickyPosition === 'top' ? documentBottom : documentTop);
+
         if (this.props.stickyPosition === 'top') {
-            const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || bottom;
-            if (top >= stickyEnter && top <= stickyExit) {
+            if (documentTop >= stickyEnter && documentTop <= stickyExit) {
                 this.sticky.classList.add(stickyClass);
             } else {
                 this.sticky.classList.remove(stickyClass);
@@ -29,8 +40,7 @@ export default class StickyBar extends React.Component {
 
         // stickyPosition === bottom
         else {
-            const stickyExit = parseInt(this.sticky.getAttribute('data-sticky-exit'), 10) || top;
-            if (screenBottom <= stickyEnter && screenBottom >= stickyExit) {
+            if (viewportBottom <= stickyEnter && viewportBottom >= stickyExit) {
                 this.sticky.classList.add(stickyClass);
             } else {
                 this.sticky.classList.remove(stickyClass);
@@ -43,33 +53,84 @@ export default class StickyBar extends React.Component {
 
         // Remove stickiness
         this.sticky.classList.remove('is-sticky');
-        this.sticky.parentElement.setAttribute('style', '');
 
+        // Remove placeholder dimensions
+        this.stickyBar.setAttribute('style', '');
+
+        // Update position and sizes
         this.sizeElements();
 
-        // Force update on initialization in case element is in a position to be sticky
+        // Force check sticky state in case element is in a position to be sticky
         this.onScroll();
     }
 
+    // Set sticky bar size and initial position
     sizeElements() {
-        const stickyClient = this.sticky.getBoundingClientRect();
-        const topInitial = this.sticky.offsetTop;
-        const bottomInitial = topInitial + this.sticky.offsetHeight;
-        const initial = this.props.stickyPosition === 'top' ? topInitial : bottomInitial;
+        // Get baseline position
+        const bodyRect = document.body.getBoundingClientRect();
+
+        // Get sticky position
+        const stickyRect = this.sticky.getBoundingClientRect();
+
+        // Calculate sticky coordinates
+        const stickyTop = stickyRect.top - bodyRect.top;
+        const stickyBottom = stickyRect.bottom - bodyRect.top;
+        const stickyHeight = stickyBottom - stickyTop;
+        const stickyWidth = stickyRect.right - stickyRect.left;
+
+        // Determine initial position
+        const initial = this.props.stickyPosition === 'top' ? stickyTop : stickyBottom;
+
+        // Set initial position
         this.sticky.setAttribute('data-sticky-initial', initial.toString());
-        this.sticky.parentElement.setAttribute('style', `width: ${stickyClient.width}px; height: ${stickyClient.height}px;`);
+
+        // Size the sticky placeholder to prevent DOM collapse
+        this.stickyBar.setAttribute('style', 'width: ' + stickyWidth + 'px; height: ' + stickyHeight + 'px;');
+    }
+
+    updateInitialPosition() {
+
+        // Get baseline position
+        const bodyRect = document.body.getBoundingClientRect();
+
+        // Get placeholder position
+        const stickyBarRect = this.stickyBar.getBoundingClientRect();
+
+        // Calculate placeholder coordinates
+        const stickyBarTop = stickyBarRect.top - bodyRect.top;
+        const stickyBarBottom = stickyBarRect.bottom - bodyRect.top;
+
+        // Determine initial position
+        const initial = this.props.stickyPosition === 'top' ? stickyBarTop : stickyBarBottom;
+
+        // Update sticky position
+        this.sticky.setAttribute('data-sticky-initial', initial.toString());
+    }
+
+    // Remove event listeners
+    destroy() {
+        document.removeEventListener('scroll', this.onScroll);
+        window.removeEventListener('resize', this.onOrientationChange);
+        this.sticky.classList.remove('is-sticky');
     }
 
     componentDidMount() {
+
+        // Force element position updates on initialization
         this.sizeElements();
+
+        // Force check sticky state on initialization in case element is in a position to be sticky
+        this.onScroll();
+
+        // Add event listeners
         document.addEventListener('scroll', this.onScroll);
         window.addEventListener('resize', this.onOrientationChange);
-        this.onScroll();
     }
 
     componentWillUnmount() {
-        document.removeEventListener('scroll', this.onScroll);
-        window.removeEventListener('resize', this.onOrientationChange);
+
+        // Remove event listeners
+        this.destroy();
     }
 
     render() {
@@ -79,7 +140,7 @@ export default class StickyBar extends React.Component {
         const stickyClass = 'c-sticky';
         const stickyClasses = classNames(stickyClass, `is-sticky-${stickyPosition}`);
         return (
-            <div className={componentClasses}>
+            <div className={componentClasses} ref={(stickyBar)=>{this.stickyBar = stickyBar;}}>
                 <div
                     ref={(sticky)=>{this.sticky = sticky;}}
                     className={stickyClasses}
