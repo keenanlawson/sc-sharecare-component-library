@@ -110,8 +110,15 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Removed hard coded icon in ToolTip component
 - Added Sticky preview interactivity JS
 - Updated Sticky functionality to be more stable
+
 -----
 
 7/8/2017
 
 - Updated Sticky functionality to be more stable
+
+-----
+
+7/9/2017
+
+- Started working out React component SDK

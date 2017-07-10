@@ -12,6 +12,8 @@ const page = ({ rendered_content, path }) => {
                 }\
               "}</style>
             <div className="base-preview" dangerouslySetInnerHTML={{__html: rendered_content}}/>
+
+            <script src={`http://localhost:3050/static/js/ReactComponentFactory.js`} />
         </div>
     );
 };
