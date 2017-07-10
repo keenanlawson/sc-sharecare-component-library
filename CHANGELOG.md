@@ -122,3 +122,10 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 7/9/2017
 
 - Started working out React component SDK
+
+-----
+
+7/10/2017
+
+- Removed unnecessary positioning and width on loading spinner
+

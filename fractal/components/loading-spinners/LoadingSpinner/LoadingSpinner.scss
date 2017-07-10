@@ -23,8 +23,6 @@ $loading-overlay-color: $color-pure-black !default;
 }
 
 .c-loading__spinner {
-  position: absolute;
-  width: 100%;
   height: $loading-spinner-size;
   z-index: z('loading');
 }
