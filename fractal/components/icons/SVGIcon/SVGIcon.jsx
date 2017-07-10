@@ -2,15 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const SVGIcon = ({ className, icon, ...rest }) => {
+const SVGIcon = ({ className, icon }) => {
 
     const componentClass = 'c-svg-icon';
     const iconClass = `${componentClass}--${icon}`;
     const componentClasses = classNames(componentClass, iconClass, className);
-    const componentProps = { className: componentClasses, ...rest };
 
     return (
-        <span {...componentProps}/>
+        <span className={componentClasses}/>
     );
 };
 
