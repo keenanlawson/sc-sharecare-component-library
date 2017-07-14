@@ -125,6 +125,12 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 -----
 
+7/10/2017
+
+- Removed unnecessary positioning and width on loading spinner
+
+-----
+
 7/14/2017
 
 - Adding assessment components
