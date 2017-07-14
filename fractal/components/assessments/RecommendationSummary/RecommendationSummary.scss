@@ -1,0 +1,128 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$summary-recommendation-border-color: $color-gallery !default;
+$summary-recommendation-footer-border-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+// SUMMARY
+.m-assessment__recommendation-summary {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.m-assessment__recommendation-summary-content-main {
+
+  @include respond-to(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.m-assessment__recommendation-summary-text {
+  margin-bottom: 1.5rem;
+
+  > *:not(:first-child) {
+    display: none;
+  }
+
+  > p:first-of-type {
+
+    @include respond-to(md) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  > h3 {
+    margin: 0;
+
+    @include respond-to(md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include respond-to(md) {
+    width: 46rem;
+    margin-right: 4rem;
+  }
+}
+
+.m-assessment__recommendation-summary-charts {
+  margin-bottom: 1.5rem;
+
+  @include respond-to(md) {
+    width: 38rem;
+    margin-top: 3rem;
+  }
+}
+
+.m-assessment__recommendation-summary-content-footer {
+  padding-top: 1rem;
+  border-top: 0.1rem solid;
+
+  @include respond-to(md) {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+.m-assessment__recommendation-summary-footer-link {
+  display: flex;
+  align-items: center;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-assessment__recommendation-summary-content-footer {
+  border-top-color: $summary-recommendation-footer-border-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-assessment__recommendation-summary-text {
+
+  > h3 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+
+    @include respond-to(md) {
+      font-size: 2rem;
+    }
+  }
+
+  > p {
+
+    @include respond-to(md) {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
+  }
+}
+
+.m-assessment__recommendation-summary-footer-link {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  // Override .content a {semi-bold} from core
+  font-weight: normal !important;
+
+  @include respond-to(md) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}

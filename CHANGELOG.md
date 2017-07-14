@@ -122,3 +122,12 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 7/9/2017
 
 - Started working out React component SDK
+
+-----
+
+7/14/2017
+
+- Adding assessment components
+- Added React Link component
+- Added more 'interactive' components for testing assessment components
+- Updated components used by the assessment components after bugs/issues found

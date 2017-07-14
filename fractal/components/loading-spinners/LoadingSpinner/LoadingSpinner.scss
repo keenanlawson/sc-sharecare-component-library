@@ -14,19 +14,12 @@ $loading-overlay-color: $color-pure-black !default;
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.c-loading {
-  position: relative;
-}
-
 .c-loading__text {
-  margin: $base-unit-size 0;
+  padding: $base-unit-size 0;
 }
 
 .c-loading__spinner {
-  position: absolute;
-  width: 100%;
   height: $loading-spinner-size;
-  z-index: z('loading');
 }
 
 
@@ -35,19 +28,18 @@ $loading-overlay-color: $color-pure-black !default;
 //////////////////////////
 .c-loading {
 
+  // NOTE: Parent element must be
   &.is-overlay {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-  }
-}
+    z-index: z('loading');
 
-.c-loading__spinner {
-
-  &.is-overlay {
-    top: calc(50% - (#{$loading-spinner-size} / 2));
+    &.is-fullscreen {
+      position: fixed;
+    }
   }
 }
 

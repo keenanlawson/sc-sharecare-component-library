@@ -83,10 +83,10 @@ const SVGBarChart = ({ className, percentFull = 0, fillClassName, chartMarkers, 
                     chartMarkers.map((marker)=>{
                         let html = null;
                         if (marker.text) {
-                            const isFirst = marker.percent === 0;
+                            const isFirst = !marker.percent;
                             const isLast = marker.percent >= barMaxWidth;
                             const markerTextClass = classNames("c-svg-bar-chart__marker-text", {'is-first': isFirst}, {'is-last': isLast});
-                            html = <text className={markerTextClass} x={`${marker.percent > barMaxWidth ? barMaxWidth : marker.percent}%`} y="15">{marker.text}</text>;
+                            html = <text key={marker.percent} className={markerTextClass} x={`${marker.percent > barMaxWidth ? barMaxWidth : !!marker.percent ? marker.percent : '0'}%`} y="15">{marker.text}</text>;
                         }
                         return html;
                     })
@@ -96,7 +96,7 @@ const SVGBarChart = ({ className, percentFull = 0, fillClassName, chartMarkers, 
                     // Display markers
                     (chartMarkers && chartMarkers.length > 0) &&
                     chartMarkers.map((marker)=>{
-                        return <rect className="c-svg-bar-chart__marker" x={`${marker.percent > barMaxWidth ? barMaxWidth : marker.percent}%`} y="20" width="1" height="40"/>;
+                        return <rect key={marker.percent} className="c-svg-bar-chart__marker" x={`${marker.percent > barMaxWidth ? barMaxWidth : !!marker.percent ? marker.percent : '0'}%`} y="20" width="1" height="40"/>;
                     })
                 }
 

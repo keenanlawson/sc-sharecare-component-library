@@ -26,22 +26,34 @@ export default class SVGArcChart extends React.Component {
     animateDashArray(ratio, svg, percentage) {
 
         // Get the masking element
-        let mask = svg.querySelector('.c-svg-arc-chart__mask2');
+        let mask = svg.querySelector('.c-svg-arc-chart__mask');
 
         // Set default visible arc in degrees of a circle (360)
         const visibleArcDegrees = 240;
         const visibleArcPercent = visibleArcDegrees / 360 * 100;
 
-        // Animate the 'uncovering' of the gauge and increment the percentage accordingly
-        // 1st param: start at this angle
-        /*return Snap.animate(visibleArcPercent, (visibleArcPercent * (1 - ratio)), ((val) => {
+        if (typeof Snap !== 'undefined') {
+
+            // Animate the 'uncovering' of the gauge and increment the percentage accordingly
+            // 1st param: start at this angle
+            return Snap.animate(visibleArcPercent, (visibleArcPercent * (1 - ratio)), ((val) => {
+
+                // Update the masking element stoke dash array attribute to 'uncover' the arc behind
+                mask.setAttribute('stroke-dasharray', val + `, 100`);
+
+                // Update the percentage text node to the current percent uncovered
+                percentage.textContent = (100 - (Math.round((val / visibleArcPercent) * 100)));
+            }), Math.round(2000 * ratio), mina.easeinout);
+        }
+
+        else {
 
             // Update the masking element stoke dash array attribute to 'uncover' the arc behind
-            mask.setAttribute('stroke-dasharray', val + `, ${visibleArcPercent}`);
+            mask.setAttribute('stroke-dasharray', (visibleArcPercent * (1 - ratio)) + `, 100`);
 
             // Update the percentage text node to the current percent uncovered
-            // percentage.textContent = (100 - (Math.round((val / visibleArcPercent) * 100)));
-        }), Math.round(2000 * ratio), mina.easeinout);*/
+            percentage.textContent = (100 - (Math.round(((visibleArcPercent * (1 - ratio)) / visibleArcPercent) * 100)));
+        }
     }
 
     createMask(cx, cy, radius, strokeWidth, stroke, visibleArcPercent, circumference) {
@@ -59,7 +71,7 @@ export default class SVGArcChart extends React.Component {
 
         // Create mask path
         // return <path {...maskProps} stroke="#eee" fill="none" />;
-        return <circle className="c-svg-arc-chart__mask" cx={cx} cy={cy} r={radius} stroke={stroke} strokeDasharray={maskStrokeDashArray} strokeWidth={maskStrokeWidth} fill="none" transform={`rotate(-30 ${cx} ${cy})`} />;
+        return <circle key="mask" className="c-svg-arc-chart__mask" cx={cx} cy={cy} r={radius} stroke={stroke} strokeDasharray={maskStrokeDashArray} strokeWidth={maskStrokeWidth} fill="none" transform={`rotate(-30 ${cx} ${cy})`} />;
     }
 
     createSegments(cx, cy, radius, strokeWidth, visibleArcPercent, circumference, percentFull) {
@@ -93,7 +105,7 @@ export default class SVGArcChart extends React.Component {
             const segmentLengthDegrees = (segment.percent / 100) * visibleArcPercent;
 
             // Return segment path
-            const circle = <circle key={Math.random()} className="c-svg-arc-chart__segment" cx={cx} cy={cy} r={radius} stroke={segment.color} strokeDasharray={segmentStrokeDashArray} strokeDashoffset={segmentStartDegrees} strokeWidth={strokeWidth} fill="none" transform={`rotate(150 ${cx} ${cy})`} />;
+            const circle = <circle key={segmentStartDegrees} className="c-svg-arc-chart__segment" cx={cx} cy={cy} r={radius} stroke={segment.color} strokeDasharray={segmentStrokeDashArray} strokeDashoffset={segmentStartDegrees} strokeWidth={strokeWidth} fill="none" transform={`rotate(150 ${cx} ${cy})`} />;
 
             // Update tick color based on percent full falling withing segment range
             tickColor = percentFull >= (segmentStartDegrees / visibleArcPercent * 100) ? segment.color : tickColor;
@@ -110,8 +122,8 @@ export default class SVGArcChart extends React.Component {
         const tickPosition = -visibleArcPercent * ((100 - percentFull) / 100);
         const fillRadius = radius - (strokeWidth / 2);
 
-        const tick = <circle className="c-svg-arc-chart__tick" cx={cx} cy={cy} r={radius} stroke={tickColor} strokeDasharray={`${tickWidth} ${circumference}`} strokeDashoffset={tickPosition} strokeWidth={strokeWidth + 1} fill="none" transform={`rotate(150 ${cx} ${cy})`}/>;
-        const fill = <circle className="c-svg-arc-chart__fill" cx={cx} cy={cy} r={fillRadius} fill="#fff"/>;
+        const tick = <circle key="tick" className="c-svg-arc-chart__tick" cx={cx} cy={cy} r={radius} stroke={tickColor} strokeDasharray={`${tickWidth} ${circumference}`} strokeDashoffset={tickPosition} strokeWidth={strokeWidth + 1} fill="none" transform={`rotate(150 ${cx} ${cy})`}/>;
+        const fill = <circle key="fill" className="c-svg-arc-chart__fill" cx={cx} cy={cy} r={fillRadius} fill="#fff"/>;
 
         return [...segs, tick, fill];
     }
@@ -175,8 +187,6 @@ SVGArcChart.propTypes = {
     percentFull: PropTypes.number.isRequired
 };
 
-SVGArcChart.defaultProps = {
-    percentFull: 95
-};
+SVGArcChart.defaultProps = {};
 
 module.exports = SVGArcChart;

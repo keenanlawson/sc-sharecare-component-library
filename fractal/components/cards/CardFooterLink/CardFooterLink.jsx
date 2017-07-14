@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticRouter, Link } from 'react-router-dom';
+import Link from '../../links/Link/Link.jsx';
 
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,15 +7,12 @@ import PropTypes from 'prop-types';
 const CardFooterLink = ({ className, to, label, children, ...rest }) => {
     const componentClass = 'c-card__footer-link';
     const componentClasses = classNames(componentClass, className);
-    const componentProps = { className: componentClasses, to, ...rest };
+    const componentProps = { className: componentClasses, label, to, ...rest };
 
     return (
-        <StaticRouter>
-            <Link {...componentProps}>
-                {label || to}
-                {children}
-            </Link>
-        </StaticRouter>
+        <Link {...componentProps}>
+            {children}
+        </Link>
     );
 };
 
