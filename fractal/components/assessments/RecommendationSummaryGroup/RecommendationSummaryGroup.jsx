@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import LoadingSpinner from "../../loading-spinners/LoadingSpinner/LoadingSpinner.jsx";
 
-// import RecommendationSummaryOverall from "../RecommendationSummaryOverall";
+import RecommendationScoreSummary from "../RecommendationScoreSummary/RecommendationScoreSummary.jsx";
 import RecommendationSummary from "../RecommendationSummary/RecommendationSummary.jsx";
 
 export default class RecommendationSummaryGroup extends React.Component {
@@ -74,9 +74,9 @@ export default class RecommendationSummaryGroup extends React.Component {
                 recommendations = recommendations.concat(
                     config.summaryType === 'overall'
                         ?
-                        null/*<RecommendationSummaryOverall {...overallProps} />*/
+                    <RecommendationScoreSummary {...overallProps} />
                         :
-                        <RecommendationSummary key={key} {...summaryProps} />
+                    <RecommendationSummary key={key} {...summaryProps} />
                 );
             });
         }

@@ -1,4 +1,5 @@
 const summaryConfig = require('../RecommendationSummary/RecommendationSummary.config');
+const summaryScoresConfig = require('../RecommendationScoreSummary/RecommendationScoreSummary.config');
 
 const getModuleConfigs = () => {
     return [
@@ -21,6 +22,7 @@ module.exports = {
             let module = summaryConfig.variants[0].context;
             switch (recommendationModuleUri) {
                 case 'moneyfitScore':
+                    module = summaryScoresConfig.context;
                     break;
                 case 'liquidity':
                     module = summaryConfig.variants[1].context;
@@ -42,7 +44,6 @@ module.exports = {
             });
         },
         getDataSuccess: function(recommendation) {
-            // return [summaryConfig.context, summaryConfig.variants[0], summaryConfig.variants[1], summaryConfig.variants[2]];
             return recommendation;
         }
     }

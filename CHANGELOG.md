@@ -137,3 +137,9 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Added React Link component
 - Added more 'interactive' components for testing assessment components
 - Updated components used by the assessment components after bugs/issues found
+
+-----
+
+7/16/2017
+
+- Added recommendation summary and score (overall) summary and summary group components

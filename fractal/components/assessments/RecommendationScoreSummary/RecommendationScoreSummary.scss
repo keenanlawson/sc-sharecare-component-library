@@ -1,0 +1,269 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$overview-recommendation-header-border-color: $color-gallery !default;
+$overview-recommendation-header-link-border-color: $color-curious-blue !default;
+$overview-recommendation-header-link-text-color: $color-curious-blue !default;
+$overview-recommendation-header-link-background-hover-color: $color-curious-blue !default;
+$overview-recommendation-header-link-text-hover-color: $color-pure-white !default;
+$overview-recommendation-score-background-color: $color-alabaster !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+// SUMMARY OVERVIEW
+.m-assessment__recommendation-score-summary {
+  padding: 1.5rem;
+
+  @include respond-to(md) {
+    padding: 2rem 3rem 2rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-header {
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid;
+
+  @include respond-to(md) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-header-link {
+  display: none;
+
+  @include respond-to(md) {
+    display: block;
+    border: 0.1rem solid;
+    padding: 0.9rem 1.4rem 0.6rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-content-main {
+
+  @include respond-to(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.m-assessment__recommendation-score-summary-charts {
+  max-height: 30rem;
+  margin-bottom: 2rem;
+
+  @include respond-to(md) {
+    width: 15rem;
+    padding: 0.5rem 2rem 0 1rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .c-svg-arc-chart {
+
+    // Needed this for IE
+    @include respond-to(md) {
+      height: 7.5rem;
+    }
+  }
+}
+
+.m-assessment__recommendation-score-summary-scores {
+
+  @include respond-to(md) {
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-score {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.1rem 1rem;
+  margin-top: 0.5rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include respond-to(md) {
+    margin-top: 0;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.m-assessment__recommendation-score-summary-score-label {
+  margin-right: 0.5rem;
+}
+
+.m-assessment__recommendation-score-summary-text {
+  margin-top: 1.5rem;
+
+  p,
+  ul {
+    display: none;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+    display: none;
+
+    @include respond-to(md) {
+      margin-bottom: 1rem;
+    }
+
+    &:first-child {
+      display: block;
+
+      + p {
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    margin-top: 0;
+    width: calc(100% - 15rem);
+  }
+}
+
+.m-assessment__recommendation-score-summary-link {
+  display: none;
+
+  @include respond-to(md) {
+    display: block;
+    margin: 1rem 0 0 15rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-content-footer {
+  padding-top: 1.5rem;
+
+  @include respond-to(md) {
+    display: none;
+  }
+}
+
+.m-assessment__recommendation-score-summary-footer-link {
+  margin-left: 1.5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-assessment__recommendation-score-summary {}
+
+.m-assessment__recommendation-score-summary-header {
+  border-bottom-color: $overview-recommendation-header-border-color;
+}
+
+.m-assessment__recommendation-score-summary-header-link {
+
+  @include respond-to(md) {
+    border-color: $overview-recommendation-header-link-border-color;
+    color: $overview-recommendation-header-link-text-color;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $overview-recommendation-header-link-background-hover-color;
+
+      .c-link__label {
+        // Needing to override 'header-mobile.css - a:not(.button):hover'
+        color: $overview-recommendation-header-link-text-hover-color !important;
+      }
+    }
+  }
+}
+
+.m-assessment__recommendation-score-summary-score {
+  background-color: $overview-recommendation-score-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-assessment__recommendation-score-summary-header-text {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+
+  @include respond-to(md) {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-header-link {
+
+  @include respond-to(md) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-score-label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 600;
+}
+
+.m-assessment__recommendation-score-summary-score-result {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+
+.m-assessment__recommendation-score-summary-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+
+  h3 {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @include respond-to(md) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+
+  @include respond-to(md) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+.m-assessment__recommendation-score-summary-footer-link {
+  font-weight: 600;
+}
