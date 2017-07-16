@@ -143,3 +143,4 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 7/16/2017
 
 - Added recommendation summary and score (overall) summary and summary group components
+- Added Assessment Score component

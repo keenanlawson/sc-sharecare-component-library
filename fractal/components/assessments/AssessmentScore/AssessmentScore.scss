@@ -1,0 +1,68 @@
+@import '../../../scss/settings/s-color-palette';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$assessment-score-last-updated-text-color: $color-dove-gray !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-assessment__score {
+  padding: 1.5rem 2rem;
+}
+
+.m-assessment__score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.m-assessment__score-footer {
+  margin-top: 1rem;
+}
+
+.m-assessment__score-footer-link {
+  margin-left: 2rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-assessment__score-last-updated {
+  color: $assessment-score-last-updated-text-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-assessment__score-title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+
+.m-assessment__score-last-updated {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+
+.m-assessment__score-footer-link {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
