@@ -1,123 +1,40 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import LoadingSpinner from "../../loading-spinners/LoadingSpinner/LoadingSpinner.jsx";
+import Card from '../cards/Card/Card';
+import CardMedia from '../cards/CardMedia/CardMedia';
+import CardText from '../cards/CardText/CardText';
 
-import RecommendationScoreSummary from "../RecommendationScoreSummary/RecommendationScoreSummary.jsx";
-import RecommendationSummary from "../RecommendationSummary/RecommendationSummary.jsx";
+const RecommendationTableOfContents = ({ className, moduleTitle, imageUrl, baseUrl, tableOfContents }) => {
+    const componentClass = 'm-assessment__detailed-recommendation-toc';
+    const tocLinkClass = `${componentClass}-link`;
 
-export default class RecommendationSummaryGroup extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            recommendations: {},
-            isLoading: true
-        };
-    }
-
-    componentDidMount() {
-
-        // Build batch of recommendation requests
-        const modules = (this.props.getModuleConfigs() || []).map((config) => {
-            return new Promise((resolve, reject) => {
-                this.props.getData(config.uri)
-                    .then((recommendation) => {
-
-                        // Check for and handle errors
-                        if (recommendation && recommendation.errors) reject(recommendation.errors);
-
-                        // Respond with data
-                        resolve({ recommendation, config });
+    return (
+        <Card className={classNames(componentClass, className)}>
+            <CardMedia imageUrl={imageUrl} title={moduleTitle}/>
+            {
+                (tableOfContents && tableOfContents.length > 0) &&
+                <CardText title="IMPROVE YOUR SCORE" text={
+                    tableOfContents.map((tocLink)=>{
+                        return <Link className={tocLinkClass} to={`${baseUrl}${tocLink.to}`}>{tocLink.text}</Link>;
                     })
+                }/>
+            }
+        </Card>
+    );
+};
 
-                    // Handle errors
-                    .catch((err) => {
-                        reject(err);
-                    });
-            });
-        });
-
-        // Resolve batch of recommendation requests
-        Promise.all(modules)
-            .then((results) => {
-
-                const recommendations = {};
-                results.forEach(({ recommendation, config }) => {
-
-                    // Build recommendations state
-                    recommendations[config.internalName] = this.props.getDataSuccess(recommendation, config);
-                    recommendations[config.internalName].config = config;
-                });
-
-                // Populate recommendations
-                this.setState({
-                    recommendations,
-                    isLoading: false
-                });
-            })
-            .catch((err) => {
-                this.props.handleErrors(err, this.props.getDataError);
-            });
-    }
-
-    render() {
-
-        let recommendations = [];
-        const keys = Object.keys(this.state.recommendations);
-        if (keys.length > 0) {
-            keys.forEach((key) => {
-                const { config, bodyContent, chartData, scoresData } = this.state.recommendations[key];
-                const summaryProps = { bodyContent, chartData, uri: config.uri, title: config.title };
-                const overallProps = { baseUrl: this.props.baseUrl, scoresData, ...summaryProps };
-                recommendations = recommendations.concat(
-                    config.summaryType === 'overall'
-                        ?
-                    <RecommendationScoreSummary {...overallProps} />
-                        :
-                    <RecommendationSummary key={key} {...summaryProps} />
-                );
-            });
-        }
-
-        return (
-            <div className={classNames('m-assessment__recommendation-summary-group', this.props.className)}>
-                <div className="m-assessment__recommendation-summary-group-main">
-                    <div className="m-assessment__recommendation-summary-group-content">
-                        <div className="m-assessment__recommendation-summary-group-content-main">
-                            {
-                                this.state.isLoading
-                                    ?
-                                    <LoadingSpinner text="Retrieving Recommendation Summary..."/>
-                                    :
-                                    recommendations.length > 0 && recommendations
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    };
-}
-
-RecommendationSummaryGroup.propTypes = {
+RecommendationTableOfContents.propTypes = {
     className: PropTypes.string,
+    moduleTitle: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
     baseUrl: PropTypes.string,
-    handleErrors: PropTypes.func.isRequired,
-    getData: PropTypes.func.isRequired,
-    getDataSuccess: PropTypes.func.isRequired,
-    getDataError: PropTypes.func.isRequired,
-    getModuleConfigs: PropTypes.func.isRequired
+    tableOfContents: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-RecommendationSummaryGroup.defaultProps = {
-    baseUrl: '',
-    handleErrors: (error, handler)=>{},
-    getData: (recommendationModule)=>{},
-    getDataSuccess: (recommendation)=>{},
-    getDataError: (error)=>{},
-    getModuleConfigs: ()=>{return [];}
-};
+RecommendationTableOfContents.defaultProps = {};
 
-module.exports = RecommendationSummaryGroup;
+// export default RecommendationTableOfContents;
+module.exports = RecommendationTableOfContents;

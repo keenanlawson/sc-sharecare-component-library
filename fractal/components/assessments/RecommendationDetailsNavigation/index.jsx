@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import RecommendationSummaryGroup from './RecommendationSummaryGroup.jsx';
-import config from './RecommendationSummaryGroup.config';
+import RecommendationDetailsNavigation from './RecommendationDetailsNavigation.jsx';
+import config from './RecommendationDetailsNavigation.config';
 
 ReactDOM.render(
-    <RecommendationSummaryGroup {...config.context} />,
+    <RecommendationDetailsNavigation {...config.context} />,
     document.getElementsByClassName('base-preview')[0]
 );

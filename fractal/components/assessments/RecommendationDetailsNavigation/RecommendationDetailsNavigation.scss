@@ -4,44 +4,83 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$recommendation-summary-group-background-color: $color-pure-white !default;
-$recommendation-summary-group-shadow-color: $color-pure-black !default;
-$recommendation-summary-group-items-border-color: $color-gallery !default;
+$detail-recommendation-navigation-background-color: $color-alabaster !default;
+$detail-recommendation-navigation-shadow-color: $color-pure-black !default;
+$detail-recommendation-navigation-shadow-color: $color-pure-black !default;
+$detail-recommendation-navigation-module-name-text-color: $color-dusty-gray !default;
+$detail-recommendation-sticky-navigation-control-text-color: $color-mine-shaft !default;
+$detail-recommendation-navigation-control-text-color: $color-dusty-gray !default;
+$detail-recommendation-navigation-control-module-name-text-color: $color-mine-shaft !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-// RECOMMENDATIONS SUMMARY PAGE
-.m-assessment__recommendation-summary-group {}
+.m-assessment__recommendation-details-navigation-sticky {
 
-.m-assessment__recommendation-summary-group-content {}
+  .c-sticky {
 
-.m-assessment__recommendation-summary-group-content-main {
-
-  > * {
-    margin-top: 1rem;
-
-    &:first-child {
-      margin-top: 0;
+    @include respond-to(md) {
+      position: relative;
     }
   }
+}
+
+.m-assessment__recommendation-details-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
 
   @include respond-to(md) {
-    padding: 2rem 3rem;
-    border-radius: 0.2rem;
+    padding: 0;
+  }
+}
 
-    > * {
-      margin-top: 2rem;
-      padding: 2rem 0 0;
-      border-top: 1px solid;
+.m-assessment__recommendation-details-navigation-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      &:first-child {
-        margin-top: 0;
-        padding-top: 0;
-        border: 0;
+  .c-svg-icon {
+    width: 2rem;
+    height: 2rem;
+
+    @include respond-to(md) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
+
+.m-assessment__recommendation-details-navigation-link-text {
+
+  @include respond-to(md) {
+    padding: 0 1.5rem;
+  }
+
+  > span {
+
+    &:first-child {
+
+      @include respond-to(md) {
+        display: block;
       }
     }
+    &:last-child {
+      display: none;
+
+      @include respond-to(md) {
+        display: block;
+      }
+    }
+  }
+}
+
+.m-assessment__recommendation-details-navigation-module-name {
+
+  @include respond-to(md) {
+    display: none;
   }
 }
 
@@ -49,25 +88,98 @@ $recommendation-summary-group-items-border-color: $color-gallery !default;
 //////////////////////////
 /// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
+.m-assessment__recommendation-details-navigation {
 
+  &.is-header-nav {
 
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-.m-assessment__recommendation-summary-group-content-main {
+    @include respond-to(md) {
+      margin-bottom: 3rem;
+      order: 0;
+    }
+  }
 
-  @include respond-to(md) {
-    background-color: $recommendation-summary-group-background-color;
-    box-shadow: 0 0.1rem 0.3rem 0 rgba($recommendation-summary-group-shadow-color, 0.2);
+  &.is-footer-nav {
 
-    > * {
-      box-shadow: none;
-      border-top-color: $recommendation-summary-group-items-border-color;
+    @include respond-to(md) {
+      margin-top: 2rem;
     }
   }
 }
 
 
 //////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-assessment__recommendation-details-navigation {
+  background-color: $detail-recommendation-navigation-background-color;
+  box-shadow: 0 0.4rem 1rem 0 rgba($detail-recommendation-navigation-shadow-color, 0.3);
+
+  @include respond-to(md) {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+.m-assessment__recommendation-details-navigation-link-text {
+
+  > span {
+
+    // Navigation next/prev text
+    &:first-child {
+      color: $detail-recommendation-sticky-navigation-control-text-color;
+
+      @include respond-to(md) {
+        color: $detail-recommendation-navigation-control-text-color;
+      }
+    }
+
+    // Navigation module name text
+    &:last-child {
+
+      @include respond-to(md) {
+        color: $detail-recommendation-navigation-control-module-name-text-color;
+      }
+    }
+  }
+}
+
+.m-assessment__recommendation-details-navigation-module-name {
+  color: $detail-recommendation-navigation-module-name-text-color;
+}
+
+
+//////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
+.m-assessment__recommendation-details-navigation-link-text {
+
+  > span {
+
+    &:first-child {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include respond-to(md) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-transform: capitalize;
+      }
+    }
+    &:last-child {
+
+      @include respond-to(md) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.m-assessment__recommendation-details-navigation-module-name {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}

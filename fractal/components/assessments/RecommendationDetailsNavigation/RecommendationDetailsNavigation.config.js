@@ -1,50 +1,13 @@
-const summaryConfig = require('../RecommendationSummary/RecommendationSummary.config');
-const summaryScoresConfig = require('../RecommendationScoreSummary/RecommendationScoreSummary.config');
-
-const getModuleConfigs = () => {
-    return [
-        {title: 'Your MoneyFit Score', uri: 'moneyfitScore', internalName: 'moneyfitScore', summaryType: 'overall'},
-        {title: 'Liquidity', uri: 'liquidity', internalName: 'liquidity'},
-        {title: 'Debt-to-Income Ratio', uri: 'debt_ratio', internalName: 'debtRatio'},
-        {title: 'Savings', uri: 'savings', internalName: 'savings'},
-        {title: 'Life Insurance', uri: 'life_insurance', internalName: 'lifeInsurance'}
-    ];
-};
-
 module.exports = {
-    "title": "Assessment Recommendation Summary Group",
+    "title": "Assessment Recommendation Details Navigation",
     "status": "ready",
     "collated": true,
-    "preview": "@recommendation-summary-group-preview",
+    "preview": "@recommendation-details-navigation-preview",
     "context": {
-        getModuleConfigs: getModuleConfigs,
-        getData: function(recommendationModuleUri) {
-            let module = summaryConfig.variants[0].context;
-            switch (recommendationModuleUri) {
-                case 'moneyfitScore':
-                    module = summaryScoresConfig.context;
-                    break;
-                case 'liquidity':
-                    module = summaryConfig.variants[1].context;
-                    break;
-                case 'debt_ratio':
-                    module = summaryConfig.variants[2].context;
-                    break;
-                case 'savings':
-                    module = summaryConfig.variants[3].context;
-                    break;
-                case 'life_insurance':
-                    module = summaryConfig.variants[4].context;
-                    break;
-                default:
-                    break;
-            }
-            return new Promise((resolve, reject) => {
-                resolve(module);
-            });
-        },
-        getDataSuccess: function(recommendation) {
-            return recommendation;
-        }
+        currentModuleLabel: 'Current Module Name',
+        previousModuleLinkTo: '/somewhere',
+        previousModuleLinkLabel: 'Previous Module Name',
+        nextModuleLinkTo: '/elsewhere',
+        nextModuleLinkLabel: 'Next Module Name'
     }
 };

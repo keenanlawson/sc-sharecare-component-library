@@ -1,47 +1,17 @@
-@import '../../../scss/settings/s-color-palette';
-@import '../../../scss/utilities/u-respond-to-breakpoint';
-
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$recommendation-summary-group-background-color: $color-pure-white !default;
-$recommendation-summary-group-shadow-color: $color-pure-black !default;
-$recommendation-summary-group-items-border-color: $color-gallery !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-// RECOMMENDATIONS SUMMARY PAGE
-.m-assessment__recommendation-summary-group {}
+.m-assessment__detailed-recommendation-toc-link {
+  display: block;
+  margin-top: 1rem;
 
-.m-assessment__recommendation-summary-group-content {}
-
-.m-assessment__recommendation-summary-group-content-main {
-
-  > * {
-    margin-top: 1rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  @include respond-to(md) {
-    padding: 2rem 3rem;
-    border-radius: 0.2rem;
-
-    > * {
-      margin-top: 2rem;
-      padding: 2rem 0 0;
-      border-top: 1px solid;
-
-      &:first-child {
-        margin-top: 0;
-        padding-top: 0;
-        border: 0;
-      }
-    }
+  &:first-child {
+    margin-top: 0;
   }
 }
 
@@ -54,20 +24,13 @@ $recommendation-summary-group-items-border-color: $color-gallery !default;
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.m-assessment__recommendation-summary-group-content-main {
-
-  @include respond-to(md) {
-    background-color: $recommendation-summary-group-background-color;
-    box-shadow: 0 0.1rem 0.3rem 0 rgba($recommendation-summary-group-shadow-color, 0.2);
-
-    > * {
-      box-shadow: none;
-      border-top-color: $recommendation-summary-group-items-border-color;
-    }
-  }
-}
 
 
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
+.m-assessment__detailed-recommendation-toc-link {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: normal !important;
+}

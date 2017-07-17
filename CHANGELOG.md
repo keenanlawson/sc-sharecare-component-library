@@ -144,3 +144,10 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Added recommendation summary and score (overall) summary and summary group components
 - Added Assessment Score component
+
+-----
+
+7/17/2017
+
+- Finished recommendation details navigation
+- Updated Sticky Bar component to allow for a non-docking version

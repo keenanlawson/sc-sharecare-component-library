@@ -116,15 +116,24 @@ export default class StickyBar extends React.Component {
 
     componentDidMount() {
 
-        // Force element position updates on initialization
-        this.sizeElements();
+        // Allow docking when required
+        if (this.props.dock) {
 
-        // Force check sticky state on initialization in case element is in a position to be sticky
-        this.onScroll();
+            // Force element position updates on initialization
+            this.sizeElements();
 
-        // Add event listeners
-        document.addEventListener('scroll', this.onScroll);
-        window.addEventListener('resize', this.onOrientationChange);
+            // Force check sticky state on initialization in case element is in a position to be sticky
+            this.onScroll();
+
+            // Add event listeners
+            document.addEventListener('scroll', this.onScroll);
+            window.addEventListener('resize', this.onOrientationChange);
+        }
+
+        else {
+
+            this.sticky.classList.add('is-sticky');
+        }
     }
 
     componentWillUnmount() {
@@ -161,11 +170,12 @@ StickyBar.propTypes = {
     enter: PropTypes.string,
     exit: PropTypes.string,
     stickyPosition: PropTypes.oneOf(['top', 'bottom']),
-    disabled: PropTypes.bool
+    dock: PropTypes.bool
 };
 
 StickyBar.defaultProps = {
-    stickyPosition: 'bottom'
+    stickyPosition: 'bottom',
+    dock: true
 };
 
 module.exports = StickyBar;
