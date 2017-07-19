@@ -23,6 +23,7 @@ $link-text-hover-color: $color-san-juan !default;
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
+a:not([class~="c-link"]),
 .c-link__label {
   color: $link-text-color;
 

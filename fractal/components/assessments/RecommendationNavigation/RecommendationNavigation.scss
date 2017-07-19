@@ -4,19 +4,19 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$detail-recommendation-navigation-background-color: $color-alabaster !default;
-$detail-recommendation-navigation-shadow-color: $color-pure-black !default;
-$detail-recommendation-navigation-shadow-color: $color-pure-black !default;
-$detail-recommendation-navigation-module-name-text-color: $color-dusty-gray !default;
-$detail-recommendation-sticky-navigation-control-text-color: $color-mine-shaft !default;
-$detail-recommendation-navigation-control-text-color: $color-dusty-gray !default;
-$detail-recommendation-navigation-control-module-name-text-color: $color-mine-shaft !default;
+$recommendation-navigation-background-color: $color-alabaster !default;
+$recommendation-navigation-shadow-color: $color-pure-black !default;
+$recommendation-navigation-shadow-color: $color-pure-black !default;
+$recommendation-navigation-module-name-text-color: $color-dusty-gray !default;
+$recommendation-sticky-navigation-control-text-color: $color-mine-shaft !default;
+$recommendation-navigation-control-text-color: $color-dusty-gray !default;
+$recommendation-navigation-control-module-name-text-color: $color-mine-shaft !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.m-assessment__recommendation-details-navigation-sticky {
+.m-assessment__recommendation-navigation-sticky {
 
   .c-sticky {
 
@@ -26,7 +26,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation {
+.m-assessment__recommendation-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation-link {
+.m-assessment__recommendation-navigation-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation-link-text {
+.m-assessment__recommendation-navigation-link-text {
 
   @include respond-to(md) {
     padding: 0 1.5rem;
@@ -77,7 +77,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation-module-name {
+.m-assessment__recommendation-navigation-module-name {
 
   @include respond-to(md) {
     display: none;
@@ -88,7 +88,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
 //////////////////////////
 /// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
-.m-assessment__recommendation-details-navigation {
+.m-assessment__recommendation-navigation {
 
   &.is-header-nav {
 
@@ -110,9 +110,9 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.m-assessment__recommendation-details-navigation {
-  background-color: $detail-recommendation-navigation-background-color;
-  box-shadow: 0 0.4rem 1rem 0 rgba($detail-recommendation-navigation-shadow-color, 0.3);
+.m-assessment__recommendation-navigation {
+  background-color: $recommendation-navigation-background-color;
+  box-shadow: 0 0.4rem 1rem 0 rgba($recommendation-navigation-shadow-color, 0.3);
 
   @include respond-to(md) {
     box-shadow: none;
@@ -120,16 +120,16 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation-link-text {
+.m-assessment__recommendation-navigation-link-text {
 
   > span {
 
     // Navigation next/prev text
     &:first-child {
-      color: $detail-recommendation-sticky-navigation-control-text-color;
+      color: $recommendation-sticky-navigation-control-text-color;
 
       @include respond-to(md) {
-        color: $detail-recommendation-navigation-control-text-color;
+        color: $recommendation-navigation-control-text-color;
       }
     }
 
@@ -137,21 +137,21 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
     &:last-child {
 
       @include respond-to(md) {
-        color: $detail-recommendation-navigation-control-module-name-text-color;
+        color: $recommendation-navigation-control-module-name-text-color;
       }
     }
   }
 }
 
-.m-assessment__recommendation-details-navigation-module-name {
-  color: $detail-recommendation-navigation-module-name-text-color;
+.m-assessment__recommendation-navigation-module-name {
+  color: $recommendation-navigation-module-name-text-color;
 }
 
 
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.m-assessment__recommendation-details-navigation-link-text {
+.m-assessment__recommendation-navigation-link-text {
 
   > span {
 
@@ -179,7 +179,7 @@ $detail-recommendation-navigation-control-module-name-text-color: $color-mine-sh
   }
 }
 
-.m-assessment__recommendation-details-navigation-module-name {
+.m-assessment__recommendation-navigation-module-name {
   font-size: 1.4rem;
   line-height: 1.7rem;
 }

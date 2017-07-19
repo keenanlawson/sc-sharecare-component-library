@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const CardHeader = ({ className, title, subtitle, simple, ...rest }) => {
+const CardHeader = ({ className, titleClassName, subtitleClassName, title, subtitle, simple, ...rest }) => {
     const componentClass = 'c-card__header';
     const titleClass = `${componentClass}-title`;
     const subtitleClass = `${componentClass}-subtitle`;
@@ -12,7 +12,8 @@ const CardHeader = ({ className, title, subtitle, simple, ...rest }) => {
         {[simpleHeaderClass]: simple},
         {[fullHeaderClass]: (title && subtitle) && !simple}
     );
-    const titleClasses = classNames(titleClass, {[simpleHeaderClass]: simple});
+    const titleClasses = classNames(titleClass, titleClassName, {[simpleHeaderClass]: simple});
+    const subtitleClasses = classNames(subtitleClass, subtitleClassName);
     const componentProps = { className: componentClasses, ...rest };
 
     return (
@@ -23,7 +24,7 @@ const CardHeader = ({ className, title, subtitle, simple, ...rest }) => {
             }
             {
                 (!simple && subtitle) &&
-                <div className={subtitleClass}>{subtitle}</div>
+                <div className={subtitleClasses}>{subtitle}</div>
             }
         </div>
     );
@@ -31,6 +32,8 @@ const CardHeader = ({ className, title, subtitle, simple, ...rest }) => {
 
 CardHeader.propTypes = {
     className: PropTypes.string,
+    titleClassName: PropTypes.string,
+    subtitleClassName: PropTypes.string,
     title: PropTypes.string,
     subtitle: PropTypes.string,
     simple: PropTypes.bool

@@ -6,25 +6,25 @@ import PropTypes from 'prop-types';
 import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
 import StickyBar from '../../stickies/StickyBar/StickyBar.jsx';
 
-const RecommendationDetailsNavigation = ({ className, currentModuleLabel, previousModuleLinkTo, previousModuleLinkLabel, nextModuleLinkTo, nextModuleLinkLabel }) => {
-    const componentClass = 'm-assessment__recommendation-details-navigation';
+const RecommendationNavigation = ({ className, currentModuleLabel, previousModuleLinkTo, previousModuleLinkLabel, nextModuleLinkTo, nextModuleLinkLabel }) => {
+    const componentClass = 'm-assessment__recommendation-navigation';
     const componentClasses = classNames(componentClass, className);
 
     return (
-        <StickyBar className="m-assessment__recommendation-details-navigation-sticky" dock={false}>
+        <StickyBar className="m-assessment__recommendation-navigation-sticky" dock={false}>
             <div className={componentClasses}>
-                <Link to={previousModuleLinkTo} className="m-assessment__recommendation-details-navigation-link">
+                <Link to={previousModuleLinkTo} className="m-assessment__recommendation-navigation-link">
                     <SVGIcon icon="caret-left"/>
-                    <div className="m-assessment__recommendation-details-navigation-link-text">
+                    <div className="m-assessment__recommendation-navigation-link-text">
                         <span>Prev</span>
                         <span>{previousModuleLinkLabel}</span>
                     </div>
                 </Link>
 
-                <span className="m-assessment__recommendation-details-navigation-module-name">{currentModuleLabel}</span>
+                <span className="m-assessment__recommendation-navigation-module-name">{currentModuleLabel}</span>
 
-                <Link to={nextModuleLinkTo} className="m-assessment__recommendation-details-navigation-link">
-                    <div className="m-assessment__recommendation-details-navigation-link-text">
+                <Link to={nextModuleLinkTo} className="m-assessment__recommendation-navigation-link">
+                    <div className="m-assessment__recommendation-navigation-link-text">
                         <span>Next</span>
                         <span>{nextModuleLinkLabel}</span>
                     </div>
@@ -35,7 +35,7 @@ const RecommendationDetailsNavigation = ({ className, currentModuleLabel, previo
     );
 };
 
-RecommendationDetailsNavigation.propTypes = {
+RecommendationNavigation.propTypes = {
     className: PropTypes.string,
     currentModuleLabel: PropTypes.string,
     previousModuleLinkTo: PropTypes.string,
@@ -44,7 +44,7 @@ RecommendationDetailsNavigation.propTypes = {
     nextModuleLinkLabel: PropTypes.string
 };
 
-RecommendationDetailsNavigation.defaultProps = {};
+RecommendationNavigation.defaultProps = {};
 
-// export default RecommendationDetailsNavigation;
-module.exports = RecommendationDetailsNavigation;
+// export default RecommendationNavigation;
+module.exports = RecommendationNavigation;

@@ -1,0 +1,89 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$detail-recommendation-chart-border-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-assessment__recommendation-detail {
+
+  .c-card__text-body {
+
+    // Give all contents some spacing between each other
+    > * {
+      padding-top: 1.5rem;
+
+      // Nullify for the first item
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+
+    > h3 {
+
+      // Give less spacing between heading and associated text
+      & + p {
+        padding-top: 0.5rem;
+      }
+    }
+
+    // Style lists with discs
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.m-assessment__recommendation-detail-chart {
+  max-height: 24rem;
+  border-bottom: 0.1rem solid;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-assessment__recommendation-detail-chart {
+  border-bottom-color: $detail-recommendation-chart-border-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-assessment__recommendation-detail {
+
+  .c-card__text-body {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      font-weight: normal;
+
+    @include respond-to(md) {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
+
+     h3 {
+       font-size: 1.7rem;
+       line-height: 2.2rem;
+       font-weight: normal;
+
+       @include respond-to(md) {
+         font-size: 2rem;
+       }
+     }
+  }
+}

@@ -1,8 +1,8 @@
 module.exports = {
-    "title": "Assessment Recommendation Details Navigation",
+    "title": "Assessment Recommendation Navigation",
     "status": "ready",
     "collated": true,
-    "preview": "@recommendation-details-navigation-preview",
+    "preview": "@recommendation-navigation-preview",
     "context": {
         currentModuleLabel: 'Current Module Name',
         previousModuleLinkTo: '/somewhere',

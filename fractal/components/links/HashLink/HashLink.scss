@@ -1,3 +1,5 @@
+@import '../Link/Link';
+
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
@@ -6,18 +8,10 @@
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.m-assessment__detailed-recommendation-toc-link {
-  display: block;
-  margin-top: 1rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
 
 
 //////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
+/// 3. STATE RULES - is-className, media queries, etc
 //////////////////////////
 
 
@@ -29,8 +23,3 @@
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.m-assessment__detailed-recommendation-toc-link {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  font-weight: normal !important;
-}

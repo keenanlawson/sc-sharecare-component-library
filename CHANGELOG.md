@@ -151,3 +151,13 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Finished recommendation details navigation
 - Updated Sticky Bar component to allow for a non-docking version
+
+-----
+
+7/19/2017
+
+- Refactored Recommendation Details into smaller components, detail and detail group
+- Added HashLink component
+- Added component sub-classes for Card Header and Card Text
+- Added ability to send HTML into Card Text as html prop (used for assessment recommendations, etc)
+- Renamed Recommendation Navigation and TOC components

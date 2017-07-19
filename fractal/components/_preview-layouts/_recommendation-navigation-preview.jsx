@@ -8,14 +8,14 @@ const page = ({ rendered_content, path }) => {
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/icons/SVGIcon/SVGIcon.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/stickies/StickyBar/StickyBar.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/links/Link/Link.css`}/>
-            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/assessments/RecommendationDetailsNavigation/RecommendationDetailsNavigation.css`}/>
+            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/assessments/RecommendationNavigation/RecommendationNavigation.css`}/>
             <style>{"\
                 .base-preview{\
                   height: 1000px;\
                 }\
               "}</style>
             <div className="base-preview" dangerouslySetInnerHTML={{__html: rendered_content}}/>
-            <script src={`http://localhost:3050/static/js/RecommendationDetailsNavigation.js`}/>
+            <script src={`http://localhost:3050/static/js/RecommendationNavigation.js`}/>
         </div>
     );
 };

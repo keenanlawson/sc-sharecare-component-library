@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from '../Card/Card';
-import CardHeader from '../CardHeader/CardHeader';
-import CardText from '../CardText/CardText';
-import CardFooter from '../CardFooter/CardFooter';
-import CardFooterLink from '../CardFooterLink/CardFooterLink';
+import Card from '../Card/Card.jsx';
+import CardHeader from '../CardHeader/CardHeader.jsx';
+import CardText from '../CardText/CardText.jsx';
+import CardFooter from '../CardFooter/CardFooter.jsx';
+import CardFooterLink from '../CardFooterLink/CardFooterLink.jsx';
 
-const SimpleCard = ({ children, title, subtitle, text, linkTo, linkLabel, ...props }) => {
+const SimpleCard = ({ children, title, subtitle, text, html, linkTo, linkLabel, ...props }) => {
     return (
         <Card {...props}>
             {
@@ -15,8 +15,8 @@ const SimpleCard = ({ children, title, subtitle, text, linkTo, linkLabel, ...pro
                 <CardHeader title={title} simple/>
             }
             {
-                (subtitle || text) &&
-                <CardText subtitle={subtitle} text={text}/>
+                (subtitle || text || html) &&
+                <CardText subtitle={subtitle} text={text} html={html}/>
             }
             {children}
             {
@@ -39,6 +39,7 @@ SimpleCard.propTypes = {
         PropTypes.string,
         PropTypes.node
     ]),
+    html: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.node,
         PropTypes.string

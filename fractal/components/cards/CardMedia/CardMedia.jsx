@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import CardHeader from'../CardHeader/CardHeader';
+import CardHeader from'../CardHeader/CardHeader.jsx';
 
 const CardMedia = ({ className, title, subtitle, imageUrl, ...rest }) => {
     const componentClass = 'c-card__media';
