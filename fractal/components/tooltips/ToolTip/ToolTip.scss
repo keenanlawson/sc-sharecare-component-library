@@ -47,7 +47,7 @@ $tooltip-shadow-color: $color-pure-black !default;
 
 
 //////////////////////////
-/// 3. STATE RULES - is-className, media queries, etc
+/// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
 
 
@@ -75,7 +75,7 @@ $tooltip-shadow-color: $color-pure-black !default;
   font-size: 1.8rem;
   line-height: 2rem;
 
-  @include respond-to(sm) {
+  @include respond-to(md) {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }

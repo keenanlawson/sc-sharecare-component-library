@@ -31,7 +31,7 @@ $progress-bar-color: $color-mountain-meadow !default;
 
 
 //////////////////////////
-/// 3. STATE RULES - is-className, media queries, etc
+/// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
 .c-progress-bar__value--0 { width: 0; }
 .c-progress-bar__value--10 { width: 10%; }
