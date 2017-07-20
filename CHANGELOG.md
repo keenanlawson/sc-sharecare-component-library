@@ -161,3 +161,9 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Added component sub-classes for Card Header and Card Text
 - Added ability to send HTML into Card Text as html prop (used for assessment recommendations, etc)
 - Renamed Recommendation Navigation and TOC components
+- Added React Breadcrumb and Breadcrumb Bar components
+- Refactored Assessment Score component to a stateless component
+- Added Link label class addition
+- Added a few base size variables
+- Added Recommendation Detail View component
+- Updated related Recommendation Detail components

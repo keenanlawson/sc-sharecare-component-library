@@ -1,4 +1,5 @@
 @import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
 
 //////////////////////////
 /// 1. CONFIG
@@ -13,6 +14,10 @@ $detail-recommendation-group-header-border-color: $color-gallery !default;
 
   .m-assessment__recommendation-detail {
     margin-top: 1rem;
+
+    @include respond-to(md) {
+      margin-top: 2rem;
+    }
 
     &:first-child {
       margin-top: 0;

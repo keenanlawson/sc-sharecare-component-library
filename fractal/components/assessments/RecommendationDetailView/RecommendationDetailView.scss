@@ -1,0 +1,82 @@
+@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$detail-recommendation-group-header-border-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-assessment__recommendation-detail-view {}
+
+.m-assessment__recommendation-detail-view-main {
+  margin: $base-unit-size-double $base-unit-size $base-unit-size;
+
+  @include respond-to(md) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    padding: 1rem;
+    margin: ($base-unit-size * 5) auto $base-unit-size;
+  }
+}
+
+.m-assessment__recommendation-detail-view-content {
+
+  @include respond-to(md) {
+    max-width: 600px;
+    margin-right: 2rem;
+  }
+}
+
+.m-assessment__recommendation-detail-view-header-navigation {
+  display: none;
+
+  @include respond-to(md) {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+}
+
+.m-assessment__recommendation-detail-view-footer-navigation {
+
+  @include respond-to(md) {
+    display: flex;
+    margin-top: $base-unit-size-double;
+  }
+}
+
+.m-assessment__recommendation-detail-view-aside {
+  display: none;
+
+  @include respond-to(md) {
+    display: block;
+    max-width: 320px;
+
+    > * {
+      margin-top: $base-unit-size-double;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

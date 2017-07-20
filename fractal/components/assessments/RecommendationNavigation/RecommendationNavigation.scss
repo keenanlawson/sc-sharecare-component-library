@@ -110,15 +110,23 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.m-assessment__recommendation-navigation {
-  background-color: $recommendation-navigation-background-color;
-  box-shadow: 0 0.4rem 1rem 0 rgba($recommendation-navigation-shadow-color, 0.3);
+.m-assessment__recommendation-navigation-sticky {
 
-  @include respond-to(md) {
-    box-shadow: none;
-    background-color: transparent;
+  .is-sticky {
+
+    .m-assessment__recommendation-navigation {
+      background-color: $recommendation-navigation-background-color;
+      box-shadow: 0 0.4rem 1rem 0 rgba($recommendation-navigation-shadow-color, 0.3);
+
+      @include respond-to(md) {
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
   }
 }
+
+.m-assessment__recommendation-navigation {}
 
 .m-assessment__recommendation-navigation-link-text {
 

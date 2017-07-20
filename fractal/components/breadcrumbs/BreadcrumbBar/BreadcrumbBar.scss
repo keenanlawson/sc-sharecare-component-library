@@ -1,0 +1,41 @@
+@import '../../../scss/settings/s-base-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$breadcrumb-bar-background-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-breadcrumb-bar {
+  height: $base-unit-size * 4;
+  padding: $base-unit-size;
+
+  .c-breadcrumb {
+    margin-left: $base-unit-size;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-breadcrumb-bar {
+  background-color: $breadcrumb-bar-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

@@ -10,10 +10,10 @@ module.exports = {
         RecommendationChart: './fractal/components/assessments/RecommendationChart/index.jsx',
         RecommendationSummaryGroup: './fractal/components/assessments/RecommendationSummaryGroup/index.jsx',
         RecommendationScoreSummary: './fractal/components/assessments/RecommendationScoreSummary/index.jsx',
-        AssessmentScore: './fractal/components/assessments/AssessmentScore/index.jsx',
         RecommendationNavigation: './fractal/components/assessments/RecommendationNavigation/index.jsx',
         RecommendationDetail: './fractal/components/assessments/RecommendationDetail/index.jsx',
-        RecommendationDetailGroup: './fractal/components/assessments/RecommendationDetailGroup/index.jsx'
+        RecommendationDetailGroup: './fractal/components/assessments/RecommendationDetailGroup/index.jsx',
+        RecommendationDetailView: './fractal/components/assessments/RecommendationDetailView/index.jsx'
     },
     output: {
         path: path.resolve(__dirname, '../../_site/js'),

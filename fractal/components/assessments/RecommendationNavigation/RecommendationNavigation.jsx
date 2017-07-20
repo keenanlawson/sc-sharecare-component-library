@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
 import StickyBar from '../../stickies/StickyBar/StickyBar.jsx';
 
-const RecommendationNavigation = ({ className, currentModuleLabel, previousModuleLinkTo, previousModuleLinkLabel, nextModuleLinkTo, nextModuleLinkLabel }) => {
+const RecommendationNavigation = ({ className, dock = false, currentModuleLabel, previousModuleLinkTo, previousModuleLinkLabel, nextModuleLinkTo, nextModuleLinkLabel }) => {
     const componentClass = 'm-assessment__recommendation-navigation';
     const componentClasses = classNames(componentClass, className);
 
     return (
-        <StickyBar className="m-assessment__recommendation-navigation-sticky" dock={false}>
+        <StickyBar className="m-assessment__recommendation-navigation-sticky" dock={dock}>
             <div className={componentClasses}>
                 <Link to={previousModuleLinkTo} className="m-assessment__recommendation-navigation-link">
                     <SVGIcon icon="caret-left"/>
@@ -37,6 +37,7 @@ const RecommendationNavigation = ({ className, currentModuleLabel, previousModul
 
 RecommendationNavigation.propTypes = {
     className: PropTypes.string,
+    dock: PropTypes.bool,
     currentModuleLabel: PropTypes.string,
     previousModuleLinkTo: PropTypes.string,
     previousModuleLinkLabel: PropTypes.string,
@@ -44,7 +45,9 @@ RecommendationNavigation.propTypes = {
     nextModuleLinkLabel: PropTypes.string
 };
 
-RecommendationNavigation.defaultProps = {};
+RecommendationNavigation.defaultProps = {
+    dock: false
+};
 
 // export default RecommendationNavigation;
 module.exports = RecommendationNavigation;

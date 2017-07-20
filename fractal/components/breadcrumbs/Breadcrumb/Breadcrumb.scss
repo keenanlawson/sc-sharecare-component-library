@@ -1,0 +1,37 @@
+@import '../../../scss/settings/s-base-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+}
+
+.c-breadcrumb__link {
+  margin-left: $base-unit-size;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-breadcrumb__link {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
