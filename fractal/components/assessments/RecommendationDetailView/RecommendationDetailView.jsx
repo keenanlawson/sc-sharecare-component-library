@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-// TODO: create rec summary 'view'
+
 import BreadcrumbBar from '../../breadcrumbs/BreadcrumbBar/BreadcrumbBar.jsx';
 import RecommendationNavigation from '../RecommendationNavigation/RecommendationNavigation.jsx';
 import RecommendationDetailGroup from '../RecommendationDetailGroup/RecommendationDetailGroup.jsx';
