@@ -9,6 +9,7 @@ module.exports = {
         SVGArcChart: './fractal/components/charts/SVGArcChart/index.jsx',
         RecommendationChart: './fractal/components/assessments/RecommendationChart/index.jsx',
         RecommendationSummaryGroup: './fractal/components/assessments/RecommendationSummaryGroup/index.jsx',
+        RecommendationSummaryView: './fractal/components/assessments/RecommendationSummaryView/index.jsx',
         RecommendationScoreSummary: './fractal/components/assessments/RecommendationScoreSummary/index.jsx',
         RecommendationNavigation: './fractal/components/assessments/RecommendationNavigation/index.jsx',
         RecommendationDetail: './fractal/components/assessments/RecommendationDetail/index.jsx',

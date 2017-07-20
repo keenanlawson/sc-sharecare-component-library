@@ -167,3 +167,10 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Added a few base size variables
 - Added Recommendation Detail View component
 - Updated related Recommendation Detail components
+
+-----
+
+7/20/2017
+
+- Added Recommendation Summary View component
+- Refactored Recommendation Summary Group to a stateless component
