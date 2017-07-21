@@ -5,6 +5,7 @@ const page = ({ rendered_content, path }) => {
     return (
         <div>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/core-configuration.css`}/>
+            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/links/Link/Link.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/cards/Card/Card.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/cards/CardHeader/CardHeader.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/cards/CardMedia/CardMedia.css`}/>

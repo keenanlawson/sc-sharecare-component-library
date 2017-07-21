@@ -39,9 +39,11 @@
 @import 'utilities/u-breakpoint-only';
 
 
-
 // Settings
 @import 'settings/s-base-config';
 
 // Base (base element settings, no classes nor ids allowed)
 @import 'base/b-resets';
+
+// Layouts (layouts for main page components)
+@import 'layouts/l-grids';

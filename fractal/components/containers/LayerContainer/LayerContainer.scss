@@ -1,24 +1,16 @@
-@import '../../../scss/settings/s-base-variables';
-@import '../../../scss/preferred-typography-variables';
+@import '../../../scss/settings/s-color-palette';
 
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
+//$-color: $color-pure-black !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.c-card__footer-link {
-  padding: 0 $base-unit-size;
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
-  }
+.c-layer-container {
+  display: flex;
 }
 
 
@@ -35,9 +27,3 @@
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.c-card__footer-link {
-  text-transform: uppercase;
-  font-weight: $font-weight-semi;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-}
