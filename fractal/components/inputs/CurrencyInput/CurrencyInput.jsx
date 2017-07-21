@@ -166,7 +166,6 @@ export default class CurrencyInput extends React.Component {
     }
 
     handleChange(inputValue, event) {
-        event.preventDefault();
         let { maskedValue, value } = this.mask(
             inputValue,
             this.props.precision,

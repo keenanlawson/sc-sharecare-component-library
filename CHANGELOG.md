@@ -174,3 +174,4 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Added Recommendation Summary View component
 - Refactored Recommendation Summary Group to a stateless component
+- Synchronized components between MoneyFit usages and this library

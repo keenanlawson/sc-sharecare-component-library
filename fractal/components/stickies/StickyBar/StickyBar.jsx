@@ -8,7 +8,7 @@ export default class StickyBar extends React.Component {
         super(props);
         this.onScroll = this.onScroll.bind(this);
         this.onOrientationChange = this.onOrientationChange.bind(this);
-        this.sizeElements = this.sizeElements.bind(this);
+        this.sizeAndUpdateDockPosition = this.sizeAndUpdateDockPosition.bind(this);
         this.updateInitialPosition = this.updateInitialPosition.bind(this);
         this.destroy = this.destroy.bind(this);
     }
@@ -58,14 +58,14 @@ export default class StickyBar extends React.Component {
         this.stickyBar.setAttribute('style', '');
 
         // Update position and sizes
-        this.sizeElements();
+        this.sizeAndUpdateDockPosition();
 
         // Force check sticky state in case element is in a position to be sticky
         this.onScroll();
     }
 
     // Set sticky bar size and initial position
-    sizeElements() {
+    sizeAndUpdateDockPosition() {
         // Get baseline position
         const bodyRect = document.body.getBoundingClientRect();
 
@@ -120,7 +120,7 @@ export default class StickyBar extends React.Component {
         if (this.props.dock) {
 
             // Force element position updates on initialization
-            this.sizeElements();
+            this.sizeAndUpdateDockPosition();
 
             // Force check sticky state on initialization in case element is in a position to be sticky
             this.onScroll();
@@ -140,6 +140,19 @@ export default class StickyBar extends React.Component {
 
         // Remove event listeners
         this.destroy();
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.forceUpdate;
+    }
+
+    componentDidUpdate() {
+
+        // Force element position updates
+        this.updateInitialPosition();
+
+        // Force check sticky state on initialization in case element is in a position to be sticky
+        this.onScroll();
     }
 
     render() {
@@ -170,6 +183,7 @@ StickyBar.propTypes = {
     enter: PropTypes.string,
     exit: PropTypes.string,
     stickyPosition: PropTypes.oneOf(['top', 'bottom']),
+    forceUpdate: PropTypes.bool,
     dock: PropTypes.bool
 };
 

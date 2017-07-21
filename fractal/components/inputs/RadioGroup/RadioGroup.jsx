@@ -21,7 +21,10 @@ const RadioGroup = ({ className, label, error, required, children }) => {
 
 RadioGroup.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node,
+    children: PropTypes.oneOf([
+        PropTypes.node,
+        PropTypes.arrayOf(PropTypes.node)
+    ]),
     required: PropTypes.bool,
     label: PropTypes.oneOfType([
         PropTypes.string,

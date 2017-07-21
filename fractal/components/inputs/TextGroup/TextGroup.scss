@@ -57,7 +57,7 @@ $text-group-error-color: $color-chestnut-rose !default;
   font-size: 1.8rem;
   line-height: 2rem;
 
-  @include respond-to(sm) {
+  @include respond-to(md) {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
@@ -67,7 +67,7 @@ $text-group-error-color: $color-chestnut-rose !default;
   font-size: 1.8rem;
   line-height: 2rem;
 
-  @include respond-to(sm) {
+  @include respond-to(md) {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }

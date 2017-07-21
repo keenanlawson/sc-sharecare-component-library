@@ -23,7 +23,7 @@ const TextInputsGroup = ({ className, label, required, labelsAndValues, onChange
                         error: (groupError ? !!error : item.error || null) || null,
                         disabled: item.disabled || false,
                         required: required || false,
-                        key: item.value,
+                        key: item.name,
                         name: item.name,
                         onChange: handleChange
                     };

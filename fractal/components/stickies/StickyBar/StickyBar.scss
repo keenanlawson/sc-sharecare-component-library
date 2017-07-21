@@ -20,18 +20,21 @@
 
 .c-sticky {
 
-  &.is-sticky {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: z('sticky');
+  @include media-breakpoint-down(sm) {
 
-    &.is-sticky-top {
-      top: 0;
-    }
+    &.is-sticky {
+      position: fixed;
+      z-index: z('sticky');
+      left: 0;
+      right: 0;
 
-    &.is-sticky-bottom {
-      bottom: 0;
+      &.is-sticky-top {
+        top: 0;
+      }
+
+      &.is-sticky-bottom {
+        bottom: 0;
+      }
     }
   }
 }

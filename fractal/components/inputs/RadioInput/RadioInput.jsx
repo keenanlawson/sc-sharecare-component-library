@@ -81,5 +81,4 @@ RadioInput.defaultProps = {
     onChange: ()=>{}
 };
 
-// export default RadioInput;
 module.exports = RadioInput;

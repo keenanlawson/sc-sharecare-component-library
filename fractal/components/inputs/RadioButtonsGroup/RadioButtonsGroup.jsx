@@ -18,6 +18,11 @@ export default class RadioButtonsGroup extends React.Component {
         if (this.props.onChange) this.props.onChange(value, event);
     }
 
+    componentWillReceiveProps(nextProps) {
+        const checkedAnswer = nextProps.labelsAndValues.find((item)=>{return item.checked});
+        this.setState({ value: checkedAnswer ? checkedAnswer.value : ''});
+    }
+
     render() {
         return (
             this.props.labelsAndValues.length > 0 &&
@@ -76,5 +81,4 @@ RadioButtonsGroup.defaultProps = {
     onChange: ()=>{}
 };
 
-// export default RadioButtonsGroup;
 module.exports = RadioButtonsGroup;

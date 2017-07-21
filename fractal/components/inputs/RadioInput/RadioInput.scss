@@ -4,8 +4,8 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$radio-label-disabled-color: $color-alto !default;
-$radio-label-error-color: $color-chestnut-rose !default;
+$radio-label-disabled-color: $color-alto;
+$radio-label-error-color: $color-chestnut-rose;
 
 
 //////////////////////////
@@ -63,7 +63,7 @@ $radio-label-error-color: $color-chestnut-rose !default;
   font-size: 1.8rem;
   line-height: 2rem;
 
-  @include respond-to(sm) {
+  @include respond-to(md) {
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
