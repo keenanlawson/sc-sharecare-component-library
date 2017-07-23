@@ -1,4 +1,4 @@
-## Page Title Bar
+## Page Header
 
 This is the title bar for the site.
 

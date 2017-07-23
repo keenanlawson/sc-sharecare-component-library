@@ -11,7 +11,7 @@ $breadcrumb-bar-background-color: $color-gallery !default;
 //////////////////////////
 .c-breadcrumb-bar {
   height: $base-unit-size * 4;
-  padding: $base-unit-size;
+  padding: $base-unit-size 0;
 
   .c-breadcrumb {
     margin-left: $base-unit-size;

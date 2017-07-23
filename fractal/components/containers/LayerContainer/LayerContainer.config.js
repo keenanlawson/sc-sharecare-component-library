@@ -1,5 +1,6 @@
 module.exports = {
     "title": "Page Layer Content Container",
+    "label": "Layer Container",
     "status": "ready",
     "order": 1,
     "collated": true,

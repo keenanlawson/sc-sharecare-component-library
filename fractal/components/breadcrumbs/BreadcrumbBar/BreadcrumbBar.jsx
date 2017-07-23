@@ -2,9 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import PageLayer from '../../containers/PageLayer/PageLayer.jsx';
 import Breadcrumb from '../Breadcrumb/Breadcrumb.jsx';
 
-const BreadcrumbBar = ({ className, breadcrumbs }) => {
+const BreadcrumbBar = ({ className, breadcrumbs, ...rest }) => {
     const componentClass = 'c-breadcrumb-bar';
     const componentClasses = classNames(componentClass, className);
     const crumbs = Array.isArray(breadcrumbs) ? breadcrumbs.map((crumb) => {
@@ -12,15 +13,15 @@ const BreadcrumbBar = ({ className, breadcrumbs }) => {
     }) : <Breadcrumb to={breadcrumbs.to} label={breadcrumbs.label} />;
 
     return (
-        <div className={componentClasses}>
+        <PageLayer className={componentClasses} {...rest}>
             {crumbs}
-        </div>
+        </PageLayer>
     );
 };
 
 BreadcrumbBar.propTypes = {
     className: PropTypes.string,
-    breadcrumbs: PropTypes.oneOf([
+    breadcrumbs: PropTypes.oneOfType([
         PropTypes.shape({
             to: PropTypes.string,
             label: PropTypes.string

@@ -1,0 +1,51 @@
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+//$search-bar-background-color: $color-gallery !default;
+//$primary-navigation-bar-background-color: $color-alabaster !default;
+//$title-bar-gradient-start-color: $color-mountain-meadow !default;
+//$title-bar-gradient-middle-color: $color-turquoise !default;
+//$title-bar-gradient-end-color: $color-boston-blue !default;
+//$breadcrumb-bar-background-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+//.m-page-header__site-search {
+//  flex-grow: 1;
+//}
+
+//.m-page-header__site-navigation {
+//  flex-grow: 1;
+//}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+//.m-page-header__site-search-bar {
+//  background-color: $search-bar-background-color;
+//}
+
+//.m-page-header__title-bar {
+//  background: linear-gradient(to right, $title-bar-gradient-start-color, $title-bar-gradient-middle-color, $title-bar-gradient-end-color);
+//}
+
+//.m-page-header__primary-navigation-bar {
+//  background-color: $primary-navigation-bar-background-color;
+//}
+
+//.m-page-header__breadcrumbs-bar {
+//  background-color: $breadcrumb-bar-background-color;
+//}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

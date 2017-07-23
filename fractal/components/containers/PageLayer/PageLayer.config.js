@@ -1,5 +1,6 @@
 module.exports = {
     "title": "Full Width Page Layer",
+    "label": "Page Layer",
     "status": "ready",
     "order": 1,
     "collated": true,

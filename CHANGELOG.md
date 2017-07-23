@@ -181,3 +181,10 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 7/21/2017
 
 - Starting React version of responsive header and footer
+
+-----
+
+7/22/2017
+
+- Added page header component, title bar and updated breadcrumb component
+- Updated some component readme files
