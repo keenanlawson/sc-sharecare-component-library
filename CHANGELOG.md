@@ -194,3 +194,12 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 7/23/2017
 
 - Adding navigation components and site navigation bar
+
+-----
+
+7/24/2017
+
+- Added site navigation and site navigation bar
+- Added site logo to site navigation bar
+- Added drawer components
+- Adding and styling site drawer

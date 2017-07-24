@@ -1,57 +1,71 @@
-//@import '../../../scss/settings/s-color-palette';
-//@import '../../../scss/utilities/u-respond-to-breakpoint';
-//@import '../../../scss/preferred-typography-variables';
-//
-////////////////////////////
-///// 1. CONFIG
-////////////////////////////
-//$title-bar-text-color: $color-pure-white !default;
-//$title-bar-gradient-start-color: $color-mountain-meadow !default;
-//$title-bar-gradient-middle-color: $color-turquoise !default;
-//$title-bar-gradient-end-color: $color-boston-blue !default;
-//
-////////////////////////////
-///// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-////////////////////////////
-//.c-title-bar {
-//  height: 0.5rem;
-//
-//  @include respond-to('md') {
-//    align-items: center;
-//    height: 5.8rem;
-//  }
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/preferred-typography-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-site-navigation-bar {
+  height: 3.8rem;
+
+  @include respond-to('sm') {
+    height: 8.4rem;
+  }
+}
+
+.c-site-navigation-bar__container {
+  align-items: center;
+  justify-content: flex-start;
+
+  @include respond-to('sm') {
+    justify-content: space-between;
+  }
+}
+
+.c-site-navigation-bar__login-register {
+  margin-right: auto;
+}
+
+//.c-site-navigation-bar__navigation {
+//  margin-left: auto;
 //}
-//
-//.c-title-bar__text {
-//  display: none;
-//
-//  @include respond-to('md') {
-//    display: block;
-//  }
+
+//.c-site-navigation-bar__join-login {
+//  margin-left: 2rem;
 //}
-//
-//
-////////////////////////////
-///// 3. STATE RULES - is-className, has-className, etc
-////////////////////////////
-//
-//
-////////////////////////////
-///// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-////////////////////////////
-//.c-title-bar__text {
-//  color: $title-bar-text-color;
+
+//.c-site-navigation-bar__join-login-link {
+
+  //&:first-child::after {
+  //  content: '';
+  //  margin: 0 1.5rem;
+  //  display: inline-block;
+  //  width: 0.1rem;
+  //  height: 1rem;
+  //  border-left: 0.1rem solid;
+  //}
 //}
-//
-//.c-title-bar {
-//  background: linear-gradient(to right, $title-bar-gradient-start-color, $title-bar-gradient-middle-color, $title-bar-gradient-end-color);
+
+//.c-site-navigation-bar__drawer-trigger {
+//  margin-left: auto;
 //}
-//
-////////////////////////////
-///// 5. TYPOGRAPHY RULES
-////////////////////////////
-//.c-title-bar__text {
-//  font-size: 3rem;
-//  line-height: 3.6rem;
-//  font-weight: $font-weight-normal;
-//}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

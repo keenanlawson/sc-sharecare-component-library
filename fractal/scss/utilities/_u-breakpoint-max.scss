@@ -13,8 +13,10 @@
   $next: breakpoint-next($name, $breakpoints);
 
   @debug 'MAX $next ->' $next;
-  @debug 'MAX breakpoint-min($next, $breakpoints) - 1px ->' breakpoint-min($next, $breakpoints) - 1px;
-  @debug 'MAX if($next, breakpoint-min($next, $breakpoints) - 1px, null) ->' if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+  @if ($next) {
+    @debug 'MAX breakpoint-min($next, $breakpoints) - 1px ->' breakpoint-min($next, $breakpoints) - 1px;
+    @debug 'MAX if($next, breakpoint-min($next, $breakpoints) - 1px, null) ->' if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+  }
 
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }

@@ -5,23 +5,22 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$site-navigation-link-label-color: $color-mine-shaft !default;
-$site-navigation-link-label-selected-color: $color-mountain-meadow !default;
+$drawer-item-selected-border-color: $color-mountain-meadow !default;
+$drawer-item-background-color: $color-gallery !default;
+$drawer-label-border-color: $color-alto !default;
+$drawer-label-expanded-icon-color: $color-san-juan !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.c-site-navigation-tab {
-  margin-left: 1.5rem;
-
-  @include respond-to('md') {
-    margin-left: 3rem;
-  }
-
-  &:first-child {
-    margin: 0;
-  }
+.c-drawer {
+  width: 200px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid;
+  top: 38px;
+  right: -200px;
 }
 
 
@@ -38,9 +37,3 @@ $site-navigation-link-label-selected-color: $color-mountain-meadow !default;
 //////////////////////////
 /// 5. TYPOGRAPHY RULES
 //////////////////////////
-.c-site-navigation-tab__label {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-weight: $font-weight-semi;
-}

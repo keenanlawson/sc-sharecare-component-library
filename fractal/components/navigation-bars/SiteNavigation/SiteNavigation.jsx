@@ -5,22 +5,23 @@ import PropTypes from 'prop-types';
 import NavigationBar from '../../navigation-bars/NavigationBar/NavigationBar.jsx';
 
 const SiteNavigation = ({ className, tabs, ...rest }) => {
-    const componentClass = 'c-primary-navigation-bar';
-    const tabClass = 'c-primary-navigation-tab';
+    const componentClass = 'c-site-navigation';
+    const tabClass = `${componentClass}-tab`;
     const tabLabelClass = `${tabClass}__label`;
     const componentClasses = classNames(componentClass, className);
-    const componentProps = { className: componentClasses, ...rest };
 
     return (
         <NavigationBar
+            className={componentClasses}
             tabClassName={tabClass}
             tabLabelClassName={tabLabelClass}
             tabs={tabs}
+            {...rest}
         />
     );
 };
 
-NavigationBar.propTypes = {
+SiteNavigation.propTypes = {
     className: PropTypes.string,
     tabs: PropTypes.arrayOf(PropTypes.shape({
         to: PropTypes.string,
