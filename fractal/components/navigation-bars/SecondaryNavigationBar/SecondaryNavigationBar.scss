@@ -1,0 +1,70 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/preferred-typography-variables';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$secondary-navigation-tab-border-color: $color-alto !default;
+$secondary-navigation-tab-text-color: $color-dusty-gray !default;
+$secondary-navigation-tab-selected-border-color: $color-curious-blue !default;
+$secondary-navigation-tab-selected-text-color: $color-san-juan !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-secondary-navigation-bar {
+  border-bottom: 0.1rem solid;
+}
+
+.c-secondary-navigation-tab {
+  padding: 1.5rem 2rem 1.2rem;
+  border: 0;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+.c-secondary-navigation-tab {
+
+  &.is-selected {
+    border-bottom: 0.3rem solid;
+    padding-bottom: 0.9rem;
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-secondary-navigation-bar {
+  border-bottom-color: $secondary-navigation-tab-border-color;
+}
+
+.c-secondary-navigation-tab__label {
+  color: $secondary-navigation-tab-text-color;
+}
+
+.c-secondary-navigation-tab {
+
+  &.is-selected {
+    border-bottom-color: $secondary-navigation-tab-selected-border-color;
+
+    .c-secondary-navigation-tab__label {
+      color: $secondary-navigation-tab-selected-text-color;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-secondary-navigation-tab__label {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: $font-weight-semi;
+  text-transform: uppercase;
+}

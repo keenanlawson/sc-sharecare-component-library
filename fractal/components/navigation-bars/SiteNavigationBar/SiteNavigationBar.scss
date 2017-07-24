@@ -1,0 +1,57 @@
+//@import '../../../scss/settings/s-color-palette';
+//@import '../../../scss/utilities/u-respond-to-breakpoint';
+//@import '../../../scss/preferred-typography-variables';
+//
+////////////////////////////
+///// 1. CONFIG
+////////////////////////////
+//$title-bar-text-color: $color-pure-white !default;
+//$title-bar-gradient-start-color: $color-mountain-meadow !default;
+//$title-bar-gradient-middle-color: $color-turquoise !default;
+//$title-bar-gradient-end-color: $color-boston-blue !default;
+//
+////////////////////////////
+///// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+////////////////////////////
+//.c-title-bar {
+//  height: 0.5rem;
+//
+//  @include respond-to('md') {
+//    align-items: center;
+//    height: 5.8rem;
+//  }
+//}
+//
+//.c-title-bar__text {
+//  display: none;
+//
+//  @include respond-to('md') {
+//    display: block;
+//  }
+//}
+//
+//
+////////////////////////////
+///// 3. STATE RULES - is-className, has-className, etc
+////////////////////////////
+//
+//
+////////////////////////////
+///// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+////////////////////////////
+//.c-title-bar__text {
+//  color: $title-bar-text-color;
+//}
+//
+//.c-title-bar {
+//  background: linear-gradient(to right, $title-bar-gradient-start-color, $title-bar-gradient-middle-color, $title-bar-gradient-end-color);
+//}
+//
+////////////////////////////
+///// 5. TYPOGRAPHY RULES
+////////////////////////////
+//.c-title-bar__text {
+//  font-size: 3rem;
+//  line-height: 3.6rem;
+//  font-weight: $font-weight-normal;
+//}

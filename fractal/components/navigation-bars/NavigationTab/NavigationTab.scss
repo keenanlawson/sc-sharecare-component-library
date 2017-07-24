@@ -1,0 +1,61 @@
+@import '../../../scss/settings/s-color-palette';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$navigation-tab-text-color: $color-mine-shaft !default;
+$navigation-tab-text-hover-color: $color-mountain-meadow !default;
+$navigation-tab-selected-text-color: $color-mountain-meadow !default;
+$navigation-tab-selected-text-hover-color: $color-elm !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-navigation-tab__label {
+  color: $navigation-tab-text-color;
+}
+
+.c-navigation-tab {
+
+  &:hover {
+
+    .c-navigation-tab__label {
+      color: $navigation-tab-text-hover-color;
+    }
+  }
+
+  &.is-selected {
+
+    .c-navigation-tab__label {
+      color: $navigation-tab-selected-text-color;
+    }
+
+    &:hover {
+
+      .c-navigation-tab__label {
+        color: $navigation-tab-selected-text-hover-color;
+      }
+    }
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-navigation-tab__label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  white-space: nowrap;
+}

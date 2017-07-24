@@ -1,6 +1,6 @@
-## Page Title Bar
+## Site Navigation
 
-This is the title bar for the site.
+This is the navigation for the main site sections.
 
 -----
 The API for the component is as follows:
@@ -16,26 +16,26 @@ The API for the component is as follows:
 The component can be included within other components like this:
 
 ```
-<TitleBar/>
+<SiteNavigation/>
 ```
 
 -----
 and it therefore expects a set of data to render it that is in the following format:
 
 ```
-{{context '@titlebar'}}
+{{context '@sitenavigation'}}
 ```
 
 -----
 The rendered HTML for this component looks like this:
 
 ```
-{{render '@titlebar'}}
+{{render '@sitenavigation'}}
 ```
 
 -----
 This code for this component looks like this:
 
 ```
-{{view '@titlebar'}}
+{{view '@sitenavigation'}}
 ```

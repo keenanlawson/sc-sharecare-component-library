@@ -188,3 +188,9 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 - Added page header component, title bar and updated breadcrumb component
 - Updated some component readme files
+
+-----
+
+7/23/2017
+
+- Adding navigation components and site navigation bar

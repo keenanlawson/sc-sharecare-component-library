@@ -1,0 +1,80 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$primary-navigation-background-color: $color-alabaster !default;
+$primary-navigation-tab-border-color: $color-alto !default;
+$primary-navigation-tab-selected-text-color: $color-mine-shaft !default;
+$primary-navigation-tab-selected-border-color: $color-mountain-meadow !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-primary-navigation-bar {}
+
+.c-primary-navigation-tab {
+  padding: 0.8rem 1.2rem 0.7rem;
+
+  @include respond-to('md') {
+    padding: 1.5rem 3rem 1.9rem;
+    border-right: 0.1rem solid;
+  }
+
+  &:first-child {
+    padding-left: 0;
+
+    @include respond-to('md') {
+      padding-left: 3rem;
+      border-left: 0.1rem solid;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+.c-primary-navigation-tab {
+
+  &.is-selected {
+    border-bottom: 0.2rem solid;
+    padding-bottom: 0.5rem;
+
+    @include respond-to('md') {
+      border-bottom: 0.6rem solid;
+      padding-bottom: 1.3rem;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-primary-navigation-bar {
+    background-color: $primary-navigation-background-color;
+}
+
+.c-primary-navigation-tab {
+  border-right-color: $primary-navigation-tab-border-color;
+
+  &:first-child {
+    border-left-color: $primary-navigation-tab-border-color;
+  }
+
+  &.is-selected {
+    border-bottom-color: $primary-navigation-tab-selected-border-color;
+
+    .c-primary-navigation-tab__label {
+      color: $primary-navigation-tab-selected-text-color;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
