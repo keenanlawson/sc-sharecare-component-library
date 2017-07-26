@@ -71,7 +71,7 @@ $detail-recommendation-chart-border-color: $color-gallery !default;
       line-height: 1.7rem;
       font-weight: normal;
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       font-size: 1.6rem;
       line-height: 1.9rem;
     }
@@ -81,7 +81,7 @@ $detail-recommendation-chart-border-color: $color-gallery !default;
        line-height: 2.2rem;
        font-weight: normal;
 
-       @include respond-to(md) {
+       @include respond-to(sm) {
          font-size: 2rem;
        }
      }

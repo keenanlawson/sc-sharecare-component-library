@@ -1,3 +1,5 @@
+const navigationConfig = require('../../navigation-bars/SiteNavigation/SiteNavigation.config');
+
 module.exports = {
     "title": "Site Drawer",
     "label": "Site Drawer",
@@ -5,6 +7,7 @@ module.exports = {
     "collated": true,
     "preview": "@drawer-preview",
     "context": {
-        trigger: "Lorem Ipsum"
+        links: navigationConfig.context.tabs,
+        visible: true
     }
 };

@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 import NavigationBar from '../../navigation-bars/NavigationBar/NavigationBar.jsx';
 
-const SiteNavigation = ({ className, tabs, ...rest }) => {
+const SiteNavigation = ({ className, tabs, stacked, ...rest }) => {
     const componentClass = 'c-site-navigation';
     const tabClass = `${componentClass}-tab`;
     const tabLabelClass = `${tabClass}__label`;
-    const componentClasses = classNames(componentClass, className);
+    const componentClasses = classNames(componentClass, className,
+        {['is-stacked']: stacked});
 
     return (
         <NavigationBar
@@ -23,6 +24,7 @@ const SiteNavigation = ({ className, tabs, ...rest }) => {
 
 SiteNavigation.propTypes = {
     className: PropTypes.string,
+    stacked: PropTypes.bool,
     tabs: PropTypes.arrayOf(PropTypes.shape({
         to: PropTypes.string,
         label: PropTypes.string

@@ -16,7 +16,7 @@ $title-bar-gradient-end-color: $color-boston-blue !default;
 .c-title-bar {
   height: 0.5rem;
 
-  @include respond-to('md') {
+  @include respond-to('sm') {
     align-items: center;
     height: 5.8rem;
   }
@@ -25,7 +25,7 @@ $title-bar-gradient-end-color: $color-boston-blue !default;
 .c-title-bar__text {
   display: none;
 
-  @include respond-to('md') {
+  @include respond-to('sm') {
     display: block;
   }
 }

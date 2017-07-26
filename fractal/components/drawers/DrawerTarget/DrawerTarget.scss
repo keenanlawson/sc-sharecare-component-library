@@ -15,9 +15,12 @@
   &:checked {
 
     // Display adjacent content in expanded state
-    + .c-drawer__pane {
-      display: block;
+    ~ .c-drawer__pane {
       right: 0;
+    }
+
+    ~ .c-drawer__overlay {
+      display: block;
     }
   }
 }

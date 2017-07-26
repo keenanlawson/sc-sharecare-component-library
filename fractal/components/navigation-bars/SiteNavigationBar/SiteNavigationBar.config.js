@@ -8,6 +8,6 @@ module.exports = {
     "collated": true,
     "preview": "@site-navigation-bar-preview",
     "context": {
-        tabs: navigationConfig.context.tabs
+        links: navigationConfig.context.tabs
     }
 };

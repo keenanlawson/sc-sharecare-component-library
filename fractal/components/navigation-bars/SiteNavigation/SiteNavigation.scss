@@ -5,8 +5,9 @@
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$site-navigation-link-label-color: $color-mine-shaft !default;
-$site-navigation-link-label-selected-color: $color-mountain-meadow !default;
+$site-navigation-tab-label-color: $color-mine-shaft !default;
+$site-navigation-tab-label-selected-color: $color-mountain-meadow !default;
+$site-navigation-tab-border-color: $color-gallery !default;
 
 
 //////////////////////////
@@ -28,11 +29,35 @@ $site-navigation-link-label-selected-color: $color-mountain-meadow !default;
 //////////////////////////
 /// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
+.c-site-navigation {
 
+  &.is-stacked {
+    flex-direction: column;
+
+    .c-site-navigation-tab {
+      margin-left: 0;
+      padding: 1.5rem;
+      border-top: 0.1rem solid;
+      
+      &:first-child {
+        border: 0;
+      }
+    }
+  }
+}
 
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
+.c-site-navigation {
+
+  &.is-stacked {
+
+    .c-site-navigation-tab {
+      border-color: $site-navigation-tab-border-color;
+    }
+  }
+}
 
 
 //////////////////////////

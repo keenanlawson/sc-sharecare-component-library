@@ -10,7 +10,6 @@ $breadcrumb-bar-background-color: $color-gallery !default;
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-breadcrumb-bar {
-  height: $base-unit-size * 4;
   padding: $base-unit-size 0;
 
   .c-breadcrumb {

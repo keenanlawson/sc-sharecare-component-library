@@ -15,7 +15,7 @@ const NavigationBar = ({ className, tabClassName, tabLabelClassName, tabs, ...re
             {
                 tabs && tabs.length > 0 &&
                 tabs.map((tab) => {
-                    return <NavigationTab {...tabProps} {...tab}/>
+                    return <NavigationTab key={tab.label} {...tabProps} {...tab}/>
                 })
             }
         </div>

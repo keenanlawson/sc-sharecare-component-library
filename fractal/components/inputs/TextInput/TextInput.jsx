@@ -26,7 +26,7 @@ export default class TextInput extends React.Component {
     };
 
     render() {
-        const { className, disabled, required, inline, label, name, onChange, error, value, placeholder } = this.props;
+        const { className, inputClassName, disabled, required, inline, label, name, onChange, error, value, placeholder } = this.props;
         const componentClass = 'c-text';
         const labelClass = `${componentClass}__label`;
         const inputClass = `${componentClass}__input`;
@@ -39,7 +39,7 @@ export default class TextInput extends React.Component {
             {['is-inline']: inline}
         ];
         const labelClasses = classNames(labelClass, ...otherClasses);
-        const inputClasses = classNames(inputClass, ...otherClasses);
+        const inputClasses = classNames(inputClass, inputClassName, ...otherClasses);
         const errorClasses = classNames(errorClass, {['is-inline']: inline});
         let componentProps = {};
         if (disabled) componentProps.disabled = disabled;
@@ -66,6 +66,7 @@ export default class TextInput extends React.Component {
 
 TextInput.propTypes = {
     className: PropTypes.string,
+    inputClassName: PropTypes.string,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
     inline: PropTypes.bool,

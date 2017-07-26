@@ -1,0 +1,8 @@
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$opacity-map: (
+        'overlay': 0.5
+);

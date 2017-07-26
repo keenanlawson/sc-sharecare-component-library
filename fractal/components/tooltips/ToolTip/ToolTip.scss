@@ -75,7 +75,7 @@ $tooltip-shadow-color: $color-pure-black !default;
   font-size: 1.8rem;
   line-height: 2rem;
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }

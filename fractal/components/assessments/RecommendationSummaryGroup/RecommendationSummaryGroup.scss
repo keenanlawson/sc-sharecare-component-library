@@ -27,7 +27,7 @@ $recommendation-summary-group-items-border-color: $color-gallery !default;
     }
   }
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     padding: 2rem 3rem;
     border-radius: 0.2rem;
 
@@ -56,7 +56,7 @@ $recommendation-summary-group-items-border-color: $color-gallery !default;
 //////////////////////////
 .m-assessment__recommendation-summary-group-content-main {
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     background-color: $recommendation-summary-group-background-color;
     box-shadow: 0 0.1rem 0.3rem 0 rgba($recommendation-summary-group-shadow-color, 0.2);
 

@@ -18,7 +18,7 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
 
 .m-assessment__recommendation-summary-content-main {
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     display: flex;
     justify-content: space-between;
   }
@@ -33,7 +33,7 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
 
   > p:first-of-type {
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       display: block;
       margin: 0;
     }
@@ -42,12 +42,12 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
   > h3 {
     margin: 0;
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       margin-bottom: 1rem;
     }
   }
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     width: 46rem;
     margin-right: 4rem;
   }
@@ -56,7 +56,7 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
 .m-assessment__recommendation-summary-charts {
   margin-bottom: 1.5rem;
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     width: 38rem;
     margin-top: 3rem;
   }
@@ -66,7 +66,7 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
   padding-top: 1rem;
   border-top: 0.1rem solid;
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     padding-top: 0;
     border-top: 0;
   }
@@ -101,14 +101,14 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
     font-size: 1.7rem;
     line-height: 2.2rem;
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       font-size: 2rem;
     }
   }
 
   > p {
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       font-size: 1.6rem;
       line-height: 1.9rem;
     }
@@ -121,7 +121,7 @@ $summary-recommendation-footer-border-color: $color-gallery !default;
   // Override .content a {semi-bold} from core
   font-weight: normal !important;
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     font-size: 1.8rem;
     line-height: 2.2rem;
   }

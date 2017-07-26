@@ -203,3 +203,23 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Added site logo to site navigation bar
 - Added drawer components
 - Adding and styling site drawer
+
+-----
+
+7/26/2017
+
+- Updated component breakpoints from medium to small as per mock documents
+- Updated breadcrumb to have natural height and better text wrapping
+- Commented out some currently unused button styles
+- Added drawer component and sub-components
+- Added site drawer component
+- Added ability to add input class names to Text Input component
+- Added key to navigation tab array
+- Finished site navigation and bar components
+- Finished Page Header HTML, layout and responsiveness
+- Added opacity map SCSS setting and accessor function
+- Added overlay z-index
+- Rearranged z-index map layers
+- Fixed some breakpoint mix-ins
+- Added global search form component
+- Added Site search bar component

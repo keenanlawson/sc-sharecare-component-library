@@ -3,7 +3,7 @@
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 /// @content
-@import '../settings/_s-break-points';
+@import '../settings/s-break-points';
 @mixin respond-to($breakpoint) {
   $raw-query: map-get($breakpoints-map, $breakpoint);
   @if $raw-query {

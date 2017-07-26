@@ -36,24 +36,24 @@ $button-secure-text-hover-color: $color-pure-white !default;
   padding: ($base-unit-size) ($base-unit-size * 2) ($base-unit-size / 2);
 }
 
-.c-button__icon {
+//.c-button__icon {
+//
+//  &:first-child {
+//    margin-right: ($base-unit-size / 2);
+//  }
+//
+//  &:last-child {
+//    margin-left: ($base-unit-size / 2);
+//  }
+//
+//  &:only-child {
+//    margin: 0;
+//  }
+//}
 
-  &:first-child {
-    margin-right: ($base-unit-size / 2);
-  }
-
-  &:last-child {
-    margin-left: ($base-unit-size / 2);
-  }
-
-  &:only-child {
-    margin: 0;
-  }
-}
-
-.c-button__badge {
-  margin-left: ($base-unit-size / 2);
-}
+//.c-button__badge {
+//  margin-left: ($base-unit-size / 2);
+//}
 
 
 //////////////////////////

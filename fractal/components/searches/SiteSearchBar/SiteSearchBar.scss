@@ -1,25 +1,31 @@
 @import '../../../scss/settings/s-color-palette';
-@import '../../../scss/utilities/u-get-opacity';
-@import '../../../scss/utilities/u-get-z-index';
 
 //////////////////////////
 /// 1. CONFIG
 //////////////////////////
-$drawer-overlay-background-color: $color-pure-black !default;
+$site-search-bar-background-color: $color-gallery !default;
 
 
 //////////////////////////
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
-.c-drawer__overlay {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: z(overlay);
+.c-site-search-bar__container {
+  justify-content: space-between;
+  align-items: center;
 }
+
+.c-site-search-bar__search {
+  width: 30rem;
+}
+
+.c-site-search-bar__login-register {
+  display: flex;
+}
+
+.c-site-search-bar__login-register-link {
+  height: 4rem;
+}
+
 
 //////////////////////////
 /// 3. STATE RULES - is-className, has-className, etc
@@ -29,8 +35,8 @@ $drawer-overlay-background-color: $color-pure-black !default;
 //////////////////////////
 /// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
 //////////////////////////
-.c-drawer__overlay {
-  background-color: rgba($drawer-overlay-background-color, opacity(overlay));
+.c-site-search-bar {
+  background-color: $site-search-bar-background-color;
 }
 
 

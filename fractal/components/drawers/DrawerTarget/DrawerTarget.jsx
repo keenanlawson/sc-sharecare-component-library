@@ -6,7 +6,7 @@ const DrawerTarget = ({ className, name, visible = false, ...rest }) => {
 
     const componentClass = 'c-drawer__target';
     const componentClasses = classNames(componentClass, className);
-    const componentProps = {className: componentClasses, id: name, checked: visible, ...rest};
+    const componentProps = {className: componentClasses, id: name, defaultChecked: visible, ...rest};
 
     return (
         <input type="checkbox" {...componentProps} />

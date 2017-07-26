@@ -20,7 +20,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
   .c-sticky {
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       position: relative;
     }
   }
@@ -32,7 +32,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
   align-items: center;
   padding: 1.5rem 1rem;
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     padding: 0;
   }
 }
@@ -46,7 +46,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
     width: 2rem;
     height: 2rem;
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       width: 2.5rem;
       height: 2.5rem;
     }
@@ -55,7 +55,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
 .m-assessment__recommendation-navigation-link-text {
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     padding: 0 1.5rem;
   }
 
@@ -63,14 +63,14 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
     &:first-child {
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         display: block;
       }
     }
     &:last-child {
       display: none;
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         display: block;
       }
     }
@@ -79,7 +79,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
 .m-assessment__recommendation-navigation-module-name {
 
-  @include respond-to(md) {
+  @include respond-to(sm) {
     display: none;
   }
 }
@@ -92,7 +92,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
   &.is-header-nav {
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       margin-bottom: 3rem;
       order: 0;
     }
@@ -100,7 +100,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
 
   &.is-footer-nav {
 
-    @include respond-to(md) {
+    @include respond-to(sm) {
       margin-top: 2rem;
     }
   }
@@ -118,7 +118,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
       background-color: $recommendation-navigation-background-color;
       box-shadow: 0 0.4rem 1rem 0 rgba($recommendation-navigation-shadow-color, 0.3);
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         box-shadow: none;
         background-color: transparent;
       }
@@ -136,7 +136,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
     &:first-child {
       color: $recommendation-sticky-navigation-control-text-color;
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         color: $recommendation-navigation-control-text-color;
       }
     }
@@ -144,7 +144,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
     // Navigation module name text
     &:last-child {
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         color: $recommendation-navigation-control-module-name-text-color;
       }
     }
@@ -169,7 +169,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
       font-weight: 600;
       text-transform: uppercase;
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         font-size: 1.2rem;
         line-height: 1.4rem;
         text-transform: capitalize;
@@ -177,7 +177,7 @@ $recommendation-navigation-control-module-name-text-color: $color-mine-shaft !de
     }
     &:last-child {
 
-      @include respond-to(md) {
+      @include respond-to(sm) {
         font-size: 1.4rem;
         line-height: 1.7rem;
         font-weight: 600;

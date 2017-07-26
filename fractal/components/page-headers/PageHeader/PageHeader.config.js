@@ -1,3 +1,4 @@
+const navigationConfig = require('../../navigation-bars/SiteNavigationBar/SiteNavigationBar.config');
 const breadcrumbConfig = require('../../breadcrumbs/BreadcrumbBar/BreadcrumbBar.config');
 const titleBarConfig = require('../../title-bars/TitleBar/TitleBar.config');
 
@@ -9,6 +10,7 @@ module.exports = {
     "collated": true,
     "preview": "@page-header-preview",
     "context": {
+        navigation: navigationConfig.context.links,
         titleBarText: titleBarConfig.context.text,
         breadcrumbs: breadcrumbConfig.context.breadcrumbs
     }
