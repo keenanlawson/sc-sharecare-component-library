@@ -1,4 +1,5 @@
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 
 //////////////////////////
 /// 1. CONFIG
@@ -10,13 +11,13 @@ $card-simple-header-background-color: $color-alabaster !default;
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-card__header {
-  padding: ($base-unit-size * 2);
+  padding: ($spacing-unit * 2);
   display: flex;
   flex-direction: column;
 }
 
 //.c-card__header-image {
-//  margin-right: ($base-unit-size * 2.5);
+//  margin-right: ($spacing-unit * 2.5);
 //  flex-shrink: 0;
 //}
 
@@ -27,7 +28,7 @@ $card-simple-header-background-color: $color-alabaster !default;
 .c-card__header {
 
   &.is-simple {
-    padding: $base-unit-size ($base-unit-size * 2) $base-unit-size;
+    padding: $spacing-unit ($spacing-unit * 2) $spacing-unit;
   }
 }
 

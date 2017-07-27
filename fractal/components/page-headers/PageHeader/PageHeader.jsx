@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import SiteNavigationBar from '../../navigation-bars/SiteNavigationBar/SiteNavigationBar.jsx';
-import SiteSearchBar from '../../searches/SiteSearchBar/SiteSearchBar.jsx';
+import SiteNavigationBar from '../../site-navigation-bar/SiteNavigationBar/SiteNavigationBar.jsx';
+import SiteSearchBar from '../../site-search-bar/SiteSearchBar/SiteSearchBar.jsx';
 import TitleBar from '../../title-bars/TitleBar/TitleBar.jsx';
 import BreadcrumbBar from '../../breadcrumbs/BreadcrumbBar/BreadcrumbBar.jsx';
 

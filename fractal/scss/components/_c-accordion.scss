@@ -16,7 +16,7 @@ $accordion-label-expanded-icon-color: $color-san-juan !default;
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.1rem solid;
-  padding: ($base-unit-size) 0 ($base-unit-size / 2) ($base-unit-size * 2);
+  padding: ($spacing-unit) 0 ($spacing-unit / 2) ($spacing-unit * 2);
 }
 
 .c-accordion__content {
@@ -33,7 +33,7 @@ $accordion-label-expanded-icon-color: $color-san-juan !default;
 // Set up icon rotation collapsed state
 .c-accordion__icon {
   display: inline-block;
-  margin-right: ($base-unit-size);
+  margin-right: ($spacing-unit);
   cursor: pointer;
   transform: rotate(0deg);
   transition: transform 0.5s;
@@ -65,7 +65,7 @@ $accordion-label-expanded-icon-color: $color-san-juan !default;
 }
 
 .c-accordion__item {
-  padding: ($base-unit-size / 2) ($base-unit-size * 3);
+  padding: ($spacing-unit / 2) ($spacing-unit * 3);
 }
 
 

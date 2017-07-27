@@ -1,4 +1,4 @@
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 
 //////////////////////////
 /// 1. CONFIG
@@ -9,7 +9,7 @@
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-card__footer {
-  padding: 0 ($base-unit-size * 2) ($base-unit-size * 2);
+  padding: 0 ($spacing-unit * 2) ($spacing-unit * 2);
   display: flex;
   justify-content: space-between;
 }

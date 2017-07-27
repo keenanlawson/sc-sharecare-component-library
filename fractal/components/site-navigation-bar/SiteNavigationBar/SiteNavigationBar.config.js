@@ -1,0 +1,13 @@
+const navigationConfig = require('../../site-navigation/SiteNavigation/SiteNavigation.config');
+
+module.exports = {
+    "title": "Site Navigation Bar",
+    "label": "Site Navigation Bar",
+    "order": 6,
+    "status": "ready",
+    "collated": true,
+    "preview": "@site-navigation-bar-preview",
+    "context": {
+        links: navigationConfig.context.tabs
+    }
+};

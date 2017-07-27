@@ -1,9 +1,13 @@
+@import '../settings/s-spacing-unit-sizes';
+@import '../settings/s-break-points';
+@import '../utilities/u-sass-flex-mixin';
+
 // Set the number of columns you want to use on your layout.
 $grid-columns: 12 !default;
 // Set the gutter between columns.
-$gutter-width: ($base-unit-size * 3) !default;
+$gutter-width: ($spacing-unit * 3) !default;
 // Set a margin for the container sides.
-$outer-margin: ($base-unit-size * 1.5) !default;
+$outer-margin: ($spacing-unit * 1.5) !default;
 // Create or remove breakpoints for your project
 // Syntax:
 // name SIZErem,

@@ -1,4 +1,4 @@
-const navigationConfig = require('../../navigation-bars/SiteNavigationBar/SiteNavigationBar.config');
+const navigationConfig = require('../../site-navigation-bar/SiteNavigationBar/SiteNavigationBar.config');
 const breadcrumbConfig = require('../../breadcrumbs/BreadcrumbBar/BreadcrumbBar.config');
 const titleBarConfig = require('../../title-bars/TitleBar/TitleBar.config');
 

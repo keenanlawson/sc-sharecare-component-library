@@ -6,7 +6,7 @@
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
 @import '../settings/s-break-points';
-//@import '../utilities/u-breakpoint-min';
+@import '../utilities/u-breakpoint-min';
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }

@@ -1,14 +1,5 @@
 @charset 'UTF-8';
 
-// Import preferred typography
-@import 'typography/_ty-proxima-nova';
-
-// Import descriptive colors
-@import 'settings/_s-color-palette';
-
-// Import base config
-@import 'settings/_s-base-config';
-
 // Grid display styles
 .box-row {
   margin-bottom: 1em;
@@ -32,45 +23,6 @@
   color: #294b69;
   border-radius: 0.2rem;
   border: 1px solid #6f9dc7;
-}
-
-.light-font-icon-preview,
-.button-preview,
-.base-preview,
-.card-preview {
-  padding: 10px;
-
-  > * {
-    margin-bottom: 10px;
-  }
-
-  > h3 {
-    margin-top: 30px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
-.button-preview {
-
-  .c-button {
-    margin: 10px;
-  }
-}
-
-.light-font-icon-preview {
-  padding: 10px;
-  background: linear-gradient($color-pure-white 88%, $color-dusty-gray, $color-dusty-gray);
-}
-
-.each-with-margin-preview {
-
-  > * {
-    display: inline-block;
-    margin: 20px;
-  }
 }
 
 .grid-preview {

@@ -1,4 +1,5 @@
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 
 //////////////////////////
 /// 1. CONFIG
@@ -10,10 +11,10 @@ $breadcrumb-bar-background-color: $color-gallery !default;
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-breadcrumb-bar {
-  padding: $base-unit-size 0;
+  padding: $spacing-unit 0;
 
   .c-breadcrumb {
-    margin-left: $base-unit-size;
+    margin-left: $spacing-unit;
 
     &:first-child {
       margin-left: 0;

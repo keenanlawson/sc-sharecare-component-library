@@ -30,7 +30,7 @@ $input-icon-color: $color-mountain-meadow !default;
 // Give stacked radio/checkboxes some spacing
 .c-input__radio,
 .c-input__checkbox {
-  margin-top: ($base-unit-size * 2);
+  margin-top: ($spacing-unit * 2);
 
   &:first-child {
     margin: 0;
@@ -44,7 +44,7 @@ $input-icon-color: $color-mountain-meadow !default;
   height: 4rem;
   border: 0.1rem solid;
   cursor: pointer;
-  padding: 0.1rem 0 0 ($base-unit-size);
+  padding: 0.1rem 0 0 ($spacing-unit);
   border-radius: 0.2rem;
 
   &:focus {
@@ -67,7 +67,7 @@ $input-icon-color: $color-mountain-meadow !default;
   display: inline-block;
 
   // Give inlined inputs some spacing
-  margin-left: ($base-unit-size * 2);
+  margin-left: ($spacing-unit * 2);
 
   &:first-child {
     margin: 0;
@@ -82,7 +82,7 @@ $input-icon-color: $color-mountain-meadow !default;
 
   // Give inlined group inputs some spacing
   .c-input__group-input {
-    margin: 0 0 0 ($base-unit-size * 2);
+    margin: 0 0 0 ($spacing-unit * 2);
 
     &:first-child {
       margin: 0;
@@ -94,7 +94,7 @@ $input-icon-color: $color-mountain-meadow !default;
 .c-input__label--text,
 .c-input__label--select,
 .c-input__label--group {
-  margin-bottom: ($base-unit-size / 2);
+  margin-bottom: ($spacing-unit / 2);
 }
 
 // Custom style radio/checkboxes using before pseudo element
@@ -108,7 +108,7 @@ $input-icon-color: $color-mountain-meadow !default;
     border: 0.1rem solid;
     border-radius: 0.2rem;
     position: relative;
-    margin-right: ($base-unit-size);
+    margin-right: ($spacing-unit);
     vertical-align: middle;
     top: -0.3rem;
     display: inline-block;
@@ -163,8 +163,8 @@ $input-icon-color: $color-mountain-meadow !default;
 //////////////////////////
 // Add custom SVG select arrow
 .c-input__element--select {
-  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><g fill="none"><g style="fill:#{$input-icon-color};stroke-width:0.5;stroke:#{$input-icon-color}"><path d="M12.85 1.8C13.31 1.38 12.6 0.72 12.14 1.14L7 5.88 7 5.87 7 5.87 1.86 1.14C1.4 0.71 0.69 1.37 1.15 1.79L6.65 6.86C6.74 6.95 6.88 7 7 7 7.13 7 7.27 6.95 7.36 6.86L12.85 1.8Z"/></g></g></svg>') no-repeat right ($base-unit-size) center;
-  background-size: ($base-unit-size * 2) ($base-unit-size * 2);
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><g fill="none"><g style="fill:#{$input-icon-color};stroke-width:0.5;stroke:#{$input-icon-color}"><path d="M12.85 1.8C13.31 1.38 12.6 0.72 12.14 1.14L7 5.88 7 5.87 7 5.87 1.86 1.14C1.4 0.71 0.69 1.37 1.15 1.79L6.65 6.86C6.74 6.95 6.88 7 7 7 7.13 7 7.27 6.95 7.36 6.86L12.85 1.8Z"/></g></g></svg>') no-repeat right ($spacing-unit) center;
+  background-size: ($spacing-unit * 2) ($spacing-unit * 2);
 }
 
 // Add custom SVG check mark
@@ -174,7 +174,7 @@ $input-icon-color: $color-mountain-meadow !default;
 
     + .c-input__label::before {
       background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><g fill="none"><g fill="#{$input-icon-color}"><path d="M9.89 0.71C9.85 0.48 9.73 0.28 9.54 0.15L9.54 0.15C9.18-0.12 8.63-0.02 8.38 0.37L3.75 7.33 1.51 4.13C1.44 4.03 1.35 3.95 1.24 3.88 0.94 3.71 0.6 3.74 0.34 3.94 0.16 4.08 0.04 4.28 0.01 4.51 -0.02 4.74 0.03 4.97 0.16 5.16L3.09 9.36C3.26 9.58 3.5 9.71 3.76 9.71 4.03 9.71 4.29 9.57 4.47 9.31L9.75 1.37C9.88 1.18 9.93 0.94 9.89 0.71"/></g></g></svg>') no-repeat center center;
-      background-size: ($base-unit-size);
+      background-size: ($spacing-unit);
     }
   }
 }

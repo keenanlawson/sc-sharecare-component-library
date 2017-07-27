@@ -1,5 +1,6 @@
 @import '../../../scss/settings/s-color-palette';
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-typography-unit-sizes';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 
 //////////////////////////
@@ -13,11 +14,11 @@ $radio-group-error-color: $color-chestnut-rose !default;
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-radio-group__label {
-  margin-bottom: ($base-unit-size / 2);
+  margin-bottom: ($spacing-unit / 2);
   cursor: default;
 
   & + .c-radio-group__error {
-    margin-top: ($base-unit-size / 2);
+    margin-top: ($spacing-unit / 2);
   }
 }
 

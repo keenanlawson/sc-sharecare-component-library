@@ -1,5 +1,5 @@
 @import '../../../scss/settings/s-color-palette';
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 @import '../../../scss/utilities/u-url-encode-svg';
 @import '../../../scss/utilities/u-get-z-index';
 
@@ -15,7 +15,7 @@ $loading-overlay-color: $color-pure-black !default;
 /// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
 //////////////////////////
 .c-loading__text {
-  padding: $base-unit-size 0;
+  padding: $spacing-unit 0;
 }
 
 .c-loading__spinner {

@@ -1,7 +1,8 @@
 @import '../../../scss/settings/s-color-palette';
-@import '../../../scss/settings/s-base-variables';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
-@import '../../../scss/preferred-typography-variables';
+@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/settings/s-typography-unit-sizes';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 
 //////////////////////////
 /// 1. CONFIG
@@ -39,7 +40,7 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
   cursor: pointer;
 
   // Give some spacing below input labels
-  margin-bottom: ($base-unit-size / 2);
+  margin-bottom: ($spacing-unit / 2);
 }
 
 .c-text__input {
@@ -51,7 +52,7 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
   height: 4rem;
   border: 0.1rem solid;
   cursor: pointer;
-  padding: 0.1rem 0 0 ($base-unit-size);
+  padding: 0.1rem 0 0 ($spacing-unit);
   border-radius: 0.2rem;
 
   @include respond-to(sm) {
@@ -66,7 +67,7 @@ $text-input-focus-border-color: $color-mountain-meadow !default;
 .c-text__error {
 
   // Give some spacing above error labels
-  margin-top: ($base-unit-size / 2);
+  margin-top: ($spacing-unit / 2);
 }
 
 

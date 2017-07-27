@@ -1,7 +1,7 @@
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @import '../settings/s-break-points';
-//@import '../utilities/u-breakpoint-min';
+@import '../utilities/u-breakpoint-min';
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {

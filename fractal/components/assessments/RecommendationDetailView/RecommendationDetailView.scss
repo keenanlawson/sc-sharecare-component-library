@@ -1,4 +1,5 @@
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 
 //////////////////////////
@@ -13,14 +14,14 @@ $detail-recommendation-group-header-border-color: $color-gallery !default;
 .m-assessment__recommendation-detail-view {}
 
 .m-assessment__recommendation-detail-view-main {
-  margin: $base-unit-size-double $base-unit-size $base-unit-size;
+  margin: $spacing-unit-2x $spacing-unit $spacing-unit;
 
   @include respond-to(sm) {
     display: flex;
     justify-content: space-between;
     max-width: 940px;
     padding: 1rem;
-    margin: ($base-unit-size * 5) auto $base-unit-size;
+    margin: ($spacing-unit * 5) auto $spacing-unit;
   }
 }
 
@@ -45,7 +46,7 @@ $detail-recommendation-group-header-border-color: $color-gallery !default;
 
   @include respond-to(sm) {
     display: flex;
-    margin-top: $base-unit-size-double;
+    margin-top: $spacing-unit-2x;
   }
 }
 
@@ -57,7 +58,7 @@ $detail-recommendation-group-header-border-color: $color-gallery !default;
     max-width: 320px;
 
     > * {
-      margin-top: $base-unit-size-double;
+      margin-top: $spacing-unit-2x;
 
       &:first-child {
         margin-top: 0;

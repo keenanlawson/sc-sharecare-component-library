@@ -223,3 +223,20 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Fixed some breakpoint mix-ins
 - Added global search form component
 - Added Site search bar component
+- Split out all logos into individual linked SVG icons
+- Deleted a lot of Handlebars templates and configs
+- Split SCSS spacing and typography units into their own partials and refactored usages of 'base-variables'
+- Refactored away use of 'base-config'
+- Cleaned up library component core configuration SCSS
+- Updated SCSS partials to import all functions/settings they require
+- Renamed SCSS spacing unit variable names
+- Renamed common typography partial
+- Moved and categorized some components into other directories
+
+
+-----
+
+TODO:
+- Delete /scss/settings/_s-base-config.scss after updating Guidelines doc
+- Delete /scss/settings/_s-base-variables.scss after updating Guidelines doc
+- Delete /scss/style-guide.scss after updating Guidelines doc

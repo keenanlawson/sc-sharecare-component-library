@@ -12,15 +12,15 @@ $chip-background-color: $color-gallery !default;
   justify-content: center;
   border-radius: 2rem;
   align-items: center;
-  padding: ($base-unit-size) ($base-unit-size * 1.5);
+  padding: ($spacing-unit) ($spacing-unit * 1.5);
 }
 
 .c-chip__image {
-  margin-right: ($base-unit-size / 2);
+  margin-right: ($spacing-unit / 2);
 }
 
 .c-chip__delete {
-  margin-left: ($base-unit-size);
+  margin-left: ($spacing-unit);
   cursor: pointer;
 }
 
@@ -40,7 +40,7 @@ $chip-background-color: $color-gallery !default;
 /// 3. STATE RULES - is-className, has-className, etc
 //////////////////////////
 .c-chip--avatar {
-  padding: 0 ($base-unit-size * 1.5) 0 0;
+  padding: 0 ($spacing-unit * 1.5) 0 0;
 }
 
 

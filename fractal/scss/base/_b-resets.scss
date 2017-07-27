@@ -73,8 +73,9 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-@import '../settings/s-base-variables';
-@import '../preferred-typography-variables';
+@import '../settings/s-typography-unit-sizes';
+@import '../settings/s-spacing-unit-sizes';
+@import '../settings/s-default-typography';
 
 /* Sections
    ========================================================================== */
@@ -209,7 +210,7 @@ html [type="button"], /* 1 */
 }
 
 input[type="search"]::-webkit-search-cancel-button {
-  margin-right: ($base-unit-size);
+  margin-right: ($spacing-unit);
 }
 
 /**

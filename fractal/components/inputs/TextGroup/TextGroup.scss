@@ -1,5 +1,6 @@
 @import '../../../scss/settings/s-color-palette';
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-spacing-unit-sizes';
+@import '../../../scss/settings/s-typography-unit-sizes';
 @import '../../../scss/utilities/u-respond-to-breakpoint';
 
 //////////////////////////
@@ -15,7 +16,7 @@ $text-group-error-color: $color-chestnut-rose !default;
 .c-text-group {
 
   .c-text {
-    margin-top: ($base-unit-size * 2);
+    margin-top: ($spacing-unit * 2);
 
     &:first-child {
       margin-top: 0;
@@ -24,11 +25,11 @@ $text-group-error-color: $color-chestnut-rose !default;
 }
 
 .c-text-group__label {
-  margin-bottom: ($base-unit-size / 2);
+  margin-bottom: ($spacing-unit / 2);
   cursor: default;
 
   & + .c-text-group__error {
-    margin-top: ($base-unit-size / 2);
+    margin-top: ($spacing-unit / 2);
   }
 }
 

@@ -5,7 +5,7 @@
 ///   @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);
 /// }
 @import '../settings/s-color-palette';
-@import '../settings/s-base-variables';
+@import '../settings/s-typography-unit-sizes';
 @mixin multiLineEllipsis($lineHeight: $base-line-height, $lineCount: 1, $bgColor: $color-pure-white){
   overflow: hidden;
   position: relative;
@@ -14,12 +14,14 @@
   text-align: justify;
   margin-right: -1em;
   padding-right: 1em;
+
   &:before {
     content: '...';
     position: absolute;
     right: 0;
     bottom: 0;
   }
+
   &:after {
     content: '';
     position: absolute;

@@ -1,0 +1,40 @@
+@import '../../../scss/settings/s-spacing-unit-sizes';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+//// Give the logos some default spacing
+.m-site-social-bar__logo {
+  margin-left: $spacing-unit;
+
+  // Extra spacing for extra large screens
+  @include respond-to(xl) {
+    margin-left: $spacing-unit-2x;
+  }
+
+  // Nullify hanging spacing on first child
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

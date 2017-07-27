@@ -1,6 +1,5 @@
 // Fonts
 //------------------------------------
-
 @import 'ty-proxima-nova-variables';
 
 $font-domain: 'http://localhost:3050/static/fonts';
@@ -11,7 +10,7 @@ $regular-path: "#{$font-domain}/proximanova-light-webfont";
   src: url('#{$regular-path}.eot?#iefix') format('embedded-opentype'),
   url("#{$regular-path}.woff") format('woff'),
   url("#{$regular-path}.ttf") format('truetype');
-  font-weight: normal;
+  font-weight: $font-weight-normal;
   font-style: normal;
 }
 
@@ -22,7 +21,7 @@ $semibold-path: "#{$font-domain}/proximanova-regular-webfont";
   src: url('#{$semibold-path}.eot?#iefix') format('embedded-opentype'),
   url("#{$semibold-path}.woff") format('woff'),
   url("#{$semibold-path}.ttf") format('truetype');
-  font-weight: 600;
+  font-weight: $font-weight-semi;
   font-style: normal;
 }
 
@@ -33,6 +32,6 @@ $bold-path: "#{$font-domain}/ProximaNovaSoft-Semibold-webfont";
   src: url('#{$bold-path}.eot?#iefix') format('embedded-opentype'),
   url("#{$bold-path}.woff") format('woff'),
   url("#{$bold-path}.ttf") format('truetype');
-  font-weight: 800;
+  font-weight: $font-weight-bold;
   font-style: normal;
 }

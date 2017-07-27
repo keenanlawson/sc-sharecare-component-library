@@ -5,9 +5,9 @@
 // Must match any respective directory paths
 $theme: 'light-sea-green' !default;
 
-$base-unit-size: 0.8rem !default;
-$base-unit-size-half: ($base-unit-size / 2) !default;
-$base-unit-size-double: ($base-unit-size * 2) !default;
+$spacing-unit: 0.8rem !default;
+$spacing-unit-half: ($spacing-unit / 2) !default;
+$spacing-unit-2x: ($spacing-unit * 2) !default;
 
 // Default Typography
 $base-font-size: 1.6rem !default;

@@ -1,4 +1,4 @@
-@import '../../../scss/settings/s-base-variables';
+@import '../../../scss/settings/s-spacing-unit-sizes';
 
 //////////////////////////
 /// 1. CONFIG
@@ -19,7 +19,7 @@
 
 .c-breadcrumb__link {
   display: inline-block;
-  margin-left: $base-unit-size;
+  margin-left: $spacing-unit;
 }
 
 
