@@ -1,0 +1,45 @@
+@import '../../../scss/settings/s-color-palette';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-search-bar-background-color: $color-gallery !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-site-search-bar__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m-site-search-bar__search {
+  width: 30rem;
+}
+
+.m-site-search-bar__login-register {
+  display: flex;
+}
+
+.m-site-search-bar__login-register-link {
+  height: 4rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-site-search-bar {
+  background-color: $site-search-bar-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

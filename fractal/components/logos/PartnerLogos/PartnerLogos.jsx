@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import SharecareLogo from '../SharecareLogo/SharecareLogo.jsx';
@@ -8,26 +7,22 @@ import DailyStrengthLogo from '../DailyStrengthLogo/DailyStrengthLogo.jsx';
 
 const PartnerLogos = (props) => {
 
+    // Expand props
     const {
         className,
         logoClass,
-        iconClass,
-        labelClass,
         ...rest
     } = props;
 
-    const componentClass = 'm-partner-logos';
-    const logoClassName = `${componentClass}__logo`;
-    const iconClassName = `${componentClass}__icon`;
-    const labelClassName = `${componentClass}__label`;
+    // Compose props
     const logoProps = {
-        className: classNames(logoClassName, logoClass),
-        iconClass: classNames(iconClassName, iconClass),
-        labelClass: classNames(labelClassName, labelClass)
+        className: logoClass,
+        ...rest
     };
 
+    // Render
     return (
-        <div className={classNames(componentClass, className)} {...rest}>
+        <div className={className}>
             <SharecareLogo {...logoProps} monochrome/>
             <DoctorOzLogo {...logoProps}/>
             <DailyStrengthLogo {...logoProps}/>
@@ -39,7 +34,9 @@ PartnerLogos.propTypes = {
     className: PropTypes.string,
     logoClass: PropTypes.string,
     iconClass: PropTypes.string,
-    labelClass: PropTypes.string
+    labelClass: PropTypes.string,
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 PartnerLogos.defaultProps = {};

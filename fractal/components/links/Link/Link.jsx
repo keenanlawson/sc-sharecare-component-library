@@ -2,15 +2,36 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Link = ({ className, labelClassName, to, label, children, ...rest }) => {
-    const componentClass = 'c-link';
-    const labelClass = `${componentClass}__label`;
-    const componentClasses = classNames(componentClass, className);
-    const labelClasses = classNames(labelClass, labelClassName);
-    const componentProps = { className: componentClasses, ...rest };
+const Link = (props) => {
 
+    // Expand props
+    const {
+        className,
+        labelClass,
+        to,
+        label,
+        children,
+        ...rest
+    } = props;
+
+    // Set class names
+    const componentClass = 'c-link';
+    const labelClassName = `${componentClass}__label`;
+
+    // Extend class names
+    const componentClasses = classNames(componentClass, className);
+    const labelClasses = classNames(labelClassName, labelClass);
+
+    // Compose props
+    const componentProps = {
+        className: componentClasses,
+        href: to,
+        ...rest
+    };
+
+    // Render
     return (
-        <a href={to} {...componentProps} title={label}>
+        <a {...componentProps}>
             {label && <span className={labelClasses}>{label}</span>}
             {children}
         </a>
@@ -19,10 +40,10 @@ const Link = ({ className, labelClassName, to, label, children, ...rest }) => {
 
 Link.propTypes = {
     className: PropTypes.string,
-    labelClassName: PropTypes.string,
-    children: PropTypes.node,
+    labelClass: PropTypes.string,
     to: PropTypes.string.isRequired,
-    label: PropTypes.string
+    label: PropTypes.string,
+    children: PropTypes.node
 };
 
 Link.defaultProps = {};

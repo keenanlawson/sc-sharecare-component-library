@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import FacebookLogo from '../FacebookLogo/FacebookLogo.jsx';
@@ -11,23 +10,22 @@ import PinterestLogo from '../PinterestLogo/PinterestLogo.jsx';
 
 const SocialLogos = (props) => {
 
+    // Expand props
     const {
         className,
         logoClass,
-        iconClass,
         ...rest
     } = props;
 
-    const componentClass = 'm-social-logos';
-    const logoClassName = `${componentClass}__logo`;
-    const iconClassName = `${componentClass}__icon`;
+    // Compose props
     const logoProps = {
-        className: classNames(logoClassName, logoClass),
-        iconClass: classNames(iconClassName, iconClass)
+        className: logoClass,
+        ...rest
     };
 
+    // Render
     return (
-        <div className={classNames(componentClass, className)} {...rest}>
+        <div className={className}>
             <FacebookLogo {...logoProps}/>
             <TwitterLogo {...logoProps}/>
             <LinkedInLogo {...logoProps}/>
@@ -41,7 +39,10 @@ const SocialLogos = (props) => {
 SocialLogos.propTypes = {
     className: PropTypes.string,
     logoClass: PropTypes.string,
-    iconClass: PropTypes.string
+    iconClass: PropTypes.string,
+    labelClass: PropTypes.string,
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 SocialLogos.defaultProps = {};

@@ -4,5 +4,10 @@ module.exports = {
     "status": "ready",
     "collated": true,
     "preview": "@logos-preview",
-    "context": {}
+    "context": {
+        className: 'test-social-logos-class',
+        logoClass: 'test-social-logo-class',
+        labelClass: 'test-social-logo-label-class',
+        iconClass: 'test-social-logo-icon-class',
+    }
 };

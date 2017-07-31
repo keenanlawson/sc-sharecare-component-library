@@ -1,20 +1,35 @@
-// TODO: determine if 'is-skinny' state is still needed
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import PageLayer from '../../containers/PageLayer/PageLayer.jsx';
 
-const TitleBar = ({ className, text, mainHeading = true, skinny = false, ...rest }) => {
+const TitleBar = (props) => {
 
+    // Expand props
+    const {
+        className,
+        text,
+        mainHeading = true,
+        ...rest
+    } = Object.assign({}, TitleBar.defaultProps, props);
+
+    // Set class names
     const componentClass = 'c-title-bar';
     const textClass = `${componentClass}__text`;
-    const skinnyClass = 'is-skinny';
-    const componentClasses = classNames(componentClass, className,
-        {[skinnyClass]: skinny});
 
+    // Extend class names
+    const componentClasses = classNames(componentClass, className);
+
+    // Compose props
+    const layerProps = {
+        className: componentClasses,
+        ...rest
+    };
+
+    // Render
     return (
-        <PageLayer className={componentClasses} {...rest}>
+        <PageLayer {...layerProps}>
             {
                 mainHeading
                     ?
@@ -29,13 +44,11 @@ const TitleBar = ({ className, text, mainHeading = true, skinny = false, ...rest
 TitleBar.propTypes = {
     className: PropTypes.string,
     text: PropTypes.string,
-    mainHeading: PropTypes.bool,
-    skinny: PropTypes.bool
+    mainHeading: PropTypes.bool
 };
 
 TitleBar.defaultProps = {
-    mainHeading: true,
-    skinny: false
+    mainHeading: true
 };
 
 // export default TitleBar;

@@ -1,35 +1,30 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Link from '../../links/Link/Link.jsx';
-import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
+import LinkedIcon from '../../links/LinkedIcon/LinkedIcon.jsx';
 
 const PinterestLogo = (props) => {
 
-    const {
-        className,
-        iconClass,
-        ...rest
-    } = props;
+    // Compose props
+    const logoProps = {
+        to: "https://www.pinterest.com",
+        label: "pinterest",
+        icon: "pinterest",
+        ...props
+    };
 
-    const linkClassName = 'c-pinterest-logo';
-    const iconClassName = `${linkClassName}__icon`;
-    const linkClasses = classNames(linkClassName, className);
-    const iconClasses = classNames(iconClassName, iconClass);
-    const linkProps = {className: linkClasses, to: 'https://www.pinterest.com', ...rest};
-    const iconProps = {className: iconClasses, icon: 'pinterest'};
-
+    // Render
     return (
-        <Link {...linkProps}>
-            <SVGIcon {...iconProps}/>
-        </Link>
+        <LinkedIcon {...logoProps}/>
     );
 };
 
 PinterestLogo.propTypes = {
     className: PropTypes.string,
-    iconClass: PropTypes.string
+    labelClass: PropTypes.string,
+    iconClass: PropTypes.string,
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 PinterestLogo.defaultProps = {};

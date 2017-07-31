@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 import LayerContainer from '../LayerContainer/LayerContainer.jsx';
 
-const PageLayer = ({ className, containerClassName, children, constrained = true, ...rest }) => {
+const PageLayer = ({ className, containerClass, children, constrained = true, ...rest }) => {
 
     const componentClass = 'c-page-layer';
-    const containerClass = `${componentClass}__container`;
+    const containerClassName = `${componentClass}__container`;
     const constrainedClass = 'is-constrained';
     const componentClasses = classNames(componentClass, className, {[constrainedClass]: constrained});
-    const containerClasses = classNames(containerClass, {[containerClassName]: containerClassName});
+    const containerClasses = classNames(containerClassName, {[containerClass]: containerClass});
 
     return (
         <div className={componentClasses} {...rest}>
@@ -27,7 +27,7 @@ const PageLayer = ({ className, containerClassName, children, constrained = true
 
 PageLayer.propTypes = {
     className: PropTypes.string,
-    containerClassName: PropTypes.string,
+    containerClass: PropTypes.string,
     constrained: PropTypes.bool,
     children: PropTypes.node
 };

@@ -1,35 +1,30 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Link from '../../links/Link/Link.jsx';
-import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
+import LinkedIcon from '../../links/LinkedIcon/LinkedIcon.jsx';
 
 const InstagramLogo = (props) => {
 
-    const {
-        className,
-        iconClass,
-        ...rest
-    } = props;
+    // Compose props
+    const logoProps = {
+        to: "https://www.instagram.com",
+        label: "instagram",
+        icon: "instagram",
+        ...props
+    };
 
-    const linkClassName = 'c-instagram-logo';
-    const iconClassName = `${linkClassName}__icon`;
-    const linkClasses = classNames(linkClassName, className);
-    const iconClasses = classNames(iconClassName, iconClass);
-    const linkProps = {className: linkClasses, to: 'https://www.instagram.com', ...rest};
-    const iconProps = {className: iconClasses, icon: 'instagram'};
-
+    // Render
     return (
-        <Link {...linkProps}>
-            <SVGIcon {...iconProps}/>
-        </Link>
+        <LinkedIcon {...logoProps}/>
     );
 };
 
 InstagramLogo.propTypes = {
     className: PropTypes.string,
-    iconClass: PropTypes.string
+    labelClass: PropTypes.string,
+    iconClass: PropTypes.string,
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 InstagramLogo.defaultProps = {};

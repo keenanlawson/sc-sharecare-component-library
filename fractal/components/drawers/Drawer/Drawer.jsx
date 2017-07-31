@@ -6,7 +6,7 @@ import DrawerTrigger from '../../drawers/DrawerTrigger/DrawerTrigger.jsx';
 import DrawerTarget from '../../drawers/DrawerTarget/DrawerTarget.jsx';
 import DrawerPane from '../../drawers/DrawerPane/DrawerPane.jsx';
 
-const Drawer = ({ className, triggerClassName, paneClassName, name, trigger, visible, overlay = true, children, ...rest }) => {
+const Drawer = ({ className, triggerClass, paneClass, name, trigger, visible, overlay = true, children, ...rest }) => {
 
     const componentClass = 'c-drawer';
     const overlayClass = `${componentClass}__overlay`;
@@ -15,21 +15,21 @@ const Drawer = ({ className, triggerClassName, paneClassName, name, trigger, vis
 
     return (
         <div {...componentProps}>
-            <DrawerTrigger className={triggerClassName} drawerFor={name}>{trigger}</DrawerTrigger>
+            <DrawerTrigger className={triggerClass} drawerFor={name}>{trigger}</DrawerTrigger>
             <DrawerTarget name={name} visible={visible}/>
             {
                 overlay &&
                 <label className={overlayClass} htmlFor={name}/>
             }
-            <DrawerPane className={paneClassName}>{children}</DrawerPane>
+            <DrawerPane className={paneClass}>{children}</DrawerPane>
         </div>
     );
 };
 
 Drawer.propTypes = {
     className: PropTypes.string,
-    triggerClassName: PropTypes.string,
-    paneClassName: PropTypes.string,
+    triggerClass: PropTypes.string,
+    paneClass: PropTypes.string,
     name: PropTypes.string.isRequired,
     trigger: PropTypes.node.isRequired,
     visible: PropTypes.bool,

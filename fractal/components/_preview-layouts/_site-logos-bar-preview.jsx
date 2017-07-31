@@ -14,12 +14,8 @@ const page = ({ rendered_content, path }) => {
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/icons/SVGIcon/SVGIcon.css`}/>
             <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/links/Link/Link.css`}/>
 
-            {/*Logos*/}
-            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/site-logos/PartnerLogos/PartnerLogos.css`}/>
-            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/social-logos/SocialLogos/SocialLogos.css`}/>
-
             {/*Bar*/}
-            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/site-logos-bar/SiteLogosBar/SiteLogosBar.css`}/>
+            <link media="all" rel="stylesheet" href={`http://localhost:3050/static/css/page-sections/SiteLogosBar/SiteLogosBar.css`}/>
             <div className="base-preview" dangerouslySetInnerHTML={{__html: rendered_content}}/>
         </div>
     );

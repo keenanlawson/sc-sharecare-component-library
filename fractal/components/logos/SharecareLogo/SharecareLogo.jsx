@@ -1,59 +1,42 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Link from '../../links/Link/Link.jsx';
-import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
+import LinkedIcon from '../../links/LinkedIcon/LinkedIcon.jsx';
 
 const SharecareLogo = (props) => {
 
+    // Expand props
     const {
-        className,
-        iconClass,
-        labelClass,
         monochrome,
-        colorIcon,
-        baseUrl = 'https://www.sharecare.com',
+        smallIcon,
         ...rest
     } = props;
 
-    const linkClassName = 'c-sharecare-logo';
-    const iconClassName = `${linkClassName}__icon`;
-    const linkClasses = classNames(linkClassName, className);
-    const iconClasses = classNames(iconClassName, iconClass);
-    const linkProps = {
-        className: linkClasses,
-        labelClassName: labelClass,
-        to: baseUrl,
-        label: 'sharecare',
+    // Compose props
+    const logoProps = {
+        to: "https://www.sharecare.com",
+        label: "sharecare",
+        icon: monochrome ? 'sharecare-logo-monochrome' : smallIcon ? 'sharecare-icon-color' : 'sharecare-logo-color',
         ...rest
     };
-    const icon = monochrome ? 'sharecare-logo-monochrome' : colorIcon ? 'sharecare-icon-color' : 'sharecare-logo-color';
-    const iconProps = {
-        className: iconClasses,
-        icon
-    };
 
+    // Render
     return (
-        <Link {...linkProps}>
-            <SVGIcon {...iconProps}/>
-        </Link>
+        <LinkedIcon {...logoProps}/>
     );
 };
 
 SharecareLogo.propTypes = {
     className: PropTypes.string,
-    iconClass: PropTypes.string,
     labelClass: PropTypes.string,
+    iconClass: PropTypes.string,
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool,
     monochrome: PropTypes.bool,
-    colorIcon: PropTypes.bool,
-    baseUrl: PropTypes.string
+    smallIcon: PropTypes.bool
 };
 
-SharecareLogo.defaultProps = {
-    baseUrl: 'https://www.sharecare.com',
-    monochrome: false
-};
+SharecareLogo.defaultProps = {};
 
 // export default SharecareLogo;
 module.exports = SharecareLogo;

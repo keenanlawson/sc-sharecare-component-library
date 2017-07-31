@@ -1,5 +1,5 @@
 module.exports = {
-    "title": "Page Title Bar",
+    "title": "Title Bar",
     "label": "Title Bar",
     "status": "ready",
     "order": 1,

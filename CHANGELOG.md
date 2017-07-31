@@ -233,6 +233,14 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Renamed common typography partial
 - Moved and categorized some components into other directories
 
+-----
+
+7/30/2017
+
+- Updated many of the above listed components
+- Added site footer component
+- Added linked image component
+
 
 -----
 

@@ -4,7 +4,9 @@ module.exports = {
     "collated": true,
     "preview": "@preview",
     "context": {
-        "to": "http://www.google.com",
-        "label": "Test Link"
+        className: "test-link-class",
+        labelClass: "test-link-label-class",
+        to: "http://www.google.com",
+        label: "Test Link"
     }
 };

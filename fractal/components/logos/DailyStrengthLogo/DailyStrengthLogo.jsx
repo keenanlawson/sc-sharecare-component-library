@@ -1,46 +1,30 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Link from '../../links/Link/Link.jsx';
-import SVGIcon from '../../icons/SVGIcon/SVGIcon.jsx';
+import LinkedIcon from '../../links/LinkedIcon/LinkedIcon.jsx';
 
 const DailyStrengthLogo = (props) => {
 
-    const {
-        className,
-        iconClass,
-        labelClass,
-        ...rest
-    } = props;
-
-    const linkClassName = 'c-daily-strength-logo';
-    const iconClassName = `${linkClassName}__icon`;
-    const linkClasses = classNames(linkClassName, className);
-    const iconClasses = classNames(iconClassName, iconClass);
-    const linkProps = {
-        className: linkClasses,
-        labelClassName: labelClass,
-        to: 'https://www.dailystrength.org',
-        label: 'daily strength',
-        ...rest
-    };
-    const iconProps = {
-        className: iconClasses,
-        icon: 'daily-strength-logo'
+    // Compose props
+    const logoProps = {
+        to: "https://www.dailystrength.org",
+        label: "daily strength",
+        icon: "daily-strength-logo",
+        ...props
     };
 
+    // Render
     return (
-        <Link {...linkProps}>
-            <SVGIcon {...iconProps}/>
-        </Link>
+        <LinkedIcon {...logoProps}/>
     );
 };
 
 DailyStrengthLogo.propTypes = {
     className: PropTypes.string,
+    labelClass: PropTypes.string,
     iconClass: PropTypes.string,
-    labelClass: PropTypes.string
+    labelOnly: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 DailyStrengthLogo.defaultProps = {};
