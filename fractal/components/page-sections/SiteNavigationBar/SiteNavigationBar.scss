@@ -1,68 +1,21 @@
-@import '../../../scss/settings/s-color-palette';
-@import '../../../scss/utilities/u-respond-to-breakpoint';
-@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/layouts/l-grids-base';
+@import '../../../scss/layouts/l-visibility';
 
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-$site-navigation-tab-label-color: $color-mine-shaft !default;
-$site-navigation-tab-label-selected-color: $color-mountain-meadow !default;
-$site-navigation-tab-border-color: $color-gallery !default;
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-.m-site-navigation-bar {
-  height: 3.8rem;
-
-  @include respond-to(sm) {
-    height: 7.4rem;
-  }
-}
-
-.m-site-navigation-bar__container {
-  align-items: center;
-  justify-content: flex-start;
-
-  @include respond-to(sm) {
-    justify-content: space-between;
-  }
-}
-
-.m-site-navigation-bar__login-register {
-  margin-right: auto;
-}
-
-.m-site-navigation-bar__navigation-link {
-  margin-left: 1.6rem;
-
-  @include respond-to(md) {
-    margin-left: 3.2rem;
-  }
-
-  &:first-child {
-    margin: 0;
-  }
-}
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
-.m-site-navigation-bar__navigation-label {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-weight: $font-weight-semi;
-}
+@import '../../containers/PageLayer/page-layer';
+@import '../../containers/LayerContainer/layer-container';
+@import '../../links/Link/link';
+@import '../../links/LinkedIcon/linked-icon';
+@import '../../icons/SVGIcon/svg-icon';
+@import '../../buttons/Button/button';
+@import '../../inputs/TextInput/text-input';
+@import '../../drawers/DrawerTrigger/drawer-trigger';
+@import '../../drawers/DrawerPane/drawer-pane';
+@import '../../drawers/DrawerTarget/drawer-target';
+@import '../../drawers/Drawer/drawer';
+@import '../../logos/AskMDLogo/ask-md-logo';
+@import '../../navigation/NavigationTab/navigation-tab';
+@import '../../navigation/NavigationBar/navigation-bar';
+@import '../../searches/GlobalSearchForm/global-search-form';
+@import '../SiteNavigationLinks/site-navigation-links';
+@import '../SiteDrawer/site-drawer';
+@import './site-navigation-bar';

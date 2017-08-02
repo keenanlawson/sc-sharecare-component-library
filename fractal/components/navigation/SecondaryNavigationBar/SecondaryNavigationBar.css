@@ -1,0 +1,70 @@
+.c-page-layer {
+  display: -ms-flexbox;
+  display: flex; }
+
+.c-layer-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.c-link {
+  cursor: pointer; }
+
+a:not([class~="c-link"]),
+.c-link__label {
+  color: #2c9acc; }
+  a:not([class~="c-link"]):hover,
+  .c-link__label:hover {
+    color: #345779; }
+
+.c-link__label {
+  line-height: 1.9rem; }
+
+.c-navigation-tab__label {
+  color: #333; }
+
+.c-navigation-tab:hover .c-navigation-tab__label {
+  color: #1aba9c; }
+
+.c-navigation-tab.is-selected .c-navigation-tab__label {
+  color: #1aba9c; }
+
+.c-navigation-tab.is-selected:hover .c-navigation-tab__label {
+  color: #227474; }
+
+.c-navigation-tab__label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  white-space: nowrap; }
+
+.c-navigation-bar {
+  display: -ms-flexbox;
+  display: flex; }
+
+.c-secondary-navigation-bar {
+  border-bottom: 0.1rem solid; }
+
+.c-secondary-navigation-tab {
+  padding: 1.5rem 2rem 1.2rem;
+  border: 0; }
+
+.c-secondary-navigation-tab.is-selected {
+  border-bottom: 0.3rem solid;
+  padding-bottom: 0.9rem; }
+
+.c-secondary-navigation-bar {
+  border-bottom-color: #ddd; }
+
+.c-secondary-navigation-tab__label {
+  color: #999; }
+
+.c-secondary-navigation-tab.is-selected {
+  border-bottom-color: #2c9acc; }
+  .c-secondary-navigation-tab.is-selected .c-secondary-navigation-tab__label {
+    color: #345779; }
+
+.c-secondary-navigation-tab__label {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase; }

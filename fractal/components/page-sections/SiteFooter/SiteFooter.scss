@@ -1,29 +1,28 @@
-//@import '../../../scss/settings/s-color-palette';
-//@import '../../../scss/utilities/u-respond-to-breakpoint';
-//@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/layouts/l-grids-base';
+@import '../../../scss/layouts/l-visibility';
 
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-//$site-footer-color: $color-mountain-meadow !default;
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-//.m-site-footer {}
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
+@import '../../containers/PageLayer/page-layer';
+@import '../../containers/LayerContainer/layer-container';
+@import '../../icons/SVGIcon/svg-icon';
+@import '../../links/Link/link';
+@import '../../links/LinkedIcon/linked-icon';
+@import '../../logos/SharecareLogo/sharecare-logo';
+@import '../../logos/DoctorOzLogo/doctor-oz-logo';
+@import '../../logos/DailyStrengthLogo/daily-strength-logo';
+@import '../../logos/FacebookLogo/facebook-logo';
+@import '../../logos/GoogleLogo/google-logo';
+@import '../../logos/InstagramLogo/instagram-logo';
+@import '../../logos/LinkedInLogo/linked-in-logo';
+@import '../../logos/PinterestLogo/pinterest-logo';
+@import '../../logos/TwitterLogo/twitter-logo';
+@import '../../logos/PartnerLogos/partner-logos';
+@import '../../logos/SocialLogos/social-logos';
+@import '../../navigation/NavigationTab/navigation-tab';
+@import '../../navigation/NavigationBar/navigation-bar';
+@import '../SiteAboutLinks/site-about-links';
+@import '../SiteDisclaimerLinks/site-disclaimer-links';
+@import '../SiteDisclaimerText/site-disclaimer-text';
+@import '../SiteLogosBar/site-logos-bar';
+@import '../SiteAboutBar/site-about-bar';
+@import '../SiteDisclaimerBar/site-disclaimer-bar';
+@import './site-footer';

@@ -1,0 +1,33 @@
+.c-link {
+  cursor: pointer; }
+
+a:not([class~="c-link"]),
+.c-link__label {
+  color: #2c9acc; }
+  a:not([class~="c-link"]):hover,
+  .c-link__label:hover {
+    color: #345779; }
+
+.c-link__label {
+  line-height: 1.9rem; }
+
+.c-navigation-tab__label {
+  color: #333; }
+
+.c-navigation-tab:hover .c-navigation-tab__label {
+  color: #1aba9c; }
+
+.c-navigation-tab.is-selected .c-navigation-tab__label {
+  color: #1aba9c; }
+
+.c-navigation-tab.is-selected:hover .c-navigation-tab__label {
+  color: #227474; }
+
+.c-navigation-tab__label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  white-space: nowrap; }
+
+.c-navigation-bar {
+  display: -ms-flexbox;
+  display: flex; }

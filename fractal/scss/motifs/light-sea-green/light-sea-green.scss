@@ -1,15 +1,14 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 // CUSTOM THEME
 // NOTE: There should be no variable overrides here, create a new theme or typography
-
-// 1. Import preferred typography
-@import '../../typography/ty-proxima-nova';
-
-// 2. Import preferred color theme
+// 1. Import preferred color theme
 @import '../../settings/themes/light-sea-green';
 
-// 3. Render application styles
+// 2. Import preferred typography - uncomment if not using typography from ESI
+//@import '../../typography/ty-proxima-nova';
+
+// 3. Import application styles
 @import '../../core-application-styles';
 
 // 4. Optional - additional styles outside of the core Sharecare application

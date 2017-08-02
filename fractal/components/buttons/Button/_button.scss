@@ -1,0 +1,153 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-units';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+// Background colors
+$button-default-background-color: $color-mountain-meadow !default;
+$button-default-background-hover-color: $color-elm !default;
+
+$button-accent-background-color: $color-san-juan !default;
+$button-accent-background-hover-color: $color-dusty-gray !default;
+
+$button-secure-background-color: $color-alto !default;
+$button-secure-background-hover-color: $color-dusty-gray !default;
+
+$button-cta-background-color: $color-neon-carrot !default;
+$button-cta-background-hover-color: $color-piper !default;
+
+$button-disabled-background-color: $color-alto !default;
+$button-disabled-background-hover-color: $color-alto !default;
+
+// Text colors
+$button-default-text-color: $color-pure-white !default;
+$button-secure-text-color: $color-dusty-gray !default;
+$button-secure-text-hover-color: $color-pure-white !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-button {
+  min-width: 10.8rem;
+  border: 0;
+  cursor: pointer;
+  padding: ($spacing-unit) ($spacing-unit * 2) ($spacing-unit / 2);
+}
+
+//.c-button__icon {
+//
+//  &:first-child {
+//    margin-right: ($spacing-unit / 2);
+//  }
+//
+//  &:last-child {
+//    margin-left: ($spacing-unit / 2);
+//  }
+//
+//  &:only-child {
+//    margin: 0;
+//  }
+//}
+
+//.c-button__badge {
+//  margin-left: ($spacing-unit / 2);
+//}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+.c-button {
+
+  &.is-medium {
+    min-width: 16.25rem;
+    padding: ($spacing-unit) ($spacing-unit * 2) ($spacing-unit);
+  }
+
+  &.is-large {
+    min-width: 18.75rem;
+    padding: ($spacing-unit * 2);
+  }
+
+  &.is-xlarge {
+    min-width: 40rem;
+    padding: ($spacing-unit * 2.5) ($spacing-unit * 6);
+  }
+
+  &.is-disabled {
+    cursor: default;
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-button {
+  color: $button-default-text-color;
+  background-color: $button-default-background-color;
+
+  &:hover {
+    background-color: $button-default-background-hover-color;
+  }
+
+  &.is-accent {
+    background-color: $button-accent-background-color;
+
+    &:hover {
+      background-color: $button-accent-background-hover-color;
+    }
+  }
+
+  &.is-secure {
+    background-color: $button-secure-background-color;
+    color: $button-secure-text-color;
+
+    &:hover {
+      background-color: $button-secure-background-hover-color;
+      color: $button-secure-text-hover-color;
+    }
+  }
+
+  &.is-cta {
+    background-color: $button-cta-background-color;
+
+    &:hover {
+      background-color: $button-cta-background-hover-color;
+    }
+  }
+
+  &.is-disabled {
+    background-color: $button-disabled-background-color;
+
+    &:hover {
+      background-color: $button-disabled-background-hover-color;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-button {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  &.is-medium {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  &.is-large {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+
+  &.is-xlarge {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+  }
+}

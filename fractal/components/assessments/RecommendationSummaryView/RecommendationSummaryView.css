@@ -1,0 +1,7 @@
+.m-assessment__recommendation-summary-view {
+  margin: 1.6rem 0.8rem 0.8rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-summary-view {
+      max-width: 940px;
+      padding: 0 1rem;
+      margin: 4rem auto 0.8rem; } }

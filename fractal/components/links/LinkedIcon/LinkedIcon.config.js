@@ -3,7 +3,7 @@ module.exports = {
     "label": "Linked Icon",
     "status": "ready",
     "collated": false,
-    "preview": "@svg-icon-preview",
+    "preview": "@linked-icon-preview",
     "context": {
         className: 'test-linked-icon-class',
         labelClass: 'test-linked-icon-label-class',

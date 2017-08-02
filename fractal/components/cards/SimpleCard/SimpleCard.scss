@@ -1,25 +1,7 @@
-@import '../../../scss/settings/s-color-palette';
-
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
+@import '../../links/Link/link';
+@import '../Card/card';
+@import '../CardHeader/card-header';
+@import '../CardText/card-text';
+@import '../CardFooter/card-footer';
+@import '../CardFooterLink/card-footer-link';
+@import './simple-card';

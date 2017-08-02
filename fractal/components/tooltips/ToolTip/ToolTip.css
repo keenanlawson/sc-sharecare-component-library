@@ -1,0 +1,43 @@
+.c-tooltip {
+  display: inline-block;
+  position: relative; }
+
+.c-tooltip__label {
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer; }
+
+.c-tooltip__body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  border: 0.1rem solid;
+  border-radius: 0.2rem;
+  padding: 1rem 1.5rem;
+  cursor: default; }
+
+.c-tooltip__arrow {
+  position: absolute;
+  border: 0.5rem solid;
+  bottom: -0.5rem;
+  left: calc(50% - (0.5rem / 2));
+  transform: rotate(-45deg); }
+
+.c-tooltip__body {
+  border-color: #ddd;
+  background-color: #fff;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.3);
+  color: #333; }
+
+.c-tooltip__arrow {
+  border-color: transparent transparent #fff #fff;
+  box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.3); }
+
+.c-tooltip__text {
+  font-size: 1.8rem;
+  line-height: 2rem; }
+  @media only screen and (min-width: 576px) {
+    .c-tooltip__text {
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }

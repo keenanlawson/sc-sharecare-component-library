@@ -1,16 +1,15 @@
-/*doc
----
-title: Colors
-name: colors
-category: Base
----
-<ul>
-  <li>Use http://chir.ag/projects/name-that-color/ to get descriptive color names</li>
-  <li>Use Lowercase values: <code>#fff</code> vs <code>#FFF</code></li>
-  <li>Use short values when possible: <code>#fff</code> vs <code>#ffffff</code></li>
-  <li>DO NOT RENAME, CHANGE OR OVERWRITE</li>
-</ul>
-*/
+/// doc
+/// ---
+/// title: Colors
+/// name: colors
+/// category: Base
+/// ---
+/// <ul>
+///   <li>Use http://chir.ag/projects/name-that-color/ to get descriptive color names</li>
+///   <li>Use Lowercase values: <code>#fff</code> vs <code>#FFF</code></li>
+///   <li>Use short values when possible: <code>#fff</code> vs <code>#ffffff</code></li>
+///   <li>DO NOT RENAME, CHANGE OR OVERWRITE</li>
+/// </ul>
 
 $color-pure-white: #fff;
 $color-supernova: #fc0;

@@ -1,0 +1,128 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/utilities/u-breakpoint-only';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-disclaimer-bar-background-color: $color-mine-shaft !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-site-disclaimer-bar {
+  padding: 0.8rem 0;
+
+  @include respond-to(sm) {
+    padding-bottom: 1.6rem;
+  }
+
+  @include respond-to(md) {
+    padding-bottom: 2.4rem;
+  }
+
+  @include respond-to(lg) {
+    padding-top: 1.2rem;
+  }
+}
+
+.m-site-disclaimer-bar__container {
+  align-items: center;
+
+  @include media-breakpoint-only(xs) {
+    flex-direction: column;
+  }
+}
+
+.m-site-disclaimer-bar__text {
+
+  @include respond-to(sm) {
+    padding-right: 1.6rem;
+    margin: 0 0.8rem 0 0;
+    border-right: 0.1rem solid;
+    border-right-color: $color-pure-white;
+  }
+}
+
+.m-site-disclaimer-bar__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.8rem;
+
+  @include respond-to(sm) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 18rem;
+  }
+
+  @include respond-to(md) {
+    width: 28rem;
+  }
+
+  @include respond-to(lg) {
+    width: 32rem;
+  }
+}
+
+.m-site-disclaimer-bar__link {
+
+  @include respond-to(sm) {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+  }
+
+  @include respond-to(lg) {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-site-disclaimer-bar {
+  background-color: $site-disclaimer-bar-background-color;
+}
+
+.m-site-disclaimer-bar__text {
+  color: $color-dusty-gray;
+}
+
+.m-site-disclaimer-bar__entity {
+  color: $color-silver;
+}
+
+.m-site-disclaimer-bar__link-label {
+  color: $color-pure-white;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-site-disclaimer-bar__text {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.m-site-disclaimer-bar__entity {
+  font-weight: $font-weight-semi;
+}
+
+.m-site-disclaimer-bar__link-label {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: $font-weight-semi;
+  text-transform: uppercase;
+}

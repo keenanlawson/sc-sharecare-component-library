@@ -1,0 +1,70 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-breakpoint-only';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+//$global-search-input-background-color: $color-pure-white !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-global-search-form__search-input {
+  position: relative;
+}
+
+.c-global-search-form__submit-icon {
+
+  @include media-breakpoint-only(xs) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.c-global-search-form__input {
+  padding-right: 4rem;
+
+  @include respond-to(sm) {
+    padding-right: 3rem;
+  }
+}
+
+.c-global-search-form__submit {
+  width: 4rem;
+  min-width: 4rem;
+  padding: 0;
+  height: 4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include respond-to(sm) {
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-global-search-form__submit {
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

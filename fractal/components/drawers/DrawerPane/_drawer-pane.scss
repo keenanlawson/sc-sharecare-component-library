@@ -1,0 +1,41 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-get-z-index';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$drawer-pane-background-color: $color-pure-white !default;
+$drawer-pane-shadow-color: $color-pure-black !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-drawer__pane {
+  // Start drawer in collapsed state for animation
+  position: fixed;
+  transition: right 0.5s;
+  overflow: hidden;
+  z-index: z(drawer);
+  width: calc(100% - 5rem);
+  right: calc(-1 * (100% - 5rem));
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-drawer__pane {
+  box-shadow: 0 0.1rem 0.3rem 0 rgba($drawer-pane-shadow-color, 0.2);
+  background-color: $drawer-pane-background-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

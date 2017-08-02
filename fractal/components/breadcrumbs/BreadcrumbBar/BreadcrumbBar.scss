@@ -1,41 +1,4 @@
-@import '../../../scss/settings/s-color-palette';
-@import '../../../scss/settings/s-spacing-unit-sizes';
-
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-$breadcrumb-bar-background-color: $color-gallery !default;
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-.c-breadcrumb-bar {
-  padding: $spacing-unit 0;
-
-  .c-breadcrumb {
-    margin-left: $spacing-unit;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-.c-breadcrumb-bar {
-  background-color: $breadcrumb-bar-background-color;
-}
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
+@import '../../links/Link/link';
+@import '../../icons/SVGIcon/svg-icon';
+@import '../Breadcrumb/breadcrumb';
+@import './breadcrumb-bar';

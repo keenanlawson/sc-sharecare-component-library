@@ -29,12 +29,12 @@ const SiteFooter = (props) => {
 
     // Render
     return (
-        <div {...footerProps}>
+        <footer {...footerProps}>
             <SiteLogosBar/>
             <SiteAboutBar/>
             <div className={FADClass}/>
             <SiteDisclaimerBar/>
-        </div>
+        </footer>
     );
 };
 

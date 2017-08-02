@@ -1,0 +1,6 @@
+.c-drawer__target {
+  display: none; }
+  .c-drawer__target:checked ~ .c-drawer__pane {
+    right: 0; }
+  .c-drawer__target:checked ~ .c-drawer__overlay {
+    display: block; }

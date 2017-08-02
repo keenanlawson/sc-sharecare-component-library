@@ -1,0 +1,41 @@
+.m-assessment__recommendation-detail-view-main {
+  margin: 1.6rem 0.8rem 0.8rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-detail-view-main {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      max-width: 940px;
+      padding: 1rem;
+      margin: 4rem auto 0.8rem; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-detail-view-content {
+    max-width: 600px;
+    margin-right: 2rem; } }
+
+.m-assessment__recommendation-detail-view-header-navigation {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-detail-view-header-navigation {
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 3rem; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-detail-view-footer-navigation {
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.6rem; } }
+
+.m-assessment__recommendation-detail-view-aside {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-detail-view-aside {
+      display: block;
+      max-width: 320px; }
+      .m-assessment__recommendation-detail-view-aside > * {
+        margin-top: 1.6rem; }
+        .m-assessment__recommendation-detail-view-aside > *:first-child {
+          margin-top: 0; } }

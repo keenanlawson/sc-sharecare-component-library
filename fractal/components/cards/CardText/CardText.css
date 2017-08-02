@@ -1,0 +1,37 @@
+.c-card__header {
+  padding: 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.c-card__header.is-simple {
+  padding: 0.8rem 1.6rem 0.8rem; }
+
+.c-card__header.is-simple {
+  background-color: #fafafa; }
+
+.c-card__header-title {
+  font-size: 2.4rem;
+  line-height: 2.8rem; }
+  .c-card__header-title.is-simple {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-transform: uppercase; }
+
+.c-card__text {
+  padding: 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .c-card__text + .c-card__text {
+    padding-top: 0; }
+
+.c-card__text-header {
+  padding: 0;
+  margin-bottom: 0.8rem; }
+
+.c-card__text {
+  font-size: 1.4rem;
+  line-height: 1.7rem; }

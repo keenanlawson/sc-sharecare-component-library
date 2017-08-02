@@ -1,0 +1,33 @@
+.c-drawer__trigger {
+  cursor: pointer; }
+
+.c-drawer__pane {
+  position: fixed;
+  transition: right 0.5s;
+  overflow: hidden;
+  z-index: 5000;
+  width: calc(100% - 5rem);
+  right: calc(-1 * (100% - 5rem)); }
+
+.c-drawer__pane {
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff; }
+
+.c-drawer__target {
+  display: none; }
+  .c-drawer__target:checked ~ .c-drawer__pane {
+    right: 0; }
+  .c-drawer__target:checked ~ .c-drawer__overlay {
+    display: block; }
+
+.c-drawer__overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3000; }
+
+.c-drawer__overlay {
+  background-color: rgba(0, 0, 0, 0.5); }

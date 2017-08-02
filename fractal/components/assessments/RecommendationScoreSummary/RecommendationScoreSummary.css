@@ -1,0 +1,185 @@
+.m-assessment__recommendation-score-summary {
+  padding: 1.5rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary {
+      padding: 2rem 3rem 2rem; } }
+
+.m-assessment__recommendation-score-summary-header {
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-header {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem; } }
+
+.m-assessment__recommendation-score-summary-header-link {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-header-link {
+      display: block;
+      border: 0.1rem solid;
+      padding: 0.9rem 1.4rem 0.6rem; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-score-summary-content-main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
+.m-assessment__recommendation-score-summary-charts {
+  max-height: 30rem;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-charts {
+      width: 15rem;
+      padding: 0.5rem 2rem 0 1rem;
+      margin-bottom: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0; } }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-charts .c-svg-arc-chart {
+      height: 7.5rem; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-score-summary-scores {
+    -ms-flex-order: 3;
+    order: 3;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: 2rem; } }
+
+.m-assessment__recommendation-score-summary-score {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.1rem 1rem;
+  margin-top: 0.5rem; }
+  .m-assessment__recommendation-score-summary-score:first-child {
+    margin-top: 0; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-score {
+      margin-top: 0;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      margin-left: 0.5rem; }
+      .m-assessment__recommendation-score-summary-score:first-child {
+        margin-left: 0; } }
+
+.m-assessment__recommendation-score-summary-score-label {
+  margin-right: 0.5rem; }
+
+.m-assessment__recommendation-score-summary-text {
+  margin-top: 1.5rem; }
+  .m-assessment__recommendation-score-summary-text p,
+  .m-assessment__recommendation-score-summary-text ul {
+    display: none; }
+  .m-assessment__recommendation-score-summary-text h3 {
+    margin-bottom: 0.5rem;
+    display: none; }
+    @media only screen and (min-width: 576px) {
+      .m-assessment__recommendation-score-summary-text h3 {
+        margin-bottom: 1rem; } }
+    .m-assessment__recommendation-score-summary-text h3:first-child {
+      display: block; }
+      .m-assessment__recommendation-score-summary-text h3:first-child + p {
+        display: block;
+        margin-bottom: 0; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-text {
+      margin-top: 0;
+      width: calc(100% - 15rem); } }
+
+.m-assessment__recommendation-score-summary-link {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-link {
+      display: block;
+      margin: 1rem 0 0 15rem; } }
+
+.m-assessment__recommendation-score-summary-content-footer {
+  padding-top: 1.5rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-content-footer {
+      display: none; } }
+
+.m-assessment__recommendation-score-summary-footer-link {
+  margin-left: 1.5rem; }
+  .m-assessment__recommendation-score-summary-footer-link:first-child {
+    margin-left: 0; }
+
+.m-assessment__recommendation-score-summary-header {
+  border-bottom-color: #eee; }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-score-summary-header-link {
+    border-color: #2c9acc;
+    color: #2c9acc;
+    background-color: transparent; }
+    .m-assessment__recommendation-score-summary-header-link:hover {
+      background-color: #2c9acc; }
+      .m-assessment__recommendation-score-summary-header-link:hover .c-link__label {
+        color: #fff !important; } }
+
+.m-assessment__recommendation-score-summary-score {
+  background-color: #fafafa; }
+
+.m-assessment__recommendation-score-summary-header-text {
+  font-size: 2.2rem;
+  line-height: 2.6rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-header-text {
+      font-size: 2.8rem;
+      line-height: 3.4rem; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-score-summary-header-link {
+    font-size: 1.3rem;
+    line-height: 1.6rem; } }
+
+.m-assessment__recommendation-score-summary-score-label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 600; }
+
+.m-assessment__recommendation-score-summary-score-result {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600; }
+
+.m-assessment__recommendation-score-summary-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem; }
+  .m-assessment__recommendation-score-summary-text h3 {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.2rem; }
+    @media only screen and (min-width: 576px) {
+      .m-assessment__recommendation-score-summary-text h3 {
+        font-size: 2.4rem;
+        line-height: 3rem; } }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-score-summary-text {
+      font-size: 1.6rem;
+      line-height: 1.9rem; } }
+
+.m-assessment__recommendation-score-summary-footer-link {
+  font-weight: 600; }

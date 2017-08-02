@@ -1,0 +1,25 @@
+.c-link {
+  cursor: pointer; }
+
+a:not([class~="c-link"]),
+.c-link__label {
+  color: #2c9acc; }
+  a:not([class~="c-link"]):hover,
+  .c-link__label:hover {
+    color: #345779; }
+
+.c-link__label {
+  line-height: 1.9rem; }
+
+.c-card__footer-link {
+  padding: 0 0.8rem; }
+  .c-card__footer-link:first-child {
+    padding-left: 0; }
+  .c-card__footer-link:last-child {
+    padding-right: 0; }
+
+.c-card__footer-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7rem; }

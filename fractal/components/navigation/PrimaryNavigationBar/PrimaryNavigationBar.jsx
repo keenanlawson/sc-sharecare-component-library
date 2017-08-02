@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import PageLayer from '../../containers/PageLayer/PageLayer.jsx';
-import NavigationBar from '..//NavigationBar/NavigationBar.jsx';
+import NavigationBar from '../NavigationBar/NavigationBar.jsx';
 
 const PrimaryNavigationBar = ({ className, tabs, ...rest }) => {
     const componentClass = 'c-primary-navigation-bar';

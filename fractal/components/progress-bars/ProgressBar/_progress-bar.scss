@@ -1,0 +1,67 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-default-typography';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$progress-bar-background-color: $color-gallery !default;
+$progress-bar-color: $color-mountain-meadow !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-progress-bar__header {
+  margin-bottom: 0.7rem;
+}
+
+.c-progress-bar__indicator {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.c-progress-bar__progress {
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.c-progress-bar__text {
+  margin-top: 0.4rem;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-progress-bar__indicator {
+  background-color: $progress-bar-background-color;
+}
+
+.c-progress-bar__progress {
+  background-color: $progress-bar-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-progress-bar__header {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+.c-progress-bar__text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: $font-weight-semi;
+  text-align: right;
+}

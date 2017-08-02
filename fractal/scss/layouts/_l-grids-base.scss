@@ -1,0 +1,13 @@
+@import '../settings/s-grid-units';
+
+.l-grid-wrapper {
+  max-width: $grid-max-width;
+  margin: 0 auto;
+}
+
+.l-fluid-grid-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-outer-margin;
+  padding-left: $grid-outer-margin;
+}

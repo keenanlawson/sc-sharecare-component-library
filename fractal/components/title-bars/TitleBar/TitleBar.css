@@ -1,0 +1,33 @@
+.c-page-layer {
+  display: -ms-flexbox;
+  display: flex; }
+
+.c-layer-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.c-title-bar {
+  height: 0.5rem; }
+  @media only screen and (min-width: 576px) {
+    .c-title-bar {
+      -ms-flex-align: center;
+      align-items: center;
+      height: 5.8rem; } }
+
+.c-title-bar__text {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .c-title-bar__text {
+      display: block; } }
+
+.c-title-bar__text {
+  color: #fff; }
+
+.c-title-bar {
+  background: linear-gradient(to right, #1aba9c, #33ceca, #2c9bad); }
+
+.c-title-bar__text {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: normal; }

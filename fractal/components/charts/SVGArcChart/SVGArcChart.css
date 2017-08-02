@@ -1,0 +1,9 @@
+.c-svg-arc-chart {
+  position: relative;
+  overflow: hidden; }
+
+.c-svg-arc-chart__svg {
+  max-width: 100%; }
+
+.c-svg-arc-chart__percentage {
+  font-weight: 600; }

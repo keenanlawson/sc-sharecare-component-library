@@ -1,0 +1,40 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/settings/s-default-typography';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-header-gradient-bar-gradient-start-color: $color-mountain-meadow !default;
+$site-header-gradient-bar-gradient-middle-color: $color-turquoise !default;
+$site-header-gradient-bar-gradient-end-color: $color-boston-blue !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-site-header__gradient-bar {
+  height: 0.4rem;
+
+  @include respond-to('sm') {
+    height: 0.8rem;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-site-header__gradient-bar {
+  background: linear-gradient(to right, $site-header-gradient-bar-gradient-start-color, $site-header-gradient-bar-gradient-middle-color, $site-header-gradient-bar-gradient-end-color);
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////

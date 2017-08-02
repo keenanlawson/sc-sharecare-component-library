@@ -13,7 +13,7 @@ const PageLayer = ({ className, containerClass, children, constrained = true, ..
     const containerClasses = classNames(containerClassName, {[containerClass]: containerClass});
 
     return (
-        <div className={componentClasses} {...rest}>
+        <section className={componentClasses} {...rest}>
             {
                 constrained
                     ?
@@ -21,7 +21,7 @@ const PageLayer = ({ className, containerClass, children, constrained = true, ..
                     :
                 {children}
             }
-        </div>
+        </section>
     );
 };
 

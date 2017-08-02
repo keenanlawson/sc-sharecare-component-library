@@ -1,41 +1,16 @@
-@import '../settings/s-spacing-unit-sizes';
 @import '../settings/s-break-points';
+@import '../settings/s-grid-units';
 @import '../utilities/u-sass-flex-mixin';
 
-// Set the number of columns you want to use on your layout.
-$grid-columns: 12 !default;
-// Set the gutter between columns.
-$gutter-width: ($spacing-unit * 3) !default;
-// Set a margin for the container sides.
-$outer-margin: ($spacing-unit * 1.5) !default;
-// Create or remove breakpoints for your project
-// Syntax:
-// name SIZErem,
-
-$flexboxgrid-max-width: 1200px !default;
-
-$gutter-compensation: $gutter-width * .5 * -1;
-$half-gutter-width: $gutter-width * .5;
-
-.l-grid-wrapper {
-  max-width: $flexboxgrid-max-width;
-  margin: 0 auto;
-}
-
-.l-grid-container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $outer-margin;
-  padding-left: $outer-margin;
-}
+@import './l-grids-base';
 
 .row {
   @include flexbox();
   @include flex(0, 1, auto);
   @include flex-direction(row);
   @include flex-wrap(wrap);
-  margin-right: $gutter-compensation;
-  margin-left: $gutter-compensation;
+  margin-right: $grid-gutter-compensation;
+  margin-left: $grid-gutter-compensation;
 }
 
 .row.reverse {
@@ -56,8 +31,8 @@ $half-gutter-width: $gutter-width * .5;
   // in some spots we need it and some we dont
   // more why here: https://github.com/kristoferjoseph/flexboxgrid/issues/126
 
-  padding-right: $half-gutter-width;
-  padding-left: $half-gutter-width;
+  padding-right: $grid-half-gutter-width;
+  padding-left: $grid-half-gutter-width;
 }
 
 $name: xs;

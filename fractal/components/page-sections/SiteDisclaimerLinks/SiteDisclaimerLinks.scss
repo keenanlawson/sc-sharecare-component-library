@@ -1,26 +1,4 @@
-//@import '../../../scss/settings/s-color-palette';
-
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-//$component-color: $color-mine-shaft !default;
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
+@import '../../links/Link/link';
+@import '../../navigation/NavigationTab/navigation-tab';
+@import '../../navigation/NavigationBar/navigation-bar';
+@import './site-disclaimer-links';

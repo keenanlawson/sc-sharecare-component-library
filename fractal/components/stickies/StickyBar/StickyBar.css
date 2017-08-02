@@ -1,0 +1,10 @@
+@media (max-width: 767px) {
+  .c-sticky.is-sticky {
+    position: fixed;
+    z-index: 4000;
+    left: 0;
+    right: 0; }
+    .c-sticky.is-sticky.is-sticky-top {
+      top: 0; }
+    .c-sticky.is-sticky.is-sticky-bottom {
+      bottom: 0; } }

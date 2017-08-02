@@ -1,40 +1,23 @@
-@import '../../../scss/settings/s-color-palette';
-@import '../../../scss/utilities/u-respond-to-breakpoint';
-@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/layouts/l-grids-base';
+@import '../../../scss/layouts/l-visibility';
 
-//////////////////////////
-/// 1. CONFIG
-//////////////////////////
-$site-header-gradient-bar-gradient-start-color: $color-mountain-meadow !default;
-$site-header-gradient-bar-gradient-middle-color: $color-turquoise !default;
-$site-header-gradient-bar-gradient-end-color: $color-boston-blue !default;
-
-
-//////////////////////////
-/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
-//////////////////////////
-.m-site-header__gradient-bar {
-  height: 0.4rem;
-
-  @include respond-to('sm') {
-    height: 0.8rem;
-  }
-}
-
-
-//////////////////////////
-/// 3. STATE RULES - is-className, has-className, etc
-//////////////////////////
-
-
-//////////////////////////
-/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
-//////////////////////////
-.m-site-header__gradient-bar {
-  background: linear-gradient(to right, $site-header-gradient-bar-gradient-start-color, $site-header-gradient-bar-gradient-middle-color, $site-header-gradient-bar-gradient-end-color);
-}
-
-
-//////////////////////////
-/// 5. TYPOGRAPHY RULES
-//////////////////////////
+@import '../../containers/PageLayer/page-layer';
+@import '../../containers/LayerContainer/layer-container';
+@import '../../icons/SVGIcon/svg-icon';
+@import '../../links/Link/link';
+@import '../../links/LinkedIcon/linked-icon';
+@import '../../buttons/Button/button';
+@import '../../inputs/TextInput/text-input';
+@import '../../drawers/Drawer/drawer';
+@import '../../drawers/DrawerTrigger/drawer-trigger';
+@import '../../drawers/DrawerPane/drawer-pane';
+@import '../../drawers/DrawerTarget/drawer-target';
+@import '../../breadcrumbs/Breadcrumb/breadcrumb';
+@import '../../breadcrumbs/BreadcrumbBar/breadcrumb-bar';
+@import '../../navigation/NavigationTab/navigation-tab';
+@import '../../navigation/NavigationBar/navigation-bar';
+@import '../../searches/GlobalSearchForm/global-search-form';
+@import '../SiteSearchBar/site-search-bar';
+@import '../SiteNavigationBar/site-navigation-bar';
+@import '../SiteDrawer/site-drawer';
+@import './site-header';

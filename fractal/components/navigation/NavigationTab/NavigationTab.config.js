@@ -4,7 +4,7 @@ module.exports = {
     "order": 1,
     "status": "ready",
     "collated": true,
-    "preview": "@navigation-bar-preview",
+    "preview": "@navigation-tab-preview",
     "context": {
         "label": "Lorem Ipsum",
         "to": "http://www.somewhere.com"

@@ -1,0 +1,25 @@
+.m-assessment__recommendation-summary-group-content-main > * {
+  margin-top: 1rem; }
+  .m-assessment__recommendation-summary-group-content-main > *:first-child {
+    margin-top: 0; }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-summary-group-content-main {
+    padding: 2rem 3rem;
+    border-radius: 0.2rem; }
+    .m-assessment__recommendation-summary-group-content-main > * {
+      margin-top: 2rem;
+      padding: 2rem 0 0;
+      border-top: 1px solid; }
+      .m-assessment__recommendation-summary-group-content-main > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border: 0; } }
+
+@media only screen and (min-width: 576px) {
+  .m-assessment__recommendation-summary-group-content-main {
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.2); }
+    .m-assessment__recommendation-summary-group-content-main > * {
+      box-shadow: none;
+      border-top-color: #eee; } }

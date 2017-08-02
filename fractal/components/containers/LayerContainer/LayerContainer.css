@@ -1,0 +1,8 @@
+.c-page-layer {
+  display: -ms-flexbox;
+  display: flex; }
+
+.c-layer-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }

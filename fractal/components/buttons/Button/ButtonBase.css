@@ -1,0 +1,57 @@
+.c-button {
+  min-width: 10.8rem;
+  border: 0;
+  cursor: pointer;
+  padding: 0.8rem 1.6rem 0.4rem; }
+
+.c-button.is-medium {
+  min-width: 16.25rem;
+  padding: 0.8rem 1.6rem 0.8rem; }
+
+.c-button.is-large {
+  min-width: 18.75rem;
+  padding: 1.6rem; }
+
+.c-button.is-xlarge {
+  min-width: 40rem;
+  padding: 2rem 4.8rem; }
+
+.c-button.is-disabled {
+  cursor: default; }
+
+.c-button {
+  color: #fff;
+  background-color: #1aba9c; }
+  .c-button:hover {
+    background-color: #227474; }
+  .c-button.is-accent {
+    background-color: #345779; }
+    .c-button.is-accent:hover {
+      background-color: #999; }
+  .c-button.is-secure {
+    background-color: #ddd;
+    color: #999; }
+    .c-button.is-secure:hover {
+      background-color: #999;
+      color: #fff; }
+  .c-button.is-cta {
+    background-color: #f93; }
+    .c-button.is-cta:hover {
+      background-color: #bd6122; }
+  .c-button.is-disabled {
+    background-color: #ddd; }
+    .c-button.is-disabled:hover {
+      background-color: #ddd; }
+
+.c-button {
+  font-size: 1.3rem;
+  line-height: 1.6rem; }
+  .c-button.is-medium {
+    font-size: 1.5rem;
+    line-height: 1.8rem; }
+  .c-button.is-large {
+    font-size: 1.6rem;
+    line-height: 1.9rem; }
+  .c-button.is-xlarge {
+    font-size: 2.3rem;
+    line-height: 2.8rem; }

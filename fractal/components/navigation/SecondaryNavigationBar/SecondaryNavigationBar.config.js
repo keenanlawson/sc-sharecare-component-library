@@ -6,7 +6,7 @@ module.exports = {
     "order": 4,
     "status": "ready",
     "collated": true,
-    "preview": "@navigation-bar-preview",
+    "preview": "@secondary-navigation-bar-preview",
     "context": {
         tabs: navigationConfig.context.tabs
     }

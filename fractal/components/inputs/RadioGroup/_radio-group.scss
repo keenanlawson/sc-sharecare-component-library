@@ -1,0 +1,64 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-typography-unit-sizes';
+@import '../../../scss/settings/s-spacing-units';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$radio-group-label-default-color: $base-font-color !default;
+$radio-group-error-color: $color-chestnut-rose !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-radio-group__label {
+  margin-bottom: ($spacing-unit / 2);
+  cursor: default;
+
+  & + .c-radio-group__error {
+    margin-top: ($spacing-unit / 2);
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-radio-group__label {
+  color: $radio-group-label-default-color;
+}
+
+.c-radio-group__error {
+  color: $radio-group-error-color;
+}
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-radio-group__label {
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+.c-radio-group__error {
+
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}

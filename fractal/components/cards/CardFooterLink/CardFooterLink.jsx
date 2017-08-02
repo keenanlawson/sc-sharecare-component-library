@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from '../../links/Link/Link.jsx';
-
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+import Link from '../../links/Link/Link.jsx';
 
 const CardFooterLink = ({ className, to, label, children, ...rest }) => {
     const componentClass = 'c-card__footer-link';

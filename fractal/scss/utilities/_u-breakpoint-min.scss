@@ -5,12 +5,12 @@
 @import '../settings/s-break-points';
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
 
-  @debug 'MIN $name ->' $name;
+  //@debug 'MIN $name ->' $name;
 
   $min: map-get($breakpoints, $name);
 
-  @debug 'MIN $min ->' $min;
-  @debug 'MIN if($min != 0, $min, null) ->' if($min != 0, $min, null);
+  //@debug 'MIN $min ->' $min;
+  //@debug 'MIN if($min != 0, $min, null) ->' if($min != 0, $min, null);
 
   @return if($min != 0, $min, null);
 }

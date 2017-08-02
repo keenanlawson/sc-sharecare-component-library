@@ -1,0 +1,13 @@
+.c-card {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.2rem; }
+
+.c-card {
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff; }

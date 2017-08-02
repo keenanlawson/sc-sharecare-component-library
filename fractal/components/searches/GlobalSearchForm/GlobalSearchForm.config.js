@@ -3,6 +3,6 @@ module.exports = {
     "label": "Global Search Form",
     "status": "ready",
     "collated": true,
-    "preview": "@global-search-preview",
+    "preview": "@global-search-form-preview",
     "context": {}
 };

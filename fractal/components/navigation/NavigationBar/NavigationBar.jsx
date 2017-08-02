@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import NavigationTab from '..//NavigationTab/NavigationTab.jsx';
+import NavigationTab from '../NavigationTab/NavigationTab.jsx';
 
 const NavigationBar = (props) => {
 

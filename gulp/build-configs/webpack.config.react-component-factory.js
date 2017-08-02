@@ -4,12 +4,12 @@ const webpack = require('webpack');
 module.exports = {
     target: 'web',
     entry: {
-        ReactComponentFactory: './fractal/components/ReactComponentFactory.jsx'
+        ComponentRenderer: './fractal/ComponentRenderer.jsx'
     },
     output: {
         path: path.resolve(__dirname, '../../_site/js'),
         filename: '[name].js',
-        library: 'ReactComponentFactory',
+        library: 'ComponentRenderer',
         libraryTarget: 'window'
     },
     module: {

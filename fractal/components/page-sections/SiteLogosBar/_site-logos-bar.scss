@@ -1,0 +1,184 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-default-typography';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+@import '../../../scss/utilities/u-breakpoint-only';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$site-logos-bar-background-color: $color-pure-white !default;
+$site-logos-bar-partner-logos-label-text-color: $color-dusty-gray !default;
+$site-logos-bar-partner-logos-label-text-hover-color: $color-mine-shaft !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.m-site-logos-bar {
+
+  // Give the bar some padding
+  padding: 0.8rem 0;
+
+    @include respond-to(md) {
+
+      // More padding for md+
+      padding: 1.6rem 0;
+    }
+}
+
+.m-site-logos-bar__container {
+
+  // Center contents
+  justify-content: center;
+
+  @include media-breakpoint-only(xs) {
+
+    // Stack partner and social logos for xs
+    flex-direction: column;
+  }
+}
+
+.m-site-logos-bar__logo-icon {
+
+  // These visible icons are normally 1.6rem wide/high
+  // Make them bigger for xs only
+  @include media-breakpoint-only(xs) {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+// Partners start out displaying logo text labels
+.m-site-logos-bar__partners {
+
+  // Center contents
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  @include media-breakpoint-only(xs) {
+
+    // Give the stacked partners some spacing from social for xs only
+    margin-bottom: 0.8rem;
+  }
+
+  @include respond-to(lg) {
+
+    // Space out the partner logos for lg+
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .m-site-logos-bar__logo {
+
+    &::after {
+
+      // Add borders and spacing between the partner logo labels
+      content: '';
+      margin-right: 0.8rem;
+      padding-right: 0.8rem;
+      width: 0.1rem;
+      height: 1.2rem;
+      border-right: 0.1rem solid;
+      display: inline-block;
+      position: relative;
+      top: 0.2rem;
+
+      // More spacing for sm
+      @include respond-to(sm) {
+        margin-right: 1.6rem;
+        padding-right: 1.6rem;
+      }
+
+      // Even more spacing for md
+      @include respond-to(md) {
+        margin-right: 2.4rem;
+        padding-right: 2.4rem;
+      }
+
+      @include respond-to(lg) {
+
+        // Remove borders because we switch to logos instead of logo labels
+        content: none;
+      }
+    }
+
+    &:last-child {
+
+      &::after {
+
+        @include media-breakpoint-only(xs) {
+
+          // Remove border between partner and social for xs as they are stacked
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+// Social logos
+.m-site-logos-bar__social {
+
+  // Center contents
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .m-site-logos-bar__logo {
+
+    // Space out the social logos
+    margin-left: 0.8rem;
+
+    &:first-child {
+
+      // Nullify spacing for first child
+      margin-left: 0;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.m-site-logos-bar {
+  background-color: $site-logos-bar-background-color;
+}
+
+.m-site-logos-bar__logo {
+
+  &::after {
+    color: $site-logos-bar-partner-logos-label-text-color;
+  }
+}
+
+.m-site-logos-bar__logo-label {
+  color: $site-logos-bar-partner-logos-label-text-color;
+
+  &:hover {
+    color: $site-logos-bar-partner-logos-label-text-hover-color;
+  }
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.m-site-logos-bar__logo-label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  white-space: nowrap;
+  font-weight: $font-weight-semi;
+
+  @include media-breakpoint-only(xs) {
+    font-size: 1.1rem;
+  }
+}

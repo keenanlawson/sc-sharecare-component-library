@@ -1,0 +1,75 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-units';
+@import '../../../scss/settings/s-typography-unit-sizes';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$text-group-label-default-color: $base-font-color !default;
+$text-group-error-color: $color-chestnut-rose !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-text-group {
+
+  .c-text {
+    margin-top: ($spacing-unit * 2);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.c-text-group__label {
+  margin-bottom: ($spacing-unit / 2);
+  cursor: default;
+
+  & + .c-text-group__error {
+    margin-top: ($spacing-unit / 2);
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-text-group__error {
+  color: $text-group-error-color;
+}
+
+.c-text-group__label {
+  color: $text-group-label-default-color;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-text-group__error {
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+.c-text-group__label {
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}

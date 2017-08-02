@@ -1,0 +1,16 @@
+@import '../settings/s-spacing-units';
+
+// Set the number of columns you want to use on your layout.
+$grid-columns: 12 !default;
+// Set the gutter between columns.
+$grid-gutter-width: ($spacing-unit * 3) !default;
+// Set a margin for the container sides.
+$grid-outer-margin: ($spacing-unit * 1.5) !default;
+// Create or remove breakpoints for your project
+// Syntax:
+// name SIZErem,
+
+$grid-max-width: 1200px !default;
+
+$grid-gutter-compensation: $grid-gutter-width * .5 * -1;
+$grid-half-gutter-width: $grid-gutter-width * .5;

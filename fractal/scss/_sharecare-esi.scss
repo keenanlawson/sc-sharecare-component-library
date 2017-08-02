@@ -1,0 +1,53 @@
+.sharecare-esi {
+
+  // Reset CSS (base element settings, no classes nor ids allowed)
+  @import './base/b-resets';
+
+  // Grid layout and visibility helpers
+  @import './layouts/l-grids-base';
+  @import './layouts/l-visibility';
+
+  // Components
+  @import '../components/containers/PageLayer/page-layer';
+  @import '../components/containers/LayerContainer/layer-container';
+  @import '../components/icons/SVGIcon/svg-icon';
+  @import '../components/links/Link/link';
+  @import '../components/links/LinkedIcon/linked-icon';
+  @import '../components/logos/SharecareLogo/sharecare-logo';
+  @import '../components/logos/DoctorOzLogo/doctor-oz-logo';
+  @import '../components/logos/DailyStrengthLogo/daily-strength-logo';
+  @import '../components/logos/FacebookLogo/facebook-logo';
+  @import '../components/logos/GoogleLogo/google-logo';
+  @import '../components/logos/InstagramLogo/instagram-logo';
+  @import '../components/logos/LinkedInLogo/linked-in-logo';
+  @import '../components/logos/PinterestLogo/pinterest-logo';
+  @import '../components/logos/TwitterLogo/twitter-logo';
+  @import '../components/logos/PartnerLogos/partner-logos';
+  @import '../components/logos/SocialLogos/social-logos';
+  @import '../components/buttons/Button/button';
+  @import '../components/inputs/TextInput/text-input';
+  @import '../components/drawers/Drawer/drawer';
+  @import '../components/drawers/DrawerTrigger/drawer-trigger';
+  @import '../components/drawers/DrawerPane/drawer-pane';
+  @import '../components/drawers/DrawerTarget/drawer-target';
+  @import '../components/breadcrumbs/Breadcrumb/breadcrumb';
+  @import '../components/breadcrumbs/BreadcrumbBar/breadcrumb-bar';
+  @import '../components/navigation/NavigationTab/navigation-tab';
+  @import '../components/navigation/NavigationBar/navigation-bar';
+  @import '../components/searches/GlobalSearchForm/global-search-form';
+
+  // Modules
+  @import '../components/page-sections/SiteSearchBar/site-search-bar';
+  @import '../components/page-sections/SiteNavigationBar/site-navigation-bar';
+  @import '../components/page-sections/SiteDrawer/site-drawer';
+  @import '../components/page-sections/SiteAboutLinks/site-about-links';
+  @import '../components/page-sections/SiteDisclaimerLinks/site-disclaimer-links';
+  @import '../components/page-sections/SiteDisclaimerText/site-disclaimer-text';
+  @import '../components/page-sections/SiteLogosBar/site-logos-bar';
+  @import '../components/page-sections/SiteAboutBar/site-about-bar';
+  @import '../components/page-sections/SiteDisclaimerBar/site-disclaimer-bar';
+  @import '../components/page-sections/SiteHeader/site-header';
+  @import '../components/page-sections/SiteFooter/site-footer';
+
+  @import '../components/page-sections/PageTemplate/page-template';
+}

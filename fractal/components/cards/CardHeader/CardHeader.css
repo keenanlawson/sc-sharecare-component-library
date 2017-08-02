@@ -1,0 +1,20 @@
+.c-card__header {
+  padding: 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.c-card__header.is-simple {
+  padding: 0.8rem 1.6rem 0.8rem; }
+
+.c-card__header.is-simple {
+  background-color: #fafafa; }
+
+.c-card__header-title {
+  font-size: 2.4rem;
+  line-height: 2.8rem; }
+  .c-card__header-title.is-simple {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-transform: uppercase; }

@@ -30,7 +30,7 @@ const SiteHeader = (props) => {
 
     // Render
     return (
-        <div {...headerProps}>
+        <header {...headerProps}>
             <SiteSearchBar/>
             <SiteNavigationBar/>
             <div className={gradientBarClass}/>
@@ -38,7 +38,7 @@ const SiteHeader = (props) => {
                 breadcrumbs &&
                 <BreadcrumbBar breadcrumbs={breadcrumbs}/>
             }
-        </div>
+        </header>
     );
 };
 

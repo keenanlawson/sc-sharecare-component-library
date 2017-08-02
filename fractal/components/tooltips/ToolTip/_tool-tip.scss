@@ -1,0 +1,82 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-typography-unit-sizes';
+@import '../../../scss/utilities/u-respond-to-breakpoint';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$tooltip-default-text-color: $base-font-color !default;
+$tooltip-background-color: $color-pure-white !default;
+$tooltip-border-color: $color-alto !default;
+$tooltip-shadow-color: $color-pure-black !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.c-tooltip__label {
+  display: flex;
+  cursor: pointer;
+}
+
+.c-tooltip__body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+
+  border: 0.1rem solid;
+  border-radius: 0.2rem;
+  padding: 1rem 1.5rem;
+  cursor: default;
+}
+
+// Create the tooltip arrow pointing to the label
+.c-tooltip__arrow {
+  position: absolute;
+  border: 0.5rem solid;
+  bottom: -0.5rem;
+  left: calc(50% - (0.5rem / 2));
+  transform: rotate(-45deg);
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-tooltip__body {
+  border-color: $tooltip-border-color;
+  background-color: $tooltip-background-color;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba($tooltip-shadow-color, 0.3);
+  color: $tooltip-default-text-color;
+}
+
+.c-tooltip__arrow {
+  border-color: transparent transparent $tooltip-background-color $tooltip-background-color;
+  box-shadow: -0.1rem 0.2rem 0.1rem 0 rgba($tooltip-shadow-color, 0.3);
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-tooltip__text {
+
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include respond-to(sm) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}

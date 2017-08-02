@@ -1,0 +1,6 @@
+.c-card__footer {
+  padding: 0 1.6rem 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }

@@ -1,0 +1,122 @@
+.c-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.c-text__label {
+  cursor: pointer;
+  margin-bottom: 0.4rem; }
+
+.c-text__input {
+  width: 100%;
+  height: 4rem;
+  border: 0.1rem solid;
+  cursor: pointer;
+  padding: 0.1rem 0 0 0.8rem;
+  border-radius: 0.2rem; }
+  @media only screen and (min-width: 576px) {
+    .c-text__input {
+      height: 3rem; } }
+  .c-text__input:focus {
+    outline: 0; }
+
+.c-text__error {
+  margin-top: 0.4rem; }
+
+@media only screen and (min-width: 576px) {
+  .c-text.is-inline {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%; } }
+
+.c-text__label.is-disabled {
+  cursor: default; }
+
+@media only screen and (min-width: 576px) {
+  .c-text__label.is-inline {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 0 0.8rem 0 0; } }
+
+.c-text__input.is-disabled {
+  cursor: default; }
+
+@media only screen and (min-width: 576px) {
+  .c-text__input.is-inline {
+    width: 20rem; } }
+
+@media only screen and (min-width: 576px) {
+  .c-text__error.is-inline {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%; } }
+
+.c-text__label {
+  color: #333; }
+  .c-text__label.is-disabled {
+    color: #ddd; }
+  .c-text__label.is-error {
+    color: #d15050; }
+
+.c-text__input {
+  border-color: #ddd;
+  color: #666;
+  background-color: #fff; }
+  .c-text__input:focus {
+    border-color: #1aba9c; }
+  .c-text__input.is-disabled {
+    background-color: #eee; }
+  .c-text__input.is-error {
+    border-color: #d15050;
+    color: #d15050; }
+
+.c-text__required {
+  color: #d15050; }
+
+.c-text__error {
+  color: #d15050; }
+
+:-moz-placeholder {
+  color: #b6b1ba; }
+
+::-moz-placeholder {
+  color: #b6b1ba; }
+
+:-ms-input-placeholder {
+  color: #b6b1ba; }
+
+::-webkit-input-placeholder {
+  color: #b6b1ba; }
+
+.c-text__label {
+  font-size: 1.5rem;
+  line-height: 1.7rem; }
+  @media only screen and (min-width: 576px) {
+    .c-text__label {
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }
+
+.c-text__input {
+  font-size: 1.8rem;
+  line-height: 2rem; }
+  @media only screen and (min-width: 576px) {
+    .c-text__input {
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }
+
+.c-text__error {
+  font-size: 1.5rem;
+  line-height: 1.7rem; }
+  @media only screen and (min-width: 576px) {
+    .c-text__error {
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }

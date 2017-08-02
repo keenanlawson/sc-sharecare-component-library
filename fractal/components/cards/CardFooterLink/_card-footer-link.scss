@@ -1,0 +1,43 @@
+@import '../../../scss/settings/s-spacing-units';
+@import '../../../scss/settings/s-default-typography';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-card__footer-link {
+  padding: 0 $spacing-unit;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-card__footer-link {
+  text-transform: uppercase;
+  font-weight: $font-weight-semi;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}

@@ -1,0 +1,22 @@
+.c-ad__frame {
+  padding: 1rem; }
+  .c-ad__frame:empty {
+    display: none; }
+
+.c-ad__text:only-child {
+  display: none; }
+
+.c-ad__frame.has-text {
+  padding-top: 0; }
+
+.c-ad {
+  background-color: #eee; }
+
+.c-ad__text {
+  color: #999; }
+
+.c-ad__text {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  text-align: center; }

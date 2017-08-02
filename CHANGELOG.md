@@ -241,6 +241,22 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Added site footer component
 - Added linked image component
 
+-----
+
+8/1/2017
+
+- Moved preview layouts to their respective folders
+- Refactored component SCSS to partials for importing
+- Cleaned up preview layouts to use one CSS file composed from new component partials
+- Updated CSS build tasks to output as component assets
+- Added page template component that showcases the header and footer
+- Created theme ready Sharecare ESI CSS
+- Split grid unit variables and base SCSS for utilizing some grid styles without duplication
+- Commented out some SCSS debug statements
+- Replaced /**/ SCSS comments with ///
+- Refactored core styles SCSS partial
+- Created theme and component CSS build tasks
+
 
 -----
 

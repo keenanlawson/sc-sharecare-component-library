@@ -1,0 +1,44 @@
+.c-svg-line-chart__background {
+  fill: #eee; }
+
+.c-svg-line-chart__marker {
+  fill: #333; }
+
+.c-svg-line-chart__marker.def-con-1,
+.c-svg-line-chart__background.def-con-1 {
+  fill: #d15050; }
+
+.c-svg-line-chart__marker.def-con-2,
+.c-svg-line-chart__background.def-con-2 {
+  fill: #f93; }
+
+.c-svg-line-chart__marker.def-con-3,
+.c-svg-line-chart__background.def-con-3 {
+  fill: #fc0; }
+
+.c-svg-line-chart__marker.def-con-4,
+.c-svg-line-chart__background.def-con-4 {
+  fill: #1aba9c; }
+
+.c-svg-line-chart__marker.def-con-5,
+.c-svg-line-chart__background.def-con-5 {
+  fill: #277667; }
+
+.c-svg-line-chart__result {
+  fill: #eee; }
+
+.c-svg-line-chart__percentage {
+  fill: #333; }
+
+.c-svg-line-chart__text {
+  fill: #999; }
+
+.c-svg-line-chart__percentage {
+  text-anchor: middle;
+  font-weight: 800;
+  line-height: 1rem;
+  font-size: 3.6rem; }
+
+.c-svg-line-chart__text {
+  text-anchor: middle;
+  font-size: 1.4rem; }

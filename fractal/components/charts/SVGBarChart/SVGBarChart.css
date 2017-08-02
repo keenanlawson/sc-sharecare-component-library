@@ -1,0 +1,25 @@
+.c-svg-bar-chart__header,
+.c-svg-bar-chart__footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.c-svg-bar-chart__footer {
+  height: 2.5rem;
+  position: relative; }
+
+.c-svg-bar-chart__marker {
+  fill: #ddd; }
+
+.c-svg-bar-chart__marker-text {
+  fill: #666; }
+
+.c-svg-bar-chart__marker-text {
+  text-anchor: middle;
+  font-size: 1.2rem;
+  font-weight: 600; }
+  .c-svg-bar-chart__marker-text.is-first {
+    text-anchor: start; }
+  .c-svg-bar-chart__marker-text.is-last {
+    text-anchor: end; }

@@ -1,0 +1,19 @@
+.m-assessment__recommendation-detail-group .m-assessment__recommendation-detail {
+  margin-top: 1rem; }
+  @media only screen and (min-width: 576px) {
+    .m-assessment__recommendation-detail-group .m-assessment__recommendation-detail {
+      margin-top: 2rem; } }
+  .m-assessment__recommendation-detail-group .m-assessment__recommendation-detail:first-child {
+    margin-top: 0; }
+
+.m-assessment__recommendation-detail-group-header {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid; }
+
+.m-assessment__recommendation-detail-group-header {
+  border-bottom-color: #eee; }
+
+.m-assessment__recommendation-detail-group-header-text {
+  font-size: 2.2rem;
+  line-height: 2.6rem; }

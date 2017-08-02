@@ -1,0 +1,71 @@
+@import '../../../scss/settings/s-color-palette';
+@import '../../../scss/settings/s-spacing-units';
+@import '../../../scss/utilities/u-url-encode-svg';
+@import '../../../scss/utilities/u-get-z-index';
+
+//////////////////////////
+/// 1. CONFIG
+//////////////////////////
+$loading-spinner-size: 10rem;
+$loading-spinner-color: $color-mountain-meadow !default;
+$loading-overlay-color: $color-pure-black !default;
+
+
+//////////////////////////
+/// 2. BASE LAYOUT RULES - display, float, position, left, top, height, width, padding, margin, etc.
+//////////////////////////
+.c-loading__text {
+  padding: $spacing-unit 0;
+}
+
+.c-loading__spinner {
+  height: $loading-spinner-size;
+}
+
+
+//////////////////////////
+/// 3. STATE RULES - is-className, has-className, etc
+//////////////////////////
+.c-loading {
+
+  // NOTE: Parent element must be
+  &.is-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: z('loading');
+
+    &.is-fullscreen {
+      position: fixed;
+    }
+  }
+}
+
+
+//////////////////////////
+/// 4. THEME/SKIN RULES - gradients, colors, box-shadows, etc.
+//////////////////////////
+.c-loading {
+
+  &.is-overlay {
+    background-color: rgba($loading-overlay-color, 0.3);
+  }
+}
+
+.c-loading__spinner {
+  @include background-svg('<svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a"><stop stop-color="#{$loading-spinner-color}" stop-opacity="0" offset="0%"/><stop stop-color="#{$loading-spinner-color}" stop-opacity=".631" offset="63.146%"/><stop stop-color="#{$loading-spinner-color}" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)"><path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></path><circle fill="#{$loading-spinner-color}" cx="36" cy="18" r="1"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"/></circle></g></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+//////////////////////////
+/// 5. TYPOGRAPHY RULES
+//////////////////////////
+.c-loading__text {
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 3rem;
+}
