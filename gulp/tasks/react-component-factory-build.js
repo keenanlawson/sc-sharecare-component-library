@@ -24,6 +24,13 @@ var nodeConfig = {
                         presets: ['react', 'stage-0', 'env']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'raw-loader'
+                ]
+
             }
         ]
     }

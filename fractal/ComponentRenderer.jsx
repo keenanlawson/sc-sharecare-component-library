@@ -1,30 +1,37 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-// import ComponentCSS from './ComponentCSS';
-
 import SVGIcon from './components/icons/SVGIcon/SVGIcon.jsx';
 import SiteHeader from './components/page-sections/SiteHeader/SiteHeader.jsx';
 import SiteFooter from './components/page-sections/SiteFooter/SiteFooter.jsx';
 
+import SVGIconCSS from './components/icons/SVGIcon/SVGIcon.css';
+import ThemeESILightSeaGreenCSS from './scss/motifs/light-sea-green/light-sea-green-esi.css';
+
 class ComponentRenderer {
 
-    constructor() {
+    constructor() {}
 
-        this.components = {
+    static getComponents() {
+        return {
             SiteFooter,
             SiteHeader,
             SVGIcon
+        };
+    }
+
+    static getComponentCSS() {
+        return {
+            esiHeaderFooter: ThemeESILightSeaGreenCSS,
+            SVGIcon: SVGIconCSS
         }
     }
 
-    renderToString(component, context = {}) {
-        const Component = typeof component === 'string' ? this.components[component] : component;
+    static renderToString(Component, context = {}) {
         return ReactDOMServer.renderToString(<Component {...context} />);
     }
 
-    renderToStaticMarkup(component, context = {}) {
-        const Component = typeof component === 'string' ? this.components[component] : component;
+    static renderToStaticMarkup(Component, context = {}) {
         return ReactDOMServer.renderToStaticMarkup(<Component {...context} />);
     }
 }
