@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import ComponentCSS from './ComponentCSS';
+// import ComponentCSS from './ComponentCSS';
 
 import SVGIcon from './components/icons/SVGIcon/SVGIcon.jsx';
 import SiteHeader from './components/page-sections/SiteHeader/SiteHeader.jsx';
@@ -19,12 +19,12 @@ class ComponentRenderer {
     }
 
     renderToString(component, context = {}) {
-        const Component = this.components[component];
+        const Component = typeof component === 'string' ? this.components[component] : component;
         return ReactDOMServer.renderToString(<Component {...context} />);
     }
 
     renderToStaticMarkup(component, context = {}) {
-        const Component = this.components[component];
+        const Component = typeof component === 'string' ? this.components[component] : component;
         return ReactDOMServer.renderToStaticMarkup(<Component {...context} />);
     }
 }

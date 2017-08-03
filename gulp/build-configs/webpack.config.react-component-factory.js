@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../../_site/js'),
-        filename: '[name].js',
+        filename: 'Web[name].js',
         library: 'ComponentRenderer',
         libraryTarget: 'window'
     },

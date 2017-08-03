@@ -1,0 +1,61 @@
+@import '../settings/s-typography-unit-sizes';
+@import '../settings/s-spacing-units';
+@import '../settings/s-default-typography';
+
+/// ! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css
+
+///  Document
+///==========================================================================
+
+//////
+/// Everything currently used
+/// 1. Border box
+/// 2. Remove spacing and outlines in all browsers (opinionated).
+/// 3. Remove tap highlight
+
+body,
+html {
+  box-sizing: border-box; ///  1
+  padding: 0; ///  2
+  margin: 0; ///  2
+  border: 0; ///  2
+  outline: 0; ///  2
+  -webkit-tap-highlight-color: transparent; ///  3
+}
+
+//////
+/// 1. Add scalable font sizing (base 10 em/rems)
+/// 2. Prevent adjustments of font size after orientation changes in
+///    IE on Windows Phone and in iOS.
+
+html {
+  font-size: 62.5%; ///  1
+  -ms-text-size-adjust: 100%; ///  2
+  -webkit-text-size-adjust: 100%; ///  2
+}
+
+
+///  Sections
+///==========================================================================
+
+//////
+/// 1. Change the default font family, size and line height in all
+///    browsers (opinionated).
+
+body {
+  font: #{$base-font-size} / #{$base-line-height} $base-font-family; ///  1
+  color: $base-font-color;
+  -webkit-touch-callout: none;
+}
+
+///  Forms
+///==========================================================================
+
+//////
+/// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+///    controls in Android 4.
+/// 2. Correct the inability to style clickable types in iOS and Safari.
+
+html [type="button"] { ///  1
+  -webkit-appearance: button; ///  2
+}

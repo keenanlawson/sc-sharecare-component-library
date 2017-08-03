@@ -1,0 +1,165 @@
+@import '../settings/s-typography-unit-sizes';
+@import '../settings/s-spacing-units';
+@import '../settings/s-default-typography';
+
+/// This is a lean version of the main resets for the ESI header/footer to help keep bytes to a minimum
+/// Based off of:
+/// ! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css
+/// All of the following resets are scoped for the ESI components only to prevent style bleed
+/// HTML and BODY classes are not scoped but are included for the measurements of 10px / rem
+
+
+//////
+/// - Add scalable font sizing (base 10 em/rems)
+/// - Prevent adjustments of font size after orientation changes in
+///    IE on Windows Phone and in iOS.
+/// - Change the default font family, size and line height in all
+///    browsers (opinionated).
+@import './b-resets-html-and-body';
+
+///  Self (header/footer)
+///==========================================================================
+
+//////
+/// Everything currently used
+/// Header and footer elements do not appear in the ESI but are the ESI component roots
+/// 1. Border box
+/// 2. Remove spacing and outlines in all browsers (opinionated).
+/// 3. Remove tap highlight
+/// 4. Add the correct display in IE 9-.
+footer.sharecare-esi,
+header.sharecare-esi {
+  box-sizing: border-box; ///  1
+  padding: 0; ///  2
+  margin: 0; ///  2
+  border: 0; ///  2
+  outline: 0; ///  2
+  -webkit-tap-highlight-color: transparent; ///  3
+  display: block; ///  4
+}
+
+.sharecare-esi {
+
+  footer & {
+    content: 'XXX';
+  }
+
+  ///  Document
+  ///==========================================================================
+
+  //////
+  /// Everything currently used
+  /// 1. Border box
+  /// 2. Remove spacing and outlines in all browsers (opinionated).
+  /// 3. Remove tap highlight
+  a,
+  div,
+  form,
+  img,
+  label,
+  nav,
+  p,
+  section,
+  span,
+  :after,
+  :before {
+    box-sizing: border-box; ///  1
+    padding: 0; ///  2
+    margin: 0; ///  2
+    border: 0; ///  2
+    outline: 0; ///  2
+    -webkit-tap-highlight-color: transparent; ///  3
+  }
+
+  ///  Sections
+  ///==========================================================================
+
+  //////
+  /// Add the correct display in IE 9-.
+  nav,
+  section {
+    display: block;
+  }
+
+  ///  Text-level semantics
+  ///==========================================================================
+
+  //////
+  /// 1. Remove the gray background on active links in IE 10.
+  a {
+    background-color: transparent; ///  1
+    text-decoration: none;
+  }
+
+  //////
+  /// Remove the outline on focused links when they are also active or hovered
+  /// in all browsers (opinionated).
+  a:active,
+  a:hover {
+    outline-width: 0;
+  }
+
+  ///  Embedded content
+  ///==========================================================================
+
+  //////
+  /// Remove the border on images inside links in IE 10-.
+  img {
+    border-style: none;
+  }
+
+
+  ///  Forms
+  ///==========================================================================
+
+  //////
+  /// 1. Change the font styles in all browsers (opinionated).
+  /// 2. Remove the margin and padding in Firefox and Safari.
+  button,
+  input,
+  optgroup,
+  select {
+    font-family: $base-font-family; ///  1
+    font-size: 100%; ///  1
+    line-height: $base-line-height; ///  1
+    margin: 0; ///  2
+    padding: 0; ///  2
+    outline: 0;
+    box-sizing: border-box
+  }
+
+  //////
+  /// Show the overflow in IE.
+  /// 1. Show the overflow in Edge.
+  button,
+  input { ///  1
+    overflow: visible;
+  }
+
+  //////
+  /// Remove the inheritance of text transform in Edge, Firefox, and IE.
+  /// 1. Remove the inheritance of text transform in Firefox.
+  button,
+  select { ///  1
+    text-transform: none;
+  }
+
+  //////
+  /// 2. Correct the inability to style clickable types in iOS and Safari.
+  button,
+  [type="submit"] {
+    -webkit-appearance: button; ///  2
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    margin-right: ($spacing-unit);
+  }
+
+  //////
+  /// 1. Correct the odd appearance in Chrome and Safari.
+  /// 2. Correct the outline style in Safari.
+  [type="search"] {
+    -webkit-appearance: textfield; ///  1
+    outline-offset: -0.2rem; ///  2
+  }
+}

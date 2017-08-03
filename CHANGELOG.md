@@ -257,6 +257,16 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 - Refactored core styles SCSS partial
 - Created theme and component CSS build tasks
 
+-----
+
+8/2/2017
+
+- Added Node version of Component Renderer
+- Changed navigation component wrapper from div to nav
+- Changed site header and footer component wrappers from divs to header and footer
+- Changed disclaimer text wrapper from div to p
+- Successfully tested switch in page template preview from page template CSS to themed motif ESI CSS
+- Split resets into ESI and base versions with a common include
 
 -----
 
@@ -264,3 +274,4 @@ TODO:
 - Delete /scss/settings/_s-base-config.scss after updating Guidelines doc
 - Delete /scss/settings/_s-base-variables.scss after updating Guidelines doc
 - Delete /scss/style-guide.scss after updating Guidelines doc
+- Check and update SCSS resets for possible usages of '<element> &' instead of element.class

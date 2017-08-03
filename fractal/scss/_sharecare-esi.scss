@@ -1,7 +1,7 @@
-.sharecare-esi {
+// Reset CSS (base element settings, no classes nor ids allowed)
+@import './base/b-resets-esi';
 
-  // Reset CSS (base element settings, no classes nor ids allowed)
-  @import './base/b-resets';
+.sharecare-esi {
 
   // Grid layout and visibility helpers
   @import './layouts/l-grids-base';

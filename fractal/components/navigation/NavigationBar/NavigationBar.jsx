@@ -34,7 +34,7 @@ const NavigationBar = (props) => {
 
     // Render
     return (
-        <div {...componentProps}>
+        <nav {...componentProps}>
             {
                 tabs && tabs.length > 0 &&
                 tabs.map((tab) => {
@@ -42,7 +42,7 @@ const NavigationBar = (props) => {
                 })
             }
             {children}
-        </div>
+        </nav>
     );
 };
 
