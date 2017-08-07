@@ -270,6 +270,15 @@ Updated styles to use a base-size-unit variable as design has changed from 10px 
 
 -----
 
+8/6/2017
+
+- Added document head component
+- Integrating document head into page template
+- Updates to the component renderer for testing
+
+
+-----
+
 TODO:
 - Delete /scss/settings/_s-base-config.scss after updating Guidelines doc
 - Delete /scss/settings/_s-base-variables.scss after updating Guidelines doc
